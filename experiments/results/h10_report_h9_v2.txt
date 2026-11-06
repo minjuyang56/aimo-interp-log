@@ -1,0 +1,12 @@
+H10 나침반 A (v2, 가중치=H9 지우기 중요도) · 사전등록: compass 큼 = robust · steady 작음 = robust · 중심화 코사인 · null 30회
+모델           지표         n    AUC   bacc       null95%  ρ(cnt)  ρ(logT)    잔차AUC        잔차null
+Qwen3_5-4B   compass   33  0.685  0.646 [0.33,0.65]▲   -0.55    -0.59    0.573 [0.28,0.62]    (N_topic 없는 문제 3)
+Qwen3_5-4B   steady    33  0.308  0.392 [0.27,0.70]    +0.07    -0.19    0.415 [0.33,0.67] 
+Skywork-OR1- compass   33  0.596  0.519 [0.31,0.69]    -0.07    -0.03    0.619 [0.34,0.63]    (N_topic 없는 문제 3)
+Skywork-OR1- steady    33  0.358  0.329 [0.31,0.70]    -0.02    -0.07    0.369 [0.33,0.66] 
+Olmo-3-7B-Th compass   33  0.496  0.519 [0.32,0.66]    -0.15    +0.21    0.638 [0.35,0.70]    (N_topic 없는 문제 3)
+Olmo-3-7B-Th steady    33  0.292  0.392 [0.30,0.68]▼   +0.26    +0.11    0.327 [0.33,0.69]▼
+DeepSeek-R1- compass   33  0.404  0.456 [0.31,0.64]    +0.37    +0.51    0.435 [0.33,0.66]    (N_topic 없는 문제 3)
+DeepSeek-R1- steady    33  0.396  0.392 [0.39,0.68]    -0.56    -0.65    0.404 [0.29,0.77] 
+풀링(잔차)       compass   33                                                 0.542 [0.34,0.66]    모델간 ρ: Qwen3_-Skywor +0.03  Qwen3_-Olmo-3 +0.14  Qwen3_-DeepSe -0.13  Skywor-Olmo-3 +0.08  Skywor-DeepSe -0.12  Olmo-3-DeepSe +0.46
+풀링(잔차)       steady    33                                                 0.373 [0.36,0.68]    모델간 ρ: Qwen3_-Skywor +0.50  Qwen3_-Olmo-3 +0.27  Qwen3_-DeepSe +0.46  Skywor-Olmo-3 +0.04  Skywor-DeepSe +0.38  Olmo-3-DeepSe +0.20

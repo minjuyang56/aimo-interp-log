@@ -1,0 +1,26 @@
+Codabench phase 30038 — 리더보드에서 받은 제출 1726건
+
+=== 우리 계정 '[author-codabench]' — 리더보드에 보이는 전부 (3건) ===
+  submission_id 1000005   2026-10-17T23:24:02 UTC  트랙 ['Main(N=21)']
+      Main(N=21)  accuracy 0.48   coverage 1.0   invalid 0.0
+  submission_id 1000047   2026-10-18T00:10:32 UTC  트랙 ['Small(N=14)']
+      Small(N=14) accuracy 0.5    coverage 1.0   invalid 0.0
+  submission_id 1005084   2026-10-20T10:19:46 UTC  트랙 ['Small(N=14)']
+      Small(N=14) accuracy 0.5    coverage 1.0   invalid 0.0
+
+=== 리더보드 집계 분포 (accuracy 칸만 · 규칙 8) ===
+  Main(N=21)  유효 점수  749 · 최고 1.00 · 1.00   1건 · >=0.86   7건 · 중앙 0.52
+  Small(N=14) 유효 점수 1157 · 최고 1.00 · 1.00   9건 · >=0.86  53건 · 중앙 0.57
+
+=== [author]가 UI 에서 읽어야 하는 것 (API 로는 불가) ===
+  경로: codabench.org 로그인 → 상단 메뉴 'My Submissions'
+        (또는 대회 페이지 → My Submissions 탭). 'Submission ID' 열을 본다.
+  읽을 행 — 아래 넷은 리더보드에 없어서 ID 를 모른다:
+    1) sub2048.zip        Main   0.62 (13/21)   ← 관측된 우리 최고
+    2) sub2048-small.zip  Small  0.57 (8/14)
+    3) h15C-small.zip     Small  0.57            ← lencal 의 대조군
+    4) compass-small.zip  Small  0.57            ← 화이트박스 계열
+  이미 아는 ID 는 다시 찾을 필요 없다:
+    1000005  lencal.zip  Main 0.48
+    1000047  lencal-small.zip  Small 0.50
+    1005084  10/20 Small 0.50 — 파일 미확인(flipent-small 로 추정)

@@ -1,0 +1,275 @@
+[{"stream_name":"stdout","time":15.13847204,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.9/87.9 kB 2.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.747760101,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 314.9/314.9 MB 3.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.859772184,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 29.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.899934347,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.7/211.7 kB 9.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.477703061,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 31.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.519494089,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.7/322.7 kB 14.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.55780843,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.0/111.0 kB 5.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.589514205,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.4/45.4 kB 3.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.723416521,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 33.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.880436051,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 22.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":31.36985961,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.2/43.2 MB 21.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":31.434358294,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 729.6/729.6 kB 17.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":32.910577703,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.5/50.5 MB 22.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":32.966962455,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 755.8/755.8 kB 20.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":46.977721917,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 526.6/526.6 MB 3.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":47.031918748,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 51.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":47.129812178,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 96.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":48.232139943,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.2/90.2 MB 17.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":48.300131487,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 44.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":56.489416106,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 366.2/366.2 MB 4.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":61.218656907,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.1/170.1 MB 9.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":61.318137857,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 34.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.406787269,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.7/88.7 MB 16.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":65.251647912,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.3/88.3 MB 17.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":69.081231777,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.0/206.0 MB 8.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":70.072240354,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.4/60.4 MB 26.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":73.851421958,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 197.7/197.7 MB 8.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":90.675990857,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 423.1/423.1 MB 3.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":92.418486694,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 5.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":99.540123469,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 MB 7.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":99.609927031,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":101.305081616,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 MB 20.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":109.352474025,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.9/200.9 MB 7.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.169958618,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.9/145.9 MB 9.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.251019189,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 20.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.285249057,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.0/148.0 kB 7.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.366187029,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 21.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.469628453,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 24.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.705861666,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 28.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.83657875,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 27.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.878988804,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.7/365.7 kB 14.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":115.911950258,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 3.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":116.15296572,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 29.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":116.186968879,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.7/125.7 kB 7.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":116.639863745,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 20.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":116.832165348,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 16.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.046751541,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 3.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.082578507,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.1/140.1 kB 6.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.121230622,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.0/60.0 kB 2.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.162447961,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.3/206.3 kB 8.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.27467901,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.2/343.2 kB 9.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.362858652,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 14.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.39879057,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.0/79.0 kB 3.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.47477406,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 14.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":117.973967105,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 19.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":118.548842259,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 21.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":118.603165267,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 13.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":118.772582188,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 22.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":118.858682497,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 19.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":118.907116209,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 461.2/461.2 kB 13.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":118.946032925,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.8/149.8 kB 6.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":118.986969644,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 230.4/230.4 kB 9.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.047084856,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.7/94.7 kB 5.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.114349802,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 4.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.428510113,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 24.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.507044174,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.2/382.2 kB 12.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.60187654,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 808.1/808.1 kB 15.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.796557097,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 24.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.830125549,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 4.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.862758487,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 4.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":119.89565974,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 3.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":121.998778896,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 14.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":122.289136291,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 13.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":122.32378297,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 3.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":122.376375223,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 320.7/320.7 kB 8.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":127.720747523,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.9/99.9 MB 11.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":129.009043958,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.3/29.3 MB 20.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":129.068707488,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 3.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":129.244221841,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 24.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":130.87241637,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 MB 21.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":130.937075376,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 897.8/897.8 kB 19.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":131.166882343,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 31.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":131.198109669,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 3.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":131.232459474,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.7/108.7 kB 5.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":131.266456481,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.1/123.1 kB 6.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":131.441038454,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 33.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":132.846448363,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.5/42.5 MB 21.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":133.14441005,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 29.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":133.238189614,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.9/160.9 kB 9.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":135.588849772,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.6/72.6 MB 15.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":135.706353936,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 927.8/927.8 kB 20.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":337.106771868,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":337.106823837,"data":"bigframes 2.39.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":337.106828582,"data":"google-adk 1.29.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":337.106832117,"data":"grpcio-tools 1.71.2 requires protobuf\u003c6.0dev,\u003e=5.26.1, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106835572,"data":"ydata-profiling 4.18.4 requires numba\u003c0.63,\u003e=0.60, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106838934,"data":"dask-cuda 26.2.0 requires cuda-core==0.3.*, but you have cuda-core 1.2.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106842489,"data":"google-cloud-bigtable 2.36.0 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c7.0.0,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106845732,"data":"pylibcudf-cu12 26.2.1 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106848908,"data":"numba-cuda 0.22.2 requires cuda-core\u003c1.0.0,\u003e=0.3.2, but you have cuda-core 1.2.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106852017,"data":"libcuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106855157,"data":"rmm-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106858302,"data":"cuml-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106861389,"data":"cuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106864464,"data":"cuml-cu12 26.2.0 requires numba\u003c0.62.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106867565,"data":"pylibraft-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106870655,"data":"cuvs-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106874819,"data":"google-ai-generativelanguage 0.6.15 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c6.0.0dev,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106879215,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106882362,"data":"google-cloud-discoveryengine 0.13.12 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c7.0.0,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106929767,"data":"google-cloud-aiplatform 1.148.1 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c7.0.0,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106937003,"data":"cudf-cu12 26.2.1 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106940727,"data":"cudf-cu12 26.2.1 requires cuda-toolkit[nvcc,nvrtc]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106944507,"data":"cudf-cu12 26.2.1 requires numba\u003c0.62.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106949899,"data":"libcuvs-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106956356,"data":"libraft-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106959075,"data":"grpcio-status 1.71.2 requires protobuf\u003c6.0dev,\u003e=5.26.1, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106961587,"data":"google-adk 1.29.0 requires mcp\u003c2.0.0,\u003e=1.23.0, but you have mcp 2.2.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106963974,"data":"google-adk 1.29.0 requires opentelemetry-api\u003c1.39.0,\u003e=1.36.0, but you have opentelemetry-api 1.45.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.10696646,"data":"google-adk 1.29.0 requires opentelemetry-sdk\u003c1.39.0,\u003e=1.36.0, but you have opentelemetry-sdk 1.45.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106968843,"data":"google-adk 1.29.0 requires starlette\u003c1.0.0,\u003e=0.49.1, but you have starlette 1.7.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106971298,"data":"opentelemetry-exporter-gcp-logging 1.11.0a0 requires opentelemetry-sdk\u003c1.39.0,\u003e=1.35.0, but you have opentelemetry-sdk 1.45.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":337.106973784,"data":"gradio 5.50.0 requires starlette\u003c1.0,\u003e=0.40.0, but you have starlette 1.7.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":344.870562504,"data":"rename   : Alice has 12 apples and $t + u = 7$. Bob computes the remainder when $C$ is divided by $9$. How many apples remain?\n"}
+,{"stream_name":"stdout","time":344.87061619,"data":"typos    : Alice has 12 apples and $x + y = 7$. Bob computes the rmeainder when $N$ is dviided by $9$. How many apples rmeain?\n"}
+,{"stream_name":"stdout","time":344.870622702,"data":"distract : Alice has 12 apples and $x + y = 7$. Bob computes the remainder when $N$ is divided by $9$. How many apples remain? Note that the problem was originally posed at a regional competition in 2019.\n"}
+,{"stream_name":"stdout","time":344.871794456,"data":"[바뀌면 안 되는 절차형] The sum of \\frac{1}{2} and \\frac{1}{3} is added to 7. A second number equals 20. The total is divided by 4. What is the result?\n"}
+,{"stream_name":"stdout","time":344.871862222,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":344.872126899,"data":"  notation: The sum of 1/2 and 1/3 is added to 7. A second number equals 20. The total is divided by 4. What is the result?\n"}
+,{"stream_name":"stdout","time":344.872227725,"data":"  → 채택 : [('notation', 'The sum of 1/2 and 1/3 is added to 7. A second number equals…', False), ('format', 'The sum of \\\\frac{1}{2} and \\\\frac{1}{3} is added to 7. A seco…', True)]\n"}
+,{"stream_name":"stdout","time":344.872236692,"data":"\n"}
+,{"stream_name":"stdout","time":344.872251514,"data":"[안전한 조건형] Alice has 12 apples. Bob has three times as many apples as Alice. Carol has $5$ fewer apples than Bob. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":344.872349861,"data":"  reorder : Carol has $5$ fewer apples than Bob. Bob has three times as many apples as Alice. Alice has 12 apples. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":344.872374488,"data":"  notation: Alice has twelve apples. Bob has three times as many apples as Alice. Carol has $5$ fewer apples than Bob. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":344.872589124,"data":"  → 채택 : [('reorder', 'Carol has $5$ fewer apples than Bob. Bob has three times as …', False), ('notation', 'Alice has twelve apples. Bob has three times as many apples …', False)]\n"}
+,{"stream_name":"stdout","time":344.872606464,"data":"\n"}
+,{"stream_name":"stdout","time":344.872611568,"data":"[짧은 문제] Let $f(x) = x^2 + 3x$. Find $f(4)$.\n"}
+,{"stream_name":"stdout","time":344.872615766,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":344.872619444,"data":"  notation: (적용 불가)\n"}
+,{"stream_name":"stdout","time":344.87270607,"data":"  → 채택 : [('format', 'Let $f(x) = x^2 + 3x$. Find $f(4)$.', True), ('format2', 'Let $f(x) = x^2 + 3x$. Find $f(4)$.', True)]\n"}
+,{"stream_name":"stdout","time":344.872715956,"data":"\n"}
+,{"stream_name":"stdout","time":344.87272033,"data":"[분수 보호] A recipe uses \\frac{3}{4} cup of sugar and 25 grams of salt. The baker triples the recipe. How much sugar is used?\n"}
+,{"stream_name":"stdout","time":344.872821938,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":344.87287368,"data":"  notation: A recipe uses 3/4 cup of sugar and twenty-five grams of salt. The baker triples the recipe. How much sugar is used?\n"}
+,{"stream_name":"stdout","time":344.872970682,"data":"  → 채택 : [('notation', 'A recipe uses 3/4 cup of sugar and twenty-five grams of salt…', False), ('format', 'A recipe uses \\\\frac{3}{4} cup of sugar and 25 grams of salt.…', True)]\n"}
+,{"stream_name":"stdout","time":344.87298533,"data":"\n"}
+,{"stream_name":"stdout","time":344.873348139,"data":"답 추출: -12 1234 42\n"}
+,{"stream_name":"stdout","time":344.8733593,"data":"자체 검사 통과\n"}
+,{"stream_name":"stdout","time":349.193444621,"data":"문제 50개 (후보 724 · Level 5 · v2 중복 제거 후)\n"}
+,{"stream_name":"stdout","time":380.450609227,"data":"[vLLM] allenai/Olmo-3-7B-Think · tensor_parallel=2 · max_num_seqs=48 · max_new=6144\n"}
+,{"stream_name":"stderr","time":380.686314709,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":397.356295058,"data":"WARNING 09-29 18:45:58 [model.py:2364] Casting torch.bfloat16 to torch.float16.\n"}
+,{"stream_name":"stdout","time":452.184083424,"data":"(Worker pid=219) WARNING 09-29 18:46:53 [symm_mem.py:67] SymmMemCommunicator: Device capability 7.5 not supported, communicator is not available.\n"}
+,{"stream_name":"stdout","time":452.184129465,"data":"(Worker pid=220) WARNING 09-29 18:46:53 [symm_mem.py:67] SymmMemCommunicator: Device capability 7.5 not supported, communicator is not available.\n"}
+,{"stream_name":"stdout","time":452.218278061,"data":"(Worker pid=219) WARNING 09-29 18:46:53 [flashinfer_all_reduce.py:383] FlashInfer All Reduce is disabled because it is not supported for world_size=2.\n"}
+,{"stream_name":"stdout","time":452.665791324,"data":"(Worker pid=220) WARNING 09-29 18:46:54 [flashinfer_all_reduce.py:383] FlashInfer All Reduce is disabled because it is not supported for world_size=2.\n"}
+,{"stream_name":"stdout","time":455.452538299,"data":"(Worker_TP0 pid=219) ERROR 09-29 18:46:57 [fa_utils.py:212] Cannot use FA version 2 is not supported due to FA2 is only supported on devices with compute capability \u003e= 8\n"}
+,{"stream_name":"stdout","time":455.603495027,"data":"(Worker_TP1 pid=220) ERROR 09-29 18:46:57 [fa_utils.py:212] Cannot use FA version 2 is not supported due to FA2 is only supported on devices with compute capability \u003e= 8\n"}
+,{"stream_name":"stderr","time":456.107106122,"data":"(Worker_TP0 pid=219) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":456.155377565,"data":"(Worker_TP1 pid=220) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":536.640994716,"data":"(Worker_TP0 pid=219) \rLoading safetensors checkpoint shards:   0% Completed | 0/3 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":548.014982208,"data":"(Worker_TP0 pid=219) \rLoading safetensors checkpoint shards:  33% Completed | 1/3 [00:11\u003c00:22, 11.37s/it]\n"}
+,{"stream_name":"stderr","time":558.575182568,"data":"(Worker_TP0 pid=219) \rLoading safetensors checkpoint shards:  67% Completed | 2/3 [00:21\u003c00:10, 10.90s/it]\n"}
+,{"stream_name":"stderr","time":576.909336171,"data":"(Worker_TP0 pid=219) \rLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:40\u003c00:00, 14.29s/it]\n"}
+,{"stream_name":"stderr","time":576.910955267,"data":"(Worker_TP0 pid=219) \rLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:40\u003c00:00, 13.42s/it]\n"}
+,{"stream_name":"stderr","time":576.910966496,"data":"(Worker_TP0 pid=219) \n"}
+,{"stream_name":"stdout","time":577.752576728,"data":"(Worker_TP0 pid=219) WARNING 09-29 18:48:59 [topk_topp_sampler.py:85] FlashInfer top-p/top-k sampling unavailable: unsupported compute capability 7.5; falling back. Set VLLM_USE_FLASHINFER_SAMPLER=0 to silence.\n"}
+,{"stream_name":"stdout","time":592.763752262,"data":"(Worker_TP1 pid=220) WARNING 09-29 18:49:14 [backends.py:1053] Failed to read file \u003cfrozen _collections_abc\u003e\n"}
+,{"stream_name":"stdout","time":593.034465359,"data":"(Worker_TP0 pid=219) WARNING 09-29 18:49:14 [backends.py:1053] Failed to read file \u003cfrozen _collections_abc\u003e\n"}
+,{"stream_name":"stderr","time":595.121346104,"data":"(Worker_TP1 pid=220) [rank1]:W0929 18:49:16.681000 220 torch/_inductor/utils.py:1953] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":595.416683215,"data":"(Worker_TP0 pid=219) [rank0]:W0929 18:49:16.977000 219 torch/_inductor/utils.py:1953] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stdout","time":612.035520044,"data":"(Worker_TP1 pid=220) WARNING 09-29 18:49:33 [decorators.py:724] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/feb15de6a3eef159710d22cb600bd3c18a5bcaf741baa86f9782c73146c1a5c8/rank_1_0/model: Can't pickle \u003cfunction Olmo3Model.forward at 0x796158470680\u003e: it's not the same object as transformers.models.olmo3.modeling_olmo3.Olmo3Model.forward\n"}
+,{"stream_name":"stdout","time":612.065799372,"data":"(Worker_TP0 pid=219) WARNING 09-29 18:49:33 [decorators.py:724] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/feb15de6a3eef159710d22cb600bd3c18a5bcaf741baa86f9782c73146c1a5c8/rank_0_0/model: Can't pickle \u003cfunction Olmo3Model.forward at 0x794c9c20d260\u003e: it's not the same object as transformers.models.olmo3.modeling_olmo3.Olmo3Model.forward\n"}
+,{"stream_name":"stderr","time":627.23977258,"data":"(Worker_TP0 pid=219) \rCapturing CUDA graphs (PIECEWISE):   0%|          | 0/15 [00:00\u003c?, ?it/s]\rCapturing CUDA graphs (PIECEWISE):   7%|▋         | 1/15 [00:02\u003c00:29,  2.11s/it]\rCapturing CUDA graphs (PIECEWISE):  13%|█▎        | 2/15 [00:02\u003c00:12,  1.03it/s]\rCapturing CUDA graphs (PIECEWISE):  20%|██        | 3/15 [00:02\u003c00:07,  1.68it/s]\rCapturing CUDA graphs (PIECEWISE):  27%|██▋       | 4/15 [00:02\u003c00:04,  2.41it/s]\rCapturing CUDA graphs (PIECEWISE):  33%|███▎      | 5/15 [00:02\u003c00:03,  3.18it/s]\rCapturing CUDA graphs (PIECEWISE):  40%|████      | 6/15 [00:02\u003c00:02,  3.99it/s]\rCapturing CUDA graphs (PIECEWISE):  47%|████▋     | 7/15 [00:02\u003c00:01,  4.57it/s]\rCapturing CUDA graphs (PIECEWISE):  53%|█████▎    | 8/15 [00:04\u003c00:05,  1.28it/s]\rCapturing CUDA graphs (PIECEWISE):  60%|██████    | 9/15 [00:05\u003c00:03,  1.73it/s]\rCapturing CUDA graphs (PIECEWISE):  67%|██████▋   | 10/15 [00:05\u003c00:02,  2.28it/s]\rCapturing CUDA graphs (PIECEWISE):  73%|███████▎  | 11/15 [00:05\u003c00:01,  2.93it/s]\rCapturing CUDA graphs (PIECEWISE):  80%|████████  | 12/15 [00:07\u003c00:02,  1.31it/s]\rCapturing CUDA graphs (PIECEWISE):  87%|████████▋ | 13/15 [00:07\u003c00:01,  1.75it/s]\rCapturing CUDA graphs (PIECEWISE):  93%|█████████▎| 14/15 [00:07\u003c00:00,  2.29it/s]\rCapturing CUDA graphs (PIECEWISE): 100%|██████████| 15/15 [00:09\u003c00:00,  1.21it/s]\rCapturing CUDA graphs (PIECEWISE): 100%|██████████| 15/15 [00:09\u003c00:00,  1.66it/s]\n"}
+,{"stream_name":"stderr","time":627.496217759,"data":"(Worker_TP0 pid=219) \rCapturing CUDA graphs (FULL):   0%|          | 0/2 [00:00\u003c?, ?it/s]\rCapturing CUDA graphs (FULL):  50%|█████     | 1/2 [00:00\u003c00:00,  7.56it/s]\rCapturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00\u003c00:00,  7.87it/s]\rCapturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00\u003c00:00,  7.81it/s]\n"}
+,{"stream_name":"stdout","time":631.927580941,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366] EngineCore failed to start.\r\n"}
+,{"stream_name":"stdout","time":631.927621139,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366] Traceback (most recent call last):\r\n"}
+,{"stream_name":"stdout","time":631.927624953,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1328, in run_engine_core\r\n"}
+,{"stream_name":"stdout","time":631.927628157,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)\r\n"}
+,{"stream_name":"stdout","time":631.927649242,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":631.927653647,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py\", line 178, in sync_wrapper\r\n"}
+,{"stream_name":"stdout","time":631.92765815,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     return func(*args, **kwargs)\r\n"}
+,{"stream_name":"stdout","time":631.92766215,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]            ^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":631.927666387,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1085, in __init__\r\n"}
+,{"stream_name":"stdout","time":631.927670858,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     super().__init__(\r\n"}
+,{"stream_name":"stdout","time":631.927675207,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 145, in __init__\r\n"}
+,{"stream_name":"stdout","time":631.927690314,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     kv_cache_config = self._initialize_kv_caches(vllm_config)\r\n"}
+,{"stream_name":"stdout","time":631.927694389,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":631.927698024,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py\", line 178, in sync_wrapper\r\n"}
+,{"stream_name":"stdout","time":631.927701864,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     return func(*args, **kwargs)\r\n"}
+,{"stream_name":"stdout","time":631.927707219,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]            ^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":631.927715594,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 319, in _initialize_kv_caches\r\n"}
+,{"stream_name":"stdout","time":631.927718536,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     kv_cache_configs = get_kv_cache_configs(\r\n"}
+,{"stream_name":"stdout","time":631.927720912,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]                        ^^^^^^^^^^^^^^^^^^^^^\r\n"}
+,{"stream_name":"stdout","time":631.927723354,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/core/kv_cache_utils.py\", line 2737, in get_kv_cache_configs\r\n"}
+,{"stream_name":"stdout","time":631.927725934,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     _check_enough_kv_cache_memory(\r\n"}
+,{"stream_name":"stdout","time":631.92772826,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/core/kv_cache_utils.py\", line 899, in _check_enough_kv_cache_memory\r\n"}
+,{"stream_name":"stdout","time":631.927730844,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366]     raise ValueError(\r\n"}
+,{"stream_name":"stdout","time":631.927735574,"data":"(EngineCore pid=179) ERROR 09-29 18:49:53 [core.py:1366] ValueError: To serve at least one request with the model's max seq len (65536), (7.75 GiB KV cache is needed, which is larger than the available KV cache memory (5.37 GiB). Based on the available memory, the estimated maximum model length is 26560. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.\n"}
+,{"stream_name":"stdout","time":636.112199756,"data":"(EngineCore pid=179) ERROR 09-29 18:49:57 [multiproc_executor.py:314] Worker proc VllmWorker-1 died unexpectedly (exit code: None), shutting down executor.\n"}
+,{"stream_name":"stderr","time":636.56730415,"data":"(EngineCore pid=179) Process EngineCore:\n"}
+,{"stream_name":"stderr","time":636.568495941,"data":"(EngineCore pid=179) Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":636.568850447,"data":"(EngineCore pid=179)   File \"/usr/lib/python3.12/multiprocessing/process.py\", line 314, in _bootstrap\n"}
+,{"stream_name":"stderr","time":636.568898328,"data":"(EngineCore pid=179)     self.run()\n"}
+,{"stream_name":"stderr","time":636.568908169,"data":"(EngineCore pid=179)   File \"/usr/lib/python3.12/multiprocessing/process.py\", line 108, in run\n"}
+,{"stream_name":"stderr","time":636.568914111,"data":"(EngineCore pid=179)     self._target(*self._args, **self._kwargs)\n"}
+,{"stream_name":"stderr","time":636.568934284,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1370, in run_engine_core\n"}
+,{"stream_name":"stderr","time":636.56893952,"data":"(EngineCore pid=179)     raise e\n"}
+,{"stream_name":"stderr","time":636.568943627,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1328, in run_engine_core\n"}
+,{"stream_name":"stderr","time":636.568947769,"data":"(EngineCore pid=179)     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)\n"}
+,{"stream_name":"stderr","time":636.568961398,"data":"(EngineCore pid=179)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":636.568967101,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py\", line 178, in sync_wrapper\n"}
+,{"stream_name":"stderr","time":636.568971362,"data":"(EngineCore pid=179)     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":636.568975355,"data":"(EngineCore pid=179)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":636.568979415,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 1085, in __init__\n"}
+,{"stream_name":"stderr","time":636.568983564,"data":"(EngineCore pid=179)     super().__init__(\n"}
+,{"stream_name":"stderr","time":636.568989816,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 145, in __init__\n"}
+,{"stream_name":"stderr","time":636.568993974,"data":"(EngineCore pid=179)     kv_cache_config = self._initialize_kv_caches(vllm_config)\n"}
+,{"stream_name":"stderr","time":636.568997925,"data":"(EngineCore pid=179)                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":636.569001698,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py\", line 178, in sync_wrapper\n"}
+,{"stream_name":"stderr","time":636.569005854,"data":"(EngineCore pid=179)     return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":636.569009768,"data":"(EngineCore pid=179)            ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":636.569013128,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py\", line 319, in _initialize_kv_caches\n"}
+,{"stream_name":"stderr","time":636.569016836,"data":"(EngineCore pid=179)     kv_cache_configs = get_kv_cache_configs(\n"}
+,{"stream_name":"stderr","time":636.56902046,"data":"(EngineCore pid=179)                        ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":636.569028932,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/core/kv_cache_utils.py\", line 2737, in get_kv_cache_configs\n"}
+,{"stream_name":"stderr","time":636.569032476,"data":"(EngineCore pid=179)     _check_enough_kv_cache_memory(\n"}
+,{"stream_name":"stderr","time":636.569034749,"data":"(EngineCore pid=179)   File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/core/kv_cache_utils.py\", line 899, in _check_enough_kv_cache_memory\n"}
+,{"stream_name":"stderr","time":636.569037255,"data":"(EngineCore pid=179)     raise ValueError(\n"}
+,{"stream_name":"stderr","time":636.569039541,"data":"(EngineCore pid=179) ValueError: To serve at least one request with the model's max seq len (65536), (7.75 GiB KV cache is needed, which is larger than the available KV cache memory (5.37 GiB). Based on the available memory, the estimated maximum model length is 26560. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.\n"}
+,{"stream_name":"stderr","time":638.497462881,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":638.497498648,"data":"  File \"/kaggle/src/script.py\", line 497, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":638.497968787,"data":"    main()\n"}
+,{"stream_name":"stderr","time":638.497986055,"data":"  File \"/kaggle/src/script.py\", line 483, in main\n"}
+,{"stream_name":"stderr","time":638.498236769,"data":"    store = vllm_stage(m, probs, a.max_new, a.n_official, a.n_unofficial, a.max_seqs, js)\n"}
+,{"stream_name":"stderr","time":638.498468327,"data":"            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":638.498484741,"data":"  File \"/kaggle/src/script.py\", line 373, in vllm_stage\n"}
+,{"stream_name":"stderr","time":638.498765639,"data":"    llm = LLM(model=model_id, dtype=\"half\", tensor_parallel_size=tp, max_num_seqs=max_seqs,\n"}
+,{"stream_name":"stderr","time":638.498974625,"data":"          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":638.499002392,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/entrypoints/llm.py\", line 343, in __init__\n"}
+,{"stream_name":"stderr","time":638.499270822,"data":"    self.llm_engine = LLMEngine.from_engine_args(\n"}
+,{"stream_name":"stderr","time":638.499325227,"data":"                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":638.499369019,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/llm_engine.py\", line 184, in from_engine_args\n"}
+,{"stream_name":"stderr","time":638.499528926,"data":"    return cls(\n"}
+,{"stream_name":"stderr","time":638.499536213,"data":"           ^^^^\n"}
+,{"stream_name":"stderr","time":638.499539915,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/llm_engine.py\", line 109, in __init__\n"}
+,{"stream_name":"stderr","time":638.499704647,"data":"    self.engine_core = EngineCoreClient.make_client(\n"}
+,{"stream_name":"stderr","time":638.499759508,"data":"                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":638.499785237,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py\", line 122, in make_client\n"}
+,{"stream_name":"stderr","time":638.499975039,"data":"    return SyncMPClient(\n"}
+,{"stream_name":"stderr","time":638.500002466,"data":"           ^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":638.500015491,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py\", line 178, in sync_wrapper\n"}
+,{"stream_name":"stderr","time":638.500229087,"data":"    return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":638.500259784,"data":"           ^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":638.500290673,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py\", line 880, in __init__\n"}
+,{"stream_name":"stderr","time":638.500576245,"data":"    super().__init__(\n"}
+,{"stream_name":"stderr","time":638.500592242,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core_client.py\", line 656, in __init__\n"}
+,{"stream_name":"stderr","time":638.500841518,"data":"    with launch_core_engines(\n"}
+,{"stream_name":"stderr","time":638.50086143,"data":"         ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":638.500875365,"data":"  File \"/usr/lib/python3.12/contextlib.py\", line 144, in __exit__\n"}
+,{"stream_name":"stderr","time":638.501079357,"data":"    next(self.gen)\n"}
+,{"stream_name":"stderr","time":638.501092556,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py\", line 1240, in launch_core_engines\n"}
+,{"stream_name":"stderr","time":638.501395142,"data":"    wait_for_engine_startup(\n"}
+,{"stream_name":"stderr","time":638.50140274,"data":"  File \"/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/utils.py\", line 1320, in wait_for_engine_startup\n"}
+,{"stream_name":"stderr","time":638.501799735,"data":"    raise RuntimeError(\n"}
+,{"stream_name":"stderr","time":638.501807703,"data":"RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}\n"}
+,{"stream_name":"stderr","time":639.483542012,"data":"/usr/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 2 leaked shared_memory objects to clean up at shutdown\n"}
+,{"stream_name":"stderr","time":639.483573985,"data":"  warnings.warn('resource_tracker: There appear to be %d '\n"}
+,{"stream_name":"stderr","time":642.711616551,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":642.711650393,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":642.942703871,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":642.942734463,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":643.703612782,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":645.028383428,"data":"[NbConvertApp] Writing 401761 bytes to __results__.html\n"}
+]

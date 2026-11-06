@@ -1,0 +1,41 @@
+H5 암기 신호 · 사전등록 부호: robust 점수 = +nll, −mink20, −minkpp20, +nll_2nd, +zlib  (perms=30)
+
+(a) v2 33문제, 계측기별 (라벨은 문제 단위)
+== Qwen3_5-4B  (n=33, robust 20)
+  nll                                AUC 0.673 bacc 0.583  null[0.32,0.72]   ρ(len)-0.44  길이잔차AUC 0.581
+  mink20                             AUC 0.604 bacc 0.583  null[0.34,0.69]   ρ(len)-0.32  길이잔차AUC 0.577
+  minkpp20                           AUC 0.462 bacc 0.456  null[0.37,0.69]   ρ(len)-0.27  길이잔차AUC 0.335
+  nll_2nd                            AUC 0.635 bacc 0.583  null[0.34,0.71]   ρ(len)-0.44  길이잔차AUC 0.523
+  zlib                               AUC 0.504 bacc 0.519  null[0.33,0.61]   ρ(len)+0.25  길이잔차AUC 0.531
+== Skywork-OR1-Math-7B  (n=33, robust 20)
+  nll                                AUC 0.704 bacc 0.646  null[0.31,0.68]▲  ρ(len)-0.66  길이잔차AUC 0.615
+  mink20                             AUC 0.685 bacc 0.646  null[0.34,0.67]▲  ρ(len)-0.65  길이잔차AUC 0.596
+  minkpp20                           AUC 0.454 bacc 0.456  null[0.32,0.70]   ρ(len)+0.01  길이잔차AUC 0.469
+  nll_2nd                            AUC 0.585 bacc 0.519  null[0.35,0.66]   ρ(len)-0.42  길이잔차AUC 0.515
+  zlib                               AUC 0.527 bacc 0.646  null[0.32,0.67]   ρ(len)-0.29  길이잔차AUC 0.542
+== Olmo-3-7B-Think  (n=33, robust 20)
+  nll                                AUC 0.692 bacc 0.583  null[0.40,0.69]▲  ρ(len)-0.54  길이잔차AUC 0.635
+  mink20                             AUC 0.638 bacc 0.583  null[0.33,0.66]   ρ(len)-0.48  길이잔차AUC 0.562
+  minkpp20                           AUC 0.465 bacc 0.456  null[0.30,0.72]   ρ(len)-0.26  길이잔차AUC 0.396
+  nll_2nd                            AUC 0.665 bacc 0.583  null[0.34,0.67]   ρ(len)-0.56  길이잔차AUC 0.527
+  zlib                               AUC 0.512 bacc 0.519  null[0.32,0.69]   ρ(len)+0.29  길이잔차AUC 0.542
+   자기 행만 (n=9, robust 7): nll 0.71  mink20 0.64  minkpp20 0.50  nll_2nd 0.57  zlib 0.79
+== DeepSeek-R1-0528-Qwen3-8B  (n=33, robust 20)
+  nll                                AUC 0.658 bacc 0.519  null[0.26,0.69]   ρ(len)-0.52  길이잔차AUC 0.588
+  mink20                             AUC 0.635 bacc 0.583  null[0.33,0.67]   ρ(len)-0.50  길이잔차AUC 0.585
+  minkpp20                           AUC 0.454 bacc 0.519  null[0.32,0.65]   ρ(len)-0.33  길이잔차AUC 0.415
+  nll_2nd                            AUC 0.573 bacc 0.456  null[0.30,0.70]   ρ(len)-0.58  길이잔차AUC 0.492
+  zlib                               AUC 0.500 bacc 0.519  null[0.31,0.69]   ρ(len)+0.10  길이잔차AUC 0.504
+   자기 행만 (n=10, robust 7): nll 0.67  mink20 0.62  minkpp20 0.57  nll_2nd 0.62  zlib 0.48
+== 4모델 z-평균 풀링 (n=33)
+  nll                                AUC 0.688 bacc 0.583  null[0.30,0.71]   ρ(len)-0.57  길이잔차AUC 0.612
+  mink20                             AUC 0.650 bacc 0.519  null[0.31,0.75]   ρ(len)-0.51  길이잔차AUC 0.585
+  minkpp20                           AUC 0.446 bacc 0.456  null[0.35,0.64]   ρ(len)-0.33  길이잔차AUC 0.392
+  nll_2nd                            AUC 0.608 bacc 0.583  null[0.26,0.65]   ρ(len)-0.51  길이잔차AUC 0.515
+  zlib                               AUC 0.527 bacc 0.519  null[0.30,0.71]   ρ(len)+0.10  길이잔차AUC 0.531
+
+(c) 외부검증: MATH137로 학습 → v2 33 시험 (5특징 로지스틱 + 길이 대조군)
+  Qwen3_5-4B                     5특징 AUC 0.312 bacc 0.363  null[0.24,0.78]    길이만 AUC 0.331
+  Skywork-OR1-Math-7B            5특징 AUC 0.338 bacc 0.313  null[0.26,0.75]    길이만 AUC 0.331
+  Olmo-3-7B-Think                5특징 AUC 0.342 bacc 0.275  null[0.31,0.69]    길이만 AUC 0.331
+  DeepSeek-R1-0528-Qwen3-8B      5특징 AUC 0.350 bacc 0.352  null[0.34,0.75]    길이만 AUC 0.331

@@ -1,0 +1,72 @@
+[conf] 모델 4종 · 문제 33 (robust 20/spurious 13) · null 1000회 · ▲▼ 는 사전등록 부호 기준
+모델                         지표               n   robust평균   spurious평균    AUC        null95%     길이잔차
+DeepSeek-R1-0528-Qwen3-8B  ans_logprob   * 33     -5.542       -7.041  0.650 [0.30,0.71]     0.623
+DeepSeek-R1-0528-Qwen3-8B  drop          * 32      0.120       -0.035  0.802 [0.31,0.70]▲    0.688
+Olmo-3-7B-Think            ans_logprob   * 33    -13.281      -11.901  0.427 [0.29,0.70]     0.446
+Olmo-3-7B-Think            drop          * 32      0.154        0.363  0.466 [0.29,0.71]     0.462
+Qwen3_5-4B                 ans_logprob   * 33     -4.985       -4.629  0.365 [0.31,0.70]     0.358
+Qwen3_5-4B                 drop          * 32      0.194        0.062  0.636 [0.31,0.70]     0.607
+Skywork-OR1-Math-7B        ans_logprob   * 33     -7.339       -5.966  0.304 [0.30,0.69]     0.373
+Skywork-OR1-Math-7B        drop          * 32      0.282       -0.013  0.741 [0.30,0.71]▲    0.672
+   * = 사전등록 주지표
+
+[conf] 모델 간 분리력 — 같은 문제에서 robust 모델 점수 > spurious 모델 점수인 쌍의 비율
+   ans_logprob    갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   drop           갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+
+[gen] 모델 4종 · 문제 33 (robust 20/spurious 13) · null 1000회 · ▲▼ 는 사전등록 부호 기준
+모델                         지표               n   robust평균   spurious평균    AUC        null95%     길이잔차
+DeepSeek-R1-0528-Qwen3-8B  mean_entropy  * 33      0.276        0.322  0.623 [0.30,0.71]     0.569
+DeepSeek-R1-0528-Qwen3-8B  mean_logprob    33     -0.134       -0.156  0.635 [0.30,0.71]     0.577
+DeepSeek-R1-0528-Qwen3-8B  mink_logprob    33     -0.767       -0.823  0.623 [0.30,0.72]     0.535
+DeepSeek-R1-0528-Qwen3-8B  hi_ent_frac     33      0.096        0.113  0.587 [0.29,0.71]     0.504
+Olmo-3-7B-Think            mean_entropy  * 33      0.296        0.336  0.608 [0.29,0.72]     0.496
+Olmo-3-7B-Think            mean_logprob    33     -0.146       -0.165  0.585 [0.29,0.72]     0.508
+Olmo-3-7B-Think            mink_logprob    33     -0.774       -0.810  0.554 [0.30,0.71]     0.485
+Olmo-3-7B-Think            hi_ent_frac     33      0.095        0.115  0.558 [0.30,0.71]     0.500
+Qwen3_5-4B                 mean_entropy  * 33      0.296        0.331  0.650 [0.31,0.72]     0.612
+Qwen3_5-4B                 mean_logprob    33     -0.145       -0.159  0.615 [0.31,0.72]     0.577
+Qwen3_5-4B                 mink_logprob    33     -0.836       -0.876  0.604 [0.30,0.71]     0.588
+Qwen3_5-4B                 hi_ent_frac     33      0.103        0.118  0.617 [0.31,0.71]     0.585
+Skywork-OR1-Math-7B        mean_entropy  * 33      0.147        0.165  0.658 [0.30,0.71]     0.550
+Skywork-OR1-Math-7B        mean_logprob    33     -0.072       -0.080  0.654 [0.30,0.71]     0.523
+Skywork-OR1-Math-7B        mink_logprob    33     -0.560       -0.588  0.619 [0.30,0.70]     0.538
+Skywork-OR1-Math-7B        hi_ent_frac     33      0.037        0.042  0.585 [0.30,0.70]     0.488
+   * = 사전등록 주지표
+
+[gen] 모델 간 분리력 — 같은 문제에서 robust 모델 점수 > spurious 모델 점수인 쌍의 비율
+   mean_entropy   갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   mean_logprob   갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   mink_logprob   갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   hi_ent_frac    갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+
+[sens] 모델 4종 · 문제 33 (robust 20/spurious 13) · null 1000회 · ▲▼ 는 사전등록 부호 기준
+모델                         지표               n   robust평균   spurious평균    AUC        null95%     길이잔차
+DeepSeek-R1-0528-Qwen3-8B  h21p          * 32     -0.034       -0.195  0.789 [0.31,0.72]▲    0.753
+DeepSeek-R1-0528-Qwen3-8B  d_irrel         33      0.150        0.160  0.615 [0.31,0.70]     0.669
+DeepSeek-R1-0528-Qwen3-8B  d_irrel_signed  33      0.101        0.064  0.469 [0.28,0.71]     0.515
+DeepSeek-R1-0528-Qwen3-8B  d_rename        31      0.060        0.011  0.397 [0.29,0.71]     0.410
+DeepSeek-R1-0528-Qwen3-8B  d_typos         33      0.147        0.116  0.508 [0.30,0.70]     0.577
+Olmo-3-7B-Think            h21p          * 32     -0.125        0.141  0.466 [0.29,0.70]     0.494
+Olmo-3-7B-Think            d_irrel         33      0.268        0.222  0.408 [0.29,0.69]     0.546
+Olmo-3-7B-Think            d_irrel_signed  33     -0.098        0.012  0.604 [0.30,0.70]     0.608
+Olmo-3-7B-Think            d_rename        31      0.005        0.058  0.530 [0.29,0.72]     0.547
+Olmo-3-7B-Think            d_typos         33     -0.201       -0.035  0.619 [0.30,0.70]     0.619
+Qwen3_5-4B                 h21p          * 32      0.055       -0.071  0.583 [0.29,0.72]     0.563
+Qwen3_5-4B                 d_irrel         33      0.141        0.134  0.377 [0.28,0.70]     0.373
+Qwen3_5-4B                 d_irrel_signed  33      0.004        0.044  0.508 [0.31,0.70]     0.442
+Qwen3_5-4B                 d_rename        31     -0.004       -0.023  0.457 [0.28,0.71]     0.419
+Qwen3_5-4B                 d_typos         33      0.016        0.110  0.588 [0.32,0.69]     0.531
+Skywork-OR1-Math-7B        h21p          * 32      0.037       -0.151  0.640 [0.30,0.71]     0.632
+Skywork-OR1-Math-7B        d_irrel         33      0.234        0.139  0.362 [0.30,0.69]     0.431
+Skywork-OR1-Math-7B        d_irrel_signed  33     -0.024       -0.066  0.492 [0.30,0.71]     0.442
+Skywork-OR1-Math-7B        d_rename        31      0.137       -0.032  0.470 [0.29,0.71]     0.444
+Skywork-OR1-Math-7B        d_typos         33     -0.163       -0.101  0.619 [0.30,0.70]     0.504
+   * = 사전등록 주지표
+
+[sens] 모델 간 분리력 — 같은 문제에서 robust 모델 점수 > spurious 모델 점수인 쌍의 비율
+   h21p           갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   d_irrel        갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   d_irrel_signed 갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   d_rename       갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)
+   d_typos        갈리는 쌍   0 · 맞춘 비율 -  (모델 자기 라벨이 갈리는 같은 문제가 없다)

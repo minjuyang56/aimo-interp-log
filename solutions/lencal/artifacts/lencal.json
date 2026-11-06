@@ -1,0 +1,16 @@
+{
+  "thr": -4.197173680708696,
+  "target_true_rate": 0.6060606060606061,
+  "k": 20,
+  "n_train": 33,
+  "n_robust": 20,
+  "achieved_true_rate": 0.6060606060606061,
+  "tie_at_boundary": false,
+  "train_acc": 0.6363636363636364,
+  "boundary_scores": [
+    -4.189654742026425,
+    -4.204692619390966
+  ],
+  "rule": "thr = midpoint of the k-th and (k+1)-th scores in descending order, k = round(label robust rate x n). Score = -log(word count), identical to h15C.",
+  "note": "Pre-registered 2026-10-15 (#FINAL-PLAN). Calibration, not ranking: this score's AUC 0.671 did not clear its shuffle-null upper bound 0.70 on these 33 problems (#ORG-TRAIN). Never tuned on leaderboard scores."
+}

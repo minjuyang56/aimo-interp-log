@@ -1,0 +1,22 @@
+rename 기호 충돌 — 자체 라벨에 섞인 '정답 미보존' 변형
+
+## skywork_labels_merged — 라벨 88건 (spurious 26)
+
+  충돌이 있는 문제 **1건** (1%)
+    그중 spurious 로 라벨된 것 1건 / 전체 spurious 26건 = 4%
+    그중 **rename 이 라벨을 결정한** 것 **1건** → 이 라벨은 신뢰할 수 없다 (전체 라벨의 1%)
+
+  라벨이 깨진 변형에 끌려간 문제:
+    pidx  16 · max_drop 0.5 · var_acc {'rename': 0.5, 'typos': 1.0, 'distract': 1.0} · 충돌 ['n->m']
+      원본 If $f(c)=\frac{3}{2c-3}$, find $\frac{kn^2}{lm}$ when $f^{-1}(c)\times c \times f(c)$ equals the simplified fraction$\fr
+      변형 If $f(r)=\frac{3}{2r-3}$, find $\frac{kn^2}{lm}$ when $f^{-1}(r)\times r \times f(r)$ equals the simplified fraction$\fr
+
+  (충돌이 있어도 rename 이 라벨을 결정하지 않았다면 라벨은 다른 변형이 정했으므로 살아 있다.)
+
+## 조치
+
+  * 제출물 `solutions/h22/h22_lib.py` 의 rename 은 **구간별 충돌 가드**를 넣어 고쳤다
+    (`_safe_pairs`: M 이 구간에 있으면서 홀로 서지 않으면 그 치환을 포기한다).
+  * `experiments/variants_official.py` 는 **고치지 않았다** — 이미 생성한 라벨이 그 규칙으로 만들어졌고,
+    고치면 Skywork 88 과 앞으로 나올 DeepSeek·Olmo 라벨의 비교 가능성이 깨진다.
+    대신 위 '라벨을 결정한' 문제들을 **사후 제외 후보**로 기록해 둔다(#77 민감도 분석에 추가).

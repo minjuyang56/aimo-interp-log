@@ -1,0 +1,31 @@
+#SUB-GEN2048 가중치 — 창 2048 · 층 L//2 고정 · PCA 24 · LR balanced · C 내부 CV
+
+## Skywork-OR1-Math-7B  (Skywork-OR1-Math-7B_gen2048.npz)
+   층 14 (후보 [7, 14, 21, 28] 중 L//2) · 차원 3584 · n 30 (robust 26 / spurious 4)
+   C 0.01 (내부 CV 4폴드 밖 AUC **0.971**) · train 적합 AUC 1.000 · balanced acc 0.788
+   임계 **+3.357**(train 점수 중앙값) → train True 비율 **0.500** · acc 0.633  |  참고 임계 0 → True 0.867 · acc 1.000 (라벨 robust 비율 0.867)
+   점수 범위 [-3.77, +4.47]
+
+## Olmo-3-7B-Think  (Olmo-3-7B-Think_gen2048.npz)
+   층 16 (후보 [8, 16, 24, 32] 중 L//2) · 차원 4096 · n 31 (robust 21 / spurious 10)
+   C 0.01 (내부 CV 4폴드 밖 AUC **0.695**) · train 적합 AUC 1.000 · balanced acc 0.857
+   임계 **+2.511**(train 점수 중앙값) → train True 비율 **0.484** · acc 0.806  |  참고 임계 0 → True 0.677 · acc 1.000 (라벨 robust 비율 0.677)
+   점수 범위 [-4.85, +4.39]
+
+## DeepSeek-R1-0528-Qwen3-8B  (DeepSeek-R1-0528-Qwen3-8B_gen2048_supp.npz)
+   층 18 (후보 [9, 18, 27, 36] 중 L//2) · 차원 4096 · n 32 (robust 29 / spurious 3)
+   C 0.003 (내부 CV 3폴드 밖 AUC **0.874**) · train 적합 AUC 1.000 · balanced acc 0.776
+   임계 **+2.707**(train 점수 중앙값) → train True 비율 **0.500** · acc 0.594  |  참고 임계 0 → True 0.875 · acc 0.969 (라벨 robust 비율 0.906)
+   점수 범위 [-2.80, +3.93]
+
+## 가중치 없는 모델 → 텍스트 폴백 (h15C: log 단어수 단독, 임계 train 고정)
+   Qwen/Qwen3.5-4B (라벨 0개) · openai/gpt-oss-120b · 미지 model_id
+
+## 읽는 법 (중요)
+   내부 CV AUC 는 **train 추정치**이고 소수 클래스가 3~10건이라 신뢰구간이 매우 넓다.
+   #DS-RELABEL 의 창 2048 모델평균 0.872(보충판)는 **폴드 내부에서 층까지 고른** 값이고,
+   여기는 층을 L//2 로 고정했으므로 그 숫자와 같지 않다. 이 표는 '가중치가 비어 있지
+   않다' 를 확인하는 용도이며, 판정은 리더보드가 한다.
+
+→ C:\side\aimo-interp-log\solutions\sub2048\artifacts\sub2048.json (7.12 MB) · 모델 3개
+→ C:\side\aimo-interp-log\experiments\results\sub2048_artifacts.txt

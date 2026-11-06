@@ -1,0 +1,30 @@
+{
+  "n_train": 33,
+  "instrument": "Skywork/Skywork-OR1-Math-7B",
+  "k": 2,
+  "decoding": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 0
+  },
+  "note": "thr = \ub450 \ud074\ub798\uc2a4 \uc911\uc559\uac12\uc758 \uc911\uc810 \u00b7 mean_tokens <= thr \uc774\uba74 True(robust)",
+  "thr": {
+    "16384": 12489.375,
+    "8192": 7702.5
+  },
+  "train_fit": {
+    "16384": {
+      "acc": 0.7272727272727273,
+      "pred_true_rate": 0.5757575757575758,
+      "median_robust": 9302.25,
+      "median_spurious": 15676.5
+    },
+    "8192": {
+      "acc": 0.696969696969697,
+      "pred_true_rate": 0.36363636363636365,
+      "median_robust": 7213.0,
+      "median_spurious": 8192.0
+    }
+  },
+  "fallback_n_sym_thr": 12.5
+}

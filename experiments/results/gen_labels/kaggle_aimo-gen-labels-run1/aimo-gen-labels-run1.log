@@ -1,0 +1,37 @@
+[{"stream_name":"stdout","time":9.023337553,"data":"문제 10 · 텍스트 45 · 생성 총 180 · 완료 0 · 남음 180\n"}
+,{"stream_name":"stderr","time":36.857650601,"data":"You are using a model of type qwen3_5 to instantiate a model of type . This is not supported for all configurations of models and can yield errors.\n"}
+,{"stream_name":"stderr","time":36.919843082,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":40.914947091,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":40.921736056,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/models/auto/configuration_auto.py\", line 1384, in from_pretrained\n"}
+,{"stream_name":"stderr","time":40.921756854,"data":"    config_class = CONFIG_MAPPING[config_dict[\"model_type\"]]\n"}
+,{"stream_name":"stderr","time":40.921765153,"data":"                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":40.921768353,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/models/auto/configuration_auto.py\", line 1087, in __getitem__\n"}
+,{"stream_name":"stderr","time":40.921771702,"data":"    raise KeyError(key)\n"}
+,{"stream_name":"stderr","time":40.921774667,"data":"KeyError: 'qwen3_5'\n"}
+,{"stream_name":"stderr","time":40.921777541,"data":"\n"}
+,{"stream_name":"stderr","time":40.921780357,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":40.921783339,"data":"\n"}
+,{"stream_name":"stderr","time":40.921786095,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":40.921788926,"data":"  File \"/kaggle/src/script.py\", line 299, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":40.921792232,"data":"    main()\n"}
+,{"stream_name":"stderr","time":40.921795053,"data":"  File \"/kaggle/src/script.py\", line 244, in main\n"}
+,{"stream_name":"stderr","time":40.92179797,"data":"    tok, model = load_model(a.quant)\n"}
+,{"stream_name":"stderr","time":40.921800886,"data":"                 ^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":40.92180379,"data":"  File \"/kaggle/src/script.py\", line 175, in load_model\n"}
+,{"stream_name":"stderr","time":40.921806721,"data":"    model = AutoModelForCausalLM.from_pretrained(MODEL, **kw).eval()\n"}
+,{"stream_name":"stderr","time":40.921809598,"data":"            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":40.921812565,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/models/auto/auto_factory.py\", line 317, in from_pretrained\n"}
+,{"stream_name":"stderr","time":40.921815619,"data":"    config, kwargs = AutoConfig.from_pretrained(\n"}
+,{"stream_name":"stderr","time":40.921818498,"data":"                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":40.921821371,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/models/auto/configuration_auto.py\", line 1386, in from_pretrained\n"}
+,{"stream_name":"stderr","time":40.921824418,"data":"    raise ValueError(\n"}
+,{"stream_name":"stderr","time":40.921827332,"data":"ValueError: The checkpoint you are trying to load has model type `qwen3_5` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.\n"}
+,{"stream_name":"stderr","time":40.921832105,"data":"\n"}
+,{"stream_name":"stderr","time":40.921835113,"data":"You can update Transformers with the command `pip install --upgrade transformers`. If this does not work, and the checkpoint is very new, then there may not be a release version that supports this model yet. In this case, you can get the most up-to-date code by installing Transformers from source with the command `pip install git+https://github.com/huggingface/transformers.git`\n"}
+,{"stream_name":"stderr","time":46.103333702,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":46.103396238,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":46.366314583,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":46.366349152,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":46.982985648,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":48.369003261,"data":"[NbConvertApp] Writing 356266 bytes to __results__.html\n"}
+]

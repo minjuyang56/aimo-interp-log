@@ -1,0 +1,19 @@
+디토큰화 가드 스모크 — 저장된 **진짜 손상 텍스트**로 decode_out 을 시험한다 (GPU 0)
+
+## Skywork · 30행 · 토크나이저 Qwen2Tokenizer → TokenizersBackend
+   vLLM o.text 마커 **0** → 새 경로 텍스트 마커 **0**
+   acc_of 경고 0회 (debpe 가 2차로 받으므로 집계는 양쪽 다 맞는다)
+   정답 집계: 손상 텍스트 23 · 새 경로 23
+
+## Olmo · 31행 · 토크나이저 TokenizersBackend → TokenizersBackend
+   vLLM o.text 마커 **0** → 새 경로 텍스트 마커 **0**
+   acc_of 경고 0회 (debpe 가 2차로 받으므로 집계는 양쪽 다 맞는다)
+   정답 집계: 손상 텍스트 25 · 새 경로 25
+
+## DeepSeek · 41행 · 토크나이저 LlamaTokenizer → TokenizersBackend
+   vLLM o.text 마커 **312799** → 새 경로 텍스트 마커 **0**
+   acc_of 경고 41회 (debpe 가 2차로 받으므로 집계는 양쪽 다 맞는다)
+   정답 집계: 손상 텍스트 40 · 새 경로 40
+
+## 판정
+   통과 — 새 경로는 마커를 0 으로 만든다

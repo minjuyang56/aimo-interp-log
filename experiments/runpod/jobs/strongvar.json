@@ -1,0 +1,11 @@
+{
+  "_why": "지휘 #STRONG — 센 섭동(Domain x2 + Rephrase x1)을 재작성기 모델로 한 번만 만들고 세 모델이 같은 섭동을 쓴다. 우리 3유형으로는 과반 규칙 양성이 0이었고(주최측 27% vs 우리 0~15%), 논문의 6유형 중 Domain 이 빠져 있었다.",
+  "entry": "strongvar.py",
+  "files": [
+    "experiments/variants_strong.py"
+  ],
+  "flatten": true,
+  "disk_gb": 220,
+  "out": "/workspace/out",
+  "cmd": "set -e; export VLLM_DISABLE_COMPILE_CACHE=1; python3 -V; python3 -m pip install -q vllm accelerate 2>&1 | tail -2; python3 -c 'import vllm;print(\"[단계] vllm\",vllm.__version__)'; python3 strongvar.py --problems \"${SV_PROBLEMS:-problems_4079.json}\" --out /workspace/out --rewriter \"${SV_REWRITER:-Qwen/Qwen2.5-32B-Instruct}\" --limit ${SV_LIMIT:-0}"
+}

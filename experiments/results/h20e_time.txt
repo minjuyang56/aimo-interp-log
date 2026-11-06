@@ -1,0 +1,48 @@
+h20e 예상 시간 (SOFT 3300s · 로드 8s/호출 · k 기본 2 · GPU 96 GB · KV 여유 몫 0.55)
+
+  모델별 '배치 x cap' 칸 수와 cap 4096 에서 한 배치에 들어가는 시퀀스 수
+    Qwen3.5-4B       KV   128 KB/토큰 · 칸   390,635 · cap4096 시퀀스   95 · cap8192   47
+    Skywork-7B       KV    56 KB/토큰 · 칸   832,119 · cap4096 시퀀스  203 · cap8192  101
+    Olmo-3-7B-Think  KV   512 KB/토큰 · 칸    91,688 · cap4096 시퀀스   22 · cap8192   11
+    DeepSeek-8B      KV   144 KB/토큰 · 칸   318,796 · cap4096 시퀀스   77 · cap8192   38
+
+  A 리더보드형 4호출 (Small 14 인스턴스, 고유 10문제) · effort default
+    모델                 문제  k    cap   그룹     예상s  train AUC
+    Qwen3.5-4B          5  1  12288    1     562      0.781
+    Skywork-7B          3  2  12288    1     632      0.840
+    Olmo-3-7B-Think     3  2  12288    1     632      0.840
+    DeepSeek-8B         3  2  16384    1    1009      0.850
+    합계 2866s = 47.8분 (로드 8s x 4 포함) · 여유 734s
+
+  B 4호출 x 10문제 · effort default
+    모델                 문제  k    cap   그룹     예상s  train AUC
+    Qwen3.5-4B         10  2   8192    1     796      0.769
+    Skywork-7B         10  2   8192    1     796      0.769
+    Olmo-3-7B-Think    10  1   8192    1     468      0.731
+    DeepSeek-8B        10  1  12288    1     911      0.781
+    합계 3003s = 50.0분 (로드 8s x 4 포함) · 여유 597s
+
+  C 최종셋형 4호출 x 35문제 · effort default
+    모델                 문제  k    cap   그룹     예상s  train AUC
+    Qwen3.5-4B         35  1   6144    1     782      0.662
+    Skywork-7B         35  1   6144    1     782      0.662
+    Olmo-3-7B-Think    35  1   4096    2     470      0.600   ← 전부 절단(임계=cap), 정보 없음
+    DeepSeek-8B        35  1   6144    1     782      0.662
+    합계 2849s = 47.5분 (로드 8s x 4 포함) · 여유 751s
+
+  C 최종셋형 (effort low) · effort low
+    모델                 문제  k    cap   그룹     예상s  train AUC
+    Qwen3.5-4B         35  1   4096    1     400      0.600   ← 전부 절단(임계=cap), 정보 없음
+    Skywork-7B         35  2   4096    1     729      0.625   ← 전부 절단(임계=cap), 정보 없음
+    Olmo-3-7B-Think    35  1   4096    2     470      0.600   ← 전부 절단(임계=cap), 정보 없음
+    DeepSeek-8B        35  1   8192    1    1286      0.731
+    합계 2917s = 48.6분 (로드 8s x 4 포함) · 여유 683s
+
+  D 최종셋형 4호출 x 40문제 · effort default
+    모델                 문제  k    cap   그룹     예상s  train AUC
+    Qwen3.5-4B         40  1   4096    1     447      0.600   ← 전부 절단(임계=cap), 정보 없음
+    Skywork-7B         40  1   6144    1     879      0.662
+    Olmo-3-7B-Think    40  1   4096    2     517      0.600   ← 전부 절단(임계=cap), 정보 없음
+    DeepSeek-8B        40  1   6144    1     879      0.662
+    합계 2753s = 45.9분 (로드 8s x 4 포함) · 여유 847s
+

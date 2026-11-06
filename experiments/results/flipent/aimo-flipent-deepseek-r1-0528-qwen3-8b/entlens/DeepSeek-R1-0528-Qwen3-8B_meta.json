@@ -1,0 +1,12 @@
+{
+  "model": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+  "n_layers": 36,
+  "maxnew": 1024,
+  "batch": 24,
+  "n_prob": 47,
+  "quant": "fp16",
+  "n_marks": 0,
+  "finished": 0,
+  "lens_ok": 43,
+  "lens_gate_max": 0.0009213388
+}

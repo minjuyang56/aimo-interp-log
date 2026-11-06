@@ -1,0 +1,14 @@
+{
+  "_why": "지휘 #LG-RP ②③ — 라벨 생성 cap 32768. Kaggle T4x2 에서는 Olmo 가 KV 때문에 시작조차 못 하고 DeepSeek 은 주간 쿼터로 24문제뿐이라 H100 으로 옮겼다. 커널과 **같은 genlab_v2.py** 를 쓴다.",
+  "entry": "labelgen32k.py",
+  "files": [
+    "experiments/kaggle/genlab_v2.py",
+    "experiments/kaggle/solve_common.py",
+    "experiments/variants_official.py",
+    "experiments/variants_nonofficial.py"
+  ],
+  "flatten": true,
+  "disk_gb": 250,
+  "out": "/workspace/out",
+  "cmd": "set -e; export VLLM_DISABLE_COMPILE_CACHE=1; python3 -V; python3 -m pip install -q vllm accelerate pandas pyarrow; python3 -c 'import vllm;print(\"[단계] vllm\",vllm.__version__)'; python3 labelgen32k.py --model \"$LG_MODEL\" --n ${LG_N:-40} --offset ${LG_OFFSET:-0} --max-new ${LG_CAP:-32768} --k ${LG_K:-4} --max-seqs ${LG_SEQS:-32} --smoke-tokens ${LG_SMOKE:-0} ${LG_SCREEN:+--screen \"$LG_SCREEN\"} ${LG_STRONG:+--strong \"$LG_STRONG\"}"
+}

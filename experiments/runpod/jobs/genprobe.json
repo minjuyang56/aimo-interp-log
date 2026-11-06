@@ -1,0 +1,18 @@
+{
+  "_why": "지휘 #GEN-PROBE 단계 2 — 원문제 greedy 풀이 재생성. k=8 라벨 실행이 --no-traj 였어서 풀이 텍스트가 저장되지 않았다(단계 0 전수 확인). 라벨 생성과 같은 genlab_v2.chat() 프롬프트를 쓰고, 행마다 텍스트·토큰수·완주여부·정답여부를 저장한다. 2026-10-12 보충: GP_PROBS 로 문제 파일을 고를 수 있게 했고, vLLM 분기가 o.text 대신 decode_out(토큰 id 재디코드)를 쓴다 — 첫 실행이 그 경로에서 Ġ 손상을 만들었고, 보충 행만 다른 경로로 디코드되면 같은 묶음 안에서 특징이 섞인다. 2026-10-12 #SAMP-FEAT: SF_N>1 이면 라벨 생성과 같은 디코딩(T·top_k·top_p 0.95)으로 n 샘플을 받아 행마다 전량 저장한다(`*_samp.json`). SF_N 이 없으면 기존 greedy 경로와 동일. 2026-10-15 #ORG-LABEL: org33_problems.json 추가 — 공식 train-main-v2 문제단위 라벨 33문제를 greedy cap 2048 로 생성해 sub2048 프로브를 주최측 라벨에 전이시킨다. gold 는 None(정답 컬럼이 없다) 이므로 correct 열은 쓰지 않는다.",
+  "entry": "genprobe.py",
+  "files": [
+    "experiments/kaggle/genlab_v2.py",
+    "experiments/kaggle/solve_common.py",
+    "experiments/variants_official.py",
+    "experiments/variants_nonofficial.py",
+    "experiments/runpod/genprobe_problems.json",
+    "experiments/runpod/genprobe_problems_supp.json",
+    "experiments/runpod/sampfeat_problems.json",
+    "experiments/runpod/org33_problems.json"
+  ],
+  "flatten": true,
+  "disk_gb": 250,
+  "out": "/workspace/out",
+  "cmd": "set -e; export VLLM_DISABLE_COMPILE_CACHE=1; python3 -V; python3 -m pip install -q vllm accelerate pandas pyarrow; python3 -c 'import vllm;print(\"[단계] vllm\",vllm.__version__)'; python3 genprobe.py --problems ${GP_PROBS:-genprobe_problems.json} --max-new ${GP_CAP:-32768} --max-seqs ${GP_SEQS:-48} ${GP_ORDER:+--order \"$GP_ORDER\"}"
+}

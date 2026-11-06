@@ -1,0 +1,32 @@
+#LOOP R2 결과 — 주최측 max_drop 흉내 (공식 33문제, 비용 $0)
+   라벨 robust 20/33 · 상수 정확도 0.6061 · 주 체크포인트 CoT 1024
+   지표 max_drop_hat = base_acc − min_t var_acc[t] · 임계는 모델별 · LOO 안에서만
+
+## 대조군 — 길이 h15C(LOO) 정확도 0.6364 · 상수 0.6061
+
+## 지표 md  (주지표)
+    ckpt    DeepSeek-R1-05    Olmo-3-7B-Thin    Skywork-OR1-Ma        모델평균    null상단
+     512  0.485/0.481(fb3)  0.394/0.327(fb2)  0.485/0.562(fb2)  0.455/0.456     0.646
+    1024  0.545/0.488(fb3)  0.455/0.327(fb2)  0.606/0.627(fb2)  0.535/0.481     0.677
+
+## 지표 combo  (보조)
+    ckpt    DeepSeek-R1-05    Olmo-3-7B-Thin    Skywork-OR1-Ma        모델평균    null상단
+     512  0.606/0.538(fb3)  0.394/0.319(fb2)  0.606/0.612(fb2)  0.535/0.490     0.636
+    1024  0.364/0.513(fb3)  0.394/0.312(fb2)  0.606/0.496(fb2)  0.455/0.440     0.576
+
+## 사전등록 판정 (R2 주지표 max_drop_hat · ckpt 1024)
+   모델평균 정확도 **0.5354** · 셔플 null 95% 상단 0.677 · AUC 0.4808
+   상수 0.6061 대비 -0.0707 · 길이 0.6364 대비 -0.1010
+   zip 빌드 조건 >0.645(H22) → **미달 — zip 만들지 않는다**
+   라운드 통과 >=0.706 → **미달** · 루프 목표 >=0.90 → **미달**
+
+## 사전지정 2차 규칙 — max_drop_hat <= 0.10 (주최측 임계 문자 그대로)
+   ckpt   512: DeepSeek-R 0.424 Olmo-3-7B- 0.333 Skywork-OR 0.545 · 모델평균 0.4343
+   ckpt  1024: DeepSeek-R 0.364 Olmo-3-7B- 0.273 Skywork-OR 0.455 · 모델평균 0.3636
+
+## 진단 — 해상도 (사전등록에 적어 둔 천장)
+   DeepSeek-R1-0528-Qwen3-8B      판정 30/33 · max_drop_hat 서로 다른 값 7 [np.float64(-0.333), np.float64(-0.167), np.float64(0.0), np.float64(0.333), np.float64(0.5), np.float64(0.667), np.float64(1.0)] · base_acc 평균 0.737 · 유형 수 평균 1.91
+   Olmo-3-7B-Think                판정 31/33 · max_drop_hat 서로 다른 값 4 [np.float64(0.0), np.float64(0.333), np.float64(0.667), np.float64(1.0)] · base_acc 평균 0.818 · 유형 수 평균 1.94
+   Skywork-OR1-Math-7B            판정 31/33 · max_drop_hat 서로 다른 값 4 [np.float64(-0.167), np.float64(0.0), np.float64(0.333), np.float64(0.667)] · base_acc 평균 0.556 · 유형 수 평균 1.94
+
+주최측 max_drop 격자는 0.01(≈100샘플)이고 우리는 N=3 이라 0.333 이다 — 33배 거칠다.

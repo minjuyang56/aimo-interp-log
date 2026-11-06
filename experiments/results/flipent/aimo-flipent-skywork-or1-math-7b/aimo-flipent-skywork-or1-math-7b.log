@@ -1,0 +1,95 @@
+[{"stream_name":"stdout","time":9.173229629,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 100.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":9.212026024,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 18.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":9.250790448,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 35.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":28.899688535,"data":"WARNING: Skipping torchaudio as it is not installed.\n"}
+,{"stream_name":"stdout","time":28.957381406,"data":"[env] torchaudio 제거 확인\n"}
+,{"stream_name":"stdout","time":28.957415991,"data":"[env] model Skywork/Skywork-OR1-Math-7B · maxnew 1024 · batch 23 · nprob 0\n"}
+,{"stream_name":"stderr","time":79.880156007,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":156.094576678,"data":"\rFetching 4 files:   0%|          | 0/4 [00:00\u003c?, ?it/s]\rFetching 4 files:  25%|██▌       | 1/4 [00:49\u003c02:28, 49.36s/it]\rFetching 4 files:  50%|█████     | 2/4 [00:55\u003c00:47, 23.67s/it]\rFetching 4 files:  75%|███████▌  | 3/4 [01:11\u003c00:20, 20.38s/it]\rFetching 4 files: 100%|██████████| 4/4 [01:11\u003c00:00, 17.88s/it]\n"}
+,{"stream_name":"stderr","time":189.530650596,"data":"\rLoading weights:   0%|          | 0/339 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/339 [00:11\u003c1:02:36, 11.11s/it]\rLoading weights:  37%|███▋      | 127/339 [00:11\u003c00:13, 16.08it/s]\rLoading weights:  75%|███████▍  | 253/339 [00:19\u003c00:05, 15.15it/s]\rLoading weights:  90%|█████████ | 306/339 [00:29\u003c00:03, 10.49it/s]\rLoading weights:  99%|█████████▉| 335/339 [00:32\u003c00:00, 10.52it/s]\rLoading weights: 100%|██████████| 339/339 [00:32\u003c00:00, 10.58it/s]\n"}
+,{"stream_name":"stdout","time":189.992869722,"data":"[entlens] Skywork/Skywork-OR1-Math-7B 로드 110s · quant fp16\n"}
+,{"stream_name":"stdout","time":189.992904326,"data":"[entlens] final_norm = model.norm\n"}
+,{"stream_name":"stdout","time":189.992909895,"data":"[entlens] 문제 69 · 층 28 · maxnew 1024 · batch 23\n"}
+,{"stream_name":"stdout","time":377.740359595,"data":"[entlens] 생성 23행 · 188s · 1024스텝 · 183 ms/step · 완주 0/23\n"}
+,{"stream_name":"stdout","time":600.946702698,"data":"[entlens] 생성 23행 · 223s · 1024스텝 · 218 ms/step · 완주 0/23\n"}
+,{"stream_name":"stdout","time":820.566345398,"data":"[entlens] 생성 23행 · 220s · 1024스텝 · 214 ms/step · 완주 1/23\n"}
+,{"stream_name":"stdout","time":825.212956601,"data":"[entlens] 렌즈 5/69 · 5s\n"}
+,{"stream_name":"stdout","time":830.100910931,"data":"[entlens] 렌즈 10/69 · 10s\n"}
+,{"stream_name":"stdout","time":834.863506703,"data":"[entlens] 렌즈 15/69 · 14s\n"}
+,{"stream_name":"stdout","time":839.071648167,"data":"[entlens] 렌즈 20/69 · 18s\n"}
+,{"stream_name":"stdout","time":843.060206059,"data":"[entlens] 렌즈 25/69 · 22s\n"}
+,{"stream_name":"stdout","time":848.124082944,"data":"[entlens] 렌즈 30/69 · 28s\n"}
+,{"stream_name":"stdout","time":853.262208767,"data":"[entlens] 렌즈 35/69 · 33s\n"}
+,{"stream_name":"stdout","time":858.102079156,"data":"[entlens] 렌즈 40/69 · 38s\n"}
+,{"stream_name":"stdout","time":862.577242527,"data":"[entlens] 렌즈 45/69 · 42s\n"}
+,{"stream_name":"stdout","time":867.637301099,"data":"[entlens] 렌즈 50/69 · 47s\n"}
+,{"stream_name":"stdout","time":872.036119834,"data":"[entlens] 렌즈 55/69 · 51s\n"}
+,{"stream_name":"stdout","time":876.985313933,"data":"[entlens] 렌즈 60/69 · 56s\n"}
+,{"stream_name":"stdout","time":881.890355536,"data":"[entlens] 렌즈 65/69 · 61s\n"}
+,{"stream_name":"stdout","time":886.034588532,"data":"[entlens] 렌즈 69/69 · 65s\n"}
+,{"stream_name":"stdout","time":886.036592517,"data":"[entlens] 저장 /kaggle/working/entlens · meta {\"model\": \"Skywork/Skywork-OR1-Math-7B\", \"n_layers\": 28, \"maxnew\": 1024, \"batch\": 23, \"n_prob\": 69, \"quant\": \"fp16\", \"n_marks\": 0, \"finished\": 1, \"lens_ok\": 69, \"lens_gate_max\": 0.0017314553}\n"}
+,{"stream_name":"stdout","time":886.036615134,"data":"[entlens] **경고** 마지막층 렌즈가 실제 로짓과 1.731e-03 어긋난다 — final_norm 가정을 다시 봐야 한다\n"}
+,{"stream_name":"stdout","time":886.037728984,"data":"\n"}
+,{"stream_name":"stdout","time":886.037756851,"data":"===== pidx 0 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":886.037763554,"data":"Okay, so I have this problem about an isosceles trapezoid ABCD. The bases AB and CD are parallel, with lengths 500 and 650 respectively. The legs AD and BC are both 333 units long. I need to find the distance between points P and Q, where P is the intersection of the angle bisectors of angles A and D, and Q is the intersection of the angle bisectors of angles B and C.\n"}
+,{"stream_name":"stdout","time":886.03776947,"data":"\n"}
+,{"stream_name":"stdout","time":886.037777793,"data":"First, let me visualize the trapezoid. Since it's isosceles, the legs AD and BC are equal, and the base angles are equal. So angles A and B are equal, and angles C and D are equal. Wait, actually, in an isosceles trapezoid, base angles are equal. So angle A is equal to angle B, and angle C is equal to angle D. Wait, no, that's not right. Wait, in a trapezoid, consecutive angles between the bases are supplementary. But in an isosceles trapezoid, the base angles are equal. So angle A equals angle D, and angle B equals angle \n"}
+,{"stream_name":"stdout","time":886.037791948,"data":"\n"}
+,{"stream_name":"stdout","time":886.037796268,"data":"\n"}
+,{"stream_name":"stdout","time":886.0378005,"data":"===== pidx 1 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":886.037805188,"data":"Okay, so I have this problem where I need to find the coefficient of x^2022 in a polynomial P(x). The given expression for P(x) is a bit complicated: it's (x^2310 - 1)^6 divided by the product of (x^105 - 1)(x^70 - 1)(x^42 - 1)(x^30 - 1). And this holds for every 0 \u003c x \u003c 1. Hmm, interesting.\n"}
+,{"stream_name":"stdout","time":886.037816754,"data":"\n"}
+,{"stream_name":"stdout","time":886.037819968,"data":"First, I remember that when dealing with expressions like (x^n - 1), they can be factored using cyclotomic polynomials, but I'm not sure if that's helpful here. Alternatively, since P(x) is given as a polynomial, the denominator must divide the numerator perfectly, so there are no issues with division by zero or anything like that in the interval 0 \u003c x \u003c 1.\n"}
+,{"stream_name":"stdout","time":886.037823584,"data":"\n"}
+,{"stream_name":"stdout","time":886.03782641,"data":"Wait, but P(x) is a polynomial, so the denominator must divide the numerator without remainder. That means the denominator is a factor of the numerator. So, perhaps I can rewrite the expression in a way that makes it easier to handle.\n"}
+,{"stream_name":"stdout","time":886.037829772,"data":"\n"}
+,{"stream_name":"stdout","time":886.037832554,"data":"Let me wr\n"}
+,{"stream_name":"stdout","time":886.037835386,"data":"\n"}
+,{"stream_name":"stdout","time":886.037838136,"data":"\n"}
+,{"stream_name":"stdout","time":886.037847978,"data":"===== pidx 2 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":886.037851562,"data":"Okay, so I have this problem about a right square pyramid with a volume of 54 and a base side length of 6. All five vertices lie on a sphere, and I need to find the radius of that sphere, expressed as a reduced fraction m/n, then find m + n.\n"}
+,{"stream_name":"stdout","time":886.03785428,"data":"\n"}
+,{"stream_name":"stdout","time":886.037856486,"data":"First, let me visualize the pyramid. It's a right square pyramid, so the base is a square with side length 6. The pyramid is right, meaning the apex is directly above the center of the base.\n"}
+,{"stream_name":"stdout","time":886.037859022,"data":"\n"}
+,{"stream_name":"stdout","time":886.037861313,"data":"The volume of a pyramid is given by (1/3) * base area * height. The base area is 6*6 = 36. The volume is 54, so I can set up the equation:\n"}
+,{"stream_name":"stdout","time":886.037863762,"data":"\n"}
+,{"stream_name":"stdout","time":886.037865956,"data":"54 = (1/3) * 36 * height\n"}
+,{"stream_name":"stdout","time":886.037868211,"data":"\n"}
+,{"stream_name":"stdout","time":886.03787051,"data":"Simplify that: 54 = 12 * height, so height = 54 / 12 = 4.5 or 9/2. So the height of the pyramid is 9/2 units.\n"}
+,{"stream_name":"stdout","time":886.037872907,"data":"\n"}
+,{"stream_name":"stdout","time":886.037875128,"data":"Now, all five vertices lie on a sphere. That means there's a sphere that passes through the four base corners and the apex. I need to find the radius of this sphere.\n"}
+,{"stream_name":"stdout","time":886.037877645,"data":"\n"}
+,{"stream_name":"stdout","time":886.037879904,"data":"Let me set up a coord\n"}
+,{"stream_name":"stdout","time":886.037882254,"data":"\n"}
+,{"stream_name":"stdout","time":886.037884414,"data":"\n"}
+,{"stream_name":"stdout","time":886.037886626,"data":"===== pidx 3 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":886.037889104,"data":"Okay, so I have this problem about an isosceles right triangle ABC with angle A being 90 degrees. There's a point P inside the triangle such that the angles PAB, PBC, and PCA are all equal. Also, the length AP is given as 10. I need to find the area of triangle ABC.\n"}
+,{"stream_name":"stdout","time":886.037891772,"data":"\n"}
+,{"stream_name":"stdout","time":886.037893984,"data":"First, let me try to visualize the triangle. Since it's an isosceles right triangle with angle A = 90°, that means sides AB and AC are equal. Let me denote the length of AB and AC as 'a'. Then, the hypotenuse BC would be a√2.\n"}
+,{"stream_name":"stdout","time":886.037897053,"data":"\n"}
+,{"stream_name":"stdout","time":886.037899346,"data":"Now, point P is inside the triangle such that angles PAB, PBC, and PCA are equal. Let me denote each of these angles as θ. So, angle PAB = angle PBC = angle PCA = θ.\n"}
+,{"stream_name":"stdout","time":886.037901961,"data":"\n"}
+,{"stream_name":"stdout","time":886.037904142,"data":"I remember that when a point inside a triangle creates equal angles with the sides, it might be related to the Brocard point. In a triangle, the Brocard point is a point such that the angles between the cevians and the sides are all equal\n"}
+,{"stream_name":"stdout","time":886.037906772,"data":"\n"}
+,{"stream_name":"stdout","time":886.037908936,"data":"\n"}
+,{"stream_name":"stdout","time":886.037911202,"data":"===== pidx 4 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":886.037913848,"data":"Okay, so I have this problem where John is computing the sum of the elements for each of the 15 two-element subsets of the set {1,2,3,4,5,6}. Then, I need to find the sum of all these 15 sums. Hmm, let me think about how to approach this.\n"}
+,{"stream_name":"stdout","time":886.037919402,"data":"\n"}
+,{"stream_name":"stdout","time":886.037921774,"data":"First, let me understand the problem. We have the set {1,2,3,4,5,6}, and we're looking at all possible two-element subsets. How many are there? Well, the number of two-element subsets of a set with n elements is given by the combination formula C(n,2). So for n=6, that's C(6,2) which is 6*5/2 = 15. Yep, that's 15 subsets, as the problem states.\n"}
+,{"stream_name":"stdout","time":886.037924666,"data":"\n"}
+,{"stream_name":"stdout","time":886.037926868,"data":"Now, for each of these 15 subsets, John computes the sum of the two elements. Then, we need to find the sum of all these individual subset sums. So, essentially, we're being asked to compute the total sum across all possible pairs.\n"}
+,{"stream_name":"stdout","time":886.037929476,"data":"\n"}
+,{"stream_name":"stdout","time":886.037931693,"data":"Wait, is there a smarter way to do this instead of listing all 15 subsets and a\n"}
+,{"stream_name":"stdout","time":886.037934117,"data":"\n"}
+,{"stream_name":"stdout","time":886.037936312,"data":"[즉답] pidx 0 · ans=' 166\\n\\nStep-by-' · int=166 · note=\n"}
+,{"stream_name":"stdout","time":886.037938919,"data":"[즉답] pidx 1 · ans=' 2023' · int=2023 · note=\n"}
+,{"stream_name":"stdout","time":886.037941341,"data":"[즉답] pidx 2 · ans=' 13\\n\\n**Step-by-' · int=13 · note=\n"}
+,{"stream_name":"stdout","time":886.037943814,"data":"[즉답] pidx 3 · ans=' 100' · int=100 · note=\n"}
+,{"stream_name":"stdout","time":886.037946202,"data":"[즉답] pidx 4 · ans=' 105' · int=105 · note=\n"}
+,{"stream_name":"stderr","time":896.646678966,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":896.646708088,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":897.091011282,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":897.0910343,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":897.960594284,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":899.487536827,"data":"[NbConvertApp] Writing 438581 bytes to __results__.html\n"}
+]

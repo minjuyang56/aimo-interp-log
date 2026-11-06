@@ -1,0 +1,45 @@
+#GEN-PROBE — 풀이 도중 벡터 프로브 · **창 앞 256 토큰** · null 1000회
+주라벨 `label`(max_drop) · gen_k==8 · #77 프로토콜 과 동일한 폴드·PCA24·C격자·층 내부CV
+
+## Skywork · Skywork-OR1-Math-7B_gen256.npz · n 30 (robust 26 / spurious 4) · 쓴 풀이토큰 중앙 2048
+   AUC **0.760** · null 95% [0.18, 0.78]
+   길이잔차 AUC 0.663 · null [0.15, 0.75]  (게이트 아님)
+   balanced acc 0.788 · 고른 (층, C) [(7, 0.1), (7, 0.03), (14, 0.003), (21, 0.003)]
+   민감도 label_fin: 같은 점수로 AUC 0.704 (robust 27 / spurious 3)
+   민감도 label_major: **적용 불가** (라벨 수·클래스 부족)
+   기준선1 base_acc(k=8): AUC 0.716  (단독 순위 AUC 0.764)
+   기준선2 greedy 정답여부: AUC 0.490  (단독 순위 AUC 0.654)
+   기준선3 greedy 토큰수: AUC 0.659  (단독 순위 AUC 0.183)
+
+## Olmo · Olmo-3-7B-Think_gen256.npz · n 31 (robust 21 / spurious 10) · 쓴 풀이토큰 중앙 2048
+   AUC **0.771** · null 95% [0.22, 0.69] ▲
+   길이잔차 AUC 0.681 · null [0.20, 0.64]  (게이트 아님)
+   balanced acc 0.733 · 고른 (층, C) [(16, 0.003), (24, 0.3), (16, 0.003), (8, 0.3), (16, 0.003)]
+   민감도 label_fin: 같은 점수로 AUC 0.772 (robust 21 / spurious 9)
+   민감도 label_major: 같은 점수로 AUC 0.845 (robust 28 / spurious 3)
+   기준선1 base_acc(k=8): AUC 0.493  (단독 순위 AUC 0.429)
+   기준선2 greedy 정답여부: AUC 0.517  (단독 순위 AUC 0.579)
+   기준선3 greedy 토큰수: AUC 0.319  (단독 순위 AUC 0.310)
+
+## DeepSeek · DeepSeek-R1-0528-Qwen3-8B_gen256.npz · n 32 (robust 29 / spurious 3) · 쓴 풀이토큰 중앙 2048
+   AUC **0.402** · null 95% [0.14, 0.86]
+   길이잔차 AUC 0.310 · null [0.11, 0.84]  (게이트 아님)
+   balanced acc 0.592 · 고른 (층, C) [(36, 0.003), (9, 0.03), (18, 0.003)]
+   민감도 label_fin: 같은 점수로 AUC 0.317 (robust 30 / spurious 2)
+   민감도 label_major: **적용 불가** (라벨 수·클래스 부족)
+   기준선1 base_acc(k=8): AUC 0.305  (단독 순위 AUC 0.609)
+   기준선2 greedy 정답여부: 분산 0 → 판정 불가
+   기준선3 greedy 토큰수: AUC 0.448  (단독 순위 AUC 0.345)
+
+## 주지표 — 주라벨 모델별 AUC 의 **모델평균**
+   모델평균 AUC **0.644** · null 상단 평균 0.78 → 기준1 **미달**
+   모델평균 길이잔차 0.552 · null 상단 평균 0.74 (게이트 아님)
+
+## 기준선 모델평균 (지휘 지정)
+   기준선1 base_acc(k=8): 모델평균 AUC 0.505
+   기준선2 greedy 정답여부: 모델평균 AUC 0.504
+   기준선3 greedy 토큰수: 모델평균 AUC 0.475
+   → 기준2 통과
+
+## 판정
+   **신호 미입증** (기준1 X · 기준2 O)

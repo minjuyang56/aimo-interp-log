@@ -1,0 +1,192 @@
+[{"stream_name":"stdout","time":13.390719936,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.9/87.9 kB 4.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":20.96510973,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 314.9/314.9 MB 5.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.053537711,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 40.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.079960721,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.7/211.7 kB 11.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.289216904,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 74.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.325985482,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.7/322.7 kB 11.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.351432896,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.0/111.0 kB 5.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.375273568,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.4/45.4 kB 2.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.428842305,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 85.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.492964964,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 72.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.900184899,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.2/43.2 MB 44.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.942524301,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 729.6/729.6 kB 21.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":22.405288649,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.5/50.5 MB 37.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":22.483609412,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 755.8/755.8 kB 12.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.104322458,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 526.6/526.6 MB 3.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.157156898,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 52.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.247079293,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 95.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.158606607,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.2/90.2 MB 21.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.203050869,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 60.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":35.757544055,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 366.2/366.2 MB 2.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":38.078083071,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.1/170.1 MB 6.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":38.126746706,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 74.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":39.050310118,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.7/88.7 MB 19.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":39.842879588,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.3/88.3 MB 21.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":42.168905922,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.0/206.0 MB 8.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":42.728641584,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.4/60.4 MB 31.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":45.469971914,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 197.7/197.7 MB 9.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":53.36678935,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 423.1/423.1 MB 1.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":56.08128028,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 3.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":58.249150839,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 MB 8.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":58.284617968,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 43.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":58.781957937,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 MB 34.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":60.602908159,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.9/200.9 MB 9.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":61.944381718,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.9/145.9 MB 12.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":61.983948733,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 37.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.007532841,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.0/148.0 kB 8.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.040389457,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 51.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.085129833,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 58.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.152570963,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 103.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.197892908,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 79.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.222972453,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.7/365.7 kB 18.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.246189805,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 3.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.313054292,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 107.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.335864586,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.7/125.7 kB 7.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.427651295,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 104.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.477560629,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 69.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.618460161,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 4.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.640990124,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.1/140.1 kB 7.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.668824713,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.0/60.0 kB 2.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.707531142,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.3/206.3 kB 10.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.767877775,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.2/343.2 kB 19.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.799586317,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 41.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.822540321,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.0/79.0 kB 4.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.849379344,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 39.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":62.957408625,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 96.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.07629622,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 101.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.108149332,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 20.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.155827107,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 84.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.193739213,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 44.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.219794551,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 461.2/461.2 kB 22.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.242716284,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.8/149.8 kB 8.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.27144994,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 230.4/230.4 kB 9.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.316584005,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.7/94.7 kB 5.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.356296134,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 7.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.429732423,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 106.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.479661671,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.2/382.2 kB 18.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.528153452,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 808.1/808.1 kB 34.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.57997172,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 97.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.602866503,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 5.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.626226731,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 4.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":63.648308396,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 3.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":64.222269061,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 33.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":64.276691001,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 79.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":64.299016871,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 4.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":64.323908561,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 320.7/320.7 kB 16.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":65.272938759,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.9/99.9 MB 19.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":65.527903734,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.3/29.3 MB 64.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":65.573415332,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 2.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":65.624011009,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 88.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.114724279,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 MB 41.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.153720179,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 897.8/897.8 kB 32.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.234135261,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 92.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.257114607,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 3.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.278453752,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.7/108.7 kB 6.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.30072412,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.1/123.1 kB 6.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.361967818,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 97.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.74881051,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.5/42.5 MB 48.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.841429224,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 94.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":66.908017561,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.9/160.9 kB 7.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":67.569241716,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.6/72.6 MB 27.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":67.637586551,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 927.8/927.8 kB 38.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":265.309579873,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":265.309635713,"data":"bigframes 2.39.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":265.309641107,"data":"google-adk 1.29.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":265.309644924,"data":"grpcio-tools 1.71.2 requires protobuf\u003c6.0dev,\u003e=5.26.1, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309648743,"data":"ydata-profiling 4.18.4 requires numba\u003c0.63,\u003e=0.60, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309652511,"data":"dask-cuda 26.2.0 requires cuda-core==0.3.*, but you have cuda-core 1.2.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309655914,"data":"google-cloud-bigtable 2.36.0 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c7.0.0,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.30965957,"data":"pylibcudf-cu12 26.2.1 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309662985,"data":"numba-cuda 0.22.2 requires cuda-core\u003c1.0.0,\u003e=0.3.2, but you have cuda-core 1.2.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309666476,"data":"libcuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309669899,"data":"rmm-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309673332,"data":"cuml-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309676758,"data":"cuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309680191,"data":"cuml-cu12 26.2.0 requires numba\u003c0.62.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309683594,"data":"pylibraft-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309687035,"data":"cuvs-cu12 26.2.0 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309691529,"data":"google-ai-generativelanguage 0.6.15 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c6.0.0dev,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309696396,"data":"ydf 0.15.0 requires protobuf\u003c7.0.0,\u003e=5.29.1, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309699837,"data":"google-cloud-discoveryengine 0.13.12 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c7.0.0,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309713506,"data":"google-cloud-aiplatform 1.148.1 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,\u003c7.0.0,\u003e=3.20.2, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309716523,"data":"cudf-cu12 26.2.1 requires cuda-python\u003c13.0,\u003e=12.9.2, but you have cuda-python 13.4.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309719162,"data":"cudf-cu12 26.2.1 requires cuda-toolkit[nvcc,nvrtc]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309721687,"data":"cudf-cu12 26.2.1 requires numba\u003c0.62.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309724342,"data":"libcuvs-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309726927,"data":"libraft-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309729479,"data":"grpcio-status 1.71.2 requires protobuf\u003c6.0dev,\u003e=5.26.1, but you have protobuf 7.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309732115,"data":"google-adk 1.29.0 requires mcp\u003c2.0.0,\u003e=1.23.0, but you have mcp 2.2.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309735623,"data":"google-adk 1.29.0 requires opentelemetry-api\u003c1.39.0,\u003e=1.36.0, but you have opentelemetry-api 1.45.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309739326,"data":"google-adk 1.29.0 requires opentelemetry-sdk\u003c1.39.0,\u003e=1.36.0, but you have opentelemetry-sdk 1.45.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309743134,"data":"google-adk 1.29.0 requires starlette\u003c1.0.0,\u003e=0.49.1, but you have starlette 1.7.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309745783,"data":"opentelemetry-exporter-gcp-logging 1.11.0a0 requires opentelemetry-sdk\u003c1.39.0,\u003e=1.35.0, but you have opentelemetry-sdk 1.45.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":265.309748439,"data":"gradio 5.50.0 requires starlette\u003c1.0,\u003e=0.40.0, but you have starlette 1.7.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":272.643751356,"data":"rename   : Alice has 12 apples and $t + u = 7$. Bob computes the remainder when $C$ is divided by $9$. How many apples remain?\n"}
+,{"stream_name":"stdout","time":272.643801564,"data":"typos    : Alice has 12 apples and $x + y = 7$. Bob computes the rmeainder when $N$ is dviided by $9$. How many apples rmeain?\n"}
+,{"stream_name":"stdout","time":272.643809618,"data":"distract : Alice has 12 apples and $x + y = 7$. Bob computes the remainder when $N$ is divided by $9$. How many apples remain? Note that the problem was originally posed at a regional competition in 2019.\n"}
+,{"stream_name":"stdout","time":272.644852425,"data":"[바뀌면 안 되는 절차형] The sum of \\frac{1}{2} and \\frac{1}{3} is added to 7. A second number equals 20. The total is divided by 4. What is the result?\n"}
+,{"stream_name":"stdout","time":272.644922096,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":272.645146975,"data":"  notation: The sum of 1/2 and 1/3 is added to 7. A second number equals 20. The total is divided by 4. What is the result?\n"}
+,{"stream_name":"stdout","time":272.645258974,"data":"  → 채택 : [('notation', 'The sum of 1/2 and 1/3 is added to 7. A second number equals…', False), ('format', 'The sum of \\\\frac{1}{2} and \\\\frac{1}{3} is added to 7. A seco…', True)]\n"}
+,{"stream_name":"stdout","time":272.645268442,"data":"\n"}
+,{"stream_name":"stdout","time":272.645284994,"data":"[안전한 조건형] Alice has 12 apples. Bob has three times as many apples as Alice. Carol has $5$ fewer apples than Bob. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":272.645409069,"data":"  reorder : Carol has $5$ fewer apples than Bob. Bob has three times as many apples as Alice. Alice has 12 apples. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":272.645426837,"data":"  notation: Alice has twelve apples. Bob has three times as many apples as Alice. Carol has $5$ fewer apples than Bob. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":272.645569643,"data":"  → 채택 : [('reorder', 'Carol has $5$ fewer apples than Bob. Bob has three times as …', False), ('notation', 'Alice has twelve apples. Bob has three times as many apples …', False)]\n"}
+,{"stream_name":"stdout","time":272.645578871,"data":"\n"}
+,{"stream_name":"stdout","time":272.645583337,"data":"[짧은 문제] Let $f(x) = x^2 + 3x$. Find $f(4)$.\n"}
+,{"stream_name":"stdout","time":272.64559655,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":272.645669971,"data":"  notation: (적용 불가)\n"}
+,{"stream_name":"stdout","time":272.645682867,"data":"  → 채택 : [('format', 'Let $f(x) = x^2 + 3x$. Find $f(4)$.', True), ('format2', 'Let $f(x) = x^2 + 3x$. Find $f(4)$.', True)]\n"}
+,{"stream_name":"stdout","time":272.645687005,"data":"\n"}
+,{"stream_name":"stdout","time":272.645708455,"data":"[분수 보호] A recipe uses \\frac{3}{4} cup of sugar and 25 grams of salt. The baker triples the recipe. How much sugar is used?\n"}
+,{"stream_name":"stdout","time":272.64575747,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":272.645798682,"data":"  notation: A recipe uses 3/4 cup of sugar and twenty-five grams of salt. The baker triples the recipe. How much sugar is used?\n"}
+,{"stream_name":"stdout","time":272.645898062,"data":"  → 채택 : [('notation', 'A recipe uses 3/4 cup of sugar and twenty-five grams of salt…', False), ('format', 'A recipe uses \\\\frac{3}{4} cup of sugar and 25 grams of salt.…', True)]\n"}
+,{"stream_name":"stdout","time":272.645904511,"data":"\n"}
+,{"stream_name":"stdout","time":272.646318806,"data":"답 추출: -12 1234 42\n"}
+,{"stream_name":"stdout","time":272.646333726,"data":"자체 검사 통과\n"}
+,{"stream_name":"stdout","time":274.68581784,"data":"공식 문제 33개 (robust 20 / spurious 13)\n"}
+,{"stream_name":"stderr","time":299.846885467,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":316.778181735,"data":"WARNING 09-30 12:14:33 [model.py:2364] Casting torch.bfloat16 to torch.float16.\n"}
+,{"stream_name":"stdout","time":374.750370456,"data":"(Worker pid=232) WARNING 09-30 12:15:31 [symm_mem.py:67] SymmMemCommunicator: Device capability 7.5 not supported, communicator is not available.\n"}
+,{"stream_name":"stdout","time":374.752881234,"data":"(Worker pid=231) WARNING 09-30 12:15:31 [symm_mem.py:67] SymmMemCommunicator: Device capability 7.5 not supported, communicator is not available.\n"}
+,{"stream_name":"stdout","time":374.805854503,"data":"(Worker pid=232) WARNING 09-30 12:15:31 [flashinfer_all_reduce.py:383] FlashInfer All Reduce is disabled because it is not supported for world_size=2.\n"}
+,{"stream_name":"stdout","time":374.807209082,"data":"(Worker pid=231) WARNING 09-30 12:15:31 [flashinfer_all_reduce.py:383] FlashInfer All Reduce is disabled because it is not supported for world_size=2.\n"}
+,{"stream_name":"stdout","time":376.56727299,"data":"(Worker_TP1 pid=232) ERROR 09-30 12:15:33 [fa_utils.py:212] Cannot use FA version 2 is not supported due to FA2 is only supported on devices with compute capability \u003e= 8\n"}
+,{"stream_name":"stdout","time":376.757954754,"data":"(Worker_TP0 pid=231) ERROR 09-30 12:15:33 [fa_utils.py:212] Cannot use FA version 2 is not supported due to FA2 is only supported on devices with compute capability \u003e= 8\n"}
+,{"stream_name":"stderr","time":377.580018668,"data":"(Worker_TP1 pid=232) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":457.489484739,"data":"(Worker_TP0 pid=231) \rLoading safetensors checkpoint shards:   0% Completed | 0/4 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":461.13857753,"data":"(Worker_TP0 pid=231) \rLoading safetensors checkpoint shards:  25% Completed | 1/4 [00:03\u003c00:10,  3.65s/it]\n"}
+,{"stream_name":"stderr","time":469.744320586,"data":"(Worker_TP0 pid=231) \rLoading safetensors checkpoint shards:  50% Completed | 2/4 [00:12\u003c00:13,  6.56s/it]\n"}
+,{"stream_name":"stderr","time":481.897325026,"data":"(Worker_TP0 pid=231) \rLoading safetensors checkpoint shards:  75% Completed | 3/4 [00:24\u003c00:09,  9.12s/it]\n"}
+,{"stream_name":"stderr","time":486.301884078,"data":"(Worker_TP0 pid=231) \rLoading safetensors checkpoint shards: 100% Completed | 4/4 [00:28\u003c00:00,  7.26s/it]\n"}
+,{"stream_name":"stderr","time":486.301938822,"data":"(Worker_TP0 pid=231) \rLoading safetensors checkpoint shards: 100% Completed | 4/4 [00:28\u003c00:00,  7.20s/it]\n"}
+,{"stream_name":"stderr","time":486.301946828,"data":"(Worker_TP0 pid=231) \n"}
+,{"stream_name":"stdout","time":487.136363706,"data":"(Worker_TP0 pid=231) WARNING 09-30 12:17:24 [topk_topp_sampler.py:85] FlashInfer top-p/top-k sampling unavailable: unsupported compute capability 7.5; falling back. Set VLLM_USE_FLASHINFER_SAMPLER=0 to silence.\n"}
+,{"stream_name":"stderr","time":504.468539069,"data":"(Worker_TP1 pid=232) [rank1]:W0930 12:17:41.606000 232 torch/_inductor/utils.py:1953] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":504.495001342,"data":"(Worker_TP0 pid=231) [rank0]:W0930 12:17:41.632000 231 torch/_inductor/utils.py:1953] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":523.046622063,"data":"(Worker_TP0 pid=231) \rCapturing CUDA graphs (PIECEWISE):   0%|          | 0/11 [00:00\u003c?, ?it/s]\rCapturing CUDA graphs (PIECEWISE):   9%|▉         | 1/11 [00:01\u003c00:10,  1.07s/it]\rCapturing CUDA graphs (PIECEWISE):  27%|██▋       | 3/11 [00:01\u003c00:02,  2.97it/s]\rCapturing CUDA graphs (PIECEWISE):  45%|████▌     | 5/11 [00:02\u003c00:02,  2.32it/s]\rCapturing CUDA graphs (PIECEWISE):  55%|█████▍    | 6/11 [00:03\u003c00:02,  1.70it/s]\rCapturing CUDA graphs (PIECEWISE):  73%|███████▎  | 8/11 [00:03\u003c00:01,  2.74it/s]\rCapturing CUDA graphs (PIECEWISE):  91%|█████████ | 10/11 [00:03\u003c00:00,  3.96it/s]\rCapturing CUDA graphs (PIECEWISE): 100%|██████████| 11/11 [00:04\u003c00:00,  2.47it/s]\rCapturing CUDA graphs (PIECEWISE): 100%|██████████| 11/11 [00:04\u003c00:00,  2.42it/s]\n"}
+,{"stream_name":"stderr","time":523.189161225,"data":"(Worker_TP0 pid=231) \rCapturing CUDA graphs (FULL):   0%|          | 0/2 [00:00\u003c?, ?it/s]\rCapturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00\u003c00:00, 14.10it/s]\rCapturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00\u003c00:00, 14.08it/s]\n"}
+,{"stream_name":"stderr","time":554.433045694,"data":"(Worker_TP0 pid=231) \rCapturing CUDA graphs (PIECEWISE):   0%|          | 0/11 [00:00\u003c?, ?it/s]\rCapturing CUDA graphs (PIECEWISE):  18%|█▊        | 2/11 [00:00\u003c00:00, 11.23it/s]\rCapturing CUDA graphs (PIECEWISE):  36%|███▋      | 4/11 [00:00\u003c00:00, 11.90it/s]\rCapturing CUDA graphs (PIECEWISE):  55%|█████▍    | 6/11 [00:00\u003c00:00, 12.29it/s]\rCapturing CUDA graphs (PIECEWISE):  73%|███████▎  | 8/11 [00:00\u003c00:00, 12.89it/s]\rCapturing CUDA graphs (PIECEWISE):  91%|█████████ | 10/11 [00:00\u003c00:00, 13.30it/s]\rCapturing CUDA graphs (PIECEWISE): 100%|██████████| 11/11 [00:00\u003c00:00, 12.98it/s]\n"}
+,{"stream_name":"stderr","time":554.85381611,"data":"(Worker_TP0 pid=231) \rCapturing CUDA graphs (FULL):   0%|          | 0/7 [00:00\u003c?, ?it/s]\rCapturing CUDA graphs (FULL):  29%|██▊       | 2/7 [00:00\u003c00:00, 15.26it/s]\rCapturing CUDA graphs (FULL):  57%|█████▋    | 4/7 [00:00\u003c00:00, 16.25it/s]\rCapturing CUDA graphs (FULL):  86%|████████▌ | 6/7 [00:00\u003c00:00, 16.65it/s]\rCapturing CUDA graphs (FULL): 100%|██████████| 7/7 [00:00\u003c00:00, 16.65it/s]\n"}
+,{"stream_name":"stdout","time":560.843913278,"data":"[H14b] vLLM 로드 261s · 문제 33 × (원본+rename) × 1회 · max_new 1024\n"}
+,{"stream_name":"stderr","time":561.010496429,"data":"\rRendering prompts:   0%|          | 0/66 [00:00\u003c?, ?it/s]\rRendering prompts:  45%|████▌     | 30/66 [00:00\u003c00:00, 297.50it/s]\rRendering prompts: 100%|██████████| 66/66 [00:00\u003c00:00, 414.38it/s]\n"}
+,{"stream_name":"stdout","time":561.919703302,"data":"(Worker_TP0 pid=231) WARNING 09-30 12:18:39 [jit_monitor.py:141] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":562.311413453,"data":"(Worker_TP0 pid=231) WARNING 09-30 12:18:39 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _topk_log_softmax_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":736.618991294,"data":"[H14b] 생성 66프롬프트 · 176s · 384.5 tok/s\n"}
+,{"stream_name":"stderr","time":736.618910231,"data":"\rProcessed prompts:   0%|          | 0/66 [00:00\u003c?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]\rProcessed prompts:   2%|▏         | 1/66 [01:07\u003c1:13:18, 67.66s/it, est. speed input: 2.32 toks/s, output: 15.13 toks/s]\rProcessed prompts:  50%|█████     | 33/66 [02:18\u003c01:58,  3.60s/it, est. speed input: 35.79 toks/s, output: 244.64 toks/s]\rProcessed prompts:  52%|█████▏    | 34/66 [02:18\u003c01:50,  3.46s/it, est. speed input: 36.56 toks/s, output: 251.68 toks/s]\rProcessed prompts:  98%|█████████▊| 65/66 [02:55\u003c00:01,  1.99s/it, est. speed input: 74.04 toks/s, output: 379.17 toks/s]\rProcessed prompts: 100%|██████████| 66/66 [02:55\u003c00:00,  1.99s/it, est. speed input: 75.20 toks/s, output: 384.86 toks/s]\rProcessed prompts: 100%|██████████| 66/66 [02:55\u003c00:00,  2.66s/it, est. speed input: 75.20 toks/s, output: 384.86 toks/s]\n"}
+,{"stream_name":"stdout","time":737.355739891,"data":"[H14b] 지표 산출 31/33 (rename 이 원문과 같은 문제 2)\n"}
+,{"stream_name":"stdout","time":737.355907461,"data":"  d_logprob: robust 평균 -0.0074 · spurious 평균 -0.0037\n"}
+,{"stream_name":"stdout","time":737.356102433,"data":"  d_entropy: robust 평균 +0.0139 · spurious 평균 +0.0072\n"}
+,{"stream_name":"stdout","time":737.35634599,"data":"  d_first_math: robust 평균 +44.7778 · spurious 평균 -56.1538\n"}
+,{"stream_name":"stdout","time":737.358120298,"data":"[H14b] 저장 완료\n"}
+,{"stream_name":"stdout","time":742.364711777,"data":"WARNING 09-30 12:21:39 [utils.py:652] [shutdown] Process manager: force killing remaining processes count=1\n"}
+,{"stream_name":"stdout","time":742.364784694,"data":"WARNING 09-30 12:21:39 [utils.py:657] [shutdown] Process manager: force killing remaining process EngineCore pid 191\n"}
+,{"stream_name":"stderr","time":747.320477783,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":747.320512236,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":747.559071318,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":747.559096534,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":748.326594038,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":749.626153732,"data":"[NbConvertApp] Writing 372484 bytes to __results__.html\n"}
+]

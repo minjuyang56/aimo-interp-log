@@ -1,0 +1,35 @@
+H10-B 풀이 궤적 나침반 (v2, Kaggle 생성 1024토큰·32토큰 청크) · 사전등록 부호: compass·ratio 큼=robust, curvature 큼=spurious · null 30회
+
+## 층 L//2
+모델           지표              n    AUC   bacc       null95% ρ(nchunk)  ρ(logT)    잔차AUC        잔차null
+-- Skywork-OR1-Math-7B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Skywork-OR1- compass_mean   33  0.692  0.583 [0.31,0.74]       +nan    -0.13    0.688 [0.25,0.71] 
+Skywork-OR1- compass_slope  33  0.581  0.583 [0.32,0.64]       +nan    -0.31    0.523 [0.32,0.66] 
+Skywork-OR1- traced_ratio   33  0.623  0.646 [0.31,0.68]       +nan    -0.11    0.588 [0.36,0.69] 
+Skywork-OR1- curvature      33  0.442  0.456 [0.37,0.71]       +nan    +0.00    0.454 [0.28,0.73] 
+-- Olmo-3-7B-Think: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Olmo-3-7B-Th compass_mean   33  0.546  0.519 [0.35,0.69]       +nan    +0.14    0.577 [0.30,0.71] 
+Olmo-3-7B-Th compass_slope  33  0.642  0.519 [0.33,0.70]       +nan    +0.11    0.665 [0.26,0.67] 
+Olmo-3-7B-Th traced_ratio   33  0.650  0.583 [0.33,0.66]       +nan    +0.16    0.681 [0.34,0.74] 
+Olmo-3-7B-Th curvature      33  0.535  0.519 [0.33,0.66]       +nan    +0.07    0.492 [0.33,0.68] 
+풀링(잔차)       compass_mean   33                                                   0.631 [0.31,0.69]    원점수 모델평균 0.612 [0.32,0.69]    ρ: Skywor-Olmo-3 +0.62 ★주지표
+풀링(잔차)       compass_slope  33                                                   0.615 [0.30,0.70]    원점수 모델평균 0.665 [0.30,0.70]    ρ: Skywor-Olmo-3 +0.31
+풀링(잔차)       traced_ratio   33                                                   0.673 [0.29,0.70]    원점수 모델평균 0.677 [0.29,0.70]    ρ: Skywor-Olmo-3 +0.57
+풀링(잔차)       curvature      33                                                   0.465 [0.29,0.69]    원점수 모델평균 0.481 [0.29,0.68]    ρ: Skywor-Olmo-3 +0.31
+
+## 층 last
+모델           지표              n    AUC   bacc       null95% ρ(nchunk)  ρ(logT)    잔차AUC        잔차null
+-- Skywork-OR1-Math-7B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Skywork-OR1- compass_mean   33  0.565  0.519 [0.34,0.70]       +nan    -0.05    0.565 [0.30,0.59] 
+Skywork-OR1- compass_slope  33  0.569  0.583 [0.39,0.68]       +nan    -0.10    0.523 [0.35,0.72] 
+Skywork-OR1- traced_ratio   33  0.508  0.456 [0.30,0.65]       +nan    +0.26    0.565 [0.30,0.66] 
+Skywork-OR1- curvature      33  0.327  0.329 [0.36,0.67]▼      +nan    -0.17    0.362 [0.34,0.66] 
+-- Olmo-3-7B-Think: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Olmo-3-7B-Th compass_mean   33  0.558  0.519 [0.29,0.71]       +nan    +0.33    0.627 [0.39,0.62]▲
+Olmo-3-7B-Th compass_slope  33  0.600  0.519 [0.31,0.70]       +nan    +0.20    0.635 [0.33,0.64] 
+Olmo-3-7B-Th traced_ratio   33  0.554  0.456 [0.35,0.68]       +nan    +0.18    0.581 [0.33,0.65] 
+Olmo-3-7B-Th curvature      33  0.473  0.519 [0.34,0.68]       +nan    +0.09    0.435 [0.34,0.68] 
+풀링(잔차)       compass_mean   33                                                   0.631 [0.31,0.70]    원점수 모델평균 0.604 [0.30,0.70]    ρ: Skywor-Olmo-3 +0.22
+풀링(잔차)       compass_slope  33                                                   0.577 [0.28,0.71]    원점수 모델평균 0.573 [0.27,0.70]    ρ: Skywor-Olmo-3 +0.15
+풀링(잔차)       traced_ratio   33                                                   0.588 [0.28,0.69]    원점수 모델평균 0.535 [0.29,0.70]    ρ: Skywor-Olmo-3 +0.11
+풀링(잔차)       curvature      33                                                   0.412 [0.30,0.70]    원점수 모델평균 0.412 [0.30,0.70]    ρ: Skywor-Olmo-3 +0.32

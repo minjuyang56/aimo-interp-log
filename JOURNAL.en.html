@@ -1,0 +1,2096 @@
+<title>Chapter 1 — [Author] Decides to Win</title>
+<style>
+  :root {
+    --paper: #f0f0ee;
+    --sheet: #fbfbfa;
+    --sheet-2: #e6e6e3;
+    --ink: #15161a;
+    --ink-2: #61636b;
+    --ink-3: #8b8d95;
+    --rule: #d6d6d2;
+    --blue: #24468f;
+    --blue-soft: #e4e9f5;
+    --red: #a5281c;
+    --red-soft: #f7e5e2;
+    --green: #2a6740;
+    --green-soft: #e3efe8;
+    --term-bg: #1b1e24;
+    --term-ink: #d4d7dd;
+    --term-dim: #7e838d;
+
+    --display: "Palatino Linotype", Palatino, "Iowan Old Style", Georgia, serif;
+    --body: system-ui, "Segoe UI Variable Text", "Segoe UI", "Malgun Gothic",
+            -apple-system, sans-serif;
+    --mono: "Cascadia Mono", "Cascadia Code", Consolas, "JetBrains Mono",
+            ui-monospace, "D2Coding", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131519; --sheet: #1a1d22; --sheet-2: #22262d;
+      --ink: #e4e5e3; --ink-2: #9a9ca4; --ink-3: #71747c; --rule: #2c3038;
+      --blue: #8fb0ee; --blue-soft: #182238;
+      --red: #ef8f83; --red-soft: #33201d;
+      --green: #7ec49a; --green-soft: #172a20;
+      --term-bg: #0c0e12; --term-ink: #ccd0d7; --term-dim: #6e737d;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #131519; --sheet: #1a1d22; --sheet-2: #22262d;
+    --ink: #e4e5e3; --ink-2: #9a9ca4; --ink-3: #71747c; --rule: #2c3038;
+    --blue: #8fb0ee; --blue-soft: #182238;
+    --red: #ef8f83; --red-soft: #33201d;
+    --green: #7ec49a; --green-soft: #172a20;
+    --term-bg: #0c0e12; --term-ink: #ccd0d7; --term-dim: #6e737d;
+  }
+
+  :root[data-theme="light"] {
+    --paper: #f0f0ee; --sheet: #fbfbfa; --sheet-2: #e6e6e3;
+    --ink: #15161a; --ink-2: #61636b; --ink-3: #8b8d95; --rule: #d6d6d2;
+    --blue: #24468f; --blue-soft: #e4e9f5;
+    --red: #a5281c; --red-soft: #f7e5e2;
+    --green: #2a6740; --green-soft: #e3efe8;
+    --term-bg: #1b1e24; --term-ink: #d4d7dd; --term-dim: #7e838d;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .reel { max-width: 860px; margin: 0 auto; padding: 0 22px 110px; }
+
+  .langbar {
+    padding: 14px 0 0;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+  }
+  .langbar a { color: var(--blue); text-decoration: none; }
+  .langbar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .langbar .cur { color: var(--ink); font-weight: 700; }
+
+  .titlecard {
+    text-align: center;
+    padding: 70px 0 56px;
+    border-bottom: 3px double var(--rule);
+    margin-bottom: 12px;
+  }
+
+  .titlecard .over {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 24px;
+  }
+
+  .titlecard h1 {
+    font-family: var(--display);
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin-bottom: 20px;
+  }
+
+  .titlecard .sub {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-2);
+    letter-spacing: 0.04em;
+  }
+
+  .billing {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 26px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-2);
+  }
+
+  .billing b { color: var(--ink); font-weight: 600; }
+
+  .legend {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 32px 0 8px;
+    font-size: 14px;
+    color: var(--ink-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    align-items: center;
+  }
+
+  .scene { padding-top: 54px; }
+
+  .slug {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .slug .no { color: var(--blue); }
+
+  .badge {
+    font-family: var(--body);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: none;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .badge-real { background: var(--green-soft); color: var(--green); }
+  .badge-pred { background: var(--blue-soft); color: var(--blue); }
+
+  .hud {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-3);
+    letter-spacing: 0.03em;
+    padding: 7px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+  }
+
+  .hud .k { color: var(--ink-2); }
+
+  .work {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    margin: 20px 0 26px;
+    overflow: hidden;
+  }
+
+  .work > div { background: var(--sheet); padding: 12px 14px; }
+
+  .work dt {
+    font-family: var(--body);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 6px;
+  }
+
+  .work dd {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--ink);
+    word-break: break-word;
+  }
+
+  .work dd.none { color: var(--ink-3); }
+
+  .action {
+    margin: 18px 0;
+    color: var(--ink-2);
+    max-width: 64ch;
+  }
+
+  .action em { color: var(--ink); font-style: normal; font-weight: 600; }
+
+  .speech { margin: 22px 0 22px 6%; max-width: 58ch; }
+
+  .speech .who {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 2px;
+  }
+
+  .speech .paren {
+    font-family: var(--body);
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-bottom: 2px;
+  }
+
+  .speech p + p { margin-top: 12px; }
+
+  .term {
+    background: var(--term-bg);
+    color: var(--term-ink);
+    border-radius: 5px;
+    padding: 15px 17px;
+    margin: 22px 0;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+    border: 1px solid var(--rule);
+  }
+
+  .term .p { color: var(--term-dim); }
+  .term .g { color: #7ec49a; }
+  .term .r { color: #ef8f83; }
+  .term .y { color: #ddb46a; }
+  .term .c { color: var(--term-dim); }
+
+  pre.code {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    padding: 15px 17px;
+    margin: 22px 0;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.75;
+    overflow-x: auto;
+  }
+
+  pre.code.bad { border-left-color: var(--red); }
+  pre.code.good { border-left-color: var(--green); }
+  pre.code .c { color: var(--ink-3); }
+  pre.code .k { color: var(--blue); }
+  pre.code .del { color: var(--red); }
+  pre.code .add { color: var(--green); }
+
+  .review {
+    border: 1px solid var(--red);
+    border-radius: 4px;
+    margin: 24px 0;
+    overflow: hidden;
+  }
+
+  .review > h4 {
+    background: var(--red-soft);
+    color: var(--red);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 9px 15px;
+  }
+
+  .review ol { list-style: none; counter-reset: note; }
+
+  .review ol > li {
+    counter-increment: note;
+    padding: 13px 15px 13px 46px;
+    position: relative;
+    border-top: 1px solid var(--rule);
+    background: var(--sheet);
+    font-size: 14.5px;
+  }
+
+  .review ol > li::before {
+    content: counter(note);
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--red);
+    color: var(--sheet);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .review .where {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .review .verdict {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 3px;
+    margin-left: 6px;
+  }
+  .v-fix { background: var(--red-soft); color: var(--red); }
+  .v-ok { background: var(--green-soft); color: var(--green); }
+
+  .tablewrap { overflow-x: auto; margin: 24px 0; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 470px;
+    font-size: 13.5px;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 10.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+    padding: 9px 13px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--sheet-2);
+    white-space: nowrap;
+  }
+
+  tbody td { padding: 9px 13px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.mono { font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  td.dim { color: var(--ink-2); }
+  .up { color: var(--green); font-weight: 600; }
+  .down { color: var(--red); font-weight: 600; }
+
+  .insert {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 17px 19px;
+    margin: 24px 0;
+  }
+
+  .insert h4 {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+
+  .insert p { font-size: 14.5px; color: var(--ink-2); max-width: 62ch; }
+  .insert p + p { margin-top: 10px; }
+
+  .divider {
+    margin: 66px 0 0;
+    padding: 22px;
+    border: 1px dashed var(--blue);
+    border-radius: 4px;
+    background: var(--blue-soft);
+    text-align: center;
+  }
+
+  .divider .t {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .divider p { font-size: 14.5px; color: var(--ink-2); max-width: 58ch; margin: 0 auto; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.87em;
+    background: var(--sheet-2);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .endcard {
+    margin-top: 76px;
+    padding-top: 26px;
+    border-top: 3px double var(--rule);
+    text-align: center;
+  }
+
+  .endcard .t {
+    font-family: var(--display);
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .endcard p {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    max-width: 62ch;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="reel">
+
+  <div class="langbar"><a href="JOURNAL.html">한국어</a> · <span class="cur">English</span></div>
+
+  <div class="titlecard">
+    <div class="over">AIMO Interpretability Challenge · Working Log</div>
+    <h1>Chapter One<br>[Author] Decides to Win</h1>
+    <div class="sub">Tuesday, 18 August 2026 — one day's record</div>
+    <div class="billing">
+      <span><b>Location</b> C:\side\getting-started</span>
+      <span><b>Hardware</b> torch 2.12.1+cpu · no GPU</span>
+      <span><b>Deadline</b> 1 November · D-75</span>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><span class="badge badge-real" style="margin:0">ACTUAL</span> Ran it today, confirmed</span>
+    <span><span class="badge badge-pred" style="margin:0">PROJECTED</span> Not done yet. Reasoning stated</span>
+  </div>
+
+  <!-- ============ S1 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#1</span> First scoring — three baselines <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Local runs</span> 3</span>
+      <span><span class="k">Best</span> 0.643 (local)</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>uv sync<br>import_hf_dataset.py<br>run_local.py × 3</dd></div>
+      <div><dt>Read</dt><dd>run_local.py<br>ingestion.py · scoring.py</dd></div>
+      <div><dt>Reference</dt><dd>Dockerfile.competition</dd></div>
+    </dl>
+
+    <p class="action">
+      The environment is up. torch is the <em>CPU build</em> — this machine has no GPU.
+      Any strategy that repeats 8B inference locally is crossed out before it begins.
+      <em>Local is for verification. Compute happens on the server.</em>
+    </p>
+
+    <p class="action">
+      28 cases land. <em>9 robust</em>, <em>19 spurious</em>.
+      Run all three provided baselines. Before trusting anyone else's code, <em>look at the numbers.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run scripts/run_local.py solutions/always-true
+{ <span class="y">"accuracy": 0.321</span>, "coverage": 1.0, "invalid_predictions": 0 }
+
+<span class="p">&gt;</span> uv run scripts/run_local.py solutions/uncertainty-profiling
+{ <span class="g">"accuracy": 0.643</span>, "coverage": 0.964, "invalid_predictions": 1 }
+
+<span class="p">&gt;</span> uv run scripts/run_local.py solutions/trained-probe
+{ <span class="r">"accuracy": 0.000</span>, <span class="r">"coverage": 0.000</span>, <span class="r">"invalid_predictions": 28</span> }</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(staring at the third line)</div>
+      <p>
+        The method the competition holds up as its flagship example is <em>wiped out.</em>
+        And there is no error message. The grader swallowed it.
+      </p>
+      <p>
+        This is not something to shrug off. <em>The server will be exactly this silent.</em>
+        Burning submissions out of 100 without knowing why would end the competition for me.
+        The debugging habit has to be established here, now.
+      </p>
+    </div>
+
+    <p class="action">
+      Call the function <em>directly</em>, bypassing the grader.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python -c "import probe_inference as p; p._load_model(...)"
+<span class="r">OSError: We couldn't connect to 'https://huggingface.co' ...</span>
+<span class="c">artifact model_id: deepseek-ai/DeepSeek-R1-0528-Qwen3-8B</span></div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The model isn't in the local cache. An environment gap, not a code defect —
+        <em>and just as that thought settles</em>, the stack trace shows something odd.
+        Why is this function being called <span style="color:var(--red)">per problem</span>?
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S2 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#2</span> Code review ① — a bomb inside the loop <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Reviewing</span> probe_inference.py · 360 lines</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Read</dt><dd>probe_inference.py<br>(all 360 lines)</dd></div>
+      <div><dt>Reference</dt><dd>uncertainty_profile/<br>inference.py:46-74</dd></div>
+      <div><dt>Run</dt><dd>pytest tests<br>analysis/count_loads.py</dd></div>
+    </dl>
+
+    <p class="action">
+      Line by line. The artifact load sits <em>outside</em> the loop. Correct.
+      But the model load—
+    </p>
+
+    <pre class="code bad"><span class="c"># probe_inference.py:242</span>
+<span class="k">def</span> _encode_problem(problem_text, artifact):
+    tokenizer, model = _load_model(artifact.model_id)   <span class="del">← here</span>
+    ...
+
+<span class="c"># probe_inference.py:356 — the call site</span>
+artifact = _load_artifact(model_id)          <span class="c"># once</span>
+<span class="k">return</span> [_predict_problem(t, artifact) <span class="k">for</span> t <span class="k">in</span> problem_texts]  <span class="c"># 28 times</span></pre>
+
+    <div class="review">
+      <h4>Review notes — red pencil</h4>
+      <ol>
+        <li>
+          <span class="where">probe_inference.py:248</span>
+          Re-reads the entire 8B checkpoint once per problem. The README puts load cost at roughly
+          one minute; there are 28 cases. <strong>Structurally exceeds the 3600-second limit.</strong>
+          <span class="verdict v-fix">must fix</span>
+        </li>
+        <li>
+          <span class="where">solutions/trained-probe/README.md:25</span>
+          Claims "no artifact is checked in here", yet a 54 MB file is committed.
+          The documented safety net (return all False when absent) <strong>never engages.</strong>
+          <span class="verdict v-fix">doc error</span>
+        </li>
+        <li>
+          <span class="where">uncertainty_profile/inference.py:46-74</span>
+          The other example in the same repo does it right: <strong>one load per batch,
+          released in finally.</strong> The correct pattern is already sitting next door.
+          <span class="verdict v-ok">reference</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Fixing it is easy. The hard part is <em>proving it's fixed.</em>
+        The model isn't here, so it can't actually run. Then count the loads instead.
+        Swap in a fake model and attach a counter.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/count_loads.py &lt;original&gt; &lt;fixed&gt;
+original (HEAD)   model loads <span class="r"> 28</span> · predictions 28 · contract OK
+fixed             model loads <span class="g">  1</span> · predictions 28 · contract OK
+
+<span class="p">&gt;</span> uv run --with pytest python -m pytest tests -q
+<span class="g">20 passed</span></div>
+
+    <p class="action">
+      <em>28 → 1.</em> Contract intact, tests intact. First win.
+      But [Author] knows — this fixed someone else's bug. <em>Their own score moved by exactly zero.</em>
+    </p>
+  </section>
+
+  <!-- ============ S3 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#3</span> What the label really is — nine discarded columns <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Found</span> 9 of 15 columns dropped</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Read</dt><dd>import_hf_dataset.py<br>:255-323 convert_rows</dd></div>
+      <div><dt>Run</dt><dd>download raw parquet<br>enumerate all columns</dd></div>
+      <div><dt>Reference</dt><dd>uncertainty-profiling<br>README (decay regression)</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        To move the score I have to know <em>how the label was manufactured.</em>
+        The importer's <code>cases.jsonl</code> holds only the problem and the model_id.
+        Is that all the source has? Not checking would be a mistake.
+      </p>
+    </div>
+
+    <p class="action">
+      Pull the parquet from Hugging Face <em>directly</em> and count the columns.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> print(frame.shape, list(frame.columns))
+(28, <span class="y">15</span>)
+['model_id', 'dataset_id', 'problem_id', 'original_problem',
+ 'permutation_type', <span class="g">'permutation_source'</span>, <span class="g">'base_accuracy'</span>,
+ <span class="g">'permuted_accuracy'</span>, <span class="g">'absolute_accuracy_decay'</span>, <span class="g">'relative_accuracy_decay'</span>,
+ <span class="g">'n_base_predictions'</span>, <span class="g">'n_permuted_predictions'</span>,
+ <span class="g">'n_detrimental_permutations'</span>, <span class="g">'permutations_causing_decay'</span>, 'model_is_robust']</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(leaning forward)</div>
+      <p>
+        The importer was <em>throwing nine away.</em> One of them is
+        <code>absolute_accuracy_decay</code>. This column tells where the binary label came from.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>Insert — label recipe, reverse-engineered</h4>
+      <p>
+        Run the original problem 10 times → <code>base_accuracy</code>.
+        Run variants perturbed in 7 ways → <code>permuted_accuracy</code>.
+        The gap is <code>absolute_accuracy_decay</code>.
+        Five styles (<code>rephrase</code>, <code>rename</code>, <code>domain</code>,
+        <code>distract</code>, <code>typos</code>) were generated by <code>gpt-oss-120b</code>
+        (the <code>permutation_source</code> column carries its name); two
+        (<code>expert_no_solution</code>, <code>expert_perturbations</code>) were written by humans.
+      </p>
+      <p>
+        The label rule is in paper §1.4: if a <strong>majority</strong> of the variants break the model,
+        False; otherwise True. One broken variant does not make it False. And the ambiguous cases
+        were dropped from the evaluation set outright ("not clear-cut"). The 28 rows show it —
+        robust sits at decay <strong>exactly 0.0</strong>, spurious at <strong>0.5 and above</strong>,
+        nothing in between. There is no threshold to find.
+        <strong>The data was built so that no middle value exists.</strong>
+      </p>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Now it's clear why <code>uncertainty-profiling</code> uses a regressor.
+        It isn't binary classification — it <em>predicts decay and cuts at a threshold.</em>
+        It follows the target definition exactly. So should I.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S4 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#4</span> Asymmetry — the labels were not made evenly <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Found</span> True labels cost 10× to verify</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>analysis/probe_field.py<br>analysis/probe_counts.py</dd></div>
+      <div><dt>Read</dt><dd>permutations_causing_decay<br>(parse the JSON string)</dd></div>
+      <div><dt>Reference</dt><dd class="none">—</dd></div>
+    </dl>
+
+    <p class="action">
+      One discarded column keeps catching the eye. <code>permutations_causing_decay</code>.
+      <em>The name is wrong.</em> A permutation is a rearrangement; what happens here is
+      perturbation. One of the values is literally <code>expert_perturbations</code> —
+      the repo mixes both words in a single row.
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The name can wait. <em>Pin the definition first.</em>
+        It reads as "the variants that caused decay", but whether that's true is a counting question.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/probe_field.py
+rows with entries: 19
+len(list) == n_detrimental_permutations: <span class="g">19</span>
+every entry below base_accuracy: <span class="g">19</span>
+
+entry keys: {'question', 'variant_accuracy', 'n_predictions',
+             'permutation_type', 'permutation_source'}</div>
+
+    <p class="action">
+      All 19, no exceptions. Definition fixed —
+      <em>a list of only those variants that scored below the original</em>,
+      each carrying <em>the full variant text and its own accuracy</em>.
+      The 9 robust rows all hold an empty list.
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Which means the original and the broken variant can be read <em>as a pair.</em>
+        Far richer than a single label.
+      </p>
+      <div class="paren">(eye moving to the prediction-count columns)</div>
+      <p>...hold on. Why are these numbers so different?</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Label</th><th class="num">base runs</th><th class="num">variant runs</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>spurious</strong> (19 rows)</td>
+            <td class="num">10</td>
+            <td class="num down">10</td>
+            <td class="dim">stops at the first break</td>
+          </tr>
+          <tr>
+            <td><strong>robust</strong> (9 rows)</td>
+            <td class="num">10</td>
+            <td class="num up">67 – 120</td>
+            <td class="dim">must survive all 7–12 styles</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="insert">
+      <h4>Insert — what the asymmetry means</h4>
+      <p>
+        <strong>A <code>True</code> label was verified at more than ten times the cost of a
+        <code>False</code> one.</strong> Spurious sticks the moment one variant breaks;
+        robust requires surviving over a hundred attempts.
+      </p>
+      <p>
+        It is early stopping, and it is reasonable — but it leaves
+        <strong>asymmetric label confidence</strong>. <code>True</code> is near-certain;
+        <code>False</code> is closer to "it broke somewhere, at least once".
+        The two classes cannot carry the same weight in training.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S5 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#5</span> The leak — 28 / 28 <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Found</span> permutation_type separates perfectly</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>analysis/model_confound.py<br>(group by permutation_type)</dd></div>
+      <div><dt>Read</dt><dd>ingestion.py:141-179<br>(what actually gets passed)</dd></div>
+      <div><dt>Reference</dt><dd>competition rules —<br>data use restrictions</dd></div>
+    </dl>
+
+    <p class="action">
+      With S#4's asymmetry still in mind, [Author] splits on <code>permutation_type</code>.
+      <em>The screen comes apart unnaturally cleanly.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> frame.groupby(single_type).model_is_robust.agg(['sum','count'])
+                     sum  count
+distract               0      1
+domain                 0      3
+expert_no_solution     0     10
+rename                 0      3
+rephrase               0      2
+<span class="y">multi-type (7–12)        9      9</span></div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(very quietly)</div>
+      <p>Twenty-eight out of twenty-eight. Not one miss.</p>
+      <div class="paren">(beat)</div>
+      <p>
+        ...of course. <em>It's the thing from S#4.</em>
+        A robust verdict requires surviving all seven styles, so all seven get listed;
+        a spurious one records the single style that broke it and stops there.
+      </p>
+      <p>
+        This is not a property of the problem. <em>It is a fingerprint left by the labeling
+        procedure.</em> "Many styles listed = survived them all = robust." A tautology.
+      </p>
+    </div>
+
+    <p class="action">
+      [Author] opens the grader immediately. <em>The first question is whether this is even usable.</em>
+    </p>
+
+    <pre class="code good"><span class="c"># ingestion.py:158-160</span>
+problems = [
+    case[<span class="k">"problem"</span>][<span class="k">"original_problem"</span>] <span class="k">for</span> _, case <span class="k">in</span> batch
+]   <span class="c"># ← original_problem only. permutation_type never crosses over</span></pre>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(relief or disappointment, hard to tell)</div>
+      <p>Blocked. Deliberately.</p>
+      <p>
+        <em>The danger is downstream.</em> The field still sits inside <code>cases.jsonl</code>.
+        If I pull features locally and let it slip in, local accuracy jumps to 1.00
+        and the server score collapses. <em>It is the easiest way to fool myself.</em>
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>Insert — the rule set today</h4>
+      <p>
+        Feature extraction accepts <strong>only what the grader hands over</strong>:
+        <code>model_id</code> and <code>original_problem</code>. Nothing else.
+        No code path reads <code>cases.jsonl</code> wholesale.
+      </p>
+      <p>
+        If the local score suddenly improves, <strong>suspect a leak before celebrating.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S6 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#6</span> Temptation, and collapse — 26 / 28 <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Verified</span> 0.929 → 0.821</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>analysis/model_confound.py<br>analysis/model_prior.py</dd></div>
+      <div><dt>Read</dt><dd>probe_inference.py:69-94<br>_artifact_candidates</dd></div>
+      <div><dt>Reference</dt><dd>beta-binomial smoothing</dd></div>
+    </dl>
+
+    <p class="action">
+      One leak closed, curiosity turns to another. What does <code>model_id</code> alone do?
+      [Author] looks at the table and <em>says nothing for a moment.</em>
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Model</th><th class="num">robust</th><th class="num">rows</th><th class="num">rate</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">gpt-5.2-2025-12-11</td><td class="num">3</td><td class="num">3</td><td class="num up">100%</td></tr>
+          <tr><td class="mono">GLM-5.1-NVFP4</td><td class="num">4</td><td class="num">4</td><td class="num up">100%</td></tr>
+          <tr><td class="mono">huikang-gpt-oss-120b</td><td class="num">1</td><td class="num">3</td><td class="num">33%</td></tr>
+          <tr><td class="mono">Qwen3.5-397B</td><td class="num">1</td><td class="num">7</td><td class="num">14%</td></tr>
+          <tr><td class="mono">gemini-3.1-pro</td><td class="num">0</td><td class="num">3</td><td class="num down">0%</td></tr>
+          <tr><td class="mono">gpt-oss-120b</td><td class="num">0</td><td class="num">7</td><td class="num down">0%</td></tr>
+          <tr><td class="mono">qwen3-8b</td><td class="num">0</td><td class="num">1</td><td class="num down">0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Guess from model_id alone, <em>without reading a single character of the problem</em>: 26/28.
+        That's 0.93. The best of the shipped examples managed 0.64 locally.
+      </p>
+      <div class="paren">(beat. then, to themselves)</div>
+      <p>
+        ...higher version means robust? <em>No.</em> gemini-3.1-pro is 0/3 while gpt-5.2 is 3/3.
+        Both frontier models, opposite results. That is not the rule.
+      </p>
+      <p>
+        This isn't inference. It's a <em>lookup table</em> — built from these 28 rows,
+        then scored on those same 28 rows.
+      </p>
+    </div>
+
+    <p class="action">
+      Before trusting the table, [Author] looks at the <em>sample</em>. How many problems are there?
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/model_confound.py
+unique problems: <span class="r">8</span> / rows: 28
+
+problem_id      1acac0 1fce4b 71beb6 a1d40b bbd91e ...
+gpt-5.2            T      T      ·      ·      T
+GLM-5.1            T      ·      T   <span class="g">   T   </span>   T
+gemini-3.1-pro     F      ·      ·      F      ·
+gpt-oss-120b       F      F      F      F      F
+
+robust per problem:  a1d40b <span class="r">1/6</span>   bbd91e 3/5   1acac0 2/4</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        <em>Eight problems</em>, and every model drew a different subset.
+        gpt-5.2 got the comparatively easy set; gemini got <code>a1d40b</code>, the hardest.
+      </p>
+      <p>
+        So "100% because the model is strong" and "100% because the problems were easy"
+        <em>cannot be told apart from this data.</em>
+      </p>
+      <div class="paren">(tapping GLM-5.1's a1d40b cell)</div>
+      <p>
+        One real signal does show here. Six models saw <code>a1d40b</code>; only GLM survived it.
+        <em>That is hard to write off as luck.</em>
+      </p>
+    </div>
+
+    <p class="action">
+      One last check: estimate the table <em>properly</em>. Put a beta prior centred on the
+      overall 0.321 and watch what happens to the in-sample accuracy.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/model_prior.py
+                        raw      smoothed   verdict
+gpt-5.2-2025-12-11      1.000     0.478    <span class="r">True → False</span>
+lukealonso/GLM-5.1      1.000     0.515    True  → True
+gemini-3.1-pro          0.000     0.247    False → False
+qwen3-8b                0.000     0.292    False → False
+
+in-sample  raw <span class="y">26/28 = 0.929</span>  →  smoothed <span class="g">23/28 = 0.821</span></div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        gpt-5.2's "100%" is <em>three wins out of three.</em>
+        Three coin flips landing heads. Smoothed, it drops to 0.478 and the verdict flips.
+      </p>
+      <p>
+        <em>10.8 points were pure noise memorisation.</em> And the remaining 0.821
+        still rests on eight problems. Not trustworthy either.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>Insert — how to handle this number</h4>
+      <p>
+        <strong>Don't discard it. Reduce its weight.</strong> Stronger models probably do break
+        less often. But that <em>isn't interpretability research</em>, and 28 rows cannot
+        even measure the effect size.
+      </p>
+      <p>
+        So redefine the goal: <strong>strip out what the model's base rate explains,
+        then predict the residual.</strong> Which problems break <em>within</em> a single model —
+        that is what the competition actually asks, and why the report prize ($5,000)
+        exceeds first place ($3,000).
+      </p>
+      <p>
+        And the report <strong>must state what the base rate alone scores.</strong>
+        Leave that out and nobody can tell what my method added.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S7 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#7</span> The door is shut <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Can submit</span> no</span>
+      <span><span class="k">Reason</span> no active phase</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>query the Codabench API</dd></div>
+      <div><dt>Read</dt><dd>official schedule page</dd></div>
+      <div><dt>Reference</dt><dd class="none">—</dd></div>
+    </dl>
+
+    <p class="action">
+      A knock on the Codabench API, just to record the submission limits.
+      And <em>the whole plan stops one line short.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> GET /api/competitions/16180/
+phase count: <span class="y">1</span>
+  name   : Warmup phase
+  end    : <span class="r">2026-08-14T22:00:00Z</span>
+  status : <span class="r">Previous</span>
+  max_submissions_per_day    : 10
+  max_submissions_per_person : 100
+  execution_time_limit       : 3600</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The warmup phase closed on 14 August, and the main phase the official schedule
+        starts on the 15th <em>is not registered yet.</em> Today is the 18th. Three days.
+      </p>
+      <p>
+        This was an unauthenticated query, so a hidden phase is possible.
+        <em>That part I cannot check.</em> It needs a look from the registered account.
+      </p>
+    </div>
+
+    <p class="action">
+      What is readable, though, is <em>the leaderboard.</em> The closed phase's scoreboard sits open.
+    </p>
+
+    <p class="action">
+      Before trusting a single sorted column, [Author] checks <em>what each score was measured
+      against.</em> Every submission carries a <code>task_id</code>. And they are <em>not the same.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/leaderboard.py
+task currently attached to this phase: {35430: 'AIMO Robustness Validation v7'}
+
+task <span class="c">35282</span>  (replaced)          2026-07-30 ~ 08-01   3 runs
+     <span class="y">1.00</span>  mnn31
+     <span class="y">1.00</span>  alikhaireddine
+     <span class="r">0.00</span>  sakshamloonker
+    ↳ pair summing to 1.00: (1.00, 0.00)
+
+task <span class="c">35369</span>  (replaced)          2026-08-04 ~ 08-08   4 runs
+     <span class="g">0.77</span>  crevious
+     0.69  Kazu
+     0.31  gkoreli
+     0.31  cohjo
+    ↳ pair summing to 1.00: (0.69, 0.31)
+
+task <span class="y">35430</span>  ← currently scored   2026-08-10 ~ 08-14   6 runs
+     0.41  pmmon · lonelydoll · yuki_ · carlos1891 · Vishesh
+     <span class="r">0.00</span>  Slash</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(slowly)</div>
+      <p>
+        <em>It was never a ranking.</em> Three different scored datasets stacked into one column.
+        1.00 and 0.77 and 0.41 are marks from <strong>different exam papers.</strong>
+      </p>
+      <p>
+        And inside each group there is a <em>pair summing to exactly 1.00.</em>
+        That is the fingerprint of constant prediction — one person answers True everywhere,
+        another answers False everywhere, and their two scores must add to 1.00.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>Insert — reading it group by group</h4>
+      <p>
+        <strong>task 35282 (3 runs).</strong> 1.00, 1.00, 0.00, with a pair summing to 1.00.
+        A <em>degenerate paper</em> whose labels were all one class explains everything —
+        answer True everywhere and you score perfect; answer False everywhere and you score zero.
+        Which is presumably why it was replaced within three days.
+      </p>
+      <p>
+        <strong>task 35369 (4 runs).</strong> Two at 0.31 and one at 0.69 are the constants
+        (majority class 69%). And <strong>crevious at 0.77</strong> sits above them.
+      </p>
+      <p>
+        <strong>task 35430 (current, 6 runs).</strong> Five at 0.41, one at 0.00.
+        All constant or invalid. <em>Under today's scoring, nobody has beaten a constant yet.</em>
+      </p>
+    </div>
+
+    <p class="action">
+      The 0.77 is tempting for a moment — then [Author] checks <em>one more thing.</em>
+      Accuracy is <code>correct / total</code>. So the observed scores can be run backwards:
+      <em>which N makes all of them expressible as whole ratios?</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/infer_task_size.py
+task 35282   observed [1.00, 0.00]   label balance <span class="r">0% / 100%</span>
+             → every label one class. any N fits
+
+task 35369   observed [0.77, 0.69, 0.31]
+             feasible N: <span class="y">[13, 26, 35, 39, 48, 52, ...]</span>   smallest N = <span class="y">13</span>
+
+task 35430   observed [0.41, 0.00]
+             feasible N: [17, 22, 27, 29, 32, 34, ...]   smallest N = 17</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(substituting N=13)</div>
+      <p>
+        4/13 = 0.31. 9/13 = 0.69. 10/13 = <em>0.77.</em>
+        All three land <strong>exactly.</strong>
+      </p>
+      <p>
+        Which makes crevious <em>one problem</em> better than the constant.
+        What looked like an eight-point margin was <strong>one case out of thirteen.</strong>
+        Method or luck — <em>these numbers cannot tell them apart.</em>
+      </p>
+      <div class="paren">(beat)</div>
+      <p>
+        And this matters more. <strong>The scored set is on the order of a dozen cases.</strong>
+        One problem is worth six to eight points. Any leaderboard gap under ten points
+        <em>has to be read as noise.</em>
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>Insert — what a small set implies</h4>
+      <p>
+        <strong>Good news.</strong> The 3600-second limit becomes comfortable. One model load
+        plus a dozen forward passes is not a time problem — which also means the reload bug
+        fixed in S#2 was even more decisive than it looked.
+      </p>
+      <p>
+        <strong>Bad news.</strong> There is no statistical power. Whether my method beats a
+        constant <em>cannot be demonstrated on the leaderboard.</em> One lucky case is
+        eight points.
+      </p>
+      <p>
+        So submission score is not a metric to steer by.
+        <strong>Judge locally with cross-validation; use submissions only to confirm.</strong>
+        The rule set in S#7 gets a second justification here.
+      </p>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The line to clear is not the 1.00 at the top of the board. It is <em>0.41</em> —
+        what a constant scores on the current task. That is the real floor.
+        <em>But the leaderboard cannot tell me whether I cleared it.</em>
+      </p>
+      <div class="paren">(noticing the submission-detail API exposes other people's prediction logs, and closing the tab)</div>
+      <p>
+        ...I'm not opening crevious's run. Picking through someone else's submission during a
+        live competition is <em>not what I'm here to do.</em>
+        The scores alone said everything I needed.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>Insert — how to spend the gap</h4>
+      <p>
+        Not being able to submit also means <strong>unlimited local experimentation
+        at zero submission cost.</strong> Uploading something already verified the moment
+        the door opens saves a large share of the 100.
+      </p>
+      <p>
+        The ten-per-day cap reads differently now too — it does not mean
+        <strong>run ten experiments a day</strong>. It means
+        <strong>finish your confirmations within ten.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S8 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#8</span> Leaving a record <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-18 Tue</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Commits</span> 2</span>
+      <span><span class="k">Scripts</span> 6</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Write</dt><dd>JOURNAL.html · README.md<br>analysis/ × 6<br>patches/ × 1</dd></div>
+      <div><dt>Run</dt><dd>git init · commit<br>(no remote yet)</dd></div>
+      <div><dt>Reference</dt><dd>competition rules —<br>technical report requirements</dd></div>
+    </dl>
+
+    <p class="action">
+      The day is ending. [Author] doesn't close the editor — <em>they open a second repository.</em>
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Look at the prize table again. First place $3,000, technical report $5,000.
+        <em>The report is worth more.</em> This isn't a leaderboard grind; it's a request for a paper.
+      </p>
+      <p>
+        And a report <em>cannot be written by sitting down in November.</em>
+        There is no chance I remember today's asymmetry and today's leak two months from now.
+        <strong>Write it now or lose it.</strong>
+      </p>
+    </div>
+
+    <p class="action">
+      Every analysis is left as a <em>standalone runnable script.</em>
+      Scattered across notebook cells it would not reproduce, and what does not reproduce
+      cannot go in the report.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th class="mono">analysis/</th><th>Why it was kept</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">probe_field.py</td><td class="dim">the 19/19 evidence for the field definition</td></tr>
+          <tr><td class="mono">probe_counts.py</td><td class="dim">verification-budget asymmetry (10 vs 67–120)</td></tr>
+          <tr><td class="mono">model_confound.py</td><td class="dim">model × problem confound, permutation_type leak</td></tr>
+          <tr><td class="mono">model_prior.py</td><td class="dim">0.929 → 0.821 under smoothing</td></tr>
+          <tr><td class="mono">show_variants.py</td><td class="dim">original vs broken variant, side by side</td></tr>
+          <tr><td class="mono">count_loads.py</td><td class="dim">28 → 1 measurement for the patch</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(writing the commit message)</div>
+      <p>
+        The journal goes in screenplay form. <em>Confirmed findings and unexecuted plans
+        marked with separate badges.</em> Blur that line and in two months I won't trust myself.
+      </p>
+      <p>
+        No push yet. <em>It goes up private.</em>
+        The leak and the two-layer design written here have no reason to be public today.
+        Open it when the report goes in.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S9 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#9</span> Two weeks later — an inventory of what isn't there <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 09-03 Wed</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Commits</span> 11</span>
+      <span><span class="k">Scripts</span> 18</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Read</dt><dd>baselines/data/*.csv (675 · 141 rows)<br>paper.pdf §1.4 · Appendix B<br>scoring.py · ingestion.py</dd></div>
+      <div><dt>Run</dt><dd>analysis/ × 6 (new)<br>DeepSeek 8B download, 16 GB<br>smoke × 4 · CPU benchmark</dd></div>
+      <div><dt>Corrected</dt><dd>the label sentence in S#3<br>leaderboard numbers in CLAUDE.md</dd></div>
+    </dl>
+
+    <p class="action">
+      Two weeks on. [Author] clones the second repository, <code>baselines</code>, and
+      <em>opens every data file from scratch.</em> This time the count is not of what is there but
+      <em>of what is missing.</em>
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        In S#3 I wrote "the label is the decay value cut at a threshold." <em>Wrong.</em>
+        The rule is in paper §1.4 — if a <strong>majority</strong> of the variants break the model, False;
+        otherwise True. One broken variant does not make it False.
+      </p>
+      <p>
+        And the ambiguous cases were dropped outright. Checked it on the 675 rows.
+        All 141 OVERALL rows satisfy <code>robust == (decay == 0.0)</code>, and the smallest False-side decay is 0.5.
+        <strong>There is no threshold to find. The data was built so that no middle value exists.</strong>
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/label_rule.py
+[1] problem_ids with mixed labels : 0 / 137   → label is per problem. Effective sample is 137, not 675
+[2] absolute_accuracy_decay == 0.0            <span class="g">141/141</span>  ← exact match
+[3] max decay on True side 0 · min on False side 0.5 · nothing in between</div>
+
+    <p class="action">
+      Then the real question. For each thing <em>one would want to use</em> to solve this, check whether the data has it.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Wanted</th><th>Present?</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>The model's solution text (CoT)</td><td><strong>No</strong></td><td class="dim">grep across both repos · every key of all 5 files enumerated. Only accuracy numbers</td></tr>
+          <tr><td>Perturbed problem text</td><td>764, <strong>biased</strong></td><td class="dim"><code>permutations_causing_decay</code> — only the variants that broke the model. Robust rows: <strong>0/157</strong></td></tr>
+          <tr><td>Training data for several target models</td><td><strong>No</strong></td><td class="dim">all 675 rows are <code>qwen3-8b:low</code></td></tr>
+          <tr><td>Definitions of the two expert perturbations</td><td>Not in the repos</td><td class="dim">Paper Appendix B only. Human-written edits; no-solution = variants with no answer</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(looking at the table)</div>
+      <p>
+        There is <em>not one example</em> of "this variant survived."
+        Train a classifier on variant text and there is no negative class.
+        CoT analysis has no material at all. <strong>So the signal has to be manufactured by running a model.</strong>
+      </p>
+    </div>
+
+    <p class="action">
+      Pull the leaderboard again. <em>The arithmetic lines up.</em>
+    </p>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py   <span class="c"># task 35430</span>
+0.71 = 12/17   2 people     0.53 =  9/17   9 people  ← constant (majority class)
+0.65 = 11/17   4 people     0.47 =  8/17   6 people  ← constant (minority class)
+0.59 = 10/17   1 person     0.41 =  7/17   5 people  ← submissions before 8/14 only</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        <strong>N=17.</strong> Every score is k/17. The constant sits at 0.53, and two people cleared it by three problems.
+        S#7 said "nobody has beaten it." <em>Two weeks made that stale.</em>
+      </p>
+      <p>
+        And there is no need to submit both always-true and always-false.
+        <code>acc(always-true) + acc(always-false) = 1</code>, so
+        <em>one submission gives the test distribution.</em> The second only confirms no case was invalid.
+      </p>
+    </div>
+
+    <p class="action">
+      Download the 16 GB surrogate. 32 minutes. Then measure <em>what this laptop can actually do.</em>
+    </p>
+
+    <div class="term"><span class="p">$</span> python analysis/smoke_submission.py
+  <span class="g">PASS</span>  solution-always-true.zip
+  <span class="g">PASS</span>  solution-trained-probe.zip        <span class="c"># load 52s · 2 forward passes · [False, False]</span>
+  <span class="r">KILL</span>  solution-uncertainty-profiling.zip <span class="c"># loaded fine · 10-min timeout during generation</span>
+
+<span class="p">$</span> python analysis/cpu_throughput.py
+decode    247.1s  for 64 new tokens  ->  <span class="r">0.26 tok/s</span>
+  one 2048-token solve  ≈  <span class="r">131.8 min</span></div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(reading the number twice)</div>
+      <p>
+        One forward pass is 51 seconds. Probing can run on CPU.
+        Generation is <strong>0.26 tok/s.</strong> When R1 spends two thousand thinking tokens, that is two hours.
+        The label-replication experiment is 10 problems × 30 solves = 300 runs — <em>a month on this machine.</em>
+      </p>
+      <p>
+        <code>experiments/replicate_labels.py</code> is written. The dry run works.
+        But <strong>the number that decides whether this strategy lives only comes out of a GPU.</strong>
+        The Fields compute application just became a prerequisite for the experiment.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S10 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#10</span> The main phase was already open <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 09-07 Sun</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Deadline</span> 11-01</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Read</dt><dd>Codabench API<br>competitions/16180 · phases/30038</dd></div>
+      <div><dt>Run</dt><dd>analysis/leaderboard.py (rewritten)</dd></div>
+      <div><dt>Corrected</dt><dd>two open items in CLAUDE.md closed<br>two main-phase rows added to the table</dd></div>
+    </dl>
+
+    <p class="action">
+      "The leaderboard is up to 0.78." Run the script. <em>It says the best is 0.71.</em>
+      The script was only looking at the warmup phase (26647).
+    </p>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py
+phase 26647  Warmup phase        2026-04-30 ~ 2026-08-31   <span class="c">status: Previous</span>
+phase 30038  Competition phase   <span class="g">2026-09-01 ~ 2026-11-01</span>   <span class="c">status: Current</span>
+  task 35766  v7 - Main Track
+  task 35767  v7 - Small Model Track</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        <strong>The main phase opened on 1 September.</strong> Six days went by unnoticed.
+        Two open items in CLAUDE.md close at once — the phase exists, and the deadline is <em>1 November</em>. The paper's 1 October is stale.
+      </p>
+      <p>
+        But the leaderboard is odd. Two tracks <em>share one column.</em>
+        Main and Small are scored on different cases, yet the numbers sit side by side. They have to be split.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py   <span class="c"># split by task_id</span>
+task 35766 Main    75 submissions = 54 scored + <span class="r">21 fully invalid</span>    N = 21
+    0.76  16/21  ×1   ← KKLUV
+    0.57  12/21  ×6
+    0.52  11/21  ×17  ← constant
+    0.48  10/21  ×15  ← constant
+
+task 35767 Small   97 submissions = 60 scored + <span class="r">37 fully invalid</span>    N = 19
+    0.79  15/19  ×1   ← KKLUV
+    0.63  12/19  ×3
+    0.53  10/19  ×20  ← constant
+    0.47   9/19  ×17  ← constant</div>
+
+    <p class="action">
+      N was not inferred; it was <em>read off.</em> A fully invalid submission shows <code>coverage 0</code> and an
+      <code>invalid_predictions</code> equal to the case count — 21 on Main, 19 on Small.
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(the two tables side by side)</div>
+      <p>
+        Three things. One: <strong>there is no 0.78 — there is 0.79 and 0.76</strong>, the same person on each track.
+        Five problems above the constant. Bigger than the warmup's +3. Someone has a signal.
+      </p>
+      <p>
+        Two: take that one person away and <strong>the next best is +1, +2.</strong> Two or three people above the constant; everyone else at it or below.
+        Small goes down to 0.21 — a real method that gets six fewer right than the constant.
+      </p>
+      <p>
+        Three: <strong>a third of all submissions are fully invalid.</strong> 21/75 on Main, 37/97 on Small.
+        Not wrong methods — <em>pipelines that died.</em>
+        Rules 3, 4, 6 and 7 were not decoration. The smoke test is the score.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S11 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#11</span> Rebuilt from the ground — there is no surrogate <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 09-14 Mon</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Upstream</span> +8 commits</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Read</dt><dd>getting-started 9fbe36f → 995f992<br>full diff of README · ingestion.py · scoring.py<br>6 HF datasets under aimo-interp</dd></div>
+      <div><dt>Run</dt><dd>git merge · import_hf_dataset (v2)<br>pytest 25/25 · build --small<br>smoke × 2 · run_local --small</dd></div>
+      <div><dt>Corrected</dt><dd>CLAUDE.md environment section, rewritten<br>3 analysis scripts for the new schema</dd></div>
+    </dl>
+
+    <p class="action">
+      "They rebuilt it." [Author] starts with <code>git fetch</code>. Eight commits, eight files, +416 −155.
+      <em>solutions/ untouched.</em> What changed is the rules.
+    </p>
+
+    <div class="term"><span class="p">$</span> git log --oneline HEAD..origin/main
+1e52bfd README: update of model_ids and infra desc
+e98c489 fix: use shared leaderboard metric keys
+ad7d3af <span class="y">Remove obsolete permutation_type field</span>
+4ae07c2 <span class="y">feat: add small model track</span>
+dc06e78 Fix import_hf_dataset.py to emit problem as a string
+e46be92 Simplify problem validation in ingestion.py</div>
+
+    <p class="action">
+      One table in the README diff <em>overturns four weeks of premises.</em>
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th class="mono">model_id (passed verbatim)</th><th>Main</th><th>Small</th><th>Size</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">Qwen/Qwen3.5-4B</td><td>✓</td><td>✓</td><td class="dim">9.3 GB</td></tr>
+          <tr><td class="mono">Skywork/Skywork-OR1-Math-7B</td><td>✓</td><td>✓</td><td class="dim">15.2 GB</td></tr>
+          <tr><td class="mono">allenai/Olmo-3-7B-Think</td><td>✓</td><td>✓</td><td class="dim">14.6 GB</td></tr>
+          <tr><td class="mono">deepseek-ai/DeepSeek-R1-0528-Qwen3-8B</td><td>✓</td><td>✓</td><td class="dim">16.4 GB</td></tr>
+          <tr><td class="mono">openai/gpt-oss-120b</td><td>✓</td><td>✗</td><td class="dim">62 GiB (MXFP4)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(reading the table twice)</div>
+      <p>
+        <strong>All five evaluated models are cached on the worker.</strong>
+        README, verbatim: "a method can always load the model it is asked to judge."
+        No gpt-5.2, no gemini, no GLM. <em>The ":low" names and the closed API models never appear in the competition phase.</em>
+      </p>
+      <p>
+        So the word "surrogate" itself goes away. No need to imitate gpt-5.2 with an 8B —
+        <strong>just run the model you are asked to judge.</strong>
+        The per-model prior table from S#6 is worthless in full. Those seven models are not on the exam.
+      </p>
+    </div>
+
+    <p class="action">
+      Second reversal. <code>ingestion.py</code> now takes <code>problem</code> as a <em>string</em>, not a dict.
+      The <code>permutation_type</code> field is <em>gone</em> from cases.jsonl.
+    </p>
+
+    <div class="term"><span class="p">$</span> uv run scripts/import_hf_dataset.py
+cases 28 → <span class="y">24</span>   duplicate_rows_removed 4   schema_version 2
+<span class="p">$</span> head -c 120 data/val-sample/input/cases.jsonl
+{"id":"case-181e…","model_id":"Qwen/Qwen3.5-397B-A17B-FP8:low","problem":"Three airline companies…"}</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The 28/28 leak from S#5 has been <em>removed from the data.</em>
+        Four rows that shared a (model, problem) and differed only in perturbation type collapsed into one: 24 rows.
+        The leak was not blocked — <strong>the place where it lived was deleted.</strong> Rule 1 still stands;
+        the HF parquet still has the column.
+      </p>
+    </div>
+
+    <p class="action">
+      Third. The track marker.
+    </p>
+
+    <div class="term">Small-track ZIP  →  <span class="g">small.txt</span> required at root (contents ignored)
+Main-track ZIP   →  present means <span class="r">failure</span>
+Checked          →  <em>before</em> solution.py is imported. Wrong marker, whole batch invalid</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        S#10's "one third fully invalid" now has an explanation. Submitted to Small without the marker, or to Main with it.
+        Dozens of people separated not by method but by <em>one empty file.</em>
+      </p>
+    </div>
+
+    <p class="action">
+      Merge, re-import, run the 25 tests, rebuild both track ZIPs. All pass.
+      always-true on 24 rows: <code>9/24 = 0.375</code>.
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(deleting the whole "environment constraints" section of CLAUDE.md)</div>
+      <p>
+        Four weeks of design against the wall "the judged models cannot be run." <strong>The wall is gone.</strong>
+        Two constraints remain — offline, and 3600 seconds <em>for the whole batch</em>.
+        8B loads in two seconds, 120B in four. The time goes to <em>generation</em>, not loading.
+      </p>
+      <p>
+        The training data did not change. Still the May material.
+        Of the five models, only one has labelled problems — DeepSeek 8B (<code>qwen3-8b:low</code> is that model, 137 problems).
+        <em>The other four have zero labels.</em> That is the next wall.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S12 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#12</span> What the probe learned — length <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 09-14 Mon, evening</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Probe</span> 0.634 → discarded</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>extract_hidden (137 problems, 1 h)<br>train_probe (37-layer sweep)<br>topic_confound · length_confound</dd></div>
+      <div><dt>Read</dt><dd>MATH type·level (137/137 matched)<br>challenge-sample-full, 558 rows</dd></div>
+      <div><dt>Kept</dt><dd>solutions/probe (with artifact)<br>analysis/ × 2 · commit c59fa98</dd></div>
+    </dl>
+
+    <p class="action">
+      Train the probe. Sweep 37 layers, layer 17 wins, cross-validated 0.634. A coin is 0.500. <em>There is a signal.</em>
+      Build the ZIP, watch the real model separate: −7.45, −4.49, +3.71.
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Ask for a review. Nine points come back; the fourth is this —
+        <em>"All 137 problems are the same model, so only the problem side separates the labels. Did the probe learn the problem's topic?"</em>
+        A thirty-minute check, and if it fails everything else is moot. Do it first.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/topic_confound.py
+[1] robust rate by subject   0.18 ~ 0.55   no strong skew
+[3] leave-one-subject-out    layer 17  0.628   holds → not topic
+[2] shallow features, AUC alone
+    n_words      <span class="r">0.749</span>
+    n_chars      <span class="r">0.740</span>
+    n_numbers    0.509
+    all shallow → cv bacc 0.621    vs probe 0.634</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(staring at 0.749)</div>
+      <p>
+        Not topic. <strong>Character count.</strong> Counting the words in the problem beats the probe.
+        Longer problems are robust. What the probe read out of the hidden state may have been
+        <em>"how many tokens is this prompt"</em> — the last-token representation carries position.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/length_confound.py
+(a) layer 17: probe AUC 0.722 · length AUC 0.749 · rho=<span class="r">+0.71</span>
+         [length] 0.741 → [length+probe] <span class="r">0.740</span>          ← the probe adds nothing
+    problems ≥ 15 words only   probe cv bacc <span class="r">0.439</span>
+    problems ≥ 20 words only   probe cv bacc <span class="r">0.364</span>
+
+(b) broken vs survived, by perturbation type
+    domain    broken 11.5 words · survived 23.4 words · AUC <span class="r">0.802</span>
+    distract  broken 23.8 words · survived 15.0 words · AUC 0.358
+    rephrase / rename / typos                        AUC 0.41 ~ 0.56
+    domain breaks on problems ≤ 12 words: <span class="r">50 / 52</span>
+      'What is the value of $255^2 - 245^2$?'  →  'What is the difference between the squares of their lengths?'</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Take length away and the probe drops <strong>below the coin.</strong> The 0.634 was all length.
+      </p>
+      <p>
+        And (b) says why length is tied to the label. Of five types, <em>only domain</em> splits by length.
+        Rewrite a five-word formula problem as a story and it becomes a different problem — the stored fragments even lost the numbers.
+        The model did not break; <strong>the variant generation destroyed the problem</strong>, and only for short ones.
+        Much of "robust" on these 137 means <em>"long enough to survive a domain rewrite."</em>
+      </p>
+    </div>
+
+    <p class="action">
+      Does the main set have this? Open the olympiad set (558 rows, 10 problems). 27–74 words, median 53. MATH is 14.
+      Length→survival AUC per type: <em>all ≤ 0.46</em>. No shortcut there.
+    </p>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(fixing one line in CLAUDE.md)</div>
+      <p>
+        Three things. The probe learned length. That length is an artifact of label generation. The main-phase problems don't carry it.
+        So this probe sits near <strong>0.5</strong> on the private set. Submitting it only confirms "not invalid."
+      </p>
+      <p>
+        The 137 MATH labels cannot train a probe. One path remains — the olympiad, multi-model training set the organisers
+        say is "days" away. Until it arrives there is <em>nothing to train on.</em>
+        Today's tools (extraction, training, packaging, sensitivity) stay as they are. Only the material changes.
+      </p>
+      <p>
+        Doing review item 4 first was the right call. Starting with item 1 would have spent another day on the same labels.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S13 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#13</span> The board is reset <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 09-22 Mon</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Leaderboard</span> cleared</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Read</dt><dd>Discord announcement · upstream de79405<br>ingestion.py diff · train-main-v2, 82 rows</dd></div>
+      <div><dt>Run</dt><dd>merge · pytest 30/30<br>both solutions re-signed · smoke 4/4</dd></div>
+      <div><dt>Kept</dt><dd>docs/DISCORD.md · CLAUDE.md<br>results/train-main-v2.parquet</dd></div>
+    </dl>
+
+    <p class="action">
+      A week later the sensitivity run is nearly done, and one announcement <em>resets the board.</em> Leaderboard cleared, signature changed, training set released.
+    </p>
+
+    <div class="term"><span class="p">$</span> git log --oneline HEAD..origin/main
+7e05b26 feat: reasoning effort support
+<span class="c"># ingestion.py</span>
+results = solution.are_robust(model_id, <span class="y">reasoning_effort=effort</span>, problems=problems)
+batches.setdefault(<span class="y">(case["model_id"], effort)</span>, [])</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The announcement says <code>reasoning_effort: list[str]</code>; the code passes <strong>one string</strong>, by keyword.
+        Batches are now (model, effort) pairs. The parameter <em>name</em> must match to get the new path.
+        Trust the code over the post — record both, fix solution.py, keep accepting the old call.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py
+task 36237 Main    N = 21   constant 0.52 / 0.48      best 0.67 (14/21)
+task 36241 Small   N = <span class="y">14</span>   constant <span class="g">0.50 (7/14)</span>      best 0.79 (11/14)</div>
+
+    <p class="action">
+      "Balanced per problem and per model" is visible in the numbers. On Small the constant is <em>exactly half</em>. Nothing left to read off a model name.
+      The old scores are gone.
+    </p>
+
+    <div class="term"><span class="p">$</span> train-main-v2   82 rows · 5 models · 36 problems · median 52 words
+labels 71 = robust <span class="g">52</span> / spurious 19   (None 11 = max_drop 0.11–0.21, dropped)
+rule   robust ⟺ max_drop ≤ 0.10 · spurious ⟺ ≥ 0.25   ← gap in between
+labels per model   gpt-oss 37 · Qwen3.5 12 · DeepSeek 10 · Olmo 9 · Skywork <span class="r">3</span>
+length→robust AUC <span class="g">0.39</span>                          ← no MATH-style 0.75 artifact
+11 problems seen under ≥2 models: label differs across models in <span class="y">0 / 11</span></div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(reading the last line twice)</div>
+      <p>
+        <strong>Same problem, different model, same label.</strong> All eleven.
+        The question was "does this model solve this problem robustly"; what the data answers is <em>"is this a robust problem."</em>
+        gpt-oss-120b gets the same verdict as Skywork-7B.
+      </p>
+      <p>
+        So is a probe per model even the right shape? Skywork has <em>three</em> labels. A probe is impossible there.
+        A classifier on the problem text alone would train on 36 problems — still tiny, but it is all five models pooled.
+      </p>
+      <p>
+        One piece of good news is certain. <strong>No length artifact.</strong> 0.39, reversed, weak.
+        The shortcut that killed the MATH probe is absent here. Whatever gets trained now, that suspicion does not apply.
+      </p>
+      <p>
+        One piece of bad news too. 71 labels is <em>still small.</em> And half of them are gpt-oss-120b, which cannot run locally.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S14 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#14</span> Thirty-three problems can tell you nothing <span class="badge badge-real">Actual</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 09-26 ~ 27</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">GPU</span> laptop 8 GB, 4-bit</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>36 problems × 4 models, forward → vectors<br>36 × 4 × 512 tokens generated → confidence<br>LOPO · 30 label shuffles</dd></div>
+      <div><dt>Found</dt><dd>there was a GPU (torch was a CPU build)<br>DeepSeek tokenizer bug</dd></div>
+      <div><dt>Kept</dt><dd>experiments/ × 5 · analysis/permutation_check.py<br>2 report files · commits e26b71e, d95e4a3</dd></div>
+    </dl>
+
+    <p class="action">
+      Two corrections first. Four weeks of "no GPU" — and <em>the laptop has an 8 GB GPU</em>; the upstream venv's torch is a CPU build, so it never saw it.
+      And <code>AutoTokenizer</code> opens DeepSeek as a legacy <code>LlamaTokenizer</code>, so <em>the encoding itself was wrong.</em> Every DeepSeek run so far ran that way.
+    </p>
+
+    <div class="term"><span class="p">$</span> nvidia-smi
+NVIDIA RTX 2000 Ada Laptop   8188 MiB
+<span class="p">$</span> .venv/Scripts/python.exe experiments/mini_sim.py --quant 4bit --limit 1
+load 19s  vram=6.4GB   <span class="g">10.2 tok/s</span>          <span class="c"># CPU was 0.33</span></div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Thirty times. Experiments drop from days to hours. Using the fact that labels are per problem, each model's 3–12 training vectors become <strong>36</strong>.
+        Read all 36 problems into all four models. Hold out one problem, predict it, 33 times.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> .venv/Scripts/python.exe experiments/train_train_v2.py
+[0] length-only AUC 0.331   length-only LOPO bacc <span class="r">0.608</span>       <span class="c"># the shortcut is back, reversed</span>
+                     raw AUC      after removing length
+Qwen3.5-4B          0.64~0.67    0.55~0.62 (early layers only)
+Skywork-7B          ~0.5         0.4~0.5
+Olmo-7B             0.6          0.5
+DeepSeek-8B         ~0.5         0.4~0.5
+cross-model margin corr   +0.69 ~ +0.90                      <span class="c"># all four see the same surface</span></div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The still photo has <strong>nothing.</strong> Remove length and nothing remains; the four probes agreeing at 0.7–0.9 is not robustness, it is <em>the same problem length</em> seen four times.
+        Trust the organisers' numbers (probing 58 vs generation 69) and go to the second method — not to the answer, just <em>the first 512 tokens of thinking</em>, confidence only.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> .venv/Scripts/python.exe experiments/train_confidence_v2.py
+single-feature AUC   4 models × 11 features, all <span class="y">0.37 ~ 0.60</span>   features agreeing in direction: 0
+12-feature LOPO      Qwen 0.14 · Skywork 0.21 · Olmo 0.62 · DeepSeek 0.17
+
+<span class="p">$</span> .venv/Scripts/python.exe analysis/permutation_check.py --kind conf
+labels shuffled ×30   mean 0.47   95% band <span class="r">[0.13, 0.72]</span>
+Qwen · Olmo   inside the band → no signal
+Skywork · DeepSeek   <span class="r">below</span> the band → anti-learning, cause unknown. Sign is not flipped</div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(staring at the band)</div>
+      <p>
+        Confidence has <strong>nothing</strong> either. But the number that matters is the last line — <em>shuffle the labels and you still get anything from 0.13 to 0.72.</em>
+        At 33 problems no score inside that band can be told from chance. The probe's 0.62, confidence's 0.62 — nothing.
+      </p>
+      <p>
+        What this week taught is not "method A fails." It is <strong>"at this label count, no method's success or failure can be established."</strong>
+        The organisers said 82 rows is final, so this is the condition of the whole competition. The report's central sentence goes here.
+      </p>
+      <p>
+        Three roads remain. Grow the labels ourselves (allowed; definitions differ), look at what the same forward pass has not shown yet (attention · the path during generation), or submit a constant and put the effort into the report.
+        Whichever it is, <em>the number 33 does not move.</em>
+      </p>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="t">End of the actual record through 27 September</div>
+    <p>
+      Everything below is plan and projection, not yet executed.
+      Numbers are estimates with stated reasoning; real results may differ.
+    </p>
+  </div>
+
+  <!-- ============ S15 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#15</span> War room — what can actually be used <span class="badge badge-pred">Projected</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-19 Wed (planned)</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Goal</span> restore the training signal</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Write</dt><dd>scripts/import_hf_dataset.py<br>(restore 9 columns)</dd></div>
+      <div><dt>Reference</dt><dd>config.py:16-31<br>FEATURE_NAMES pattern</dd></div>
+      <div><dt>Run</dt><dd>re-import, inspect distribution</dd></div>
+    </dl>
+
+    <p class="action">
+      Three options on the whiteboard.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Option</th><th>Feasible?</th><th>Call</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Run the target model directly</td>
+            <td class="dim">No — not cached, network disabled</td>
+            <td class="down">rejected</td>
+          </tr>
+          <tr>
+            <td>Generate variants and solve them</td>
+            <td class="dim">Possible in principle; cannot generate and score within 3600 s</td>
+            <td class="down">rejected</td>
+          </tr>
+          <tr>
+            <td>Proxy model + problem text + model_id</td>
+            <td class="dim">All three available</td>
+            <td class="up">adopted</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        First job is data recovery. Restore the nine columns the importer drops.
+        <code>convert_rows</code> lets only four fields through; widen it.
+        <em>No reason to start by throwing away my own training signal.</em>
+      </p>
+      <p>
+        Except <code>permutation_type</code>. That one stays out <em>on purpose.</em> See S#5.
+      </p>
+    </div>
+
+    <pre class="code good"><span class="c"># scripts/import_hf_dataset.py — keep the continuous target beside the label</span>
+labels.append({
+    <span class="k">"id"</span>: case_id,
+    <span class="k">"is_robust"</span>: row[<span class="k">"model_is_robust"</span>],
+    <span class="add">"absolute_accuracy_decay": row["absolute_accuracy_decay"],</span>
+    <span class="add">"base_accuracy": row["base_accuracy"],</span>
+    <span class="add">"n_permuted_predictions": row["n_permuted_predictions"],  # label-confidence weight</span>
+})</pre>
+
+    <div class="insert">
+      <h4>Note — this file is not part of the submission</h4>
+      <p>
+        <code>scripts/</code> is local tooling and never enters the ZIP.
+        Changing it has <strong>no direct effect on the score.</strong>
+        The effect is indirect — an artifact trained on a better target ships inside the submission.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S16 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#16</span> Writing — a two-layer judge <span class="badge badge-pred">Projected</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-20 ~ 08-23 (planned)</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">New</span> solutions/layered/</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Write</dt><dd>solutions/layered/solution.py<br>layered/prior.py<br>layered/signal.py</dd></div>
+      <div><dt>Reference</dt><dd>uncertainty_profile/ (all)<br>— model lifecycle<br>probe_inference.py:297-335<br>— margin ensemble</dd></div>
+      <div><dt>Run</dt><dd>run_local.py<br>pytest</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>Two layers.</p>
+      <p>
+        <em>Layer 1 — prior.</em> For a known model_id, its <strong>smoothed</strong> base rate;
+        otherwise the global mean. As S#6 showed, the raw ratio must never be used directly.
+      </p>
+      <p>
+        <em>Layer 2 — problem signal.</em> Encode the problem with the proxy model to measure
+        how much it leans on surface pattern. Use that to <em>correct</em> layer 1.
+      </p>
+    </div>
+
+    <pre class="code"><span class="c"># solutions/layered/solution.py — keep the contract thin</span>
+<span class="k">from</span> layered.inference <span class="k">import</span> predict
+
+<span class="k">def</span> are_robust(model_id: <span class="k">str</span>, problems: <span class="k">list</span>[<span class="k">str</span>]) -&gt; <span class="k">list</span>[<span class="k">bool</span>]:
+    <span class="k">return</span> predict(model_id, problems)</pre>
+
+    <pre class="code"><span class="c"># layered/inference.py — one model load per batch. The S#2 lesson.</span>
+prior = prior_for(model_id)              <span class="c"># layer 1: smoothed scalar</span>
+<span class="k">try</span>:
+    model, tokenizer = load_once(CHECKPOINT)
+    <span class="k">try</span>:
+        signals = encode_batch(problems, model, tokenizer)
+        scores = prior + weight * signals    <span class="c"># layer 2: correction</span>
+    <span class="k">finally</span>:
+        release()
+<span class="k">except</span> Exception:
+    scores = [prior] * len(problems)     <span class="c"># layer 2 failed → fall back to layer 1</span>
+<span class="k">return</span> [<span class="k">bool</span>(s &gt;= threshold) <span class="k">for</span> s <span class="k">in</span> scores]</pre>
+
+    <p class="action">
+      Run it locally. With no model present, layer 2 fails.
+      <em>Layer 1 survives.</em> That is the entire point of the design —
+      when layer 2 dies it returns layer 1's answer instead of raising.
+    </p>
+  </section>
+
+  <!-- ============ S17 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#17</span> Code review ② — before hitting submit <span class="badge badge-pred">Projected</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> 08-23 Sun (planned)</span>
+      <span><span class="k">Submissions</span> 0 / 100</span>
+      <span><span class="k">Reviewing</span> own code</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Read</dt><dd>components/ingestion_program/<br>ingestion.py:69-179</dd></div>
+      <div><dt>Run</dt><dd>docker build -f Dockerfile.competition<br>run_local.py inside container</dd></div>
+      <div><dt>Reference</dt><dd>Dockerfile.competition<br>(package version parity)</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        Before pressing submit, read my own code <em>as the grader would.</em>
+        I know what ingestion.py rejects, so that list becomes the self-audit.
+      </p>
+    </div>
+
+    <div class="review">
+      <h4>Self review — pre-submission checklist</h4>
+      <ol>
+        <li>
+          <span class="where">layered/inference.py — return type</span>
+          A numpy comparison can leak <code>np.bool_</code>. The grader tests
+          <code>type(x) is bool</code>, so <strong>the whole batch goes invalid</strong>.
+          <span class="verdict v-fix">most common failure</span>
+        </li>
+        <li>
+          <span class="where">layered/prior.py — unseen model_id</span>
+          A model absent from the table raises <code>KeyError</code>. The exception is swallowed
+          and the whole group is lost. Use <code>dict.get(model_id, GLOBAL_MEAN)</code>.
+          <span class="verdict v-fix">critical</span>
+        </li>
+        <li>
+          <span class="where">layered/signal.py — leak re-check</span>
+          Are the feature inputs strictly <code>model_id</code> and <code>original_problem</code>?
+          One path that reads <code>cases.jsonl</code> and S#5 repeats itself.
+          <span class="verdict v-fix">today's rule</span>
+        </li>
+        <li>
+          <span class="where">layered/inference.py — layer 2 failure path</span>
+          If a model load failure propagates, it takes layer 1 down with it.
+          <code>uncertainty-profiling</code> saved 27/28 with exactly this fallback.
+          <span class="verdict v-fix">core of the design</span>
+        </li>
+        <li>
+          <span class="where">ZIP layout · determinism</span>
+          Is <code>solution.py</code> at the root? Same input twice, same output?
+          <span class="verdict v-ok">build script + greedy fixed</span>
+        </li>
+        <li>
+          <span class="where">Docker</span>
+          Was it run in the <code>Dockerfile.competition</code> image, not just the local venv?
+          <strong>Skipping this burns a submission.</strong>
+          <span class="verdict v-fix">required</span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="action">
+      Four of six are flagged. <em>Better caught here.</em>
+      Any one of them firing on the server would have meant three days chasing a bare number.
+    </p>
+  </section>
+
+  <!-- ============ S18 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#18</span> First submission <span class="badge badge-pred">Projected</span></div>
+    <div class="hud">
+      <span><span class="k">Date</span> as soon as the phase opens</span>
+      <span><span class="k">Submissions</span> 1 / 100</span>
+      <span><span class="k">Today</span> 1 / 10</span>
+      <span><span class="k">Remaining</span> D-69</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>Run</dt><dd>scripts/build.py components<br>upload to Codabench</dd></div>
+      <div><dt>Check</dt><dd>coverage → invalid → accuracy<br>(in that order)</dd></div>
+      <div><dt>Reference</dt><dd class="none">—</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <p>
+        The first submission isn't for score. <em>It's to confirm the pipeline round-trips.</em>
+        Hence the fixed order — is coverage 1.0, is invalid 0?
+        <em>Accuracy comes last.</em> If the first two are broken, accuracy means nothing.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>Projected outcomes — three branches</h4>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Scenario</th><th class="num">P (subjective)</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Clean landing</strong><br><span class="dim">coverage 1.0 · invalid 0 · acc 0.60–0.70</span></td>
+              <td class="num">55%</td>
+              <td class="dim">Layer 1 works. Near the 0.64 baseline.<br>Grow layer 2 from here.</td>
+            </tr>
+            <tr>
+              <td><strong>Partial failure</strong><br><span class="dim">coverage 0.9x · invalid 1–5</span></td>
+              <td class="num">30%</td>
+              <td class="dim">Certain model_id groups threw.<br>Fallback only partly engaged.</td>
+            </tr>
+            <tr>
+              <td><strong>Wipeout</strong><br><span class="dim">coverage 0 · all invalid</span></td>
+              <td class="num">15%</td>
+              <td class="dim">Contract violation or timeout.<br>Docker verification makes this unlikely.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px">
+        Basis for 0.60–0.70: locally, <code>uncertainty-profiling</code> scored 0.643 while
+        essentially only matching the label distribution. A smoothed layer 1 carries slightly
+        better prior information, so that is the centre; the ceiling is wherever layer 2 adds
+        real signal.
+      </p>
+      <p>
+        <strong>The in-sample 0.93 will not reproduce.</strong> As S#6 showed, 10.8 points of it
+        were noise, and the real phase has different models and different problems.
+        <strong>Even the smoothed 0.821 should be read as optimistic</strong> — it rests on
+        eight problems.
+      </p>
+    </div>
+
+    <div class="speech">
+      <div class="who">MINJU</div>
+      <div class="paren">(watching the submission counter)</div>
+      <p>
+        1 / 100. Ten a day. <em>A submission is a confirmation, not an experiment.</em>
+        Experiments happen locally.
+      </p>
+    </div>
+  </section>
+
+  <div class="endcard">
+    <div class="t">End of Chapter One</div>
+    <p>
+      18 August 2026 · submissions 0 / 100 · local scorings 4<br>
+      bugs fixed 1 · label leaks found 1 · analysis scripts left behind 6<br>
+      best local score 0.643 (someone else's code) · own code still 0 lines<br><br>
+      <strong>Chapter Two — "When Does the Main Phase Open?"</strong>
+    </p>
+  </div>
+
+</div>

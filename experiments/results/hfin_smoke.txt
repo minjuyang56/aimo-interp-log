@@ -1,0 +1,60 @@
+#FINAL hfin 스모크
+  라이브러리 상수: CAP 12288 · k 1 · THR_FIN 0.50 · SOFT 3300
+  H-FIN 라우팅 모델: ['Skywork/Skywork-OR1-Math-7B', 'allenai/Olmo-3-7B-Think']
+
+[1] h15C 폴백 동일성
+  h15c_decide == 출하 h15C decide(mode C)                OK 7/7 일치 · 임계 -4.084030533093
+  폴백 반환이 순수 bool                                       OK 
+
+[2] score_fin 단위검사
+  k=1 완주 -> 1.0                                        OK 
+  k=1 미완주 -> 0.0                                       OK 
+  k=2 반반 -> 0.5 (임계와 같아 robust)                        OK 
+  빈 입력 -> None (그 행만 폴백)                               OK 
+
+[3] 라우팅 (모델 로드 없음)
+  deepseek-ai/DeepSeek-R1-0528-Qwen3-8B  eff=default -> h15C · 0.00s OK True 5/7
+  Qwen/Qwen3.5-4B                        eff=default -> h15C · 0.00s OK True 5/7
+  some/unknown-model                     eff=default -> h15C · 0.00s OK True 5/7
+  (빈 문자열)                                eff=default -> h15C · 0.00s OK True 5/7
+  openai/gpt-oss-120b                    eff=default -> h15C · 0.00s OK True 5/7
+  openai/gpt-oss-120b                    eff=low     -> h15C · 0.00s OK True 5/7
+  openai/gpt-oss-120b                    eff=medium  -> h15C · 0.00s OK True 5/7
+  openai/gpt-oss-120b                    eff=high    -> h15C · 0.00s OK True 5/7
+
+[4] 예산 가드 (생성 전에 폴백하는가)
+  예산 1s -> 생성 호출 0회 · h15C 와 동일                        OK 
+      문제  3개 · 배치칸 5 · 추정     434s  (호출예산 825s 의   53%)
+      문제 10개 · 배치칸 5 · 추정    1164s  (호출예산 825s 의  141%)
+      문제 35개 · 배치칸 5 · 추정    4074s  (호출예산 825s 의  494%)
+      문제 40개 · 배치칸 5 · 추정    4656s  (호출예산 825s 의  564%)
+
+[5] 공식 33 하이브리드 재현 — 제출물 함수로 다시 계산
+      Skywork   H-FIN  정확도 0.6970
+      Olmo      H-FIN  정확도 0.8182
+      DeepSeek  h15C   정확도 0.6061
+      Qwen3.5   h15C   정확도 0.6061  (텍스트 규칙이라 DeepSeek 칸과 같다)
+  하이브리드 모델평균 0.6818 == 평가기 0.6818                      OK 
+
+[5b] 워커(96 GB) 기준 시간표 — [4] 는 로컬 8 GB 라 배치칸이 작게 나온다
+      Skywork   KV   56.0 KB/토큰 · 배치칸 66 | 3문제 434s | 5문제 582s | 10문제 952s | 21문제 1766s | 35문제 2802s | 40문제 3172s
+      Olmo      KV  512.0 KB/토큰 · 배치칸  7 | 3문제 434s | 5문제 582s | 10문제 1164s | 21문제 2190s | 35문제 3650s | 40문제 4232s
+      호출예산은 3300s 를 호출 수로 나눈 값이다. 생성하는 모델이 2개뿐이므로
+      그 둘이 약 1650s 씩 쓸 수 있다 → 리더보드형(3문제)은 들어가고 35문제는 못 들어간다.
+
+[5c] **Main 트랙 per-case 예산** (N=21 인스턴스 · 5모델 · 호출 5회)
+      Main 은 21 인스턴스를 5모델로 나눈다 → 모델당 약 4~5문제. gpt-oss·DeepSeek·Qwen3.5 는 h15C 라 생성 0s,
+      따라서 Skywork·Olmo 가 3300s 를 거의 다 쓸 수 있다(각 약 1650s).
+      모델        cap     문제 수별 추정 (per-case)
+      Skywork   12288   |  4문제    508s (127.0s/문제) |  5문제    582s (116.4s/문제) | 21문제   1766s ( 84.1s/문제)
+      Skywork   8192    |  4문제    283s ( 70.8s/문제) |  5문제    318s ( 63.7s/문제) | 21문제    885s ( 42.2s/문제)
+      Olmo      12288   |  4문제    508s (127.0s/문제) |  5문제    582s (116.4s/문제) | 21문제   2190s (104.3s/문제)
+      Olmo      8192    |  4문제    283s ( 70.8s/문제) |  5문제    318s ( 63.7s/문제) | 21문제   1027s ( 48.9s/문제)
+      판정: Main 에서 모델당 4~5문제면 cap 12288 이 호출당 약 434~582s 로 1650s 예산의 26~35%% → **첫 칸으로 돈다**.
+
+[6] 반환 계약
+  빈 리스트 -> []                                          OK 
+  문제 1개 -> 길이 1 · 순수 bool                              OK 
+  옛 2-인자 호출 == 3-인자 호출                                 OK 
+
+결과: 검사 19개 중 실패 0개

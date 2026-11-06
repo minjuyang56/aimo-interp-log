@@ -1,0 +1,4 @@
+## 짝지을 파일 후보 (gen_cap 기준)
+  skywork_labels_merged.json  라벨  88  gen_cap 16384
+
+→ --a(낮은 cap) --b(높은 cap) 로 두 파일을 지정해 다시 돌릴 것.

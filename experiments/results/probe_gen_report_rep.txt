@@ -1,0 +1,29 @@
+#GEN-PROBE — 풀이 도중 벡터 프로브 · **창 앞 512 토큰** · null 1000회
+주라벨 `label`(max_drop) · gen_k==8 · #77 프로토콜 과 동일한 폴드·PCA24·C격자·층 내부CV
+
+## Skywork — 특징 파일 없음 (Skywork-OR1-Math-7B_gen512_rep.npz) → 건너뜀
+
+## Olmo — 특징 파일 없음 (Olmo-3-7B-Think_gen512_rep.npz) → 건너뜀
+
+## DeepSeek · DeepSeek-R1-0528-Qwen3-8B_gen512_rep.npz · n 18 (robust 12 / spurious 6) · 쓴 풀이토큰 중앙 2048
+   AUC **0.514** · null 95% [0.12, 0.74]
+   길이잔차 AUC 0.514 · null [0.11, 0.67]  (게이트 아님)
+   balanced acc 0.500 · 고른 (층, C) [(36, 0.1), (27, 0.1), (36, 0.003), (9, 0.01), (36, 0.03)]
+   민감도 label_fin: 같은 점수로 AUC 0.610 (robust 11 / spurious 7)
+   민감도 label_major: **적용 불가** (라벨 수·클래스 부족)
+   기준선1 base_acc(k=8): AUC 0.861  (단독 순위 AUC 0.125)
+   기준선2 greedy 정답여부: 분산 0 → 판정 불가
+   기준선3 greedy 토큰수: AUC 0.306  (단독 순위 AUC 0.556)
+
+## 주지표 — 주라벨 모델별 AUC 의 **모델평균**
+   모델평균 AUC **0.514** · null 상단 평균 0.74 → 기준1 **미달**
+   모델평균 길이잔차 0.514 · null 상단 평균 0.67 (게이트 아님)
+
+## 기준선 모델평균 (지휘 지정)
+   기준선1 base_acc(k=8): 모델평균 AUC 0.861
+   기준선2 greedy 정답여부: 모델평균 AUC nan
+   기준선3 greedy 토큰수: 모델평균 AUC 0.306
+   → 기준2 **미달** (기준선1 base_acc(k=8), 기준선2 greedy 정답여부 이상)
+
+## 판정
+   **신호 미입증** (기준1 X · 기준2 X)

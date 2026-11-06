@@ -1,0 +1,35 @@
+DeepSeek 라벨 교체: experiments/results/runpod/labelgen32k/mbpc29h3v7um64/out/DeepSeek-R1-0528-Qwen3-8B_off40_v2_labels.json
+Skywork: 라벨 30문제 · gen_k {8} · gen_cap {32768} · spurious 4
+Olmo: 라벨 31문제 · gen_k {8} · gen_cap {32768} · spurious 10
+DeepSeek: 라벨 32문제 · gen_k {8} · gen_cap {32768} · spurious 3
+
+## 1. 모델 간 라벨 불일치 (두 모델 이상에 라벨이 있는 문제)
+   두 모델 이상 32문제 · **갈리는 문제 10 (31%)**
+   비교: 공식 train-main-v2 는 11문제 중 **0건** 갈렸다 (H2).
+
+   쌍별 일치율:
+     Skywork   vs Olmo      n= 25 · 일치  18 (72%)
+     Skywork   vs DeepSeek  n= 26 · 일치  24 (92%)
+     Olmo      vs DeepSeek  n= 23 · 일치  16 (70%)
+
+## 2. #77 '모델 간 분리력' 에 쓸 쌍 수
+   (robust 모델, spurious 모델) 쌍 **16개** · 사전등록 기준 20개 → **판정 불가**(숫자를 주장하지 않는다)
+   쌍의 모델 구성: {'Skywork>Olmo': 5, 'DeepSeek>Olmo': 6, 'DeepSeek>Skywork': 1, 'Skywork>DeepSeek': 1, 'Olmo>DeepSeek': 1, 'Olmo>Skywork': 2}
+
+## 3. 같은 문제가 여러 모델에서 spurious 일 때 결정 유형이 같은가
+   둘 이상에서 spurious 인 문제 3 · 결정 유형 **같음 1 / 다름 2**
+     pidx  44: {'Skywork': 'rename', 'Olmo': 'rename'}
+     pidx  65: {'Skywork': 'rename', 'Olmo': 'rename', 'DeepSeek': None}
+     pidx  47: {'Olmo': 'rename', 'DeepSeek': None}
+
+## 4. 갈리는 쌍이 base_acc 교란으로 설명되는가
+   spurious 쪽 base_acc 가 **더 낮음 3** / 더 높음 5 / 같음 8 (쌍 16)
+   base_acc 차이(spurious − robust) 평균 +0.039
+   교란이 전부라면 '더 낮음' 이 쌍 거의 전부를 차지해야 한다. 같음이 많으면 교란 아닌 성분이 있다.
+   모델별 평균 base_acc: Skywork 0.942 · Olmo 0.859 · DeepSeek 0.977
+
+## 읽는 법
+   공식 학습셋에서 0 이던 모델 간 라벨 차이가 자체 라벨에서는 10건 생겼다.
+   즉 **모델×문제 성분이 실재한다** — 다만 그 차이가 '모델 성질' 인지 '라벨 잡음' 인지는
+   이 표가 가르지 못한다. 3번(결정 유형 일치)이 그 구분의 단서다: 같은 문제를 같은 유형이
+   무너뜨리면 문제 성질, 모델마다 다른 유형이면 모델 성질 쪽이다.

@@ -1,0 +1,102 @@
+﻿diff --git a/solutions/trained-probe/probe_inference.py b/solutions/trained-probe/probe_inference.py
+index 618806d..d762567 100644
+--- a/solutions/trained-probe/probe_inference.py
++++ b/solutions/trained-probe/probe_inference.py
+@@ -19,6 +19,7 @@ If no artifact is found for a model, the method degrades gracefully and predicts
+ 
+ from __future__ import annotations
+ 
++import gc
+ import pickle
+ import re
+ import torch
+@@ -216,6 +217,13 @@ def _load_model(model_id: str) -> tuple[Any, Any]:
+     return tokenizer, model
+ 
+ 
++def _release_model() -> None:
++    """Collect dereferenced model resources and empty the CUDA allocator cache."""
++    gc.collect()
++    if torch.cuda.is_available():
++        torch.cuda.empty_cache()
++
++
+ def _build_prompt(tokenizer: Any, problem_text: str, system_prompt: str) -> str:
+     """Format the problem exactly as it was formatted during probe training.
+ 
+@@ -239,13 +247,21 @@ def _build_prompt(tokenizer: Any, problem_text: str, system_prompt: str) -> str:
+     return f"{system_prompt}\n\n{problem_text}" if system_prompt else problem_text
+ 
+ 
+-def _encode_problem(problem_text: str, artifact: ProbeArtifact) -> Any:
++def _encode_problem(
++    problem_text: str,
++    artifact: ProbeArtifact,
++    tokenizer: Any,
++    model: Any,
++) -> Any:
+     """Run one forward pass and return the probe's input hidden-state vector.
+ 
+     The vector is the last prompt token's hidden state at the probe's layer,
+     mirroring how the probes were trained. Returned as a float32 numpy array.
++
++    The caller supplies ``tokenizer`` and ``model`` so one checkpoint load is
++    shared by every problem in the batch; loading them here would repeat a
++    multi-minute load per problem and exhaust the evaluation time limit.
+     """
+-    tokenizer, model = _load_model(artifact.model_id)
+     prompt = _build_prompt(tokenizer, problem_text, artifact.system_prompt)
+     model_inputs = tokenizer(prompt, return_tensors="pt", truncation=True)
+     model_inputs = {name: value.to(model.device) for name, value in model_inputs.items()}
+@@ -335,9 +351,16 @@ def mean_ensemble_margin(vector: Any, artifact: ProbeArtifact) -> float:
+     return float(np.mean(np.asarray(margins, dtype=np.float64)))
+ 
+ 
+-def _predict_problem(problem_text: str, artifact: ProbeArtifact) -> bool:
++def _predict_problem(
++    problem_text: str,
++    artifact: ProbeArtifact,
++    tokenizer: Any,
++    model: Any,
++) -> bool:
+     """Encode one problem and turn its probe margin into a robustness bool."""
+-    vector = np.asarray(_encode_problem(problem_text, artifact), dtype=np.float32)
++    vector = np.asarray(
++        _encode_problem(problem_text, artifact, tokenizer, model), dtype=np.float32
++    )
+     margin = (
+         mean_ensemble_margin(vector, artifact)
+         if artifact.kind == "pickle"
+@@ -349,11 +372,28 @@ def _predict_problem(problem_text: str, artifact: ProbeArtifact) -> bool:
+ def predict_robustness(model_id: str, problem_texts: list[str]) -> list[bool]:
+     """Return one robustness prediction for each problem text.
+ 
+-    Loads the artifact once, then scores every problem. If no artifact exists
+-    for ``model_id`` the method predicts ``False`` everywhere so the submission
+-    still runs as a valid (if trivial) baseline.
++    Loads the artifact and the language model once each, then scores every
++    problem against them. If no artifact exists for ``model_id`` the method
++    predicts ``False`` everywhere so the submission still runs as a valid (if
++    trivial) baseline.
+     """
+     artifact = _load_artifact(model_id)
+     if artifact is None:
+         return [False for _ in problem_texts]
+-    return [_predict_problem(problem_text, artifact) for problem_text in problem_texts]
++    if not problem_texts:
++        return []
++
++    # One load per batch, not per problem: the evaluator calls are_robust once
++    # per model_id, so this is the only place the checkpoint has to be read.
++    tokenizer, model = _load_model(artifact.model_id)
++    try:
++        return [
++            _predict_problem(problem_text, artifact, tokenizer, model)
++            for problem_text in problem_texts
++        ]
++    finally:
++        # Drop the local references before collecting so the checkpoint's
++        # memory is reclaimed before the next batch loads its own.
++        tokenizer = None
++        model = None
++        _release_model()

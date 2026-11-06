@@ -1,0 +1,1 @@
+{"explained_variance": 0.32783273932211376, "fvu": 0.6721672606778862, "l0": 63.724215599798384, "k": 64, "d_sae": 163840, "quant": "4bit", "layer_hs": 16, "sae": "layer_15/width_163k/topk_64_raw", "n_rows": 31}

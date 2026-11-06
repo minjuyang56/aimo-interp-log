@@ -1,0 +1,12 @@
+{
+  "model": "allenai/Olmo-3-7B-Think",
+  "n_layers": 32,
+  "maxnew": 1024,
+  "batch": 11,
+  "n_prob": 33,
+  "quant": "fp16",
+  "n_marks": 0,
+  "finished": 0,
+  "lens_ok": 33,
+  "lens_gate_max": 0.0017610192
+}

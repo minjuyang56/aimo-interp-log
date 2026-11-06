@@ -1,0 +1,17 @@
+H10-B 풀이 궤적 나침반 (v2, Kaggle 생성 1024토큰·32토큰 청크) · 사전등록 부호: compass·ratio 큼=robust, curvature 큼=spurious · null 30회
+
+## 층 L//2
+모델           지표              n    AUC   bacc       null95% ρ(nchunk)  ρ(logT)    잔차AUC        잔차null
+-- Skywork-OR1-Math-7B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Skywork-OR1- compass_mean   33  0.692  0.583 [0.31,0.74]       +nan    -0.13    0.688 [0.25,0.71] 
+Skywork-OR1- compass_slope  33  0.581  0.583 [0.32,0.64]       +nan    -0.31    0.523 [0.32,0.66] 
+Skywork-OR1- traced_ratio   33  0.623  0.646 [0.31,0.68]       +nan    -0.11    0.588 [0.36,0.69] 
+Skywork-OR1- curvature      33  0.442  0.456 [0.37,0.71]       +nan    +0.00    0.454 [0.28,0.73] 
+
+## 층 last
+모델           지표              n    AUC   bacc       null95% ρ(nchunk)  ρ(logT)    잔차AUC        잔차null
+-- Skywork-OR1-Math-7B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Skywork-OR1- compass_mean   33  0.565  0.519 [0.39,0.74]       +nan    -0.05    0.565 [0.31,0.68] 
+Skywork-OR1- compass_slope  33  0.569  0.583 [0.29,0.61]       +nan    -0.10    0.523 [0.32,0.66] 
+Skywork-OR1- traced_ratio   33  0.508  0.456 [0.32,0.73]       +nan    +0.26    0.565 [0.38,0.68] 
+Skywork-OR1- curvature      33  0.327  0.329 [0.36,0.65]▼      +nan    -0.17    0.362 [0.34,0.74] 

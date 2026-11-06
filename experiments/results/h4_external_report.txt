@@ -1,0 +1,13 @@
+학습 MATH 137문제 (robust 36) · 시험 v2 33문제 (robust 20) · 중복 제외 0
+  특징                  시험 bacc    시험 AUC  null(학습 라벨 섞기 30회)
+  길이(대조군)          bacc 0.475  AUC 0.331  null AUC [0.33, 0.67]  
+  프로브 층2           bacc 0.585  AUC 0.627  null AUC [0.32, 0.67]  
+  프로브 층6           bacc 0.623  AUC 0.673  null AUC [0.34, 0.70]  
+  프로브 층10          bacc 0.519  AUC 0.585  null AUC [0.29, 0.75]  
+  프로브 층14          bacc 0.619  AUC 0.658  null AUC [0.36, 0.71]  
+  프로브 층18          bacc 0.648  AUC 0.731  null AUC [0.36, 0.75]  
+  프로브 층22          bacc 0.612  AUC 0.662  null AUC [0.35, 0.71]  
+  프로브 층26          bacc 0.417  AUC 0.500  null AUC [0.33, 0.66]  
+  프로브 층30          bacc 0.658  AUC 0.619  null AUC [0.33, 0.64]  
+  프로브 층34          bacc 0.646  AUC 0.635  null AUC [0.34, 0.67]  
+판정 기준: 시험 AUC가 null 구간 밖(▲)이면 MATH에서 배운 것이 올림피아드로 옮겨간 것. 길이 행이 같이 ▲면 길이의 대리.

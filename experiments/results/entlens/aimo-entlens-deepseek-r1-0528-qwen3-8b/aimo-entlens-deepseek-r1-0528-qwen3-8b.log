@@ -1,0 +1,126 @@
+[{"stream_name":"stdout","time":5.493200916,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 79.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.52353563,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 23.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.560579294,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 42.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":22.410471666,"data":"WARNING: Skipping torchaudio as it is not installed.\n"}
+,{"stream_name":"stdout","time":22.466194753,"data":"[env] torchaudio 제거 확인\n"}
+,{"stream_name":"stdout","time":22.466229169,"data":"[env] model deepseek-ai/DeepSeek-R1-0528-Qwen3-8B · maxnew 1024 · batch 0 · nprob 0\n"}
+,{"stream_name":"stderr","time":45.002212728,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":47.183192321,"data":"[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='yarn': {'attn_factor'}\n"}
+,{"stream_name":"stderr","time":126.996579483,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [01:18\u003c01:18, 78.07s/it]\rFetching 2 files: 100%|██████████| 2/2 [01:18\u003c00:00, 39.04s/it]\n"}
+,{"stream_name":"stderr","time":163.856003081,"data":"\rLoading weights:   0%|          | 0/399 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/399 [00:01\u003c08:22,  1.26s/it]\rLoading weights:   1%|          | 2/399 [00:08\u003c29:58,  4.53s/it]\rLoading weights:  33%|███▎      | 131/399 [00:08\u003c00:11, 23.70it/s]\rLoading weights:  48%|████▊     | 190/399 [00:09\u003c00:06, 30.02it/s]\rLoading weights:  57%|█████▋    | 228/399 [00:12\u003c00:08, 20.61it/s]\rLoading weights:  63%|██████▎   | 253/399 [00:15\u003c00:08, 16.37it/s]\rLoading weights:  68%|██████▊   | 270/399 [00:18\u003c00:10, 12.35it/s]\rLoading weights:  71%|███████   | 282/399 [00:20\u003c00:10, 11.46it/s]\rLoading weights:  73%|███████▎  | 290/399 [00:21\u003c00:10, 10.19it/s]\rLoading weights:  74%|███████▍  | 296/399 [00:21\u003c00:09, 11.12it/s]\rLoading weights:  76%|███████▌  | 302/399 [00:23\u003c00:10,  9.06it/s]\rLoading weights:  78%|███████▊  | 312/399 [00:24\u003c00:10,  8.11it/s]\rLoading weights:  81%|████████  | 323/399 [00:26\u003c00:09,  7.96it/s]\rLoading weights:  84%|████████▎ | 334/399 [00:27\u003c00:08,  7.67it/s]\rLoading weights:  84%|████████▍ | 336/399 [00:27\u003c00:07,  7.93it/s]\rLoading weights:  86%|████████▋ | 345/399 [00:29\u003c00:07,  7.58it/s]\rLoading weights:  87%|████████▋ | 347/399 [00:29\u003c00:06,  7.83it/s]\rLoading weights:  89%|████████▉ | 356/399 [00:30\u003c00:05,  7.23it/s]\rLoading weights:  90%|████████▉ | 358/399 [00:31\u003c00:05,  7.56it/s]\rLoading weights:  92%|█████████▏| 367/399 [00:32\u003c00:04,  7.07it/s]\rLoading weights:  95%|█████████▍| 378/399 [00:33\u003c00:02,  7.06it/s]\rLoading weights:  97%|█████████▋| 389/399 [00:35\u003c00:01,  7.21it/s]\rLoading weights: 100%|██████████| 399/399 [00:35\u003c00:00, 11.23it/s]\n"}
+,{"stream_name":"stdout","time":164.264375046,"data":"[entlens] deepseek-ai/DeepSeek-R1-0528-Qwen3-8B 로드 120s · quant fp16\n"}
+,{"stream_name":"stdout","time":164.264408275,"data":"[entlens] final_norm = model.norm\n"}
+,{"stream_name":"stdout","time":164.26442711,"data":"[entlens] 문제 33 · 층 36 · maxnew 1024 · batch 33\n"}
+,{"stream_name":"stdout","time":635.617008701,"data":"[entlens] 생성 33행 · 471s · 1024스텝 · 460 ms/step · 완주 0/33\n"}
+,{"stream_name":"stdout","time":641.329687183,"data":"[entlens] 렌즈 5/33 · 6s\n"}
+,{"stream_name":"stdout","time":647.754650989,"data":"[entlens] 렌즈 10/33 · 12s\n"}
+,{"stream_name":"stdout","time":653.4710291,"data":"[entlens] 렌즈 15/33 · 18s\n"}
+,{"stream_name":"stdout","time":659.433332767,"data":"[entlens] 렌즈 20/33 · 24s\n"}
+,{"stream_name":"stdout","time":666.561012463,"data":"[entlens] 렌즈 25/33 · 31s\n"}
+,{"stream_name":"stdout","time":673.132417136,"data":"[entlens] 렌즈 30/33 · 38s\n"}
+,{"stream_name":"stdout","time":676.797599385,"data":"[entlens] 렌즈 33/33 · 41s\n"}
+,{"stream_name":"stdout","time":676.798918271,"data":"[entlens] 저장 /kaggle/working/entlens · meta {\"model\": \"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B\", \"n_layers\": 36, \"maxnew\": 1024, \"batch\": 33, \"n_prob\": 33, \"quant\": \"fp16\", \"n_marks\": 0, \"finished\": 0, \"lens_ok\": 30, \"lens_gate_max\": 0.0038590133}\n"}
+,{"stream_name":"stdout","time":676.79893806,"data":"[entlens] **경고** 마지막층 렌즈가 실제 로짓과 3.859e-03 어긋난다 — final_norm 가정을 다시 봐야 한다\n"}
+,{"stream_name":"stdout","time":676.798945242,"data":"\n"}
+,{"stream_name":"stdout","time":676.798950439,"data":"===== pidx 0 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":676.798956251,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":676.79896231,"data":"I need to find the product of Alice and Bob's ages. Let's denote Alice's age as A and Bob's age as B. Both are positive integers.\n"}
+,{"stream_name":"stdout","time":676.798968155,"data":"\n"}
+,{"stream_name":"stdout","time":676.798973253,"data":"From Alice's statement: If they each added their number of sweets to their age, Alice's sum would be double Bob's sum. Also, if they took the product of their sweets and ages, Alice's product would be four times Bob's product.\n"}
+,{"stream_name":"stdout","time":676.79897852,"data":"\n"}
+,{"stream_name":"stdout","time":676.798982906,"data":"Let S_A be the number of sweets Alice has, and S_B be the number Bob has. Both are integers.\n"}
+,{"stream_name":"stdout","time":676.798989274,"data":"\n"}
+,{"stream_name":"stdout","time":676.799009439,"data":"So, Alice says: (A + S_A) = 2 * (B + S_B)\n"}
+,{"stream_name":"stdout","time":676.799015434,"data":"\n"}
+,{"stream_name":"stdout","time":676.799020615,"data":"And (A * S_A) = 4 * (B * S_B)\n"}
+,{"stream_name":"stdout","time":676.799026004,"data":"\n"}
+,{"stream_name":"stdout","time":676.79903106,"data":"Bob replies: If Alice gives Bob five sweets, then both their sum and product would be equal. So, after giving, Alice has S_A - 5 sweets, and Bob has S_B + 5 sweets.\n"}
+,{"stream_name":"stdout","time":676.799036989,"data":"\n"}
+,{"stream_name":"stdout","time":676.799042264,"data":"Then, (A + (S_A - 5)) = (B + (S_B + 5))\n"}
+,{"stream_name":"stdout","time":676.799047454,"data":"\n"}
+,{"stream_name":"stdout","time":676.799051826,"data":"And (A * (S_A - 5)) = (B * (S_B + 5))\n"}
+,{"stream_name":"stdout","time":676.799056389,"data":"\n"}
+,{"stream_name":"stdout","time":676.799060786,"data":"But from Bob's reply, it says \"both our sum and product would be equal.\" I think it means that after the transaction, t\n"}
+,{"stream_name":"stdout","time":676.799065804,"data":"\n"}
+,{"stream_name":"stdout","time":676.799070119,"data":"\n"}
+,{"stream_name":"stdout","time":676.79907998,"data":"===== pidx 1 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":676.799094521,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":676.799110046,"data":"The problem involves Fibonacci numbers and finding how many positive integers n less than 10^101 satisfy that n² + (n+1)² is a multiple of 5 but F_{n-1}² + F_n² is not. Then, I need to find the number of prime factors of N, including multiplicity.\n"}
+,{"stream_name":"stdout","time":676.799115004,"data":"\n"}
+,{"stream_name":"stdout","time":676.799119174,"data":"First, recall that Fibonacci numbers are defined as F_0 = 0, F_1 = 1, and F_{n+1} = F_n + F_{n-1} for n ≥ 1. So the sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, etc.\n"}
+,{"stream_name":"stdout","time":676.799123551,"data":"\n"}
+,{"stream_name":"stdout","time":676.799127735,"data":"The condition is that n² + (n+1)² is divisible by 5, but F_{n-1}² + F_n² is not divisible by 5.\n"}
+,{"stream_name":"stdout","time":676.799132197,"data":"\n"}
+,{"stream_name":"stdout","time":676.79913559,"data":"n² + (n+1)² = n² + n² + 2n + 1 = 2n² + 2n + 1.\n"}
+,{"stream_name":"stdout","time":676.799139826,"data":"\n"}
+,{"stream_name":"stdout","time":676.799143932,"data":"This needs to be divisible by 5. So 2n² + 2n + 1 ≡ 0 mod 5.\n"}
+,{"stream_name":"stdout","time":676.799147612,"data":"\n"}
+,{"stream_name":"stdout","time":676.799151036,"data":"I can simplify this. Divide both sides by 2, but since 2 and 5 are coprime, I can multiply by the inverse of 2 mod 5.\n"}
+,{"stream_name":"stdout","time":676.799154914,"data":"\n"}
+,{"stream_name":"stdout","time":676.799158329,"data":"Inverse of 2 mod 5 is 3, because 2*3=6≡1 mod 5.\n"}
+,{"stream_name":"stdout","time":676.79916196,"data":"\n"}
+,{"stream_name":"stdout","time":676.799165372,"data":"So multiply both sides by 3: n² + n + 3 ≡ 0 mod 5? Let me check.\n"}
+,{"stream_name":"stdout","time":676.799169064,"data":"\n"}
+,{"stream_name":"stdout","time":676.79917255,"data":"2n² + 2n + 1 ≡ 0 mod 5\n"}
+,{"stream_name":"stdout","time":676.799177842,"data":"\n"}
+,{"stream_name":"stdout","time":676.799184449,"data":"Multiply by 3: 3\n"}
+,{"stream_name":"stdout","time":676.799186837,"data":"\n"}
+,{"stream_name":"stdout","time":676.799189119,"data":"\n"}
+,{"stream_name":"stdout","time":676.799191366,"data":"===== pidx 2 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":676.799194007,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":676.799208996,"data":"I need to find the sum of the five smallest values of n for which, when drawing 7 marbles without replacement, the probability of getting exactly 4 red is equal to the probability of getting exactly 5 red. There are at least 7 marbles of each color, so the total number of marbles n is at least 14.\n"}
+,{"stream_name":"stdout","time":676.79921446,"data":"\n"}
+,{"stream_name":"stdout","time":676.799218478,"data":"The probability of drawing exactly k red marbles in 7 draws without replacement is given by the hypergeometric distribution. Let R be the number of red marbles and B be the number of blue marbles. Since there are at least 7 of each, R and B are both at least 7, and n = R + B.\n"}
+,{"stream_name":"stdout","time":676.799223336,"data":"\n"}
+,{"stream_name":"stdout","time":676.799227194,"data":"The probability of exactly 4 red is:\n"}
+,{"stream_name":"stdout","time":676.799230725,"data":"\n"}
+,{"stream_name":"stdout","time":676.799234044,"data":"\\[ P(4) = \\frac{\\binom{R}{4} \\binom{B}{3}}{\\binom{n}{7}} \\]\n"}
+,{"stream_name":"stdout","time":676.79923798,"data":"\n"}
+,{"stream_name":"stdout","time":676.799241316,"data":"Because we're choosing 4 red out of R and 3 blue out of B, and total ways to choose 7 out of n.\n"}
+,{"stream_name":"stdout","time":676.799249338,"data":"\n"}
+,{"stream_name":"stdout","time":676.799252856,"data":"Similarly, the probability of exactly 5 red is:\n"}
+,{"stream_name":"stdout","time":676.799256434,"data":"\n"}
+,{"stream_name":"stdout","time":676.799259807,"data":"\\[ P(5) = \\frac{\\binom{R}{5} \\binom{B}{2}}{\\binom{n}{7}} \\]\n"}
+,{"stream_name":"stdout","time":676.799263614,"data":"\n"}
+,{"stream_name":"stdout","time":676.799267037,"data":"And thes\n"}
+,{"stream_name":"stdout","time":676.799270457,"data":"\n"}
+,{"stream_name":"stdout","time":676.799273836,"data":"\n"}
+,{"stream_name":"stdout","time":676.79927725,"data":"===== pidx 3 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":676.799282822,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":676.79928653,"data":"I have a geometry problem. Triangle ABC has side length AB = 20 and circumradius R = 26. I need to find the greatest possible length of segment CD, where D is the foot of the perpendicular from C to the line AB. The answer should be an integer or NaN if no solution exists.\n"}
+,{"stream_name":"stdout","time":676.799311506,"data":"\n"}
+,{"stream_name":"stdout","time":676.799315634,"data":"First, recall that the circumradius R is the radius of the circumcircle, which passes through all three vertices of the triangle. The formula for circumradius is R = a / (2 sin A), but I might need a different approach here.\n"}
+,{"stream_name":"stdout","time":676.799319838,"data":"\n"}
+,{"stream_name":"stdout","time":676.799323267,"data":"Since AB is fixed at 20, and R is fixed at 26, I need to consider different positions of point C such that the circumcircle of ABC has radius 26, and then find the maximum distance from C to the line AB.\n"}
+,{"stream_name":"stdout","time":676.7993274,"data":"\n"}
+,{"stream_name":"stdout","time":676.799331291,"data":"D is the foot of the perpendicular from C to AB, so CD is the distance from C to AB. I need to maximize this distance given that the circumradius is 26 and AB is 20.\n"}
+,{"stream_name":"stdout","time":676.799335269,"data":"\n"}
+,{"stream_name":"stdout","time":676.799338713,"data":"In a circle with ra\n"}
+,{"stream_name":"stdout","time":676.799342125,"data":"\n"}
+,{"stream_name":"stdout","time":676.799345462,"data":"\n"}
+,{"stream_name":"stdout","time":676.799348775,"data":"===== pidx 4 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":676.799352471,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":676.799355942,"data":"I need to find the sum of all real numbers \\( r \\) such that a circle with radius \\( r \\) centered at (4, 39) is tangent to the parabola given by \\( 2y = x^2 - 8x + 12 \\). The answer should be an integer or NaN if there's no solution.\n"}
+,{"stream_name":"stdout","time":676.799360556,"data":"\n"}
+,{"stream_name":"stdout","time":676.799363954,"data":"First, I should rewrite the parabola equation in standard form. The given equation is \\( 2y = x^2 - 8x + 12 \\). Dividing both sides by 2, I get \\( y = \\frac{1}{2}x^2 - 4x + 6 \\).\n"}
+,{"stream_name":"stdout","time":676.799368192,"data":"\n"}
+,{"stream_name":"stdout","time":676.799371884,"data":"Now, the circle is centered at (4, 39) with radius r, so its equation is \\( (x - 4)^2 + (y - 39)^2 = r^2 \\).\n"}
+,{"stream_name":"stdout","time":676.799375872,"data":"\n"}
+,{"stream_name":"stdout","time":676.799381319,"data":"For the circle to be tangent to the parabola, they must touch at exactly one point. That means the system of equations should have exactly one solution.\n"}
+,{"stream_name":"stdout","time":676.799387028,"data":"\n"}
+,{"stream_name":"stdout","time":676.799395168,"data":"So, I need to solve for the intersection points of the circle and the parabola and set the condition that there's exactly one solution.\n"}
+,{"stream_name":"stdout","time":676.799400015,"data":"\n"}
+,{"stream_name":"stdout","time":676.799404345,"data":"I can substitute the parabola equation into the circle equation. Since the \n"}
+,{"stream_name":"stdout","time":676.79940869,"data":"\n"}
+,{"stream_name":"stdout","time":676.799412162,"data":"[즉답] pidx 0 · ans=' NaN\\n\\nThe problem states that Alice and' · int=None · note=첫 줄에 숫자 토큰이 없다\n"}
+,{"stream_name":"stdout","time":676.799416336,"data":"[즉답] pidx 1 · ans=' 0\\n\\nThe problem asks for the' · int=0 · note=\n"}
+,{"stream_name":"stdout","time":676.799420235,"data":"[즉답] pidx 2 · ans=' 49\\n\\nThe problem states that' · int=49 · note=\n"}
+,{"stream_name":"stdout","time":676.799424193,"data":"[즉답] pidx 3 · ans=' 26.0\\n\\nThe problem' · int=26 · note=\n"}
+,{"stream_name":"stdout","time":676.799428133,"data":"[즉답] pidx 4 · ans=' 14\\nThe problem is to' · int=14 · note=\n"}
+,{"stream_name":"stderr","time":682.801249636,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":682.801277509,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":683.050175002,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":683.050199565,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":683.827133995,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":684.857575895,"data":"[NbConvertApp] Writing 375746 bytes to __results__.html\n"}
+]

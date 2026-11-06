@@ -1,0 +1,24 @@
+H10-B 확장 (A) 결합 지표 · 문제 단위 라벨 · null 30회 · 부호: 큼 = robust
+모델           지표           n    AUC       null95%    잔차AUC        잔차null
+Qwen3_5-4B   combo       33  0.662 [0.34,0.66]     0.654 [0.32,0.70] 
+Qwen3_5-4B   lopo_C0.1   33  0.558 [0.30,0.72]     0.592 [0.39,0.76] 
+Skywork-OR1- combo       33  0.723 [0.37,0.68]▲    0.700 [0.34,0.62]▲
+Skywork-OR1- lopo_C0.1   33  0.738 [0.23,0.65]▲    0.715 [0.34,0.71]▲
+Olmo-3-7B-Th combo       33  0.631 [0.36,0.68]     0.646 [0.34,0.66] 
+Olmo-3-7B-Th lopo_C0.1   33  0.496 [0.35,0.67]     0.562 [0.30,0.71] 
+DeepSeek-R1- combo       33  0.427 [0.32,0.69]     0.423 [0.35,0.72] 
+DeepSeek-R1- lopo_C0.1   33  0.638 [0.26,0.66]     0.612 [0.31,0.73] 
+풀링(잔차)       combo       33                         0.627 [0.28,0.70]    ρ: Qwen3_-Skywor -0.10  Qwen3_-Olmo-3 +0.16  Qwen3_-DeepSe +0.05  Skywor-Olmo-3 +0.45  Skywor-DeepSe -0.16  Olmo-3-DeepSe -0.04
+
+H10-B 확장 (B) 모델 간 상대값 · 모델 자기 라벨 행 · null 30회 · 부호: 큼 = robust
+모델           n_own  compass  rel_compass    combo  rel_combo   (자기 라벨 AUC; n<6 또는 한 클래스면 —)
+Qwen3_5-4B      12    0.781        0.688    0.688      0.688
+Skywork-OR1-     3        —            —        —          —
+Olmo-3-7B-Th     9    0.929        0.786    0.714      0.643
+DeepSeek-R1-    10    0.429        0.238    0.714      0.524
+풀링(모델,문제) 행          n=34 robust=24
+  compass      AUC 0.600 [0.26,0.74]   잔차 0.587 [0.31,0.66] 
+  rel_compass  AUC 0.554 [0.35,0.67]   잔차 0.550 [0.28,0.71] 
+  combo        AUC 0.679 [0.28,0.70]   잔차 0.683 [0.36,0.71] 
+  rel_combo    AUC 0.575 [0.28,0.74]   잔차 0.600 [0.36,0.71] 
+  rel_compass 모델 간 ρ: Qwen3_-Skywor -0.26  Qwen3_-Olmo-3 -0.48  Qwen3_-DeepSe -0.28  Skywor-Olmo-3 -0.08  Skywor-DeepSe -0.37  Olmo-3-DeepSe -0.43

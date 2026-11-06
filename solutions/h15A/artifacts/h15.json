@@ -1,0 +1,31 @@
+{
+  "slope": 16.31963985245531,
+  "intercept": -51.87420495142408,
+  "n_train": 33,
+  "thr": {
+    "A": -12.5,
+    "B": 0.4284663289988906,
+    "C": -4.084030533093263
+  },
+  "note": "thr = \ub450 \ud074\ub798\uc2a4 \uc810\uc218 \uc911\uc559\uac12\uc758 \uc911\uc810 (train \uace0\uc815, AUC \ucd5c\uc801\ud654 \uc544\ub2d8)",
+  "train_fit": {
+    "A": {
+      "acc": 0.7575757575757576,
+      "pred_true_rate": 0.6666666666666666,
+      "median_robust": -5.0,
+      "median_spurious": -20.0
+    },
+    "B": {
+      "acc": 0.6363636363636364,
+      "pred_true_rate": 0.6060606060606061,
+      "median_robust": 3.5610012460013962,
+      "median_spurious": -2.704068588003615
+    },
+    "C": {
+      "acc": 0.6060606060606061,
+      "pred_true_rate": 0.5151515151515151,
+      "median_robust": -3.9195658241371665,
+      "median_spurious": -4.248495242049359
+    }
+  }
+}

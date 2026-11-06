@@ -1,0 +1,59 @@
+#ORG-LABEL 시험1 — 주최측 공개 라벨로 우리 라벨 규칙 검증 (비용 $0)
+출처 train-main-v2.parquet · 82행 · 고유 문제 36 · 모델 5종
+
+## 지휘의 쌍별 비교 — **판정 불가 (겹침 0)**
+   우리 라벨 묶음 14개에서 공식 36문제와 **완전 일치 0건**
+   (`source_leak_audit.txt`: 8-그램 자카드 최댓값도 다섯 묶음 전부 0.000 = 근사 중복도 없다)
+   원인은 설계다 — `genlab_v2.load_pool:74` 가 `problem not in v2` 로 공식 문제를 배제한다.
+   → 주최측 max_drop 과 우리 max_drop 을 같은 (모델,문제) 에서 맞댈 데이터가 **없다**.
+     만들려면 공식 33문제에 우리 파이프라인을 새로 돌려야 하고(약 $5·1.6h) 지휘가 (1)을
+     $0 으로 못 박았으므로 하지 않는다. 아래 두 각도로 대체한다.
+
+## (1a) 임계 규칙 역추정 검증 — **주지표**
+   우리 규칙: max_drop ≤ 0.1 → robust · ≥ 0.25 → spurious · 사이 → 제외
+   주최측 max_drop 해상도: 격자 간격 **0.01** · 서로 다른 값 35개 · 범위 [-0.090, +1.000]
+   음수 max_drop 6행 — 변형이 **원본보다 정확**했던 경우다(우리 규칙은 robust 로 본다)
+
+   혼동표 (행 = 우리 규칙 · 열 = 주최측 is_robust)
+                    robust   spurious   excluded       합
+   robust               52          0          0        52
+   spurious              0         19          0        19
+   excluded              0          0         11        11
+   합                    52         19         11        82
+
+   **일치율 82/82 = 1.000** → 사전등록 판정: **같은 규칙**
+     (기준: ≥0.95 같은 규칙 · 0.80~0.95 근사 · <0.80 다른 규칙)
+
+   주최측이 제외한 11행의 max_drop: [0.110, 0.210] · 값 [0.11, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.21]
+   주최측이 라벨을 준 71행의 max_drop 범위: [-0.090, 1.000]
+   → 우리 중간대역 (0.1, 0.25) 과 비교: 제외 행이 전부 그 안에 드는가 = True
+
+   [탐색] 주최측 라벨을 가장 잘 재현하는 임계쌍 — **우리 규칙을 이 값으로 바꾸지 않는다**
+      최고 일치 82/82 = 1.000 · 그 값을 내는 임계쌍 4개
+      가장 좁은 것 5개: [(0.1, 0.22), (0.1, 0.23), (0.1, 0.24), (0.1, 0.25)]
+      우리 규칙 (0.1, 0.25) 의 일치 = 82 → 최고와 차 0행
+
+## (1b) 분포 비교 — **보조, 판정 없음** (문제집합·k·cap·디코딩이 전부 다르다)
+   묶음                                                           n  k     해상도      중앙  spur%    제외%
+   주최측 train-main-v2 (10샘플 · 5모델 · 36문제)                       82 10   0.010   0.040   23.2   13.4
+   genlab/aimo-genlab-skywork-or1-math-7b-v3/genlab/Skywork-OR1-Math-7B_v3_labels.json  38  ?   0.250   0.000   36.8    0.0
+   genlab/aimo-lg-cap16-skywork-or1-math-7b/genlab/Skywork-OR1-Math-7B_v2_labels.json  20  ?   0.250   0.000   25.0    0.0
+   genlab/aimo-lg-pilot2-skywork-or1-math-7b/genlab/Skywork-OR1-Math-7B_v2_labels.json  16  ?   0.250   0.250   50.0    0.0
+   genlab/aimo-lg-run0-skywork-or1-math-7b/genlab/Skywork-OR1-Math-7B_v2_labels.json  41  ?   0.250   0.000   29.3    0.0
+   genlab/aimo-lg-run50-skywork-or1-math-7b/genlab/Skywork-OR1-Math-7B_off50_v2_labels.json  47  ?   0.250   0.000   29.8    0.0
+   genlab/skywork_labels_merged.json                           88  4   0.250   0.000   29.5    0.0
+   runpod/labelgen32k/1f7jul0dgk7o9s/out/DeepSeek-R1-0528-Qwen3-8B_off80_v2_labels.json  26  8   0.125   0.125   23.1   30.8
+   runpod/labelgen32k/9svqsw8dzrtjsv/out/DeepSeek-R1-0528-Qwen3-8B_off80_v2_labels.json  35  8   0.125   0.000    8.6    8.6
+   runpod/labelgen32k/i6hxd8z437eas4/out/Olmo-3-7B-Think_off40_v2_labels.json  20  8   0.125   0.000   30.0    5.0
+   runpod/labelgen32k/luvw8yu3mkxsza/out/DeepSeek-R1-0528-Qwen3-8B_v3_labels.json  24  8   0.125   0.125   45.8    4.2
+   runpod/labelgen32k/mbpc29h3v7um64/out/DeepSeek-R1-0528-Qwen3-8B_off40_v2_labels.json  35  8   0.125   0.000    8.6    8.6
+   runpod/labelgen32k/ofclt769pgvn6u/out/Olmo-3-7B-Think_v3_labels.json  40  8   0.125   0.000   25.0   22.5
+   runpod/labelgen32k/pj7vh1qllei51i/out/Skywork-OR1-Math-7B_off40_v2_labels.json  38  8   0.125   0.000   10.5   21.1
+   runpod/labelgen32k/x04ghnc52b6dll/out/DeepSeek-R1-0528-Qwen3-8B_off80_v2_labels.json  26  4   0.250   0.250   76.9    0.0
+
+   읽는 법: `해상도` 는 max_drop 값들의 격자 간격이다. k샘플 정확도의 차이라면 1/k 의
+   배수여야 한다 — 우리 k=8 은 0.125, k=4 는 0.25 다. 주최측은 그 둘과 다르고(위 숫자),
+   그래서 **분포를 같은 축에 놓고 비교할 수 없다**. `spur%`·`제외%` 는 우리 규칙을 그 묶음에
+   적용했을 때의 비율이고, 묶음마다 문제 난이도·모델·cap·디코딩이 달라 **원인 분해가 안 된다**.
+   이 표의 용도는 '우리 라벨이 주최측과 같은 방향인가' 의 답이 아니라, 그 질문에 답할 수
+   있는 데이터가 없다는 사실의 정량화다.

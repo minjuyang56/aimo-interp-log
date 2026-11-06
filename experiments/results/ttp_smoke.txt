@@ -1,0 +1,21 @@
+#TT-PERTURB 스모크 — 공식 train-main-v2 문제단위 33문제로 검사
+
+1. 앞 6종 == h22.rule_perturbations : 불일치 0/33  OK
+2. 섭동 결정성 (두 번 호출 동일) : True  OK
+3. 수식 안 숫자 다중집합 보존 : 위반 0  OK
+4. 섭동 개수 분포 {4: 2, 6: 18, 7: 12, 8: 1} · 최소 4 (K_MIN 4)  OK
+   유형별 적용 횟수 {'typos0': 33, 'typos1': 33, 'distract0': 33, 'distract1': 33, 'rename': 31, 'rename2': 31, 'notation': 13, 'reorder': 1}
+5. score_one 원본답 없음             → (None, 0)  기대 (None, 0)  OK
+5. score_one 전부 일치              → (0.0, 6)  기대 (0.0, 6)  OK
+5. score_one 절반 갈림              → (0.5, 6)  기대 (0.5, 6)  OK
+5. score_one 전부 갈림              → (1.0, 6)  기대 (1.0, 6)  OK
+5. score_one 쓸 수 있는 섭동 3개       → (None, 3)  기대 (None, 3)  OK
+5. score_one 쓸 수 있는 섭동 4개       → (0.25, 4)  기대 (0.25, 4)  OK
+6. h15C 폴백 복제 : 33/33 일치  OK
+7. 미지 model_id    → [True]  순수bool True  OK
+7. 빈 model_id     → [True]  순수bool True  OK
+7. 빈 리스트          → []  순수bool True  OK
+7. 공백만            → [True]  순수bool True  OK
+7. 옛 2-인자 == 3-인자 : True  OK
+
+## **전부 통과**

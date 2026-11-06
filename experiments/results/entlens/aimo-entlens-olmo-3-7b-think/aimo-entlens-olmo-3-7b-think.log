@@ -1,0 +1,103 @@
+[{"stream_name":"stdout","time":6.379235077,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 49.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.472550056,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 22.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.569419289,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 40.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":23.150230997,"data":"WARNING: Skipping torchaudio as it is not installed.\n"}
+,{"stream_name":"stdout","time":23.205958931,"data":"[env] torchaudio 제거 확인\n"}
+,{"stream_name":"stdout","time":23.205989646,"data":"[env] model allenai/Olmo-3-7B-Think · maxnew 1024 · batch 11 · nprob 0\n"}
+,{"stream_name":"stderr","time":46.937802307,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":126.309085645,"data":"\rFetching 3 files:   0%|          | 0/3 [00:00\u003c?, ?it/s]\rFetching 3 files:  33%|███▎      | 1/3 [01:06\u003c02:12, 66.39s/it]\rFetching 3 files:  67%|██████▋   | 2/3 [01:14\u003c00:32, 32.33s/it]\rFetching 3 files: 100%|██████████| 3/3 [01:14\u003c00:00, 24.96s/it]\n"}
+,{"stream_name":"stderr","time":161.063445633,"data":"\rLoading weights:   0%|          | 0/355 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/355 [00:06\u003c38:56,  6.60s/it]\rLoading weights:   1%|          | 2/355 [00:07\u003c18:24,  3.13s/it]\rLoading weights:  16%|█▌        | 56/355 [00:07\u003c00:20, 14.41it/s]\rLoading weights:  23%|██▎       | 80/355 [00:08\u003c00:14, 19.12it/s]\rLoading weights:  27%|██▋       | 96/355 [00:08\u003c00:11, 23.29it/s]\rLoading weights:  31%|███       | 109/355 [00:08\u003c00:09, 26.93it/s]\rLoading weights:  34%|███▎      | 119/355 [00:09\u003c00:13, 17.38it/s]\rLoading weights:  35%|███▌      | 126/355 [00:11\u003c00:18, 12.35it/s]\rLoading weights:  37%|███▋      | 133/355 [00:11\u003c00:16, 13.10it/s]\rLoading weights:  39%|███▊      | 137/355 [00:13\u003c00:25,  8.66it/s]\rLoading weights:  41%|████      | 144/355 [00:13\u003c00:19, 11.07it/s]\rLoading weights:  42%|████▏     | 148/355 [00:14\u003c00:28,  7.34it/s]\rLoading weights:  44%|████▎     | 155/355 [00:14\u003c00:20,  9.61it/s]\rLoading weights:  45%|████▍     | 158/355 [00:16\u003c00:29,  6.63it/s]\rLoading weights:  45%|████▌     | 161/355 [00:16\u003c00:26,  7.20it/s]\rLoading weights:  47%|████▋     | 166/355 [00:16\u003c00:19,  9.69it/s]\rLoading weights:  48%|████▊     | 169/355 [00:16\u003c00:21,  8.68it/s]\rLoading weights:  50%|█████     | 179/355 [00:17\u003c00:12, 14.16it/s]\rLoading weights:  53%|█████▎    | 188/355 [00:17\u003c00:08, 20.05it/s]\rLoading weights:  54%|█████▍    | 192/355 [00:17\u003c00:08, 20.27it/s]\rLoading weights:  57%|█████▋    | 201/355 [00:17\u003c00:05, 25.92it/s]\rLoading weights:  59%|█████▉    | 211/355 [00:17\u003c00:03, 36.09it/s]\rLoading weights:  61%|██████    | 217/355 [00:17\u003c00:03, 36.02it/s]\rLoading weights:  63%|██████▎   | 223/355 [00:18\u003c00:03, 34.49it/s]\rLoading weights:  66%|██████▌   | 233/355 [00:18\u003c00:02, 43.04it/s]\rLoading weights:  67%|██████▋   | 239/355 [00:18\u003c00:02, 41.95it/s]\rLoading weights:  69%|██████▉   | 245/355 [00:19\u003c00:07, 14.61it/s]\rLoading weights:  72%|███████▏  | 256/355 [00:19\u003c00:05, 18.87it/s]\rLoading weights:  73%|███████▎  | 260/355 [00:20\u003c00:08, 11.25it/s]\rLoading weights:  75%|███████▌  | 267/355 [00:21\u003c00:09,  9.71it/s]\rLoading weights:  76%|███████▌  | 269/355 [00:22\u003c00:09,  9.53it/s]\rLoading weights:  78%|███████▊  | 276/355 [00:22\u003c00:06, 12.12it/s]\rLoading weights:  78%|███████▊  | 278/355 [00:23\u003c00:10,  7.40it/s]\rLoading weights:  79%|███████▉  | 280/355 [00:23\u003c00:10,  6.85it/s]\rLoading weights:  81%|████████  | 288/355 [00:24\u003c00:06, 10.70it/s]\rLoading weights:  82%|████████▏ | 290/355 [00:25\u003c00:10,  6.17it/s]\rLoading weights:  84%|████████▍ | 298/355 [00:25\u003c00:05,  9.57it/s]\rLoading weights:  85%|████████▍ | 300/355 [00:26\u003c00:09,  5.90it/s]\rLoading weights:  85%|████████▌ | 302/355 [00:26\u003c00:08,  6.09it/s]\rLoading weights:  87%|████████▋ | 309/355 [00:27\u003c00:04,  9.45it/s]\rLoading weights:  88%|████████▊ | 311/355 [00:28\u003c00:07,  5.58it/s]\rLoading weights:  88%|████████▊ | 313/355 [00:28\u003c00:07,  5.90it/s]\rLoading weights:  90%|█████████ | 320/355 [00:28\u003c00:03,  9.58it/s]\rLoading weights:  91%|█████████ | 322/355 [00:29\u003c00:05,  6.07it/s]\rLoading weights:  91%|█████████▏| 324/355 [00:30\u003c00:05,  5.69it/s]\rLoading weights:  94%|█████████▎| 332/355 [00:30\u003c00:02,  9.83it/s]\rLoading weights:  94%|█████████▍| 334/355 [00:31\u003c00:03,  5.64it/s]\rLoading weights:  96%|█████████▋| 342/355 [00:31\u003c00:01,  9.23it/s]\rLoading weights:  97%|█████████▋| 344/355 [00:33\u003c00:01,  5.58it/s]\rLoading weights:  97%|█████████▋| 346/355 [00:33\u003c00:01,  6.01it/s]\rLoading weights:  99%|█████████▉| 353/355 [00:33\u003c00:00, 10.04it/s]\rLoading weights: 100%|██████████| 355/355 [00:33\u003c00:00, 10.60it/s]\n"}
+,{"stream_name":"stdout","time":161.602459738,"data":"[entlens] allenai/Olmo-3-7B-Think 로드 116s · quant fp16\n"}
+,{"stream_name":"stdout","time":161.602506953,"data":"[entlens] final_norm = model.norm\n"}
+,{"stream_name":"stdout","time":161.60251397,"data":"[entlens] 문제 33 · 층 32 · maxnew 1024 · batch 11\n"}
+,{"stream_name":"stdout","time":303.239355591,"data":"[entlens] 생성 11행 · 142s · 1024스텝 · 138 ms/step · 완주 0/11\n"}
+,{"stream_name":"stdout","time":483.729103434,"data":"[entlens] 생성 11행 · 180s · 1024스텝 · 176 ms/step · 완주 0/11\n"}
+,{"stream_name":"stdout","time":634.030455808,"data":"[entlens] 생성 11행 · 150s · 1024스텝 · 147 ms/step · 완주 0/11\n"}
+,{"stream_name":"stdout","time":639.530213243,"data":"[entlens] 렌즈 5/33 · 5s\n"}
+,{"stream_name":"stdout","time":645.124979278,"data":"[entlens] 렌즈 10/33 · 11s\n"}
+,{"stream_name":"stdout","time":650.670840209,"data":"[entlens] 렌즈 15/33 · 17s\n"}
+,{"stream_name":"stdout","time":656.363803859,"data":"[entlens] 렌즈 20/33 · 22s\n"}
+,{"stream_name":"stdout","time":663.229664449,"data":"[entlens] 렌즈 25/33 · 29s\n"}
+,{"stream_name":"stdout","time":669.507431888,"data":"[entlens] 렌즈 30/33 · 35s\n"}
+,{"stream_name":"stdout","time":673.497433054,"data":"[entlens] 렌즈 33/33 · 39s\n"}
+,{"stream_name":"stdout","time":673.498831735,"data":"[entlens] 저장 /kaggle/working/entlens · meta {\"model\": \"allenai/Olmo-3-7B-Think\", \"n_layers\": 32, \"maxnew\": 1024, \"batch\": 11, \"n_prob\": 33, \"quant\": \"fp16\", \"n_marks\": 0, \"finished\": 0, \"lens_ok\": 33, \"lens_gate_max\": 0.0017610192}\n"}
+,{"stream_name":"stdout","time":673.498852138,"data":"[entlens] **경고** 마지막층 렌즈가 실제 로짓과 1.761e-03 어긋난다 — final_norm 가정을 다시 봐야 한다\n"}
+,{"stream_name":"stdout","time":673.498880104,"data":"\n"}
+,{"stream_name":"stdout","time":673.498885776,"data":"===== pidx 0 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":673.498890807,"data":"Okay, let's see. So the problem is about Alice and Bob's ages and the number of sweets they have. Hmm. Let me try to parse the problem step by step. \n"}
+,{"stream_name":"stdout","time":673.498895474,"data":"\n"}
+,{"stream_name":"stdout","time":673.498899217,"data":"First, let me note down the given information. Let me assign variables to make this clearer. Let me denote:\n"}
+,{"stream_name":"stdout","time":673.49890341,"data":"\n"}
+,{"stream_name":"stdout","time":673.498907064,"data":"Let A be Alice's age, and B be Bob's age. Both A and B are positive integers. \n"}
+,{"stream_name":"stdout","time":673.498911113,"data":"\n"}
+,{"stream_name":"stdout","time":673.498914889,"data":"Let S_A be the number of sweets Alice is holding, and S_B be the number of sweets Bob is holding. These are also positive integers. \n"}
+,{"stream_name":"stdout","time":673.498920905,"data":"\n"}
+,{"stream_name":"stdout","time":673.498928444,"data":"Now, the problem states:\n"}
+,{"stream_name":"stdout","time":673.498931159,"data":"\n"}
+,{"stream_name":"stdout","time":673.498933582,"data":"Alice says to Bob: \"If we each added the number of sweets we're holding to our (positive integer) age, my answer would be double yours.\" \n"}
+,{"stream_name":"stdout","time":673.498936501,"data":"\n"}
+,{"stream_name":"stdout","time":673.49893895,"data":"Hmm, okay. So, when Alice says that, she's talking about taking her age plus her sweets, and that would be double Bob's age plus his sweets? Wait, let me read that again. \n"}
+,{"stream_name":"stdout","time":673.498941751,"data":"\n"}
+,{"stream_name":"stdout","time":673.498944189,"data":"\"If we each added the number of sweets we're holding to our (positive integer) age, my a\n"}
+,{"stream_name":"stdout","time":673.498946919,"data":"\n"}
+,{"stream_name":"stdout","time":673.498949316,"data":"\n"}
+,{"stream_name":"stdout","time":673.498951733,"data":"===== pidx 1 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":673.498955127,"data":"Okay, so I need to solve this problem about Fibonacci numbers and some conditions on n. Let me read it again carefully.\n"}
+,{"stream_name":"stdout","time":673.498974139,"data":"\n"}
+,{"stream_name":"stdout","time":673.498979392,"data":"The problem says: There are N positive integers n strictly less than 10^101 such that n² + (n+1)² is a multiple of 5, but F_{n-1}² + F_n² is not. We need to find how many prime factors N has, counted with multiplicity. The answer should be an integer or NaN if no solution.\n"}
+,{"stream_name":"stdout","time":673.498985067,"data":"\n"}
+,{"stream_name":"stdout","time":673.498989326,"data":"First, let me parse the problem step by step.\n"}
+,{"stream_name":"stdout","time":673.498993774,"data":"\n"}
+,{"stream_name":"stdout","time":673.498997436,"data":"We have two conditions on n:\n"}
+,{"stream_name":"stdout","time":673.499001264,"data":"\n"}
+,{"stream_name":"stdout","time":673.499004933,"data":"1. n² + (n+1)² ≡ 0 mod 5\n"}
+,{"stream_name":"stdout","time":673.499008857,"data":"2. F_{n-1}² + F_n² ≢ 0 mod 5\n"}
+,{"stream_name":"stdout","time":673.499012767,"data":"\n"}
+,{"stream_name":"stdout","time":673.499017819,"data":"And we need to count the number of such n less than 10^101, then factor that count N into its prime factors with multiplicity.\n"}
+,{"stream_name":"stdout","time":673.499021987,"data":"\n"}
+,{"stream_name":"stdout","time":673.499030372,"data":"Alright, so first step: figure out for which n the first condition holds. Then, for those n, check the second condition, and count how many satisfy both. Then factor that count.\n"}
+,{"stream_name":"stdout","time":673.499034824,"data":"\n"}
+,{"stream_name":"stdout","time":673.499044119,"data":"Let me start with the first condition: n² + (n+1)² ≡ 0 mod 5.\n"}
+,{"stream_name":"stdout","time":673.499047959,"data":"\n"}
+,{"stream_name":"stdout","time":673.499050395,"data":"Le\n"}
+,{"stream_name":"stdout","time":673.49905281,"data":"\n"}
+,{"stream_name":"stdout","time":673.499055262,"data":"\n"}
+,{"stream_name":"stdout","time":673.499057676,"data":"===== pidx 2 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":673.499060444,"data":"Okay, so I have this problem about an urn with n marbles, each either red or blue, and there are at least 7 of each color. The condition is that when you draw 7 marbles without replacement, the probability of getting exactly 4 reds is equal to the probability of getting exactly 5 reds. I need to find the sum of the 5 least values of n for which this is possible. Alright, let's break this down step by step.\n"}
+,{"stream_name":"stdout","time":673.499063667,"data":"\n"}
+,{"stream_name":"stdout","time":673.499066184,"data":"First, let me recall some probability concepts. The probability of drawing exactly k red marbles in a sample of size m from an urn with R red and B blue marbles is given by the hypergeometric distribution:\n"}
+,{"stream_name":"stdout","time":673.499069,"data":"\n"}
+,{"stream_name":"stdout","time":673.499071402,"data":"P(X = k) = [C(R, k) * C(B, m - k)] / C(R + B, m)\n"}
+,{"stream_name":"stdout","time":673.499073945,"data":"\n"}
+,{"stream_name":"stdout","time":673.499076462,"data":"Where C(n, k) is the combination of n things taken k at a time. In this problem, m is 7, k is 4 and 5, and we want P(X=4) = P(X=5). Also, since the total number of marbles is n = R + B, and we know that R ≥ 7 and B ≥ 7. So R and B a\n"}
+,{"stream_name":"stdout","time":673.49907945,"data":"\n"}
+,{"stream_name":"stdout","time":673.499081817,"data":"\n"}
+,{"stream_name":"stdout","time":673.499084239,"data":"===== pidx 3 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":673.49908718,"data":"Okay, so I have this geometry problem here about triangle ABC. Let me read it again: Triangle ABC has side length AB = 20 and circumradius R = 26. D is the foot of the perpendicular from C to the line AB. I need to find the greatest possible length of segment CD. Hmm, alright. Let me think step by step.\n"}
+,{"stream_name":"stdout","time":673.499090205,"data":"\n"}
+,{"stream_name":"stdout","time":673.499092606,"data":"First, let me recall some concepts. The circumradius R of a triangle is the radius of the circumscribed circle around the triangle. The formula for the circumradius R of a triangle with sides a, b, c is R = (a*b*c)/(4*A), where A is the area of the triangle. Maybe that will come in handy here.\n"}
+,{"stream_name":"stdout","time":673.499095581,"data":"\n"}
+,{"stream_name":"stdout","time":673.499098422,"data":"Given that AB is 20, so that's one side of the triangle. Let me denote the sides as follows: Let AB = c = 20, BC = a, AC = b, and the circumradius R = 26. The problem is asking for the maximum possible length of CD, where D is the foot of the perpendicular from C to AB. So CD is the height from po\n"}
+,{"stream_name":"stdout","time":673.499101456,"data":"\n"}
+,{"stream_name":"stdout","time":673.49910383,"data":"\n"}
+,{"stream_name":"stdout","time":673.499106633,"data":"===== pidx 4 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":673.499109408,"data":"Okay, so I need to find the sum of all real numbers r such that there's at least one point where a circle with radius r centered at (4, 39) is tangent to the parabola given by 2y = x² - 8x + 12. Hmm, let me start by understanding the problem step by step.\n"}
+,{"stream_name":"stdout","time":673.499115539,"data":"\n"}
+,{"stream_name":"stdout","time":673.499118256,"data":"First, let me rewrite the equation of the parabola in a more standard form. The given equation is 2y = x² - 8x + 12. If I divide both sides by 2, I get y = (x² - 8x + 12)/2. Maybe completing the square for the quadratic in x would help me see the vertex and other properties of the parabola.\n"}
+,{"stream_name":"stdout","time":673.499121302,"data":"\n"}
+,{"stream_name":"stdout","time":673.499123716,"data":"Starting with the quadratic part: x² - 8x. To complete the square, take half of the coefficient of x, which is -8/2 = -4, square it to get 16. So, x² - 8x + 16 - 16 + 12/2. Wait, hold on. Let me do this carefully.\n"}
+,{"stream_name":"stdout","time":673.499126591,"data":"\n"}
+,{"stream_name":"stdout","time":673.499129087,"data":"Original equation after dividing by 2: y = (x² - 8x + 12)/2. Let me factor out the coefficient of x² from the first two terms? Wait, ac\n"}
+,{"stream_name":"stdout","time":673.499131814,"data":"\n"}
+,{"stream_name":"stdout","time":673.499134234,"data":"[즉답] pidx 0 · ans=' 600\\n\\nStep-by-step solution:\\n\\n' · int=600 · note=\n"}
+,{"stream_name":"stdout","time":673.499137151,"data":"[즉답] pidx 1 · ans=' 0\\n\\nThe problem asks for the' · int=0 · note=\n"}
+,{"stream_name":"stdout","time":673.499140254,"data":"[즉답] pidx 2 · ans=' 105\\n\\nThe problem involves an urn' · int=105 · note=\n"}
+,{"stream_name":"stdout","time":673.499142934,"data":"[즉답] pidx 3 · ans=' 96\\n\\nThe problem involves triangle ABC' · int=96 · note=\n"}
+,{"stream_name":"stdout","time":673.499145664,"data":"[즉답] pidx 4 · ans=' 80\\n\\nOkay, so I need' · int=80 · note=\n"}
+,{"stream_name":"stderr","time":679.351599556,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":679.35162659,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":679.583614544,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":679.58363912,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":680.319765338,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":681.290642631,"data":"[NbConvertApp] Writing 375733 bytes to __results__.html\n"}
+]

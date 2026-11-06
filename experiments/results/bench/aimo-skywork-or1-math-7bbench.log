@@ -1,0 +1,169 @@
+[{"stream_name":"stdout","time":5.2197425,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 3.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.258537789,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 108.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.295123764,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 13.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.412668155,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.8/10.8 MB 95.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.905935087,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 39.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.940280326,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 30.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":34.952760949,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":34.952788711,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":34.952793686,"data":"ydata-profiling 4.18.4 requires pandas!=1.4.0,\u003c3.0,\u003e1.5, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.952797363,"data":"google-colab 1.0.0 requires jupyter-server==2.20.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.952801035,"data":"google-colab 1.0.0 requires pandas==2.2.3, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.952804896,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.34.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.952808459,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.952811949,"data":"cudf-cu12 26.2.1 requires pandas\u003c2.4.0,\u003e=2.0, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.95281572,"data":"dask-cudf-cu12 26.2.1 requires pandas\u003c2.4.0,\u003e=2.0, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":61.924305727,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":138.382568079,"data":"\rFetching 4 files:   0%|          | 0/4 [00:00\u003c?, ?it/s]\rFetching 4 files:  25%|██▌       | 1/4 [00:38\u003c01:56, 38.78s/it]\rFetching 4 files:  50%|█████     | 2/4 [00:59\u003c00:56, 28.11s/it]\rFetching 4 files: 100%|██████████| 4/4 [01:13\u003c00:00, 14.75s/it]\rFetching 4 files: 100%|██████████| 4/4 [01:13\u003c00:00, 18.26s/it]\n"}
+,{"stream_name":"stderr","time":170.028853289,"data":"\rLoading weights:   0%|          | 0/339 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/339 [00:09\u003c55:26,  9.84s/it]\rLoading weights:   1%|          | 2/339 [00:09\u003c23:10,  4.13s/it]\rLoading weights:  41%|████      | 138/339 [00:10\u003c00:08, 24.69it/s]\rLoading weights:  44%|████▎     | 148/339 [00:11\u003c00:09, 21.08it/s]\rLoading weights:  46%|████▌     | 155/339 [00:11\u003c00:08, 21.77it/s]\rLoading weights:  47%|████▋     | 161/339 [00:12\u003c00:08, 21.97it/s]\rLoading weights:  51%|█████     | 172/339 [00:12\u003c00:07, 23.63it/s]\rLoading weights:  54%|█████▍    | 184/339 [00:12\u003c00:06, 25.75it/s]\rLoading weights:  55%|█████▌    | 188/339 [00:13\u003c00:05, 26.04it/s]\rLoading weights:  58%|█████▊    | 197/339 [00:13\u003c00:04, 29.88it/s]\rLoading weights:  61%|██████▏   | 208/339 [00:13\u003c00:03, 34.05it/s]\rLoading weights:  63%|██████▎   | 213/339 [00:13\u003c00:03, 33.25it/s]\rLoading weights:  65%|██████▍   | 220/339 [00:14\u003c00:05, 22.17it/s]\rLoading weights:  68%|██████▊   | 232/339 [00:15\u003c00:07, 13.45it/s]\rLoading weights:  69%|██████▉   | 235/339 [00:15\u003c00:07, 13.93it/s]\rLoading weights:  72%|███████▏  | 244/339 [00:17\u003c00:09,  9.57it/s]\rLoading weights:  73%|███████▎  | 246/339 [00:17\u003c00:11,  8.20it/s]\rLoading weights:  76%|███████▌  | 256/339 [00:18\u003c00:09,  9.07it/s]\rLoading weights:  76%|███████▌  | 258/339 [00:19\u003c00:12,  6.39it/s]\rLoading weights:  79%|███████▉  | 268/339 [00:21\u003c00:09,  7.33it/s]\rLoading weights:  80%|███████▉  | 270/339 [00:21\u003c00:10,  6.78it/s]\rLoading weights:  83%|████████▎ | 280/339 [00:23\u003c00:09,  6.49it/s]\rLoading weights:  86%|████████▌ | 292/339 [00:24\u003c00:06,  7.11it/s]\rLoading weights:  86%|████████▋ | 293/339 [00:25\u003c00:07,  6.01it/s]\rLoading weights:  90%|████████▉ | 304/339 [00:26\u003c00:04,  7.29it/s]\rLoading weights:  90%|████████▉ | 305/339 [00:26\u003c00:05,  6.74it/s]\rLoading weights:  90%|█████████ | 306/339 [00:27\u003c00:06,  5.42it/s]\rLoading weights:  93%|█████████▎| 316/339 [00:28\u003c00:03,  7.37it/s]\rLoading weights:  94%|█████████▎| 317/339 [00:28\u003c00:02,  7.41it/s]\rLoading weights:  94%|█████████▍| 318/339 [00:28\u003c00:03,  6.47it/s]\rLoading weights:  97%|█████████▋| 328/339 [00:30\u003c00:01,  6.48it/s]\rLoading weights: 100%|██████████| 339/339 [00:30\u003c00:00, 11.18it/s]\n"}
+,{"stream_name":"stdout","time":170.348225178,"data":"[bench] 로드 109s · transformers 5.18.0 · torch 2.11.0+cu128 · GPU 2\n"}
+,{"stream_name":"stdout","time":170.885903528,"data":"[bench] 시퀀스 8 · 프롬프트 토큰 190 · max_new 8192\n"}
+,{"stream_name":"stdout","time":2384.004562295,"data":"[bench] A_baseline_pad: 2213s · 53770 토큰 · **24.3 tok/s 합산** (3.0/시퀀스)\n"}
+,{"stream_name":"stderr","time":2398.332967532,"data":"W1003 02:25:41.276000 7 torch/_inductor/utils.py:1731] [2/2_1] Not enough SMs to use max_autotune_gemm mode\n"}
+,{"stream_name":"stderr","time":2400.912153128,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8] torch._dynamo hit config.recompile_limit (8)\n"}
+,{"stream_name":"stderr","time":2400.912197329,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8]    function: 'wrapper' (/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py:46)\n"}
+,{"stream_name":"stderr","time":2400.912201938,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8]    last reason: 1/7: len(args) == 2                                           # return wrapper._compiled_fn(*args, **kwargs)  # accelerate/hooks.py:50 in wrapper\n"}
+,{"stream_name":"stderr","time":2400.912227942,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8] User stack trace:\n"}
+,{"stream_name":"stderr","time":2400.91223358,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8]   File \"/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py\", line 50, in wrapper\n"}
+,{"stream_name":"stderr","time":2400.912255974,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8]     return wrapper._compiled_fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":2400.912260042,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8] To log all recompilation reasons, use TORCH_LOGS=\"recompiles\".\n"}
+,{"stream_name":"stderr","time":2400.91226587,"data":"W1003 02:25:43.855000 7 torch/_dynamo/convert_frame.py:1743] [1/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html\n"}
+,{"stream_name":"stderr","time":2405.562717156,"data":"W1003 02:25:48.506000 7 torch/_dynamo/convert_frame.py:1743] [2/8] torch._dynamo hit config.recompile_limit (8)\n"}
+,{"stream_name":"stderr","time":2405.56274753,"data":"W1003 02:25:48.506000 7 torch/_dynamo/convert_frame.py:1743] [2/8]    function: 'torch_dynamo_resume_in_new_forward_at_187' (/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py:187)\n"}
+,{"stream_name":"stderr","time":2405.562754812,"data":"W1003 02:25:48.506000 7 torch/_dynamo/convert_frame.py:1743] [2/8]    last reason: 2/7: expected type of 'module._parameters['bias']' to be a tensor type, ' but found \u003cclass 'NoneType'\u003e\n"}
+,{"stream_name":"stderr","time":2405.562758108,"data":"W1003 02:25:48.506000 7 torch/_dynamo/convert_frame.py:1743] [2/8] To log all recompilation reasons, use TORCH_LOGS=\"recompiles\".\n"}
+,{"stream_name":"stderr","time":2405.562761224,"data":"W1003 02:25:48.506000 7 torch/_dynamo/convert_frame.py:1743] [2/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html\n"}
+,{"stream_name":"stderr","time":2406.49937695,"data":"W1003 02:25:49.443000 7 torch/_dynamo/convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)\n"}
+,{"stream_name":"stderr","time":2406.499423056,"data":"W1003 02:25:49.443000 7 torch/_dynamo/convert_frame.py:1743] [0/8]    function: 'new_forward' (/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py:186)\n"}
+,{"stream_name":"stderr","time":2406.499428924,"data":"W1003 02:25:49.443000 7 torch/_dynamo/convert_frame.py:1743] [0/8]    last reason: 0/3: tensor 'args[0]' Tensor device index mismatch. Expected device index to be \u0000, actual \u0001\n"}
+,{"stream_name":"stderr","time":2406.499434335,"data":"W1003 02:25:49.443000 7 torch/_dynamo/convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS=\"recompiles\".\n"}
+,{"stream_name":"stderr","time":2406.499438824,"data":"W1003 02:25:49.443000 7 torch/_dynamo/convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html\n"}
+,{"stream_name":"stdout","time":6298.733092367,"data":"[bench] B_static_cache: 3915s · 50369 토큰 · **12.9 tok/s 합산** (1.6/시퀀스)\n"}
+,{"stream_name":"stderr","time":6298.773852702,"data":"2026-10-03 03:30:41,718 - ContinuousBatchingLogger - WARNING - `eos_token_id` not set in GenerationConfig. Setting to -1 (disabled).\n"}
+,{"stream_name":"stderr","time":6298.951842288,"data":"2026-10-03 03:30:41,890 - ContinuousBatchingLogger - ERROR - Error in generation loop: Expected all tensors to be on the same device, but got index is on cuda:1, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA_index_copy_)\n"}
+,{"stream_name":"stderr","time":6298.951905561,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":6298.951913075,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/continuous_api.py\", line 1108, in _run_generation_loop\n"}
+,{"stream_name":"stderr","time":6298.95194802,"data":"    while self._generation_loop_body(batch_processor, bootstrapping=False):\n"}
+,{"stream_name":"stderr","time":6298.951950887,"data":"          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.951953217,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/continuous_api.py\", line 1065, in _generation_loop_body\n"}
+,{"stream_name":"stderr","time":6298.951955597,"data":"    self._generation_step()\n"}
+,{"stream_name":"stderr","time":6298.951957802,"data":"    ~~~~~~~~~~~~~~~~~~~~~^^\n"}
+,{"stream_name":"stderr","time":6298.951959955,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/continuous_api.py\", line 1135, in _generation_step\n"}
+,{"stream_name":"stderr","time":6298.951962391,"data":"    self.batch_processor._generation_step(self.model)\n"}
+,{"stream_name":"stderr","time":6298.951964576,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.951966743,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":6298.951969069,"data":"    return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.951971303,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/continuous_api.py\", line 645, in _generation_step\n"}
+,{"stream_name":"stderr","time":6298.951973652,"data":"    self.model_runner.compute_batch(model, batch_data)\n"}
+,{"stream_name":"stderr","time":6298.951975849,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.951978012,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/model_runner.py\", line 138, in compute_batch\n"}
+,{"stream_name":"stderr","time":6298.951980531,"data":"    forward_fn(model, batch_data, carry_over_ids, prev_output_ids, output_ids)\n"}
+,{"stream_name":"stderr","time":6298.951982776,"data":"    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.951984959,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/model_runner.py\", line 190, in _forward_process_and_sample\n"}
+,{"stream_name":"stderr","time":6298.95198733,"data":"    logits = model(**batch_data).logits  # shape [1, seq_len OR num_logits, vocab_size]\n"}
+,{"stream_name":"stderr","time":6298.951989582,"data":"             ~~~~~^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.951992941,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":6298.951995653,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.951997869,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952000013,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stderr","time":6298.952002272,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952004856,"data":"  File \"/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py\", line 192, in new_forward\n"}
+,{"stream_name":"stderr","time":6298.952020476,"data":"    output = module._old_forward(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952024431,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/generic.py\", line 939, in wrapper\n"}
+,{"stream_name":"stderr","time":6298.952032735,"data":"    output = func(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952035821,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/models/qwen2/modeling_qwen2.py\", line 452, in forward\n"}
+,{"stream_name":"stderr","time":6298.952038958,"data":"    outputs: BaseModelOutputWithPast = self.model(\n"}
+,{"stream_name":"stderr","time":6298.952041913,"data":"                                       ~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":6298.952045136,"data":"        input_ids=input_ids,\n"}
+,{"stream_name":"stderr","time":6298.952048495,"data":"        ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952051843,"data":"    ...\u003c5 lines\u003e...\n"}
+,{"stream_name":"stderr","time":6298.952055338,"data":"        **kwargs,\n"}
+,{"stream_name":"stderr","time":6298.952058412,"data":"        ^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952061392,"data":"    )\n"}
+,{"stream_name":"stderr","time":6298.95206453,"data":"    ^\n"}
+,{"stream_name":"stderr","time":6298.952067634,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":6298.952071029,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952074621,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952078,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stderr","time":6298.952081599,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952084709,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/generic.py\", line 1068, in wrapper\n"}
+,{"stream_name":"stderr","time":6298.952088166,"data":"    output = func(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952091741,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/output_capturing.py\", line 287, in wrapper\n"}
+,{"stream_name":"stderr","time":6298.952095451,"data":"    outputs = func(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952099071,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/models/qwen2/modeling_qwen2.py\", line 388, in forward\n"}
+,{"stream_name":"stderr","time":6298.952102968,"data":"    hidden_states = decoder_layer(\n"}
+,{"stream_name":"stderr","time":6298.952106328,"data":"        hidden_states,\n"}
+,{"stream_name":"stderr","time":6298.952109644,"data":"    ...\u003c5 lines\u003e...\n"}
+,{"stream_name":"stderr","time":6298.952113322,"data":"        **kwargs,\n"}
+,{"stream_name":"stderr","time":6298.952116644,"data":"    )\n"}
+,{"stream_name":"stderr","time":6298.952119691,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/modeling_layers.py\", line 110, in __call__\n"}
+,{"stream_name":"stderr","time":6298.95212337,"data":"    return super().__call__(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952126795,"data":"           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952130176,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":6298.9521335,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952136903,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952140159,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stderr","time":6298.952143901,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952167753,"data":"  File \"/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py\", line 192, in new_forward\n"}
+,{"stream_name":"stderr","time":6298.95217133,"data":"    output = module._old_forward(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.9521748,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/models/qwen2/modeling_qwen2.py\", line 282, in forward\n"}
+,{"stream_name":"stderr","time":6298.952178404,"data":"    hidden_states, _ = self.self_attn(\n"}
+,{"stream_name":"stderr","time":6298.952182109,"data":"                       ~~~~~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":6298.952185212,"data":"        hidden_states=hidden_states,\n"}
+,{"stream_name":"stderr","time":6298.952188548,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952192155,"data":"    ...\u003c5 lines\u003e...\n"}
+,{"stream_name":"stderr","time":6298.952195592,"data":"        **kwargs,\n"}
+,{"stream_name":"stderr","time":6298.95219914,"data":"        ^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952202767,"data":"    )\n"}
+,{"stream_name":"stderr","time":6298.952206021,"data":"    ^\n"}
+,{"stream_name":"stderr","time":6298.95220933,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":6298.952212978,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952215967,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.95221944,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stderr","time":6298.952222875,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952226344,"data":"  File \"/usr/local/lib/python3.13/dist-packages/accelerate/hooks.py\", line 192, in new_forward\n"}
+,{"stream_name":"stderr","time":6298.952229726,"data":"    output = module._old_forward(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952233167,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/models/qwen2/modeling_qwen2.py\", line 220, in forward\n"}
+,{"stream_name":"stderr","time":6298.952236596,"data":"    attn_output, attn_weights = attention_interface(\n"}
+,{"stream_name":"stderr","time":6298.952240038,"data":"                                ~~~~~~~~~~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":6298.952243547,"data":"        self,\n"}
+,{"stream_name":"stderr","time":6298.952246798,"data":"        ^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952250143,"data":"    ...\u003c7 lines\u003e...\n"}
+,{"stream_name":"stderr","time":6298.952253653,"data":"        **kwargs,\n"}
+,{"stream_name":"stderr","time":6298.952256975,"data":"        ^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952260464,"data":"    )\n"}
+,{"stream_name":"stderr","time":6298.952263675,"data":"    ^\n"}
+,{"stream_name":"stderr","time":6298.952267062,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py\", line 1263, in _fn\n"}
+,{"stream_name":"stderr","time":6298.95227066,"data":"    return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":6298.952274249,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/integrations/sdpa_paged.py\", line 40, in sdpa_attention_paged_forward\n"}
+,{"stream_name":"stderr","time":6298.952277743,"data":"    key, value = cache.update(\n"}
+,{"stream_name":"stderr","time":6298.952280883,"data":"                 ~~~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":6298.952288485,"data":"        key_states=key,\n"}
+,{"stream_name":"stderr","time":6298.952291967,"data":"        ^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952295338,"data":"    ...\u003c3 lines\u003e...\n"}
+,{"stream_name":"stderr","time":6298.952298444,"data":"        write_index=kwargs[\"write_index\"],\n"}
+,{"stream_name":"stderr","time":6298.952301917,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952305418,"data":"    )\n"}
+,{"stream_name":"stderr","time":6298.952308956,"data":"    ^\n"}
+,{"stream_name":"stderr","time":6298.952313219,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/cache.py\", line 410, in update\n"}
+,{"stream_name":"stderr","time":6298.952316972,"data":"    return allocator.update(key_states, value_states, layer_idx, layer_read_index, layer_write_index)\n"}
+,{"stream_name":"stderr","time":6298.952320552,"data":"           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952324332,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/generation/continuous_batching/cache_allocators/full_attention.py\", line 219, in update\n"}
+,{"stream_name":"stderr","time":6298.952328196,"data":"    k_cache.index_copy_(0, write_index, key_states)\n"}
+,{"stream_name":"stderr","time":6298.952331363,"data":"    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":6298.952334582,"data":"RuntimeError: Expected all tensors to be on the same device, but got index is on cuda:1, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA_index_copy_)\n"}
+,{"stream_name":"stderr","time":6299.332273159,"data":"2026-10-03 03:30:42,276 - ContinuousBatchingLogger - ERROR - Requests ['req_0', 'req_1', 'req_2', 'req_3', 'req_4', 'req_5', 'req_6', 'req_7'] failed during generation.\n"}
+,{"stream_name":"stdout","time":6299.332349718,"data":"[bench] C_generate_batch: 1s · 0 토큰 · **0.0 tok/s 합산** (0.0/시퀀스)\n"}
+,{"stream_name":"stdout","time":12376.598833084,"data":"[bench] D_per_problem: 6077s · 52885 토큰 · **8.7 tok/s 합산** (1.1/시퀀스)\n"}
+,{"stream_name":"stdout","time":12376.599529499,"data":"[bench] 저장 완료\n"}
+,{"stream_name":"stdout","time":12376.599544268,"data":"  A_baseline_pad     {'sec': 2213.1, 'tokens': 53770, 'tok_s': 24.3, 'per_seq': 3.0}\n"}
+,{"stream_name":"stdout","time":12376.599549679,"data":"  B_static_cache     {'sec': 3914.7, 'tokens': 50369, 'tok_s': 12.9, 'per_seq': 1.6}\n"}
+,{"stream_name":"stdout","time":12376.599554808,"data":"  C_generate_batch   {'sec': 0.6, 'tokens': 0, 'tok_s': 0.0, 'per_seq': 0.0}\n"}
+,{"stream_name":"stdout","time":12376.599560531,"data":"  D_per_problem      {'sec': 6077.3, 'tokens': 52885, 'tok_s': 8.7, 'per_seq': 1.1}\n"}
+,{"stream_name":"stderr","time":12385.148233353,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":12385.148281095,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":12385.433352585,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":12385.433379179,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":12386.253604075,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":12387.314155799,"data":"[NbConvertApp] Writing 304770 bytes to __results__.html\n"}
+]

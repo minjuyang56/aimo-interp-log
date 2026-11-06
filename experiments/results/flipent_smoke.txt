@@ -1,0 +1,49 @@
+#FLIPENT-ZIP 스모크 — 제출물이 측정과 같은 양을 재는지 검사 · $0
+
+## 1. ent_front == entlens_eval.ent_feats[0] (제출물이 측정과 같은 식인가)
+   [OK] 난수 배열 9종(T=8..1024) 최대절대차                    2.220e-16
+   [OK] 실제 P2 행 132개 최대절대차                           5.551e-17
+   [OK] T<8 은 None                                   
+   [OK] 비유한(nan/inf) 흔적은 None                        
+
+## 1b. 프롬프트·토큰 id == P2 커널 (임계가 그 측정에 묶여 있다)
+   [OK] SOLVE_PROMPT 문자열 동일                          
+   [OK] Qwen3.5-4B                         프롬프트·id 동일 토큰 [89, 83] · add_special_tokens=True 면 +[0, 0] 토큰
+   [OK] Skywork-OR1-Math-7B                프롬프트·id 동일 토큰 [81, 75] · add_special_tokens=True 면 +[1, 1] 토큰
+   [OK] Olmo-3-7B-Think                    프롬프트·id 동일 토큰 [147, 143] · add_special_tokens=True 면 +[0, 0] 토큰
+   [OK] DeepSeek-R1-0528-Qwen3-8B          프롬프트·id 동일 토큰 [79, 73] · add_special_tokens=True 면 +[0, 0] 토큰
+        (마지막 칸이 0 이 아닌 모델에서는 기본 토크나이즈가 **BOS 를 두 번** 넣는다 —
+         제출물은 커널과 같게 `add_special_tokens=False` 를 쓴다)
+
+## 2. 저장된 임계 == 공식 33(P2) 중앙값 == CLAUDE.md 기록
+   [OK] 모델 4종 임계 존재                                  Qwen/Qwen3.5-4B Skywork/Skywork-OR1-Math-7B allenai/Olmo-3-7B-Think deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+   [OK] 기록값 재현 DeepSeek-R1-0528-Qwen3-8B             0.190593 vs 기록 0.1906
+   [OK] 기록값 재현 Olmo-3-7B-Think                       0.241389 vs 기록 0.2414
+   [OK] 기록값 재현 Skywork-OR1-Math-7B                   0.136397 vs 기록 0.1364
+        Qwen3.5-4B 임계 0.250796 (CLAUDE.md 기록 없음 — 이번에 처음 계산, 게이트 없음)
+   [OK] 저장값 == 다시 계산한 중앙값 (4모델)                      불일치 0
+   [OK] cap·부호 메타 기록                                 cap 1024 · experimental True
+
+## 3. 폴백 == 출하된 h15C 제출물의 판정
+   [OK] 판정 8/8 일치                                    단어수 8 8 1 81 27 59 60 1
+   [OK] 폴백 임계 == h15C 출하값                            
+
+## 4. 임계 없는 model_id — 모델을 열지 않고 폴백 (규칙 4: KeyError 금지)
+   [OK] openai/gpt-oss-120b      → h15C 폴백           0.00s · [True, True]
+   [OK] qwen3-8b:low             → h15C 폴백           0.00s · [True, True]
+   [OK] totally-unknown-model    → h15C 폴백           0.00s · [True, True]
+   [OK] (빈 문자열)                  → h15C 폴백           0.00s · [True, True]
+   [OK] 빈 입력은 []                                     
+
+## 5. 예산이 cap 1024 를 못 사면 생성을 시작하지 않는다 (cap 을 깎지 않는다)
+   [OK] 예산 0 → 생성 전에 폴백                              [True, True]
+   [OK] 예산 충분 → 계획 성립(칸 44 · 추정 73s)                 
+   [OK] CAP 사다리가 없다(점수 정의가 cap 에 묶여 있다)              CAP=1024
+
+## 6. 시간 견적 (flipent_lib 내부 모형 · 워커 칸 가정)
+        문제  5 · Olmo 칸 87 가정 →    25s (3300s 의 0.7%)
+        문제 14 · Olmo 칸 87 가정 →    37s (3300s 의 1.1%)
+        문제 35 · Olmo 칸 87 가정 →    66s (3300s 의 2.0%)
+        문제 40 · Olmo 칸 87 가정 →    73s (3300s 의 2.2%)
+
+## 판정: 전부 통과

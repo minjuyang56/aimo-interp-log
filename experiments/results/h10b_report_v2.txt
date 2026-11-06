@@ -1,0 +1,55 @@
+H10-B 풀이 궤적 나침반 (v2, Kaggle 생성 1024토큰·32토큰 청크) · 사전등록 부호: compass·ratio 큼=robust, curvature 큼=spurious · null 30회
+
+## 층 L//2
+모델           지표              n    AUC   bacc       null95% ρ(nchunk)  ρ(logT)    잔차AUC        잔차null
+-- Qwen3_5-4B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Qwen3_5-4B   compass_mean   33  0.638  0.583 [0.35,0.68]       +nan    +0.23    0.700 [0.37,0.67]▲
+Qwen3_5-4B   compass_slope  33  0.508  0.519 [0.31,0.65]       +nan    -0.15    0.473 [0.37,0.69] 
+Qwen3_5-4B   traced_ratio   33  0.615  0.583 [0.38,0.71]       +nan    -0.01    0.608 [0.30,0.69] 
+Qwen3_5-4B   curvature      33  0.558  0.519 [0.28,0.63]       +nan    +0.22    0.512 [0.38,0.65] 
+-- Skywork-OR1-Math-7B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Skywork-OR1- compass_mean   33  0.692  0.583 [0.35,0.68]▲      +nan    -0.13    0.688 [0.28,0.64]▲
+Skywork-OR1- compass_slope  33  0.581  0.583 [0.37,0.67]       +nan    -0.31    0.523 [0.31,0.67] 
+Skywork-OR1- traced_ratio   33  0.623  0.646 [0.33,0.73]       +nan    -0.11    0.588 [0.30,0.71] 
+Skywork-OR1- curvature      33  0.442  0.456 [0.32,0.64]       +nan    +0.00    0.454 [0.30,0.67] 
+-- Olmo-3-7B-Think: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Olmo-3-7B-Th compass_mean   33  0.546  0.519 [0.30,0.61]       +nan    +0.14    0.577 [0.32,0.66] 
+Olmo-3-7B-Th compass_slope  33  0.642  0.519 [0.28,0.68]       +nan    +0.11    0.665 [0.19,0.71] 
+Olmo-3-7B-Th traced_ratio   33  0.650  0.583 [0.32,0.69]       +nan    +0.16    0.681 [0.32,0.70] 
+Olmo-3-7B-Th curvature      33  0.535  0.519 [0.35,0.71]       +nan    +0.07    0.492 [0.29,0.76] 
+-- DeepSeek-R1-0528-Qwen3-8B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+DeepSeek-R1- compass_mean   33  0.296  0.329 [0.30,0.72]▼      +nan    +0.12    0.319 [0.30,0.65] 
+DeepSeek-R1- compass_slope  33  0.562  0.646 [0.32,0.72]       +nan    -0.27    0.535 [0.38,0.63] 
+DeepSeek-R1- traced_ratio   33  0.565  0.456 [0.19,0.68]       +nan    -0.21    0.515 [0.38,0.71] 
+DeepSeek-R1- curvature      33  0.415  0.456 [0.38,0.63]       +nan    -0.16    0.442 [0.38,0.65] 
+풀링(잔차)       compass_mean   33                                                   0.615 [0.28,0.70]    원점수 모델평균 0.565 [0.28,0.70]    ρ: Qwen3_-Skywor +0.21  Qwen3_-Olmo-3 +0.28  Qwen3_-DeepSe +0.00  Skywor-Olmo-3 +0.62  Skywor-DeepSe +0.09  Olmo-3-DeepSe +0.23 ★주지표
+풀링(잔차)       compass_slope  33                                                   0.569 [0.30,0.69]    원점수 모델평균 0.654 [0.30,0.69]    ρ: Qwen3_-Skywor +0.27  Qwen3_-Olmo-3 -0.13  Qwen3_-DeepSe +0.20  Skywor-Olmo-3 +0.31  Skywor-DeepSe -0.21  Olmo-3-DeepSe +0.15
+풀링(잔차)       traced_ratio   33                                                   0.708 [0.31,0.70]▲   원점수 모델평균 0.750 [0.32,0.70]▲   ρ: Qwen3_-Skywor +0.52  Qwen3_-Olmo-3 +0.42  Qwen3_-DeepSe -0.09  Skywor-Olmo-3 +0.57  Skywor-DeepSe -0.29  Olmo-3-DeepSe +0.12
+풀링(잔차)       curvature      33                                                   0.450 [0.30,0.68]    원점수 모델평균 0.454 [0.30,0.69]    ρ: Qwen3_-Skywor -0.32  Qwen3_-Olmo-3 +0.20  Qwen3_-DeepSe +0.46  Skywor-Olmo-3 +0.31  Skywor-DeepSe -0.39  Olmo-3-DeepSe -0.03
+
+## 층 last
+모델           지표              n    AUC   bacc       null95% ρ(nchunk)  ρ(logT)    잔차AUC        잔차null
+-- Qwen3_5-4B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Qwen3_5-4B   compass_mean   33  0.562  0.583 [0.26,0.67]       +nan    +0.17    0.600 [0.36,0.69] 
+Qwen3_5-4B   compass_slope  33  0.442  0.392 [0.36,0.68]       +nan    -0.15    0.388 [0.31,0.68] 
+Qwen3_5-4B   traced_ratio   33  0.600  0.583 [0.35,0.66]       +nan    +0.04    0.619 [0.33,0.63] 
+Qwen3_5-4B   curvature      33  0.485  0.519 [0.37,0.64]       +nan    +0.01    0.496 [0.36,0.75] 
+-- Skywork-OR1-Math-7B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Skywork-OR1- compass_mean   33  0.565  0.519 [0.31,0.67]       +nan    -0.05    0.565 [0.32,0.67] 
+Skywork-OR1- compass_slope  33  0.569  0.583 [0.34,0.65]       +nan    -0.10    0.523 [0.33,0.66] 
+Skywork-OR1- traced_ratio   33  0.508  0.456 [0.39,0.72]       +nan    +0.26    0.565 [0.38,0.78] 
+Skywork-OR1- curvature      33  0.327  0.329 [0.29,0.64]       +nan    -0.17    0.362 [0.25,0.73] 
+-- Olmo-3-7B-Think: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+Olmo-3-7B-Th compass_mean   33  0.558  0.519 [0.26,0.66]       +nan    +0.33    0.627 [0.30,0.65] 
+Olmo-3-7B-Th compass_slope  33  0.600  0.519 [0.31,0.81]       +nan    +0.20    0.635 [0.25,0.71] 
+Olmo-3-7B-Th traced_ratio   33  0.554  0.456 [0.38,0.66]       +nan    +0.18    0.581 [0.26,0.67] 
+Olmo-3-7B-Th curvature      33  0.473  0.519 [0.31,0.70]       +nan    +0.09    0.435 [0.34,0.70] 
+-- DeepSeek-R1-0528-Qwen3-8B: 라벨 33 (robust 20) · 청크 수 중앙 32 [32,32] · EOS 조기종료 0/36
+DeepSeek-R1- compass_mean   33  0.312  0.392 [0.36,0.67]▼      +nan    +0.07    0.342 [0.29,0.66] 
+DeepSeek-R1- compass_slope  33  0.354  0.329 [0.37,0.66]▼      +nan    +0.03    0.354 [0.34,0.63] 
+DeepSeek-R1- traced_ratio   33  0.462  0.519 [0.32,0.66]       +nan    +0.07    0.458 [0.33,0.67] 
+DeepSeek-R1- curvature      33  0.512  0.519 [0.41,0.65]       +nan    -0.01    0.550 [0.28,0.72] 
+풀링(잔차)       compass_mean   33                                                   0.569 [0.30,0.70]    원점수 모델평균 0.504 [0.30,0.70]    ρ: Qwen3_-Skywor +0.32  Qwen3_-Olmo-3 +0.23  Qwen3_-DeepSe +0.09  Skywor-Olmo-3 +0.22  Skywor-DeepSe +0.05  Olmo-3-DeepSe +0.14
+풀링(잔차)       compass_slope  33                                                   0.469 [0.30,0.69]    원점수 모델평균 0.496 [0.30,0.70]    ρ: Qwen3_-Skywor +0.19  Qwen3_-Olmo-3 -0.14  Qwen3_-DeepSe +0.01  Skywor-Olmo-3 +0.15  Skywor-DeepSe -0.40  Olmo-3-DeepSe +0.21
+풀링(잔차)       traced_ratio   33                                                   0.600 [0.30,0.69]    원점수 모델평균 0.581 [0.30,0.70]    ρ: Qwen3_-Skywor +0.42  Qwen3_-Olmo-3 +0.20  Qwen3_-DeepSe -0.23  Skywor-Olmo-3 +0.11  Skywor-DeepSe -0.07  Olmo-3-DeepSe -0.03
+풀링(잔차)       curvature      33                                                   0.442 [0.29,0.70]    원점수 모델평균 0.412 [0.30,0.70]    ρ: Qwen3_-Skywor -0.26  Qwen3_-Olmo-3 +0.09  Qwen3_-DeepSe +0.14  Skywor-Olmo-3 +0.32  Skywor-DeepSe -0.11  Olmo-3-DeepSe +0.02

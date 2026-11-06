@@ -1,0 +1,2083 @@
+<title>제1장 — 대회에 1등하기로 결심한 [author]</title>
+<style>
+  :root {
+    --paper: #f0f0ee;
+    --sheet: #fbfbfa;
+    --sheet-2: #e6e6e3;
+    --ink: #15161a;
+    --ink-2: #61636b;
+    --ink-3: #8b8d95;
+    --rule: #d6d6d2;
+    --blue: #24468f;
+    --blue-soft: #e4e9f5;
+    --red: #a5281c;
+    --red-soft: #f7e5e2;
+    --green: #2a6740;
+    --green-soft: #e3efe8;
+    --term-bg: #1b1e24;
+    --term-ink: #d4d7dd;
+    --term-dim: #7e838d;
+
+    --display: "Palatino Linotype", Palatino, "Iowan Old Style", Georgia, serif;
+    --body: system-ui, "Segoe UI Variable Text", "Segoe UI", "Malgun Gothic",
+            -apple-system, sans-serif;
+    --mono: "Cascadia Mono", "Cascadia Code", Consolas, "JetBrains Mono",
+            ui-monospace, "D2Coding", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131519; --sheet: #1a1d22; --sheet-2: #22262d;
+      --ink: #e4e5e3; --ink-2: #9a9ca4; --ink-3: #71747c; --rule: #2c3038;
+      --blue: #8fb0ee; --blue-soft: #182238;
+      --red: #ef8f83; --red-soft: #33201d;
+      --green: #7ec49a; --green-soft: #172a20;
+      --term-bg: #0c0e12; --term-ink: #ccd0d7; --term-dim: #6e737d;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #131519; --sheet: #1a1d22; --sheet-2: #22262d;
+    --ink: #e4e5e3; --ink-2: #9a9ca4; --ink-3: #71747c; --rule: #2c3038;
+    --blue: #8fb0ee; --blue-soft: #182238;
+    --red: #ef8f83; --red-soft: #33201d;
+    --green: #7ec49a; --green-soft: #172a20;
+    --term-bg: #0c0e12; --term-ink: #ccd0d7; --term-dim: #6e737d;
+  }
+
+  :root[data-theme="light"] {
+    --paper: #f0f0ee; --sheet: #fbfbfa; --sheet-2: #e6e6e3;
+    --ink: #15161a; --ink-2: #61636b; --ink-3: #8b8d95; --rule: #d6d6d2;
+    --blue: #24468f; --blue-soft: #e4e9f5;
+    --red: #a5281c; --red-soft: #f7e5e2;
+    --green: #2a6740; --green-soft: #e3efe8;
+    --term-bg: #1b1e24; --term-ink: #d4d7dd; --term-dim: #7e838d;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .reel { max-width: 860px; margin: 0 auto; padding: 0 22px 110px; }
+
+  .langbar {
+    padding: 14px 0 0;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+  }
+  .langbar a { color: var(--blue); text-decoration: none; }
+  .langbar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .langbar .cur { color: var(--ink); font-weight: 700; }
+
+  .titlecard {
+    text-align: center;
+    padding: 70px 0 56px;
+    border-bottom: 3px double var(--rule);
+    margin-bottom: 12px;
+  }
+
+  .titlecard .over {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 24px;
+  }
+
+  .titlecard h1 {
+    font-family: var(--display);
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin-bottom: 20px;
+  }
+
+  .titlecard .sub {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-2);
+    letter-spacing: 0.04em;
+  }
+
+  .billing {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 26px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-2);
+  }
+
+  .billing b { color: var(--ink); font-weight: 600; }
+
+  .legend {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 32px 0 8px;
+    font-size: 14px;
+    color: var(--ink-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    align-items: center;
+  }
+
+  .scene { padding-top: 54px; }
+
+  .slug {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .slug .no { color: var(--blue); }
+
+  .badge {
+    font-family: var(--body);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: none;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .badge-real { background: var(--green-soft); color: var(--green); }
+  .badge-pred { background: var(--blue-soft); color: var(--blue); }
+
+  .hud {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-3);
+    letter-spacing: 0.03em;
+    padding: 7px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+  }
+
+  .hud .k { color: var(--ink-2); }
+
+  .work {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    margin: 20px 0 26px;
+    overflow: hidden;
+  }
+
+  .work > div { background: var(--sheet); padding: 12px 14px; }
+
+  .work dt {
+    font-family: var(--body);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 6px;
+  }
+
+  .work dd {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--ink);
+    word-break: break-word;
+  }
+
+  .work dd.none { color: var(--ink-3); }
+
+  .action {
+    margin: 18px 0;
+    color: var(--ink-2);
+    max-width: 64ch;
+  }
+
+  .action em { color: var(--ink); font-style: normal; font-weight: 600; }
+
+  .speech { margin: 22px 0 22px 6%; max-width: 58ch; }
+
+  .speech .who {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 2px;
+  }
+
+  .speech .paren {
+    font-family: var(--body);
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-bottom: 2px;
+  }
+
+  .speech p + p { margin-top: 12px; }
+
+  .term {
+    background: var(--term-bg);
+    color: var(--term-ink);
+    border-radius: 5px;
+    padding: 15px 17px;
+    margin: 22px 0;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+    border: 1px solid var(--rule);
+  }
+
+  .term .p { color: var(--term-dim); }
+  .term .g { color: #7ec49a; }
+  .term .r { color: #ef8f83; }
+  .term .y { color: #ddb46a; }
+  .term .c { color: var(--term-dim); }
+
+  pre.code {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    padding: 15px 17px;
+    margin: 22px 0;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.75;
+    overflow-x: auto;
+  }
+
+  pre.code.bad { border-left-color: var(--red); }
+  pre.code.good { border-left-color: var(--green); }
+  pre.code .c { color: var(--ink-3); }
+  pre.code .k { color: var(--blue); }
+  pre.code .del { color: var(--red); }
+  pre.code .add { color: var(--green); }
+
+  .review {
+    border: 1px solid var(--red);
+    border-radius: 4px;
+    margin: 24px 0;
+    overflow: hidden;
+  }
+
+  .review > h4 {
+    background: var(--red-soft);
+    color: var(--red);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 9px 15px;
+  }
+
+  .review ol { list-style: none; counter-reset: note; }
+
+  .review ol > li {
+    counter-increment: note;
+    padding: 13px 15px 13px 46px;
+    position: relative;
+    border-top: 1px solid var(--rule);
+    background: var(--sheet);
+    font-size: 14.5px;
+  }
+
+  .review ol > li::before {
+    content: counter(note);
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--red);
+    color: var(--sheet);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .review .where {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .review .verdict {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 3px;
+    margin-left: 6px;
+  }
+  .v-fix { background: var(--red-soft); color: var(--red); }
+  .v-ok { background: var(--green-soft); color: var(--green); }
+
+  .tablewrap { overflow-x: auto; margin: 24px 0; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 470px;
+    font-size: 13.5px;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 10.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+    padding: 9px 13px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--sheet-2);
+    white-space: nowrap;
+  }
+
+  tbody td { padding: 9px 13px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.mono { font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  td.dim { color: var(--ink-2); }
+  .up { color: var(--green); font-weight: 600; }
+  .down { color: var(--red); font-weight: 600; }
+
+  .insert {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 17px 19px;
+    margin: 24px 0;
+  }
+
+  .insert h4 {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+
+  .insert p { font-size: 14.5px; color: var(--ink-2); max-width: 62ch; }
+  .insert p + p { margin-top: 10px; }
+
+  .divider {
+    margin: 66px 0 0;
+    padding: 22px;
+    border: 1px dashed var(--blue);
+    border-radius: 4px;
+    background: var(--blue-soft);
+    text-align: center;
+  }
+
+  .divider .t {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .divider p { font-size: 14.5px; color: var(--ink-2); max-width: 58ch; margin: 0 auto; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.87em;
+    background: var(--sheet-2);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .endcard {
+    margin-top: 76px;
+    padding-top: 26px;
+    border-top: 3px double var(--rule);
+    text-align: center;
+  }
+
+  .endcard .t {
+    font-family: var(--display);
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .endcard p {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    max-width: 62ch;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="reel">
+
+  <div class="langbar"><span class="cur">한국어</span> · <a href="JOURNAL.en.html">English</a></div>
+
+  <div class="titlecard">
+    <div class="over">AIMO Interpretability Challenge · 참가 기록</div>
+    <h1>제 1 장<br>대회에 1등하기로 결심한 [author]!</h1>
+    <div class="sub">2026년 8월 18일 (화) — 하루의 기록</div>
+    <div class="billing">
+      <span><b>장소</b> C:\side\getting-started</span>
+      <span><b>장비</b> torch 2.12.1+cpu · GPU 없음</span>
+      <span><b>마감</b> 11월 1일 · D-75</span>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><span class="badge badge-real" style="margin:0">실제</span> 오늘 실행해서 확인한 일</span>
+    <span><span class="badge badge-pred" style="margin:0">예측</span> 아직 안 한 일. 근거는 명시함</span>
+  </div>
+
+  <!-- ============ S1 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#1</span> 첫 채점 — 세 개의 베이스라인 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">로컬 실행</span> 3회</span>
+      <span><span class="k">최고점</span> 0.643 (로컬)</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>uv sync<br>import_hf_dataset.py<br>run_local.py × 3</dd></div>
+      <div><dt>읽기</dt><dd>run_local.py<br>ingestion.py · scoring.py</dd></div>
+      <div><dt>참고</dt><dd>Dockerfile.competition</dd></div>
+    </dl>
+
+    <p class="action">
+      환경은 걸었다. torch는 <em>CPU 빌드</em> — 이 기계에 GPU가 없다.
+      로컬에서 8B 추론을 반복하는 전략은 시작 전에 이미 지워진다.
+      <em>로컬은 검증용, 계산은 서버에서.</em>
+    </p>
+
+    <p class="action">
+      데이터 28건이 들어온다. robust <em>9건</em>, spurious <em>19건</em>.
+      제공된 예제 셋을 전부 돌린다. 남이 만든 코드를 믿기 전에 <em>숫자를 본다.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run scripts/run_local.py solutions/always-true
+{ <span class="y">"accuracy": 0.321</span>, "coverage": 1.0, "invalid_predictions": 0 }
+
+<span class="p">&gt;</span> uv run scripts/run_local.py solutions/uncertainty-profiling
+{ <span class="g">"accuracy": 0.643</span>, "coverage": 0.964, "invalid_predictions": 1 }
+
+<span class="p">&gt;</span> uv run scripts/run_local.py solutions/trained-probe
+{ <span class="r">"accuracy": 0.000</span>, <span class="r">"coverage": 0.000</span>, <span class="r">"invalid_predictions": 28</span> }</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(세 번째 줄을 오래 본다)</div>
+      <p>
+        대회가 대표 예제로 내세운 방법이 <em>전멸</em>했다. 그런데 에러 메시지가 없다.
+        채점기가 삼킨 거다.
+      </p>
+      <p>
+        이건 그냥 넘어갈 일이 아니다. <em>서버에서도 똑같이 침묵할 것이기 때문이다.</em>
+        제출 100번 중 한 번을 원인도 모른 채 날리는 일이 반복되면 대회를 못 한다.
+        지금 여기서 디버깅 습관을 확립해야 한다.
+      </p>
+    </div>
+
+    <p class="action">
+      채점기를 거치지 않고 <em>직접</em> 함수를 부른다.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python -c "import probe_inference as p; p._load_model(...)"
+<span class="r">OSError: We couldn't connect to 'https://huggingface.co' ...</span>
+<span class="c">artifact model_id: deepseek-ai/DeepSeek-R1-0528-Qwen3-8B</span></div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        모델이 로컬 캐시에 없다. 환경 차이지 코드 결함이 아니다 —
+        <em>라고 넘어가려던 순간</em>, 스택 트레이스가 이상한 걸 보여준다.
+        이 함수가 왜 <span style="color:var(--red)">문제마다</span> 불리고 있지?
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S2 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#2</span> 코드 리뷰 ① — 루프 안의 폭탄 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">리뷰</span> probe_inference.py 360줄</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>읽기</dt><dd>probe_inference.py<br>(전체 360줄)</dd></div>
+      <div><dt>참고</dt><dd>uncertainty_profile/<br>inference.py:46-74</dd></div>
+      <div><dt>실행</dt><dd>pytest tests<br>analysis/count_loads.py</dd></div>
+    </dl>
+
+    <p class="action">
+      한 줄씩 읽는다. 아티팩트 로드는 루프 <em>밖</em>에 있다. 올바르다.
+      그런데 모델 로드는—
+    </p>
+
+    <pre class="code bad"><span class="c"># probe_inference.py:242</span>
+<span class="k">def</span> _encode_problem(problem_text, artifact):
+    tokenizer, model = _load_model(artifact.model_id)   <span class="del">← 여기</span>
+    ...
+
+<span class="c"># probe_inference.py:356 — 호출부</span>
+artifact = _load_artifact(model_id)          <span class="c"># 1회</span>
+<span class="k">return</span> [_predict_problem(t, artifact) <span class="k">for</span> t <span class="k">in</span> problem_texts]  <span class="c"># 28회</span></pre>
+
+    <div class="review">
+      <h4>리뷰 노트 — 빨간 연필</h4>
+      <ol>
+        <li>
+          <span class="where">probe_inference.py:248</span>
+          문제 하나당 8B 체크포인트를 처음부터 다시 읽는다. README가 밝힌 로드 비용은 약 1분,
+          케이스는 28건. <strong>3600초 제한을 구조적으로 넘긴다.</strong>
+          <span class="verdict v-fix">고쳐야 함</span>
+        </li>
+        <li>
+          <span class="where">solutions/trained-probe/README.md:25</span>
+          "아티팩트는 커밋되어 있지 않다"고 적혀 있으나 54MB 파일이 실제로 커밋돼 있다.
+          문서가 약속한 안전장치(없으면 전부 False)가 <strong>작동하지 않는다.</strong>
+          <span class="verdict v-fix">문서 오류</span>
+        </li>
+        <li>
+          <span class="where">uncertainty_profile/inference.py:46-74</span>
+          같은 저장소의 다른 예제는 <strong>배치당 1회 로드 + finally 해제</strong>로 짜여 있다.
+          정답 패턴이 옆 폴더에 이미 있다.
+          <span class="verdict v-ok">참고 대상</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        고치는 건 쉽다. 문제는 <em>고쳤다는 걸 어떻게 증명하느냐</em>다.
+        모델이 없으니 실제로 돌려볼 수 없다. 그러면 로드 횟수만 세면 된다.
+        모델을 가짜로 바꿔치기하고 카운터를 붙인다.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/count_loads.py &lt;원본&gt; &lt;수정본&gt;
+원본 (HEAD)      모델 로드 <span class="r"> 28회</span> · 예측 28개 · 계약 준수 OK
+수정본           모델 로드 <span class="g">  1회</span> · 예측 28개 · 계약 준수 OK
+
+<span class="p">&gt;</span> uv run --with pytest python -m pytest tests -q
+<span class="g">20 passed</span></div>
+
+    <p class="action">
+      <em>28 → 1.</em> 계약도 테스트도 그대로다. 첫 승리.
+      하지만 [author]는 안다 — 이건 남의 버그를 고친 것일 뿐, <em>자기 점수는 1점도 오르지 않았다.</em>
+    </p>
+  </section>
+
+  <!-- ============ S3 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#3</span> 라벨의 정체 — 버려진 아홉 개의 컬럼 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">발견</span> 15컬럼 중 9개 유실</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>읽기</dt><dd>import_hf_dataset.py<br>:255-323 convert_rows</dd></div>
+      <div><dt>실행</dt><dd>원본 parquet 직접 다운로드<br>컬럼 전수 조사</dd></div>
+      <div><dt>참고</dt><dd>uncertainty-profiling<br>README (decay 회귀)</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        점수를 올리려면 <em>라벨이 어떻게 만들어졌는지</em>를 알아야 한다.
+        임포터가 준 <code>cases.jsonl</code>에는 문제와 model_id뿐이다.
+        원본에도 그것뿐일까? 확인 안 하고 넘어가면 안 된다.
+      </p>
+    </div>
+
+    <p class="action">
+      허깅페이스에서 parquet을 <em>직접</em> 받아 컬럼을 센다.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> print(frame.shape, list(frame.columns))
+(28, <span class="y">15</span>)
+['model_id', 'dataset_id', 'problem_id', 'original_problem',
+ 'permutation_type', <span class="g">'permutation_source'</span>, <span class="g">'base_accuracy'</span>,
+ <span class="g">'permuted_accuracy'</span>, <span class="g">'absolute_accuracy_decay'</span>, <span class="g">'relative_accuracy_decay'</span>,
+ <span class="g">'n_base_predictions'</span>, <span class="g">'n_permuted_predictions'</span>,
+ <span class="g">'n_detrimental_permutations'</span>, <span class="g">'permutations_causing_decay'</span>, 'model_is_robust']</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(의자에서 몸을 앞으로 당기며)</div>
+      <p>
+        임포터가 <em>아홉 개를 버리고 있었다.</em> 그중에 <code>absolute_accuracy_decay</code>가 있다.
+        이진 라벨이 어디서 왔는지 이 컬럼이 말해준다.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>인서트 — 라벨 생성 절차 (역산 결과)</h4>
+      <p>
+        원본 문제를 10회 풀린다 → <code>base_accuracy</code>.
+        7가지 방식으로 비튼 변형본들을 풀린다 → <code>permuted_accuracy</code>.
+        둘의 차이가 <code>absolute_accuracy_decay</code>.
+        비트는 방식 5개(<code>rephrase</code>, <code>rename</code>, <code>domain</code>,
+        <code>distract</code>, <code>typos</code>)는 <code>gpt-oss-120b</code>가 생성했고
+        (<code>permutation_source</code> 컬럼이 그 이름을 담고 있다),
+        2개(<code>expert_no_solution</code>, <code>expert_perturbations</code>)는 사람이 만들었다.
+      </p>
+      <p>
+        라벨 규칙은 논문 §1.4에 있다: 변형본 중 <strong>과반이 무너지면 False</strong>, 아니면 True.
+        하나만 깨져도 False가 되는 게 아니다. 그리고 애매한 케이스는 평가셋에서 아예 뺐다
+        ("not clear-cut"). 28건의 실제 분포가 그 증거다 — robust는 decay가
+        <strong>정확히 0.0</strong>, spurious는 <strong>0.5 이상</strong>, 그 사이는 텅 비어 있다.
+        임계값을 찾을 필요가 없다. <strong>중간값이 존재하지 않게 만들어진 데이터다.</strong>
+      </p>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        <code>uncertainty-profiling</code>이 왜 회귀모델을 쓰는지 이제 이해된다.
+        이진 분류가 아니라 <em>decay를 예측하고 임계값으로 자르는</em> 설계다.
+        타깃 정의를 정확히 따라간 거다. 나도 그래야 한다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S4 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#4</span> 비대칭 — 라벨은 공평하게 만들어지지 않았다 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">발견</span> True 라벨이 10배 비싸게 검증됨</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>analysis/probe_field.py<br>analysis/probe_counts.py</dd></div>
+      <div><dt>읽기</dt><dd>permutations_causing_decay<br>(JSON 문자열 파싱)</dd></div>
+      <div><dt>참고</dt><dd class="none">—</dd></div>
+    </dl>
+
+    <p class="action">
+      버려진 컬럼 중 하나가 유독 눈에 걸린다. <code>permutations_causing_decay</code>.
+      <em>이름이 이상하다.</em> permutation은 순열인데, 여기서 하는 건 perturbation, 섭동이다.
+      값 하나가 <code>expert_perturbations</code>인 걸 보면 저장소도 두 단어를 섞어 쓰고 있다.
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        이름은 나중 문제다. <em>정의부터 확정하자.</em>
+        "하락을 유발한 변형본들"이라는 뜻으로 읽히는데, 정말 그런지는 세어봐야 안다.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/probe_field.py
+항목이 있는 행: 19
+리스트 길이 == n_detrimental_permutations: <span class="g">19</span>
+모든 항목이 base_accuracy 미만: <span class="g">19</span>
+
+항목의 키: {'question', 'variant_accuracy', 'n_predictions',
+            'permutation_type', 'permutation_source'}</div>
+
+    <p class="action">
+      19건 전부에서 예외 없이 성립한다. 정의 확정 —
+      <em>원본보다 정답률이 떨어진 변형본만 골라 담은 리스트</em>이고,
+      각 항목은 <em>변형본 전문과 그 변형본의 개별 정답률</em>을 함께 들고 있다.
+      robust인 9건은 전부 빈 리스트다.
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        원본과 무너진 변형본을 <em>쌍으로</em> 볼 수 있다는 뜻이다.
+        라벨 하나보다 훨씬 풍부한 신호다.
+      </p>
+      <div class="paren">(시행 횟수 컬럼으로 시선을 옮기며)</div>
+      <p>...잠깐. 이 숫자들이 왜 이렇게 다르지?</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>라벨</th><th class="num">원본 실행</th><th class="num">변형 실행</th><th>의미</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>spurious</strong> (19건)</td>
+            <td class="num">10</td>
+            <td class="num down">10</td>
+            <td class="dim">처음 무너진 지점에서 멈춤</td>
+          </tr>
+          <tr>
+            <td><strong>robust</strong> (9건)</td>
+            <td class="num">10</td>
+            <td class="num up">67 ~ 120</td>
+            <td class="dim">7~12개 유형을 전부 통과해야 함</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="insert">
+      <h4>인서트 — 이 비대칭이 뜻하는 것</h4>
+      <p>
+        <strong><code>True</code> 라벨이 <code>False</code> 라벨보다 10배 이상 비싸게 검증됐다.</strong>
+        spurious는 변형본 하나만 무너뜨려도 붙지만, robust는 100번 넘게 다 통과해야 붙는다.
+      </p>
+      <p>
+        조기 종료 설계다. 합리적이지만 결과적으로 <strong>라벨 신뢰도가 비대칭</strong>이다 —
+        <code>True</code>는 거의 확실하고, <code>False</code>는 "적어도 한 군데선 무너졌다"는
+        약한 진술에 가깝다. 학습할 때 두 클래스를 같은 무게로 다루면 안 된다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S5 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#5</span> 누출 — 28 / 28 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">발견</span> permutation_type 완전 분리</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>analysis/model_confound.py<br>(permutation_type 집계)</dd></div>
+      <div><dt>읽기</dt><dd>ingestion.py:141-179<br>(무엇이 넘어가는가)</dd></div>
+      <div><dt>참고</dt><dd>대회 규정 —<br>데이터 사용 제한</dd></div>
+    </dl>
+
+    <p class="action">
+      S#4의 비대칭이 머리에 걸린 채로, [author]는 <code>permutation_type</code> 컬럼을 갈라본다.
+      <em>그리고 화면이 이상할 정도로 깨끗하게 갈린다.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> frame.groupby(단일유형).model_is_robust.agg(['sum','count'])
+                     sum  count
+distract               0      1
+domain                 0      3
+expert_no_solution     0     10
+rename                 0      3
+rephrase               0      2
+<span class="y">복수유형 (7~12개)        9      9</span></div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(아주 조용히)</div>
+      <p>28대 28. 하나도 안 틀린다.</p>
+      <div class="paren">(사이)</div>
+      <p>
+        ...당연하지. <em>S#4에서 본 그거잖아.</em>
+        robust 판정을 받으려면 7가지 유형을 전부 통과해야 하니 컬럼에 전부 나열되고,
+        spurious는 처음 무너뜨린 유형 하나만 적히고 거기서 끝난다.
+      </p>
+      <p>
+        이건 문제의 속성이 아니다. <em>라벨을 만든 절차가 남긴 지문이다.</em>
+        "여러 유형이 적혀 있다 = 다 통과했다 = robust"라는 동어반복.
+      </p>
+    </div>
+
+    <p class="action">
+      [author]는 곧바로 채점기를 연다. <em>이걸 쓸 수 있는지부터 확인해야 한다.</em>
+    </p>
+
+    <pre class="code good"><span class="c"># ingestion.py:158-160</span>
+problems = [
+    case[<span class="k">"problem"</span>][<span class="k">"original_problem"</span>] <span class="k">for</span> _, case <span class="k">in</span> batch
+]   <span class="c"># ← original_problem만. permutation_type은 넘어가지 않는다</span></pre>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(안도인지 실망인지 모를 표정으로)</div>
+      <p>막아놨군. 의도적이다.</p>
+      <p>
+        <em>문제는 그 다음이다.</em> <code>cases.jsonl</code>에는 이 필드가 그대로 들어 있다.
+        내가 로컬에서 특징을 뽑다가 무심코 집어넣으면, 로컬 정확도는 1.00으로 치솟고
+        서버에서는 폭락한다. <em>내가 나를 속이는 가장 쉬운 방법이다.</em>
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>인서트 — 오늘 세운 규칙</h4>
+      <p>
+        특징 추출 코드는 <strong>채점기가 넘겨주는 것만</strong> 입력으로 받는다.
+        즉 <code>model_id</code>와 <code>original_problem</code> 두 개뿐.
+        <code>cases.jsonl</code>을 통째로 읽는 코드는 쓰지 않는다.
+      </p>
+      <p>
+        로컬 점수가 갑자기 좋아지면 <strong>기뻐하기 전에 누출부터 의심한다.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S6 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#6</span> 유혹, 그리고 붕괴 — 26 / 28 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">검증</span> 0.929 → 0.821</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>analysis/model_confound.py<br>analysis/model_prior.py</dd></div>
+      <div><dt>읽기</dt><dd>probe_inference.py:69-94<br>_artifact_candidates</dd></div>
+      <div><dt>참고</dt><dd>베타-이항 평활</dd></div>
+    </dl>
+
+    <p class="action">
+      누출을 하나 닫고 나니 다른 쪽이 궁금해진다. <code>model_id</code>만으로는 어떨까.
+      화면에 뜬 표를 보고 [author]는 <em>잠시 아무 말도 하지 않는다.</em>
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>모델</th><th class="num">robust</th><th class="num">전체</th><th class="num">비율</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">gpt-5.2-2025-12-11</td><td class="num">3</td><td class="num">3</td><td class="num up">100%</td></tr>
+          <tr><td class="mono">GLM-5.1-NVFP4</td><td class="num">4</td><td class="num">4</td><td class="num up">100%</td></tr>
+          <tr><td class="mono">huikang-gpt-oss-120b</td><td class="num">1</td><td class="num">3</td><td class="num">33%</td></tr>
+          <tr><td class="mono">Qwen3.5-397B</td><td class="num">1</td><td class="num">7</td><td class="num">14%</td></tr>
+          <tr><td class="mono">gemini-3.1-pro</td><td class="num">0</td><td class="num">3</td><td class="num down">0%</td></tr>
+          <tr><td class="mono">gpt-oss-120b</td><td class="num">0</td><td class="num">7</td><td class="num down">0%</td></tr>
+          <tr><td class="mono">qwen3-8b</td><td class="num">0</td><td class="num">1</td><td class="num down">0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        문제를 <em>한 글자도 안 보고</em> model_id만으로 찍으면 26/28. 0.93이다.
+        제공된 예제 중 제일 나은 게 로컬에서 0.64였는데.
+      </p>
+      <div class="paren">(사이. 그리고 스스로에게)</div>
+      <p>
+        ...버전이 높으면 robust다? <em>아니다.</em> gemini-3.1-pro가 0/3인데 gpt-5.2는 3/3이다.
+        둘 다 최신 프런티어 모델인데 정반대로 나온다. 그런 규칙이 아니다.
+      </p>
+      <p>
+        이건 추론이 아니라 <em>암기표</em>다. 같은 28건으로 표를 만들고 그 28건을 채점한 것.
+      </p>
+    </div>
+
+    <p class="action">
+      [author]는 표를 믿기 전에 <em>표본을 본다.</em> 문제가 몇 개나 되는지 세어본다.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/model_confound.py
+고유 문제 수: <span class="r">8</span> / 행 수: 28
+
+problem_id      1acac0 1fce4b 71beb6 a1d40b bbd91e ...
+gpt-5.2            T      T      ·      ·      T
+GLM-5.1            T      ·      T   <span class="g">   T   </span>   T
+gemini-3.1-pro     F      ·      ·      F      ·
+gpt-oss-120b       F      F      F      F      F
+
+문제별 robust:  a1d40b <span class="r">1/6</span>   bbd91e 3/5   1acac0 2/4</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        문제가 <em>여덟 개뿐</em>이고, 모델마다 받은 문제가 다르다.
+        gpt-5.2는 상대적으로 쉬운 셋을 받았고, gemini는 최난도 <code>a1d40b</code>를 받았다.
+      </p>
+      <p>
+        그러니 "모델이 강해서 100%"인지 "쉬운 문제를 받아서 100%"인지
+        <em>이 데이터로는 분리가 안 된다.</em>
+      </p>
+      <div class="paren">(GLM-5.1의 a1d40b 칸을 짚으며)</div>
+      <p>
+        진짜 신호는 여기 하나 보인다. <code>a1d40b</code>를 여섯 모델 중 GLM만 통과했다.
+        <em>그건 우연으로 보기 어렵다.</em>
+      </p>
+    </div>
+
+    <p class="action">
+      마지막으로 표를 <em>제대로</em> 추정해본다. 전체 평균 0.321을 중심에 둔
+      베타 사전분포로 평활을 걸고, 인샘플 정확도가 어떻게 변하는지 본다.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/model_prior.py
+                        원시비율   평활추정   판정변화
+gpt-5.2-2025-12-11        1.000     0.478    <span class="r">True → False</span>
+lukealonso/GLM-5.1        1.000     0.515    True  → True
+gemini-3.1-pro            0.000     0.247    False → False
+qwen3-8b                  0.000     0.292    False → False
+
+인샘플 정확도  원시 <span class="y">26/28 = 0.929</span>  →  평활 <span class="g">23/28 = 0.821</span></div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        gpt-5.2의 "100%"는 <em>3판 3승</em>이다. 동전 세 번 던져 앞면 세 번 나온 것과 같다.
+        평활하면 0.478로 내려앉고 판정이 뒤집힌다.
+      </p>
+      <p>
+        <em>10.8%p가 순수 노이즈 암기였다.</em> 남은 0.821도 문제 여덟 개짜리 표본이라
+        여전히 못 믿는다.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>인서트 — 이 숫자를 어떻게 다룰 것인가</h4>
+      <p>
+        <strong>버리지 않는다. 대신 무게를 줄인다.</strong> 강한 모델이 덜 무너진다는 건
+        사실일 가능성이 높다. 다만 그건 <em>해석가능성 연구가 아니고</em>,
+        28건으로는 크기를 잴 수도 없다.
+      </p>
+      <p>
+        그래서 목표를 다시 정의한다. <strong>모델 기저율로 설명되는 부분을 걷어낸 뒤,
+        남는 잔차를 맞추는 것.</strong> 같은 모델 안에서 어떤 문제가 무너지는가 —
+        그게 대회가 실제로 묻는 것이고, 리포트 상금($5,000)이 1등 상금($3,000)보다 큰 이유다.
+      </p>
+      <p>
+        그리고 리포트에는 <strong>기저율 단독 성능을 반드시 적는다.</strong>
+        그걸 안 적으면 내 방법이 뭘 더했는지 아무도 모른다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S7 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#7</span> 창구가 닫혀 있다 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출 가능</span> 불가</span>
+      <span><span class="k">사유</span> 활성 phase 없음</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>Codabench API 조회</dd></div>
+      <div><dt>읽기</dt><dd>공식 일정 페이지</dd></div>
+      <div><dt>참고</dt><dd class="none">—</dd></div>
+    </dl>
+
+    <p class="action">
+      제출 제한을 확인해두려고 Codabench API를 두드린다.
+      그리고 <em>계획 전체가 한 줄 앞에서 멈춘다.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> GET /api/competitions/16180/
+phase count: <span class="y">1</span>
+  name   : Warmup phase
+  end    : <span class="r">2026-08-14T22:00:00Z</span>
+  status : <span class="r">Previous</span>
+  max_submissions_per_day    : 10
+  max_submissions_per_person : 100
+  execution_time_limit       : 3600</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        연습 phase는 8월 14일에 끝났고, 공식 일정상 8월 15일에 시작했어야 할 본선이
+        <em>아직 등록돼 있지 않다.</em> 오늘이 18일이니 사흘째다.
+      </p>
+      <p>
+        비로그인 공개 조회라 숨겨진 phase가 있을 수는 있다.
+        <em>이건 내가 확인할 수 없는 부분이다.</em> 참가 신청한 계정으로 직접 봐야 한다.
+      </p>
+    </div>
+
+    <p class="action">
+      대신 <em>리더보드가 공개돼 있다.</em> 끝난 phase의 성적표를 그대로 읽을 수 있다.
+    </p>
+
+    <p class="action">
+      한 줄로 정렬된 순위표를 그대로 믿기 전에, [author]는 <em>각 점수가 무엇에 대해 매겨졌는지</em>부터 본다.
+      제출마다 <code>task_id</code>가 붙어 있다. 그리고 그게 <em>같지 않다.</em>
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/leaderboard.py
+현재 이 phase에 붙어 있는 task: {35430: 'AIMO Robustness Validation v7'}
+
+task <span class="c">35282</span>  (교체됨)          2026-07-30 ~ 08-01   3건
+     <span class="y">1.00</span>  mnn31
+     <span class="y">1.00</span>  alikhaireddine
+     <span class="r">0.00</span>  sakshamloonker
+    ↳ 합이 1.00인 쌍 (1.00, 0.00)
+
+task <span class="c">35369</span>  (교체됨)          2026-08-04 ~ 08-08   4건
+     <span class="g">0.77</span>  crevious
+     0.69  Kazu
+     0.31  gkoreli
+     0.31  cohjo
+    ↳ 합이 1.00인 쌍 (0.69, 0.31)
+
+task <span class="y">35430</span>  ← 현재 채점 대상   2026-08-10 ~ 08-14   6건
+     0.41  pmmon · lonelydoll · yuki_ · carlos1891 · Vishesh
+     <span class="r">0.00</span>  Slash</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(천천히)</div>
+      <p>
+        <em>순위표가 아니었다.</em> 서로 다른 세 개의 채점 데이터가 한 칼럼에 쌓여 있을 뿐이다.
+        1.00과 0.77과 0.41은 애초에 <strong>다른 시험지의 점수</strong>다.
+      </p>
+      <p>
+        그리고 각 묶음 안에 <em>합이 정확히 1.00인 쌍</em>이 있다.
+        이건 상수 예측의 지문이다 — 한 명은 전부 True를 찍고 다른 한 명은 전부 False를 찍으면
+        두 점수는 반드시 1.00으로 더해진다.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>인서트 — 묶음별로 읽으면</h4>
+      <p>
+        <strong>task 35282 (3건).</strong> 1.00, 1.00, 0.00. 합이 1.00인 쌍.
+        라벨이 전부 한 클래스인 <em>퇴화된 시험지</em>였다고 보면 전부 설명된다 —
+        전부 True를 찍으면 만점, 전부 False를 찍으면 0점.
+        사흘 만에 교체된 것도 그래서일 것이다.
+      </p>
+      <p>
+        <strong>task 35369 (4건).</strong> 0.31 두 명, 0.69 한 명 — 이 셋이 상수다
+        (다수 클래스가 69%). 그리고 <strong>crevious의 0.77</strong>이 그 위에 있다.
+      </p>
+      <p>
+        <strong>task 35430 (현재, 6건).</strong> 0.41이 다섯 명, 0.00이 한 명.
+        전부 상수 아니면 실격이다. <em>지금 채점 기준에서는 아직 아무도 상수를 못 이겼다.</em>
+      </p>
+    </div>
+
+    <p class="action">
+      [author]는 0.77에 잠깐 마음이 갔다가, <em>한 가지를 더 확인한다.</em>
+      accuracy는 결국 <code>맞힌 수 / 전체</code>다. 그러면 관측된 점수들이
+      정수 비율로 표현될 수 있는 <em>N이 무엇인지</em> 거꾸로 물을 수 있다.
+    </p>
+
+    <div class="term"><span class="p">&gt;</span> uv run python analysis/infer_task_size.py
+task 35282   관측 [1.00, 0.00]   라벨 균형 <span class="r">0% / 100%</span>
+             → 라벨이 전부 한 클래스. 어떤 N이든 성립
+
+task 35369   관측 [0.77, 0.69, 0.31]
+             가능한 N: <span class="y">[13, 26, 35, 39, 48, 52, ...]</span>   최소 N = <span class="y">13</span>
+
+task 35430   관측 [0.41, 0.00]
+             가능한 N: [17, 22, 27, 29, 32, 34, ...]   최소 N = 17</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(N=13을 대입해보며)</div>
+      <p>
+        4/13 = 0.31. 9/13 = 0.69. 10/13 = <em>0.77.</em>
+        세 점수가 <strong>전부 딱 맞는다.</strong>
+      </p>
+      <p>
+        그러면 crevious는 상수보다 <em>정확히 한 문제</em>를 더 맞힌 거다.
+        8점 차이로 보였던 게 <strong>13문제 중 1문제</strong>였다.
+        방법이 좋아서인지 운인지 <em>이 숫자로는 구별할 수 없다.</em>
+      </p>
+      <div class="paren">(사이)</div>
+      <p>
+        그리고 이게 더 중요하다. <strong>채점 세트가 열몇 건 규모다.</strong>
+        한 문제가 6~8점이다. 리더보드에서 10점 이내 차이는 전부 <em>노이즈로 읽어야 한다.</em>
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>인서트 — 세트가 작다는 게 뜻하는 것</h4>
+      <p>
+        <strong>좋은 소식.</strong> 3600초 제한이 넉넉해진다. 모델을 한 번 로드하고
+        열몇 건을 처리하는 건 시간 문제가 안 된다. S#2에서 고친 재로딩 버그가
+        더더욱 결정적이었다는 뜻이기도 하다.
+      </p>
+      <p>
+        <strong>나쁜 소식.</strong> 검정력이 없다. 내 방법이 상수보다 나은지
+        <em>리더보드로는 증명할 수 없다.</em> 한 문제만 운 좋게 맞아도 8점이 오른다.
+      </p>
+      <p>
+        그래서 제출 점수를 지표로 삼으면 안 된다.
+        <strong>로컬에서 교차검증으로 판단하고, 제출은 확인용으로만 쓴다.</strong>
+        S#7에서 세운 원칙이 여기서 한 번 더 뒷받침된다.
+      </p>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        넘어야 할 선은 리더보드 맨 위의 1.00이 아니라 <em>0.41</em>이다.
+        현재 task에서 상수가 내는 점수. 그게 진짜 바닥선이다.
+        <em>다만 그 선을 넘었는지는 리더보드가 알려주지 못한다.</em>
+      </p>
+      <div class="paren">(제출 상세 API가 남의 예측 로그까지 열어주는 걸 보고, 창을 닫으며)</div>
+      <p>
+        ...crevious가 뭘 했는지는 열어보지 않는다. 진행 중인 대회에서
+        남의 제출물을 뜯어보는 건 <em>내가 하려는 일이 아니다.</em>
+        점수만으로도 알아야 할 건 다 나왔다.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>인서트 — 이 공백을 어떻게 쓰는가</h4>
+      <p>
+        제출할 수 없다는 건 <strong>제출 횟수를 한 장도 안 쓰면서 로컬 실험을
+        무제한으로 할 수 있다</strong>는 뜻이기도 하다.
+        창구가 열릴 때 <em>이미 검증된 것</em>을 올리면 100회를 크게 아낀다.
+      </p>
+      <p>
+        하루 10회 제한도 다시 읽힌다 — 이건 <strong>하루에 열 번 실험하라</strong>는 뜻이 아니라
+        <strong>열 번 안에 확인을 끝내라</strong>는 뜻이다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S8 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#8</span> 기록을 남기다 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-18 (화)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">커밋</span> 2</span>
+      <span><span class="k">분석 스크립트</span> 6</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>작성</dt><dd>JOURNAL.html · README.md<br>analysis/ × 6<br>patches/ × 1</dd></div>
+      <div><dt>실행</dt><dd>git init · commit<br>(원격은 아직)</dd></div>
+      <div><dt>참고</dt><dd>대회 규정 —<br>기술 리포트 요건</dd></div>
+    </dl>
+
+    <p class="action">
+      하루가 끝나간다. [author]는 코드를 닫지 않고 <em>별도 저장소를 하나 판다.</em>
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        상금표를 다시 본다. 1등 $3,000, 기술 리포트 $5,000.
+        <em>리포트가 더 크다.</em> 이건 순위표를 긁는 대회가 아니라 논문을 쓰라는 대회다.
+      </p>
+      <p>
+        그런데 리포트는 <em>11월에 앉아서 쓸 수 있는 게 아니다.</em>
+        오늘 발견한 비대칭이랑 누출을 두 달 뒤에 기억할 리가 없다.
+        <strong>지금 적어야 그때 쓴다.</strong>
+      </p>
+    </div>
+
+    <p class="action">
+      분석은 전부 <em>단독 실행 가능한 스크립트</em>로 남긴다.
+      노트북 셀에 흩어놓으면 재현이 안 되고, 재현이 안 되면 리포트에 쓸 수 없다.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th class="mono">analysis/</th><th>남긴 이유</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">probe_field.py</td><td class="dim">필드 정의를 19/19로 검증한 근거</td></tr>
+          <tr><td class="mono">probe_counts.py</td><td class="dim">검증 예산 비대칭 (10 vs 67~120)</td></tr>
+          <tr><td class="mono">model_confound.py</td><td class="dim">모델 × 문제 교락, permutation_type 누출</td></tr>
+          <tr><td class="mono">model_prior.py</td><td class="dim">평활 전후 0.929 → 0.821</td></tr>
+          <tr><td class="mono">show_variants.py</td><td class="dim">원본과 무너진 변형본 대조</td></tr>
+          <tr><td class="mono">count_loads.py</td><td class="dim">패치 효과 28 → 1 계측</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(커밋 메시지를 쓰며)</div>
+      <p>
+        일지는 대본으로 쓴다. <em>실제로 확인한 것과 아직 안 한 것을 배지로 구분해서.</em>
+        이걸 섞기 시작하면 두 달 뒤에 내가 나를 못 믿는다.
+      </p>
+      <p>
+        푸시는 아직. <em>비공개로 만들 것이다.</em>
+        여기 적힌 누출 지점과 2층 설계는 지금 공개할 이유가 없다.
+        리포트 낼 때 열면 된다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S9 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#9</span> 2주 뒤 — 없는 것들의 목록 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 09-03 (수)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">커밋</span> 11</span>
+      <span><span class="k">분석 스크립트</span> 18</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>읽음</dt><dd>baselines/data/*.csv (675 · 141행)<br>paper.pdf §1.4 · Appendix B<br>scoring.py · ingestion.py</dd></div>
+      <div><dt>실행</dt><dd>analysis/ × 6 (신규)<br>DeepSeek 8B 다운로드 16 GB<br>스모크 × 4 · CPU 벤치</dd></div>
+      <div><dt>정정</dt><dd>S#3의 라벨 문장<br>CLAUDE.md 리더보드 숫자</dd></div>
+    </dl>
+
+    <p class="action">
+      2주 만이다. [author]는 두 번째 저장소 <code>baselines</code>를 클론하고
+      <em>데이터 파일을 처음부터 다시 연다.</em> 이번엔 "있는 것"이 아니라 <em>"없는 것"</em>을 센다.
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        S#3에서 "라벨은 decay를 임계값으로 자른 것"이라고 썼다. <em>틀렸다.</em>
+        논문 §1.4에 규칙이 있다 — 변형본 중 <strong>과반이 무너지면 False</strong>, 아니면 True.
+        하나만 깨져도 False가 되는 게 아니다.
+      </p>
+      <p>
+        그리고 애매한 케이스는 아예 뺐다고 적혀 있다. 675행에서 확인했다.
+        OVERALL 행 141개 전부 <code>robust == (decay == 0.0)</code>이고, False 쪽 최소 decay가 0.5다.
+        <strong>임계값을 찾을 필요가 없다. 중간값이 존재하지 않게 만들어진 데이터다.</strong>
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/label_rule.py
+[1] 라벨이 섞인 problem_id : 0 / 137   → 문제 단위 라벨. 실질 샘플은 675가 아니라 137개
+[2] absolute_accuracy_decay == 0.0    <span class="g">141/141</span>  ← 완전 일치
+[3] True 쪽 최대 decay 0 · False 쪽 최소 decay 0.5 · 사이 구간 비어 있음</div>
+
+    <p class="action">
+      그다음이 진짜 문제다. 이 대회를 풀 때 <em>쓰고 싶은 것</em>이 데이터에 있는지 하나씩 확인한다.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>쓰고 싶은 것</th><th>있나</th><th>근거</th></tr></thead>
+        <tbody>
+          <tr><td>모델의 풀이 텍스트 (CoT)</td><td><strong>없음</strong></td><td class="dim">두 저장소 전수 grep · 5개 파일 키 열거. 정답률 숫자뿐</td></tr>
+          <tr><td>변형된 문제 텍스트</td><td>764개, <strong>편향</strong></td><td class="dim"><code>permutations_causing_decay</code> — 무너뜨린 변형만. robust 행 <strong>0/157</strong></td></tr>
+          <tr><td>대상 모델 여러 종의 학습 데이터</td><td><strong>없음</strong></td><td class="dim">675행 전부 <code>qwen3-8b:low</code> 하나</td></tr>
+          <tr><td>expert 변형 2종의 정의</td><td>저장소엔 없음</td><td class="dim">논문 Appendix B에만. 사람이 쓴 변형 · no-solution은 답이 없는 변형</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(표를 보며)</div>
+      <p>
+        "이 변형은 견뎠다"는 예시가 <em>한 건도 없다.</em>
+        변형 텍스트로 분류기를 학습시키려 해도 음성 클래스가 없다.
+        CoT 분석은 애초에 재료가 없고. <strong>결국 모델을 직접 돌려서 신호를 만들어야 한다.</strong>
+      </p>
+    </div>
+
+    <p class="action">
+      리더보드를 다시 받는다. <em>산수가 맞아떨어진다.</em>
+    </p>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py   <span class="c"># task 35430</span>
+0.71 = 12/17   2명        0.53 =  9/17   9명  ← 상수 (다수 클래스)
+0.65 = 11/17   4명        0.47 =  8/17   6명  ← 상수 (소수 클래스)
+0.59 = 10/17   1명        0.41 =  7/17   5명  ← 8/14 이전 제출만</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        <strong>N=17.</strong> 모든 점수가 k/17이다. 상수 예측이 0.53이고, 그걸 3문제 차이로 넘은 사람이 둘 있다.
+        S#7에서 "아무도 못 넘음"이라고 썼는데 <em>2주 사이에 옛말이 됐다.</em>
+      </p>
+      <p>
+        그리고 always-true와 always-false를 둘 다 낼 필요가 없다.
+        <code>acc(always-true) + acc(always-false) = 1</code>이니까
+        <em>하나만 내면 테스트 분포가 나온다.</em> 두 번째는 무효 케이스 확인용이다.
+      </p>
+    </div>
+
+    <p class="action">
+      대리 모델 16 GB를 받는다. 32분. 그리고 <em>이 노트북이 무엇을 할 수 있는지</em> 잰다.
+    </p>
+
+    <div class="term"><span class="p">$</span> python analysis/smoke_submission.py
+  <span class="g">PASS</span>  solution-always-true.zip
+  <span class="g">PASS</span>  solution-trained-probe.zip        <span class="c"># 로드 52s · forward 2회 · [False, False]</span>
+  <span class="r">KILL</span>  solution-uncertainty-profiling.zip <span class="c"># 로드 OK · 풀이 생성 중 10분 타임아웃</span>
+
+<span class="p">$</span> python analysis/cpu_throughput.py
+decode    247.1s  for 64 new tokens  ->  <span class="r">0.26 tok/s</span>
+  2048 토큰 풀이 1회  ≈  <span class="r">131.8 분</span></div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(숫자를 한 번 더 읽고)</div>
+      <p>
+        forward 1회는 51초. 프로빙은 CPU로 돌 수 있다.
+        생성은 <strong>0.26 tok/s.</strong> R1이 생각 토큰 2천 개를 뽑으면 두 시간이다.
+        라벨 재현 실험은 10문제 × 30회 = 300회 — <em>이 기계로는 한 달이다.</em>
+      </p>
+      <p>
+        <code>experiments/replicate_labels.py</code>는 써뒀다. dry-run은 돈다.
+        하지만 <strong>이 전략의 생사를 정하는 숫자는 GPU에서만 나온다.</strong>
+        Fields 컴퓨트 신청이 실험의 전제조건이 됐다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S10 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#10</span> 본선이 열려 있었다 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 09-07 (일)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">본선 마감</span> 11-01</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>읽음</dt><dd>Codabench API<br>competitions/16180 · phases/30038</dd></div>
+      <div><dt>실행</dt><dd>analysis/leaderboard.py (재작성)</dd></div>
+      <div><dt>정정</dt><dd>CLAUDE.md 미해결 2건 해소<br>리더보드 표 본선 2행 추가</dd></div>
+    </dl>
+
+    <p class="action">
+      "리더보드 0.78까지 올라왔다"는 말에 스크립트를 돌린다. <em>최고가 0.71로 나온다.</em>
+      스크립트가 워밍업 phase(26647)만 보고 있었다.
+    </p>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py
+phase 26647  Warmup phase        2026-04-30 ~ 2026-08-31   <span class="c">status: Previous</span>
+phase 30038  Competition phase   <span class="g">2026-09-01 ~ 2026-11-01</span>   <span class="c">status: Current</span>
+  task 35766  v7 - Main Track
+  task 35767  v7 - Small Model Track</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        <strong>본선이 9월 1일에 열렸다.</strong> 엿새를 모르고 지났다.
+        CLAUDE.md 미해결 항목 두 개가 한 번에 풀린다 — 본선 개설, 그리고 마감은 <em>11월 1일</em>이다. 논문의 10/1은 옛 값.
+      </p>
+      <p>
+        그런데 리더보드가 이상하다. 두 트랙이 <em>한 칼럼에 섞여</em> 있다.
+        Main과 Small은 채점 케이스가 다른데 점수가 나란히 앉아 있다. 갈라서 봐야 한다.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py   <span class="c"># task_id로 가른 뒤</span>
+task 35766 Main    제출 75 = 채점 54 + <span class="r">전량무효 21</span>    N = 21
+    0.76  16/21  ×1   ← KKLUV
+    0.57  12/21  ×6
+    0.52  11/21  ×17  ← 상수 예측
+    0.48  10/21  ×15  ← 상수 예측
+
+task 35767 Small   제출 97 = 채점 60 + <span class="r">전량무효 37</span>    N = 19
+    0.79  15/19  ×1   ← KKLUV
+    0.63  12/19  ×3
+    0.53  10/19  ×20  ← 상수 예측
+    0.47   9/19  ×17  ← 상수 예측</div>
+
+    <p class="action">
+      N은 계산이 아니라 <em>읽은 것</em>이다. 전량 무효된 제출은 <code>coverage 0</code>에
+      <code>invalid_predictions</code>가 케이스 수 그대로 찍힌다 — Main 21, Small 19.
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(두 표를 나란히 놓고)</div>
+      <p>
+        세 가지가 보인다. 하나, <strong>0.78은 없고 0.79와 0.76이 있다</strong> — 같은 사람이 두 트랙에서 각각.
+        상수보다 <em>다섯 문제</em> 더 맞혔다. 워밍업의 +3보다 크다. 신호가 있는 사람이 있다.
+      </p>
+      <p>
+        둘, 그 한 사람을 빼면 <strong>다음이 +1, +2다.</strong> 상수 위에 올라선 게 두세 명이고, 나머지는 상수 아니면 그 아래.
+        Small엔 0.21까지 있다 — 상수보다 여섯 개 덜 맞힌 진짜 방법.
+      </p>
+      <p>
+        셋, <strong>제출의 3분의 1이 전량 무효다.</strong> Main 21/75, Small 37/97.
+        방법이 틀린 게 아니라 <em>파이프라인에서 죽은 것</em>이다.
+        절대 규칙 3·4·6·7이 괜히 있는 게 아니었다. 스모크 테스트가 곧 점수다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S11 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#11</span> 갈아엎음 — 대리 모델은 없다 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 09-14 (월)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">업스트림</span> +8 커밋</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>읽음</dt><dd>getting-started 9fbe36f → 995f992<br>README · ingestion.py · scoring.py 전체 diff<br>HF aimo-interp 데이터셋 6개</dd></div>
+      <div><dt>실행</dt><dd>git merge · import_hf_dataset (v2)<br>pytest 25/25 · build --small<br>smoke × 2 · run_local --small</dd></div>
+      <div><dt>정정</dt><dd>CLAUDE.md 환경 제약 전면<br>analysis/ 3개 스키마 대응</dd></div>
+    </dl>
+
+    <p class="action">
+      "갈아엎었다는데." [author]는 <code>git fetch</code>부터 한다. 커밋 8개, 파일 8개, +416 −155.
+      <em>solutions/는 안 건드렸다.</em> 건드린 건 규칙 쪽이다.
+    </p>
+
+    <div class="term"><span class="p">$</span> git log --oneline HEAD..origin/main
+1e52bfd README: update of model_ids and infra desc
+e98c489 fix: use shared leaderboard metric keys
+ad7d3af <span class="y">Remove obsolete permutation_type field</span>
+4ae07c2 <span class="y">feat: add small model track</span>
+dc06e78 Fix import_hf_dataset.py to emit problem as a string
+e46be92 Simplify problem validation in ingestion.py</div>
+
+    <p class="action">
+      README diff의 표 하나가 <em>지난 4주의 전제를 뒤집는다.</em>
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th class="mono">model_id (그대로 전달)</th><th>Main</th><th>Small</th><th>크기</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">Qwen/Qwen3.5-4B</td><td>✓</td><td>✓</td><td class="dim">9.3 GB</td></tr>
+          <tr><td class="mono">Skywork/Skywork-OR1-Math-7B</td><td>✓</td><td>✓</td><td class="dim">15.2 GB</td></tr>
+          <tr><td class="mono">allenai/Olmo-3-7B-Think</td><td>✓</td><td>✓</td><td class="dim">14.6 GB</td></tr>
+          <tr><td class="mono">deepseek-ai/DeepSeek-R1-0528-Qwen3-8B</td><td>✓</td><td>✓</td><td class="dim">16.4 GB</td></tr>
+          <tr><td class="mono">openai/gpt-oss-120b</td><td>✓</td><td>✗</td><td class="dim">62 GiB (MXFP4)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(표를 두 번 읽고)</div>
+      <p>
+        <strong>판정 대상 모델 다섯 개가 전부 워커에 캐시돼 있다.</strong>
+        README 원문: "a method can always load the model it is asked to judge."
+        gpt-5.2도 gemini도 GLM도 없다. <em>":low" 이름과 닫힌 API 모델은 본선에 절대 안 온다.</em>
+      </p>
+      <p>
+        그러면 "대리 모델"이라는 말 자체가 없어진다. 8B로 gpt-5.2를 흉내 낼 필요가 없다 —
+        <strong>판정해야 할 모델을 그냥 직접 돌린다.</strong>
+        S#6의 모델별 사전확률 표는 통째로 쓸모가 없다. 그 일곱 모델은 시험에 안 나온다.
+      </p>
+    </div>
+
+    <p class="action">
+      두 번째 뒤집힘. <code>ingestion.py</code>가 <code>problem</code>을 dict가 아니라 <em>문자열</em>로 받는다.
+      <code>permutation_type</code> 필드가 cases.jsonl에서 <em>사라졌다.</em>
+    </p>
+
+    <div class="term"><span class="p">$</span> uv run scripts/import_hf_dataset.py
+cases 28 → <span class="y">24</span>   duplicate_rows_removed 4   schema_version 2
+<span class="p">$</span> head -c 120 data/val-sample/input/cases.jsonl
+{"id":"case-181e…","model_id":"Qwen/Qwen3.5-397B-A17B-FP8:low","problem":"Three airline companies…"}</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        S#5에서 찾은 28/28 누출이 <em>데이터에서 제거됐다.</em>
+        같은 (모델, 문제)인데 변형 유형만 다르던 4행이 하나로 합쳐져서 24행.
+        누출을 막은 게 아니라 <strong>누출이 있던 자리를 없앤 것</strong>이다. 규칙 1번은 그대로 유효하다 —
+        HF parquet엔 아직 그 컬럼이 있으니까.
+      </p>
+    </div>
+
+    <p class="action">
+      세 번째. 트랙 마커.
+    </p>
+
+    <div class="term">Small 트랙 ZIP  →  루트에 <span class="g">small.txt</span> 필수 (내용 무관)
+Main  트랙 ZIP  →  있으면 <span class="r">실패</span>
+검사 시점        →  solution.py import <em>전</em>. 틀리면 전량 무효</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        S#10의 "전량 무효 1/3"이 이제 설명된다. 마커 없이 Small에 냈거나, 마커 달고 Main에 냈거나.
+        방법이 아니라 <em>빈 파일 하나</em>로 갈린 사람이 수십 명이다.
+      </p>
+    </div>
+
+    <p class="action">
+      병합하고, 재임포트하고, 테스트 25개를 돌리고, 양 트랙 ZIP을 다시 빌드한다. 전부 통과.
+      always-true는 24행에서 <code>9/24 = 0.375</code>.
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(CLAUDE.md의 "환경 제약" 절을 통째로 지우며)</div>
+      <p>
+        4주 동안 "판정 대상은 실행 불가"라는 벽 앞에서 설계했다. <strong>벽이 없어졌다.</strong>
+        남는 제약은 둘뿐이다 — 오프라인, 그리고 3600초가 <em>배치 전체 합산</em>이라는 것.
+        8B 로드 2초, 120B 로드 4초. 시간은 로드가 아니라 <em>생성</em>에서 나간다.
+      </p>
+      <p>
+        학습 데이터 쪽은 안 바뀌었다. 5월 자료 그대로.
+        다섯 모델 중 라벨 붙은 문제가 있는 건 DeepSeek 8B 하나(<code>qwen3-8b:low</code> = 그 모델, 137문제).
+        <em>나머지 넷은 라벨 0개.</em> 이게 다음 벽이다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S12 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#12</span> 프로브가 배운 것 — 길이 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 09-14 (월) 저녁</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">프로브</span> 0.634 → 폐기</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>extract_hidden (137문제, 1h)<br>train_probe (37층 sweep)<br>topic_confound · length_confound</dd></div>
+      <div><dt>읽음</dt><dd>MATH 원본 type·level (137/137 매칭)<br>challenge-sample-full 558행</dd></div>
+      <div><dt>남김</dt><dd>solutions/probe (아티팩트 포함)<br>analysis/ × 2 · 커밋 c59fa98</dd></div>
+    </dl>
+
+    <p class="action">
+      프로브를 학습한다. 37층을 훑어 17층, 교차검증 0.634. 동전은 0.500. <em>신호가 있다.</em>
+      ZIP까지 만들고 실제 모델로 점수가 갈리는 것도 본다: −7.45, −4.49, +3.71.
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        리뷰를 시킨다. 아홉 개가 나오고, 넷째가 이거다 —
+        <em>"137문제 전부 같은 모델이면 라벨을 가르는 건 문제 쪽뿐이다. 프로브가 문제 유형을 배운 건 아닌가."</em>
+        30분짜리 검사고, 나쁘면 나머지가 전부 무의미해진다. 이걸 먼저 한다.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/topic_confound.py
+[1] 주제별 robust 비율   0.18 ~ 0.55   뚜렷한 쏠림 없음
+[3] 주제 하나 빼고 학습  층 17  0.628   안 무너짐 → 주제는 아님
+[2] 얕은 특징 단독 AUC
+    n_words      <span class="r">0.749</span>
+    n_chars      <span class="r">0.740</span>
+    n_numbers    0.509
+    얕은 특징 전부 → cv bacc 0.621    vs 프로브 0.634</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(0.749를 한참 본다)</div>
+      <p>
+        주제는 아니다. <strong>글자 수다.</strong> 문제 단어 수만 세면 프로브보다 잘 맞힌다.
+        긴 문제일수록 robust. 프로브가 hidden state에서 읽은 건 <em>"이 프롬프트가 몇 토큰이냐"</em>였을 수 있다.
+        마지막 토큰 표현엔 위치가 들어 있으니까.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/length_confound.py
+(a) 층 17: 프로브 AUC 0.722 · 길이 AUC 0.749 · 상관 ρ=<span class="r">+0.71</span>
+         [길이] 0.741 → [길이+프로브] <span class="r">0.740</span>          ← 프로브가 더하는 게 없다
+    15단어 이상만 남기면  프로브 cv bacc <span class="r">0.439</span>
+    20단어 이상만 남기면  프로브 cv bacc <span class="r">0.364</span>
+
+(b) 유형별 무너짐 vs 길이
+    domain    무너짐 11.5단어 · 버팀 23.4단어 · AUC <span class="r">0.802</span>
+    distract  무너짐 23.8단어 · 버팀 15.0단어 · AUC 0.358
+    rephrase / rename / typos                     AUC 0.41 ~ 0.56
+    12단어 이하 문제의 domain 무너짐: <span class="r">50 / 52</span>
+      'What is the value of $255^2 - 245^2$?'  →  'What is the difference between the squares of their lengths?'</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        길이를 빼면 프로브는 <strong>동전 밑으로</strong> 떨어진다. 0.634는 전부 길이였다.
+      </p>
+      <p>
+        그리고 길이가 라벨과 얽힌 이유가 (b)에 있다. 다섯 유형 중 <em>domain 하나만</em> 길이로 갈린다.
+        다섯 단어짜리 수식 문제를 "이야기"로 다시 쓰면 다른 문제가 된다 — 저장된 조각을 보면 숫자까지 빠졌다.
+        모델이 무너진 게 아니라 <strong>변형 생성이 문제를 파괴한 것</strong>이고, 그게 짧은 문제에서만 일어난다.
+        이 137개의 "robust"는 상당 부분 <em>"domain 재작성을 견딜 만큼 길었나"</em>다.
+      </p>
+    </div>
+
+    <p class="action">
+      본선 문제엔 이게 있나. 올림피아드 셋(558행, 10문제)을 연다. 단어 수 27~74, 중앙 53. MATH는 14.
+      유형별 길이→버팀 AUC가 <em>전부 0.46 이하</em>. 지름길이 없다.
+    </p>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(CLAUDE.md에 한 줄을 고치며)</div>
+      <p>
+        정리하면 셋이다. 프로브는 길이를 배웠다. 그 길이는 라벨 생성 흔적이다. 본선 문제엔 그 흔적이 없다.
+        그러니 이 프로브는 본선에서 <strong>0.5 근처</strong>다. 내도 되지만 의미는 "무효 아님" 확인뿐이다.
+      </p>
+      <p>
+        137문제 MATH 라벨은 프로브 학습에 못 쓴다. 남은 길은 하나 — 주최측이 "며칠 내" 낸다는
+        올림피아드 문제·다중 모델 학습셋. 그게 오기 전엔 <em>학습할 것이 없다.</em>
+        오늘 만든 도구(추출·학습·패키징·민감도)는 그대로 쓴다. 재료만 바뀐다.
+      </p>
+      <p>
+        리뷰의 4번을 먼저 하라고 한 판단이 맞았다. 1번(구조 편집)부터 했으면 같은 라벨 위에 하루를 더 썼을 것이다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S13 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#13</span> 판이 다시 깔렸다 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 09-22 (월)</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">리더보드</span> 초기화됨</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>읽음</dt><dd>Discord 공지 · 업스트림 de79405<br>ingestion.py diff · train-main-v2 82행</dd></div>
+      <div><dt>실행</dt><dd>merge · pytest 30/30<br>solutions 2개 시그니처 갱신 · 스모크 4/4</dd></div>
+      <div><dt>남김</dt><dd>docs/DISCORD.md · CLAUDE.md<br>results/train-main-v2.parquet</dd></div>
+    </dl>
+
+    <p class="action">
+      일주일 만에 민감도 실험이 끝나 가는데, 공지 하나가 <em>판을 다시 깐다.</em> 리더보드 초기화, 시그니처 변경, 학습셋 공개.
+    </p>
+
+    <div class="term"><span class="p">$</span> git log --oneline HEAD..origin/main
+7e05b26 feat: reasoning effort support
+<span class="c"># ingestion.py</span>
+results = solution.are_robust(model_id, <span class="y">reasoning_effort=effort</span>, problems=problems)
+batches.setdefault(<span class="y">(case["model_id"], effort)</span>, [])</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        공지엔 <code>reasoning_effort: list[str]</code>라고 적혀 있는데 코드는 <strong>문자열 하나</strong>를 키워드로 넘긴다.
+        배치가 (모델, effort) 쌍으로 쪼개진다. 파라미터 <em>이름</em>이 맞아야 새 경로를 탄다.
+        공지보다 코드를 믿는다 — 둘 다 적어두고 solution.py를 고친다. 옛 호출도 받게.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> python analysis/leaderboard.py
+task 36237 Main    N = 21   상수 0.52 / 0.48      최고 0.67 (14/21)
+task 36241 Small   N = <span class="y">14</span>   상수 <span class="g">0.50 (7/14)</span>      최고 0.79 (11/14)</div>
+
+    <p class="action">
+      "문제별·모델별 균형"이 숫자로 보인다. Small은 상수가 <em>정확히 반</em>. 모델 이름으로 얻을 게 없다.
+      옛 점수는 전부 지워졌다.
+    </p>
+
+    <div class="term"><span class="p">$</span> train-main-v2   82행 · 5모델 · 36문제 · 단어 중앙 52
+라벨 71 = robust <span class="g">52</span> / spurious 19   (None 11 = max_drop 0.11~0.21, 제외)
+규칙   robust ⟺ max_drop ≤ 0.10 · spurious ⟺ ≥ 0.25   ← 사이 비어 있음
+모델당 라벨   gpt-oss 37 · Qwen3.5 12 · DeepSeek 10 · Olmo 9 · Skywork <span class="r">3</span>
+길이→robust AUC <span class="g">0.39</span>                          ← MATH의 0.75 아티팩트 없음
+2개 이상 모델에 나온 문제 11개: 모델 따라 갈리는 것 <span class="y">0 / 11</span></div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(마지막 줄을 두 번 읽고)</div>
+      <p>
+        <strong>같은 문제면 모델이 달라도 라벨이 같다.</strong> 열한 문제 전부.
+        "이 모델이 이 문제를 robust하게 푸는가"라고 물었는데 데이터가 답하는 건 <em>"이 문제가 robust한 문제인가"</em>다.
+        gpt-oss-120b가 Skywork-7B랑 같은 답을 받는다.
+      </p>
+      <p>
+        그러면 모델당 프로브를 만드는 게 맞나. Skywork는 라벨이 <em>세 개</em>다. 프로브는 애초에 불가능하다.
+        반대로 문제 텍스트만 보는 분류기라면 36문제로 학습한다 — 여전히 작지만, 모델 다섯 개를 하나로 합친 크기다.
+      </p>
+      <p>
+        좋은 소식은 하나 확실하다. <strong>길이 아티팩트가 없다.</strong> 0.39, 방향도 반대, 약하다.
+        MATH에서 프로브를 죽였던 지름길이 여기엔 없다. 이제 뭘 학습해도 그 의심은 안 붙는다.
+      </p>
+      <p>
+        나쁜 소식도 하나. 71개 라벨은 <em>여전히 작다.</em> 그리고 gpt-oss-120b가 절반인데 로컬에선 못 돌린다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S14 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#14</span> 서른세 문제로는 아무것도 알 수 없다 <span class="badge badge-real">실제</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 09-26 ~ 27</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">GPU</span> 노트북 8 GB, 4bit</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>36문제 × 4모델 forward → 벡터<br>36문제 × 4모델 × 512토큰 생성 → 자신감<br>LOPO · 라벨 섞기 30회</dd></div>
+      <div><dt>발견</dt><dd>GPU 있었음 (torch가 CPU 빌드)<br>DeepSeek 토크나이저 오류</dd></div>
+      <div><dt>남김</dt><dd>experiments/ × 5 · analysis/permutation_check.py<br>결과표 2개 · 커밋 e26b71e, d95e4a3</dd></div>
+    </dl>
+
+    <p class="action">
+      두 가지 먼저 바로잡는다. 4주 동안 "GPU 없음"이었는데 <em>노트북에 8 GB GPU가 있었다</em> — 업스트림 venv의 torch가 CPU 빌드라 못 봤을 뿐.
+      그리고 <code>AutoTokenizer</code>가 DeepSeek을 옛 <code>LlamaTokenizer</code>로 열어 <em>인코딩부터 달랐다.</em> 지금까지의 DeepSeek 실험은 전부 그 상태로 돈 것이다.
+    </p>
+
+    <div class="term"><span class="p">$</span> nvidia-smi
+NVIDIA RTX 2000 Ada Laptop   8188 MiB
+<span class="p">$</span> .venv/Scripts/python.exe experiments/mini_sim.py --quant 4bit --limit 1
+load 19s  vram=6.4GB   <span class="g">10.2 tok/s</span>          <span class="c"># CPU는 0.33</span></div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        30배. 실험이 하루 단위에서 시간 단위로 내려온다. 라벨이 문제 단위라는 걸 쓰면 모델당 3~12개였던 학습 벡터가 <strong>36개</strong>가 된다.
+        4모델에 36문제를 전부 읽힌다. 문제 하나씩 빼고 33번 맞혀본다.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> .venv/Scripts/python.exe experiments/train_train_v2.py
+[0] 길이 단독 AUC 0.331   길이만으로 LOPO bacc <span class="r">0.608</span>       <span class="c"># 지름길이 거꾸로 살아 있음</span>
+                     raw AUC      길이 제거 잔차
+Qwen3.5-4B          0.64~0.67    0.55~0.62 (앞층만)
+Skywork-7B          ~0.5         0.4~0.5
+Olmo-7B             0.6          0.5
+DeepSeek-8B         ~0.5         0.4~0.5
+4모델 margin 상관   +0.69 ~ +0.90                            <span class="c"># 넷이 같은 표면을 봄</span></div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        정지 사진은 <strong>없다.</strong> 길이를 빼면 남는 게 없고, 네 모델의 프로브가 서로 0.7~0.9로 일치하는 건 robust를 봐서가 아니라 <em>같은 문제 길이</em>를 봐서다.
+        주최측 숫자(프로빙 58 vs 생성 69)를 믿고 두 번째로 간다 — 답까지 안 가고 <em>생각의 첫 512토큰</em>에서 자신감만 뽑는다.
+      </p>
+    </div>
+
+    <div class="term"><span class="p">$</span> .venv/Scripts/python.exe experiments/train_confidence_v2.py
+특징 단독 AUC   4모델 × 11특징 전부 <span class="y">0.37 ~ 0.60</span>   같은 방향인 특징 0개
+12특징 LOPO     Qwen 0.14 · Skywork 0.21 · Olmo 0.62 · DeepSeek 0.17
+
+<span class="p">$</span> .venv/Scripts/python.exe analysis/permutation_check.py --kind conf
+라벨 섞어 30회   평균 0.47   95% 구간 <span class="r">[0.13, 0.72]</span>
+Qwen · Olmo   구간 안 → 신호 없음
+Skywork · DeepSeek   구간 <span class="r">아래</span> → 원인 불명의 anti-learning. 부호 뒤집어 쓰지 않는다</div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(구간 폭을 한참 본다)</div>
+      <p>
+        자신감도 <strong>없다.</strong> 그런데 더 중요한 숫자는 그 밑줄이다 — <em>라벨을 무작위로 섞어도 0.13에서 0.72까지 나온다.</em>
+        33문제에서는 그 안의 어떤 점수도 우연과 구분이 안 된다. 프로브 0.62도, 자신감 0.62도, 아무것도 아니다.
+      </p>
+      <p>
+        이번 주에 배운 건 "방법 A가 안 된다"가 아니다. <strong>"이 정답표 크기로는 어떤 방법의 성패도 판정할 수 없다"</strong>다.
+        주최측이 82행을 최종이라고 했으니, 이게 대회 전체의 조건이다. 보고서의 중심 문장은 이걸로 간다.
+      </p>
+      <p>
+        남은 길은 셋. 정답표를 직접 늘리거나(허용됨, 정의는 다름), 같은 forward에서 안 본 것을 보거나(어텐션 · 생성 중 경로), 상수를 내고 보고서에 집중하거나.
+        어느 쪽이든 <em>33이라는 숫자는 안 바뀐다.</em>
+      </p>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="t">여기까지가 9월 27일까지의 실제 기록</div>
+    <p>
+      아래부터는 아직 실행하지 않은 계획과 예측입니다.
+      숫자는 근거를 명시한 추정치이며, 실제 결과는 다를 수 있습니다.
+    </p>
+  </div>
+
+  <!-- ============ S15 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#15</span> 작전 회의 — 무엇을 쓸 것인가 <span class="badge badge-pred">예측</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-19 (수) 예정</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">목표</span> 학습 신호 복원</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>작성</dt><dd>scripts/import_hf_dataset.py<br>(9개 컬럼 복원)</dd></div>
+      <div><dt>참고</dt><dd>config.py:16-31<br>FEATURE_NAMES 패턴</dd></div>
+      <div><dt>실행</dt><dd>재임포트 후 분포 확인</dd></div>
+    </dl>
+
+    <p class="action">
+      화이트보드에 세 갈래가 적혀 있다.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>후보</th><th>쓸 수 있는가</th><th>판단</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>대상 모델을 직접 돌린다</td>
+            <td class="dim">불가 — 캐시에 없고 네트워크 차단</td>
+            <td class="down">기각</td>
+          </tr>
+          <tr>
+            <td>변형본을 직접 만들어 풀려본다</td>
+            <td class="dim">이론상 가능하나 3600초 안에 생성·채점 불가</td>
+            <td class="down">기각</td>
+          </tr>
+          <tr>
+            <td>대리 모델 + 문제 텍스트 + model_id</td>
+            <td class="dim">전부 사용 가능</td>
+            <td class="up">채택</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        첫 작업은 데이터 복원이다. 임포터가 버린 9개 컬럼을 살린다.
+        <code>convert_rows</code>가 4개 필드만 통과시키고 있으니 거기를 넓힌다.
+        <em>학습 신호를 스스로 버린 채로 시작할 이유가 없다.</em>
+      </p>
+      <p>
+        단, <code>permutation_type</code>은 <em>일부러 안 살린다.</em> S#5에서 본 그거다.
+      </p>
+    </div>
+
+    <pre class="code good"><span class="c"># scripts/import_hf_dataset.py — 라벨 옆에 연속 타깃을 함께 보존</span>
+labels.append({
+    <span class="k">"id"</span>: case_id,
+    <span class="k">"is_robust"</span>: row[<span class="k">"model_is_robust"</span>],
+    <span class="add">"absolute_accuracy_decay": row["absolute_accuracy_decay"],</span>
+    <span class="add">"base_accuracy": row["base_accuracy"],</span>
+    <span class="add">"n_permuted_predictions": row["n_permuted_predictions"],  # 라벨 신뢰도 가중치용</span>
+})</pre>
+
+    <div class="insert">
+      <h4>주의 — 이 파일은 제출물이 아니다</h4>
+      <p>
+        <code>scripts/</code>는 로컬 개발 도구라 ZIP에 안 들어간다.
+        따라서 여기를 고쳐도 <strong>채점 결과에는 직접 영향이 없다.</strong>
+        영향은 간접적이다 — 더 좋은 타깃으로 학습한 아티팩트가 제출물에 실린다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ S16 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#16</span> 집필 — 2층 구조의 판정기 <span class="badge badge-pred">예측</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-20 ~ 08-23 예정</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">신규</span> solutions/layered/</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>작성</dt><dd>solutions/layered/solution.py<br>layered/prior.py<br>layered/signal.py</dd></div>
+      <div><dt>참고</dt><dd>uncertainty_profile/ 전체<br>(모델 수명주기 관리)<br>probe_inference.py:297-335<br>(마진 앙상블)</dd></div>
+      <div><dt>실행</dt><dd>run_local.py<br>pytest</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>설계는 두 층이다.</p>
+      <p>
+        <em>1층 — 사전확률.</em> model_id가 알려진 모델이면 <strong>평활된</strong> 기저율을,
+        모르는 모델이면 전체 평균을 쓴다. S#6에서 본 대로 원시 비율을 그대로 쓰면 안 된다.
+      </p>
+      <p>
+        <em>2층 — 문제 신호.</em> 대리 모델로 문제를 인코딩해 "이 문제가 표면 패턴에
+        의존하기 쉬운가"를 잰다. 1층의 사전확률을 이 신호로 <em>보정</em>한다.
+      </p>
+    </div>
+
+    <pre class="code"><span class="c"># solutions/layered/solution.py — 계약은 얇게 유지</span>
+<span class="k">from</span> layered.inference <span class="k">import</span> predict
+
+<span class="k">def</span> are_robust(model_id: <span class="k">str</span>, problems: <span class="k">list</span>[<span class="k">str</span>]) -&gt; <span class="k">list</span>[<span class="k">bool</span>]:
+    <span class="k">return</span> predict(model_id, problems)</pre>
+
+    <pre class="code"><span class="c"># layered/inference.py — 모델은 배치당 한 번. S#2에서 배운 것.</span>
+prior = prior_for(model_id)              <span class="c"># 1층: 평활된 스칼라</span>
+<span class="k">try</span>:
+    model, tokenizer = load_once(CHECKPOINT)
+    <span class="k">try</span>:
+        signals = encode_batch(problems, model, tokenizer)
+        scores = prior + weight * signals    <span class="c"># 2층: 보정</span>
+    <span class="k">finally</span>:
+        release()
+<span class="k">except</span> Exception:
+    scores = [prior] * len(problems)     <span class="c"># 2층 실패 → 1층으로 폴백</span>
+<span class="k">return</span> [<span class="k">bool</span>(s &gt;= threshold) <span class="k">for</span> s <span class="k">in</span> scores]</pre>
+
+    <p class="action">
+      로컬에서 돌린다. 모델이 없으니 2층은 실패한다.
+      <em>그런데 1층은 살아 있다.</em> 이게 설계의 요점이다 —
+      2층이 죽어도 예외를 내지 않고 1층 결과를 반환한다.
+    </p>
+  </section>
+
+  <!-- ============ S17 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#17</span> 코드 리뷰 ② — 제출 직전 <span class="badge badge-pred">예측</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 08-23 (일) 예정</span>
+      <span><span class="k">제출</span> 0 / 100</span>
+      <span><span class="k">리뷰 대상</span> 자기 코드</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>읽기</dt><dd>components/ingestion_program/<br>ingestion.py:69-179</dd></div>
+      <div><dt>실행</dt><dd>docker build -f Dockerfile.competition<br>컨테이너 안에서 run_local.py</dd></div>
+      <div><dt>참고</dt><dd>Dockerfile.competition<br>(패키지 버전 대조)</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        제출 버튼을 누르기 전에 <em>채점기 입장에서</em> 내 코드를 읽는다.
+        ingestion.py가 무엇을 거부하는지 알고 있으니, 그 목록으로 자기 검열을 한다.
+      </p>
+    </div>
+
+    <div class="review">
+      <h4>셀프 리뷰 — 제출 전 체크</h4>
+      <ol>
+        <li>
+          <span class="where">layered/inference.py — 반환 타입</span>
+          <code>numpy</code> 비교 결과가 <code>np.bool_</code>로 새어나갈 수 있다.
+          채점기는 <code>type(x) is bool</code>로 검사하므로 <strong>전량 무효</strong>가 된다.
+          <span class="verdict v-fix">가장 흔한 사고</span>
+        </li>
+        <li>
+          <span class="where">layered/prior.py — 미지의 model_id</span>
+          본선에 없는 모델이 오면 <code>KeyError</code>. 예외는 삼켜지고 그룹 전체가 날아간다.
+          <code>dict.get(model_id, GLOBAL_MEAN)</code>으로.
+          <span class="verdict v-fix">치명적</span>
+        </li>
+        <li>
+          <span class="where">layered/signal.py — 누출 재확인</span>
+          특징 추출 입력이 <code>model_id</code>와 <code>original_problem</code> 둘뿐인가.
+          <code>cases.jsonl</code>을 읽는 경로가 하나라도 있으면 S#5이 되풀이된다.
+          <span class="verdict v-fix">오늘 세운 규칙</span>
+        </li>
+        <li>
+          <span class="where">layered/inference.py — 2층 실패 경로</span>
+          모델 로드 실패 시 예외를 올리면 1층까지 같이 죽는다.
+          <code>uncertainty-profiling</code>이 이 폴백으로 27/28을 건졌다.
+          <span class="verdict v-fix">설계 핵심</span>
+        </li>
+        <li>
+          <span class="where">ZIP 레이아웃 · 결정성</span>
+          <code>solution.py</code>가 루트에 있는가. 두 번 돌려 같은 결과가 나오는가.
+          <span class="verdict v-ok">빌드 스크립트 + greedy 고정</span>
+        </li>
+        <li>
+          <span class="where">Docker</span>
+          로컬 venv가 아니라 <code>Dockerfile.competition</code> 이미지에서 돌려봤는가.
+          <strong>이걸 건너뛰면 제출 1회를 버린다.</strong>
+          <span class="verdict v-fix">필수</span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="action">
+      여섯 개 중 넷이 걸린다. <em>제출 전에 걸린 게 다행이다.</em>
+      하나라도 서버에서 터졌다면 원인 없이 숫자만 보고 사흘을 헤맸을 것이다.
+    </p>
+  </section>
+
+  <!-- ============ S18 ============ -->
+  <section class="scene">
+    <div class="slug"><span class="no">S#18</span> 첫 제출 <span class="badge badge-pred">예측</span></div>
+    <div class="hud">
+      <span><span class="k">날짜</span> 창구 개설 직후</span>
+      <span><span class="k">제출</span> 1 / 100</span>
+      <span><span class="k">오늘</span> 1 / 10</span>
+      <span><span class="k">남은 날</span> D-69</span>
+    </div>
+
+    <dl class="work">
+      <div><dt>실행</dt><dd>scripts/build.py components<br>Codabench 업로드</dd></div>
+      <div><dt>확인</dt><dd>coverage → invalid → accuracy<br>(이 순서로)</dd></div>
+      <div><dt>참고</dt><dd class="none">—</dd></div>
+    </dl>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <p>
+        첫 제출은 점수를 위한 게 아니다. <em>파이프라인이 왕복하는지 확인하는 것이다.</em>
+        그래서 확인 순서가 정해져 있다 — coverage가 1.0인가, invalid가 0인가.
+        <em>accuracy는 마지막에 본다.</em> 앞의 둘이 깨져 있으면 accuracy는 의미가 없으니까.
+      </p>
+    </div>
+
+    <div class="insert">
+      <h4>예상 결과 — 세 갈래</h4>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>시나리오</th><th class="num">확률(주관)</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>정상 착지</strong><br><span class="dim">coverage 1.0 · invalid 0 · acc 0.60~0.70</span></td>
+              <td class="num">55%</td>
+              <td class="dim">1층이 작동. 베이스라인 0.64 근처.<br>여기서부터 2층을 키운다.</td>
+            </tr>
+            <tr>
+              <td><strong>부분 실패</strong><br><span class="dim">coverage 0.9대 · invalid 1~5</span></td>
+              <td class="num">30%</td>
+              <td class="dim">특정 model_id 그룹만 예외.<br>폴백이 일부만 작동한 것.</td>
+            </tr>
+            <tr>
+              <td><strong>전멸</strong><br><span class="dim">coverage 0 · invalid 전건</span></td>
+              <td class="num">15%</td>
+              <td class="dim">계약 위반 아니면 타임아웃.<br>Docker 검증을 했다면 확률이 낮다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px">
+        0.60~0.70으로 잡은 근거: 로컬 28건에서 라벨 분포만 맞춘
+        <code>uncertainty-profiling</code>이 0.643이었다. 평활된 1층은 그보다 약간 나은
+        사전정보를 쓰므로 그 언저리가 중심값. 상한은 2층이 실제로 신호를 더할 때.
+      </p>
+      <p>
+        <strong>인샘플 0.93은 재현되지 않는다.</strong> S#6에서 확인한 대로 그중 10.8%p는
+        노이즈였고, 본선은 모델 구성도 문제도 다르다.
+        <strong>평활 후 0.821조차 낙관적</strong>이라고 봐야 한다 — 문제 여덟 개짜리 추정이니까.
+      </p>
+    </div>
+
+    <div class="speech">
+      <div class="who">[author]</div>
+      <div class="paren">(제출 카운터를 보며)</div>
+      <p>
+        1 / 100. 하루 10회. <em>제출은 실험이 아니라 확인이어야 한다.</em>
+        실험은 로컬에서 한다.
+      </p>
+    </div>
+  </section>
+
+  <div class="endcard">
+    <div class="t">제 1 장 끝</div>
+    <p>
+      2026년 8월 18일 · 제출 0 / 100 · 로컬 채점 4회<br>
+      고친 버그 1개 · 찾아낸 라벨 누출 1개 · 남긴 분석 스크립트 6개<br>
+      최고 로컬 점수 0.643 (남의 코드) · 자기 코드 아직 0줄<br><br>
+      <strong>제 2 장 예고 — 「본선은 언제 열리는가」</strong>
+    </p>
+  </div>
+
+</div>

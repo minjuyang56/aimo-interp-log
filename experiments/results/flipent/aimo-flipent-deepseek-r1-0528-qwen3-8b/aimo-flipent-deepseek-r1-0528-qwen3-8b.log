@@ -1,0 +1,161 @@
+[{"stream_name":"stdout","time":6.432906516,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 105.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.465412921,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 20.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.501746,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 34.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":23.357851275,"data":"WARNING: Skipping torchaudio as it is not installed.\n"}
+,{"stream_name":"stdout","time":23.41480178,"data":"[env] torchaudio 제거 확인\n"}
+,{"stream_name":"stdout","time":23.414837747,"data":"[env] model deepseek-ai/DeepSeek-R1-0528-Qwen3-8B · maxnew 1024 · batch 24 · nprob 0\n"}
+,{"stream_name":"stderr","time":53.957807755,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":56.055731837,"data":"[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='yarn': {'attn_factor'}\n"}
+,{"stream_name":"stderr","time":135.150986384,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [01:03\u003c01:03, 63.99s/it]\rFetching 2 files: 100%|██████████| 2/2 [01:17\u003c00:00, 34.33s/it]\rFetching 2 files: 100%|██████████| 2/2 [01:17\u003c00:00, 38.77s/it]\n"}
+,{"stream_name":"stderr","time":171.545050198,"data":"\rLoading weights:   0%|          | 0/399 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/399 [00:01\u003c08:26,  1.27s/it]\rLoading weights:   1%|          | 2/399 [00:07\u003c28:32,  4.31s/it]\rLoading weights:  28%|██▊       | 111/399 [00:07\u003c00:13, 20.95it/s]\rLoading weights:  38%|███▊      | 152/399 [00:08\u003c00:09, 25.93it/s]\rLoading weights:  45%|████▍     | 179/399 [00:09\u003c00:07, 30.26it/s]\rLoading weights:  50%|████▉     | 198/399 [00:09\u003c00:06, 32.16it/s]\rLoading weights:  53%|█████▎    | 212/399 [00:09\u003c00:05, 35.10it/s]\rLoading weights:  56%|█████▌    | 224/399 [00:11\u003c00:09, 18.14it/s]\rLoading weights:  58%|█████▊    | 232/399 [00:12\u003c00:09, 17.97it/s]\rLoading weights:  60%|█████▉    | 239/399 [00:13\u003c00:11, 13.63it/s]\rLoading weights:  62%|██████▏   | 246/399 [00:15\u003c00:14, 10.53it/s]\rLoading weights:  64%|██████▍   | 257/399 [00:16\u003c00:15,  9.20it/s]\rLoading weights:  67%|██████▋   | 268/399 [00:18\u003c00:15,  8.56it/s]\rLoading weights:  70%|██████▉   | 279/399 [00:19\u003c00:15,  7.96it/s]\rLoading weights:  73%|███████▎  | 290/399 [00:21\u003c00:13,  7.93it/s]\rLoading weights:  73%|███████▎  | 292/399 [00:21\u003c00:13,  8.12it/s]\rLoading weights:  75%|███████▌  | 301/399 [00:22\u003c00:13,  7.43it/s]\rLoading weights:  78%|███████▊  | 312/399 [00:24\u003c00:11,  7.29it/s]\rLoading weights:  81%|████████  | 323/399 [00:25\u003c00:10,  7.29it/s]\rLoading weights:  82%|████████▏ | 326/399 [00:25\u003c00:09,  7.99it/s]\rLoading weights:  84%|████████▎ | 334/399 [00:27\u003c00:09,  6.93it/s]\rLoading weights:  86%|████████▋ | 345/399 [00:28\u003c00:07,  7.17it/s]\rLoading weights:  87%|████████▋ | 347/399 [00:28\u003c00:06,  7.56it/s]\rLoading weights:  89%|████████▉ | 356/399 [00:30\u003c00:06,  7.04it/s]\rLoading weights:  90%|████████▉ | 358/399 [00:30\u003c00:05,  7.50it/s]\rLoading weights:  92%|█████████▏| 367/399 [00:31\u003c00:04,  7.04it/s]\rLoading weights:  95%|█████████▍| 378/399 [00:33\u003c00:02,  7.01it/s]\rLoading weights:  97%|█████████▋| 389/399 [00:35\u003c00:01,  7.05it/s]\rLoading weights: 100%|██████████| 399/399 [00:35\u003c00:00, 11.38it/s]\n"}
+,{"stream_name":"stdout","time":171.988531445,"data":"[entlens] deepseek-ai/DeepSeek-R1-0528-Qwen3-8B 로드 118s · quant fp16\n"}
+,{"stream_name":"stdout","time":171.988568152,"data":"[entlens] final_norm = model.norm\n"}
+,{"stream_name":"stdout","time":171.988571414,"data":"[entlens] 문제 47 · 층 36 · maxnew 1024 · batch 24\n"}
+,{"stream_name":"stdout","time":463.554092406,"data":"[entlens] 생성 24행 · 291s · 1024스텝 · 285 ms/step · 완주 0/24\n"}
+,{"stream_name":"stdout","time":793.802193359,"data":"[entlens] 생성 23행 · 330s · 1024스텝 · 322 ms/step · 완주 0/23\n"}
+,{"stream_name":"stdout","time":800.972517139,"data":"[entlens] 렌즈 5/47 · 7s\n"}
+,{"stream_name":"stdout","time":808.014444033,"data":"[entlens] 렌즈 10/47 · 14s\n"}
+,{"stream_name":"stdout","time":814.035163282,"data":"[entlens] 렌즈 15/47 · 20s\n"}
+,{"stream_name":"stdout","time":821.112940324,"data":"[entlens] 렌즈 20/47 · 27s\n"}
+,{"stream_name":"stdout","time":828.522882221,"data":"[entlens] 렌즈 25/47 · 35s\n"}
+,{"stream_name":"stdout","time":836.623438738,"data":"[entlens] 렌즈 30/47 · 43s\n"}
+,{"stream_name":"stdout","time":841.844535552,"data":"[entlens] 렌즈 35/47 · 48s\n"}
+,{"stream_name":"stdout","time":849.082674105,"data":"[entlens] 렌즈 40/47 · 55s\n"}
+,{"stream_name":"stdout","time":855.928087533,"data":"[entlens] 렌즈 45/47 · 62s\n"}
+,{"stream_name":"stdout","time":859.167751241,"data":"[entlens] 렌즈 47/47 · 65s\n"}
+,{"stream_name":"stdout","time":859.16928497,"data":"[entlens] 저장 /kaggle/working/entlens · meta {\"model\": \"deepseek-ai/DeepSeek-R1-0528-Qwen3-8B\", \"n_layers\": 36, \"maxnew\": 1024, \"batch\": 24, \"n_prob\": 47, \"quant\": \"fp16\", \"n_marks\": 0, \"finished\": 0, \"lens_ok\": 43, \"lens_gate_max\": 0.0009213388}\n"}
+,{"stream_name":"stdout","time":859.169303336,"data":"[entlens] 렌즈 게이트 통과 · 마지막층 vs 실제 로짓 최대차 9.213e-04\n"}
+,{"stream_name":"stdout","time":859.169309392,"data":"\n"}
+,{"stream_name":"stdout","time":859.169314473,"data":"===== pidx 0 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":859.169319681,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":859.169324908,"data":"I need to find three distinct integers a, b, and c that multiply to 17955 and are consecutive terms of an arithmetic sequence. Additionally, 3a + b, 3b + c, and 3c + a are consecutive terms of a geometric sequence. I need to find a + b + c.\n"}
+,{"stream_name":"stdout","time":859.169330193,"data":"\n"}
+,{"stream_name":"stdout","time":859.169351176,"data":"Since a, b, c are in arithmetic sequence, the difference between consecutive terms is constant. So, b - a = c - b, which means 2b = a + c.\n"}
+,{"stream_name":"stdout","time":859.169358256,"data":"\n"}
+,{"stream_name":"stdout","time":859.169362535,"data":"Also, abc = 17955.\n"}
+,{"stream_name":"stdout","time":859.169366636,"data":"\n"}
+,{"stream_name":"stdout","time":859.169370556,"data":"Now, for the geometric sequence part: 3a + b, 3b + c, 3c + a are in geometric sequence. That means the ratio between consecutive terms is constant. So, (3b + c) / (3a + b) = (3c + a) / (3b + c).\n"}
+,{"stream_name":"stdout","time":859.169375445,"data":"\n"}
+,{"stream_name":"stdout","time":859.169379405,"data":"Let me denote the common ratio as r, so:\n"}
+,{"stream_name":"stdout","time":859.169409195,"data":"\n"}
+,{"stream_name":"stdout","time":859.169413654,"data":"(3b + c) / (3a + b) = r\n"}
+,{"stream_name":"stdout","time":859.169417666,"data":"\n"}
+,{"stream_name":"stdout","time":859.169421426,"data":"And (3c + a) / (3b + c) = r\n"}
+,{"stream_name":"stdout","time":859.169425377,"data":"\n"}
+,{"stream_name":"stdout","time":859.169428583,"data":"So, (3b + c) / (3a + b) = (3c + a) / (3b + c)\n"}
+,{"stream_name":"stdout","time":859.169431788,"data":"\n"}
+,{"stream_name":"stdout","time":859.169434931,"data":"I can cross-multiply to get:\n"}
+,{"stream_name":"stdout","time":859.16943814,"data":"\n"}
+,{"stream_name":"stdout","time":859.169441218,"data":"(3b + c)^2 = (3a + b)(3c + a)\n"}
+,{"stream_name":"stdout","time":859.169444415,"data":"\n"}
+,{"stream_name":"stdout","time":859.1694475,"data":"Let me expand both sides.\n"}
+,{"stream_name":"stdout","time":859.169450713,"data":"\n"}
+,{"stream_name":"stdout","time":859.169453758,"data":"Left side: (3b + c)^2 = 9b^2 + 6bc + c^2\n"}
+,{"stream_name":"stdout","time":859.16945707,"data":"\n"}
+,{"stream_name":"stdout","time":859.169460106,"data":"Right side: (3a + b)(\n"}
+,{"stream_name":"stdout","time":859.169463228,"data":"\n"}
+,{"stream_name":"stdout","time":859.169466353,"data":"\n"}
+,{"stream_name":"stdout","time":859.169469551,"data":"===== pidx 1 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":859.169476428,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":859.169478721,"data":"I need to find how many positive integers n between 1 and 100 inclusive make the expression \\( x^{2n} + 1 + (x + 1)^{2n} \\) divisible by \\( x^2 + x + 1 \\). And I have to output the answer as an integer or NaN if there's no solution.\n"}
+,{"stream_name":"stdout","time":859.169481401,"data":"\n"}
+,{"stream_name":"stdout","time":859.169483783,"data":"First, I know that for a polynomial to be divisible by another, the roots of the divisor must also be roots of the dividend. So, if \\( x^2 + x + 1 \\) divides \\( x^{2n} + 1 + (x + 1)^{2n} \\), then the roots of \\( x^2 + x + 1 \\) should satisfy the equation \\( x^{2n} + 1 + (x + 1)^{2n} = 0 \\).\n"}
+,{"stream_name":"stdout","time":859.169486802,"data":"\n"}
+,{"stream_name":"stdout","time":859.16949,"data":"The roots of \\( x^2 + x + 1 = 0 \\) are the complex cube roots of unity, excluding 1. Let me recall: the cube roots of unity are solutions to \\( x^3 - 1 = 0 \\), which factors as \\( (x-1)(x^2 + x + 1) = 0 \\). So yes, the roots are the primitive cube roots of unity, often denoted by ω and ω², where ω = e^{2πi/3} = -1/2 + i√3/2, and ω² = e^{-2πi/3} = -1/2 - i√3/2, an\n"}
+,{"stream_name":"stdout","time":859.169505091,"data":"\n"}
+,{"stream_name":"stdout","time":859.169508776,"data":"\n"}
+,{"stream_name":"stdout","time":859.169512363,"data":"===== pidx 2 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":859.169516451,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":859.169525773,"data":"I need to find p(10) for a polynomial p(x) that satisfies p(1) = 210 and (x + 10) p(2x) = 8(x - 4) p(x + 6) for all real x. The answer should be an integer or NaN if no solution exists.\n"}
+,{"stream_name":"stdout","time":859.169529455,"data":"\n"}
+,{"stream_name":"stdout","time":859.169532601,"data":"First, since it's a polynomial and the equation holds for all x, I am considering that p(x) might be linear or something simple, but probably it's more complex because of the functional equation. Let me denote the equation:\n"}
+,{"stream_name":"stdout","time":859.169536389,"data":"\n"}
+,{"stream_name":"stdout","time":859.169539513,"data":"(x + 10) p(2x) = 8(x - 4) p(x + 6)\n"}
+,{"stream_name":"stdout","time":859.169547367,"data":"\n"}
+,{"stream_name":"stdout","time":859.169550554,"data":"I need to find p(10). I know p(1) = 210. Maybe I can find other values by plugging in specific x.\n"}
+,{"stream_name":"stdout","time":859.169553898,"data":"\n"}
+,{"stream_name":"stdout","time":859.169557078,"data":"Let me try x = 1. Then the equation becomes:\n"}
+,{"stream_name":"stdout","time":859.169560309,"data":"\n"}
+,{"stream_name":"stdout","time":859.16956353,"data":"(1 + 10) p(2*1) = 8(1 - 4) p(1 + 6)\n"}
+,{"stream_name":"stdout","time":859.169566881,"data":"\n"}
+,{"stream_name":"stdout","time":859.169569947,"data":"11 p(2) = 8*(-3) p(7)\n"}
+,{"stream_name":"stdout","time":859.169573129,"data":"\n"}
+,{"stream_name":"stdout","time":859.169576273,"data":"11 p(2) = -24 p(7)\n"}
+,{"stream_name":"stdout","time":859.169579496,"data":"\n"}
+,{"stream_name":"stdout","time":859.169592883,"data":"So p(2) and p(7) are related, but I don't know their values yet.\n"}
+,{"stream_name":"stdout","time":859.169597215,"data":"\n"}
+,{"stream_name":"stdout","time":859.169601094,"data":"Now, let me try x = 2.\n"}
+,{"stream_name":"stdout","time":859.169604902,"data":"\n"}
+,{"stream_name":"stdout","time":859.169608602,"data":"(2 + 10) p(4) = 8(2 - 4) p(8)\n"}
+,{"stream_name":"stdout","time":859.169611816,"data":"\n"}
+,{"stream_name":"stdout","time":859.169614916,"data":"12 p(4) = 8*(-2) p(8)\n"}
+,{"stream_name":"stdout","time":859.169618065,"data":"\n"}
+,{"stream_name":"stdout","time":859.169621086,"data":"12 p(4) = -16 p(8)\n"}
+,{"stream_name":"stdout","time":859.169624218,"data":"\n"}
+,{"stream_name":"stdout","time":859.169627281,"data":"Simplify: 3 p(4) = -4 p(8)\n"}
+,{"stream_name":"stdout","time":859.16963047,"data":"\n"}
+,{"stream_name":"stdout","time":859.169633507,"data":"Still not helpful.\n"}
+,{"stream_name":"stdout","time":859.169636631,"data":"\n"}
+,{"stream_name":"stdout","time":859.169639678,"data":"x = 4.\n"}
+,{"stream_name":"stdout","time":859.169642785,"data":"\n"}
+,{"stream_name":"stdout","time":859.169645843,"data":"\n"}
+,{"stream_name":"stdout","time":859.169648908,"data":"\n"}
+,{"stream_name":"stdout","time":859.169652005,"data":"===== pidx 3 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":859.169655331,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":859.169658515,"data":"I have this system of equations with complex numbers a, b, c:\n"}
+,{"stream_name":"stdout","time":859.169661934,"data":"\n"}
+,{"stream_name":"stdout","time":859.169669175,"data":"(a + 1)(b + 1)(c + 1) = 1,\n"}
+,{"stream_name":"stdout","time":859.169671354,"data":"\n"}
+,{"stream_name":"stdout","time":859.169674281,"data":"(a + 2)(b + 2)(c + 2) = 2,\n"}
+,{"stream_name":"stdout","time":859.169686816,"data":"\n"}
+,{"stream_name":"stdout","time":859.169690526,"data":"(a + 3)(b + 3)(c + 3) = 3.\n"}
+,{"stream_name":"stdout","time":859.169694238,"data":"\n"}
+,{"stream_name":"stdout","time":859.16969808,"data":"I need to find (a + 4)(b + 4)(c + 4). Since it's complex numbers, but the equations look symmetric, maybe a, b, c are related in a simple way. Perhaps they are roots of some polynomial or something.\n"}
+,{"stream_name":"stdout","time":859.16970218,"data":"\n"}
+,{"stream_name":"stdout","time":859.169705373,"data":"Let me denote s_k = (a + k)(b + k)(c + k) for k = 1,2,3, and I need s_4.\n"}
+,{"stream_name":"stdout","time":859.169708725,"data":"\n"}
+,{"stream_name":"stdout","time":859.169711828,"data":"So s_1 = 1, s_2 = 2, s_3 = 3, find s_4.\n"}
+,{"stream_name":"stdout","time":859.169718863,"data":"\n"}
+,{"stream_name":"stdout","time":859.169722096,"data":"Now, s_k is a product of linear terms. I recall that for three variables, the product (x + a)(x + b)(x + c) can be related to the elementary symmetric polynomials.\n"}
+,{"stream_name":"stdout","time":859.169725654,"data":"\n"}
+,{"stream_name":"stdout","time":859.169728723,"data":"But here, it's fixed a,b,c and varying x, but in this case, x is k, which is integer.\n"}
+,{"stream_name":"stdout","time":859.169732117,"data":"\n"}
+,{"stream_name":"stdout","time":859.16973583,"data":"I could think of a,b,c as roots of a cubic equation. Let me set t = x, and consider the polynomial whose roots are a,b,c.\n"}
+,{"stream_name":"stdout","time":859.169739351,"data":"\n"}
+,{"stream_name":"stdout","time":859.169742418,"data":"Define p(x) = (x - a)(x - b)(x - c).\n"}
+,{"stream_name":"stdout","time":859.169745645,"data":"\n"}
+,{"stream_name":"stdout","time":859.169748724,"data":"But I have produc\n"}
+,{"stream_name":"stdout","time":859.169751892,"data":"\n"}
+,{"stream_name":"stdout","time":859.169754988,"data":"\n"}
+,{"stream_name":"stdout","time":859.169761553,"data":"===== pidx 4 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":859.169764015,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stdout","time":859.169767101,"data":"I need to find the number of pairs of complex numbers (z1, z2) such that z1 times z2 is pure imaginary, z1 divided by z2 is real, and both have magnitude 1. Since they're complex numbers with magnitude 1, they lie on the unit circle. So, I can represent them as z1 = e^{iθ} and z2 = e^{iφ} for some real angles θ and φ.\n"}
+,{"stream_name":"stdout","time":859.169778711,"data":"\n"}
+,{"stream_name":"stdout","time":859.169782452,"data":"A complex number is pure imaginary if its real part is zero. So, for z1 z2 to be pure imaginary, the product should have no real part.\n"}
+,{"stream_name":"stdout","time":859.169786498,"data":"\n"}
+,{"stream_name":"stdout","time":859.169790725,"data":"z1 z2 = e^{iθ} * e^{iφ} = e^{i(θ+φ)} = cos(θ+φ) + i sin(θ+φ). For this to be pure imaginary, the real part must be zero, so cos(θ+φ) = 0.\n"}
+,{"stream_name":"stdout","time":859.169794994,"data":"\n"}
+,{"stream_name":"stdout","time":859.169798183,"data":"Also, z1 / z2 is real. z1 / z2 = e^{iθ} / e^{iφ} = e^{i(θ-φ)}. This is real if its imaginary part is zero, so sin(θ-φ) = 0.\n"}
+,{"stream_name":"stdout","time":859.169801752,"data":"\n"}
+,{"stream_name":"stdout","time":859.169804872,"data":"And both have magnitude 1, which is already satisfied by this representation.\n"}
+,{"stream_name":"stdout","time":859.169808234,"data":"\n"}
+,{"stream_name":"stdout","time":859.169811305,"data":"So, I have two conditions:\n"}
+,{"stream_name":"stdout","time":859.169814417,"data":"\n"}
+,{"stream_name":"stdout","time":859.169817426,"data":"1. cos(θ + φ) = 0\n"}
+,{"stream_name":"stdout","time":859.169820675,"data":"\n"}
+,{"stream_name":"stdout","time":859.16982375,"data":"2. sin(θ - φ) = 0\n"}
+,{"stream_name":"stdout","time":859.169826935,"data":"\n"}
+,{"stream_name":"stdout","time":859.169829935,"data":"And I need to find the num\n"}
+,{"stream_name":"stdout","time":859.169833171,"data":"\n"}
+,{"stream_name":"stdout","time":859.16983631,"data":"[즉답] pidx 0 · ans=' 105\\n\\nThe problem states' · int=105 · note=\n"}
+,{"stream_name":"stdout","time":859.169840118,"data":"[즉답] pidx 1 · ans=' 33\\nThe problem is to' · int=33 · note=\n"}
+,{"stream_name":"stdout","time":859.169843573,"data":"[즉답] pidx 2 · ans=' 1400\\n\\nThe equation' · int=1400 · note=\n"}
+,{"stream_name":"stdout","time":859.169853885,"data":"[즉답] pidx 3 · ans=' 4\\n\\nThe problem involves finding the' · int=4 · note=\n"}
+,{"stream_name":"stdout","time":859.169856632,"data":"[즉답] pidx 4 · ans=' 4\\n\\nThe problem asks for the' · int=4 · note=\n"}
+,{"stream_name":"stderr","time":866.321273493,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":866.321317956,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":866.616568728,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":866.616595505,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":867.412057861,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":868.538942462,"data":"[NbConvertApp] Writing 438591 bytes to __results__.html\n"}
+]

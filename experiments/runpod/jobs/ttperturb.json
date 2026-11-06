@@ -1,0 +1,13 @@
+{
+  "_why": "지휘 #TT-PERTURB (루프 R1) — 제출물 안에서 직접 흔들어 보는 판정을 공식 train-main-v2 문제단위 라벨 33문제에서 검증한다. 검증 잡이 제출 라이브러리 solutions/ttp/ttp_lib.py 를 그대로 import 하고 생성 엔진도 HF generate 로 같게 맞췄다 — vLLM 이 싸지만 그러면 '방법이 나쁘다' 와 '엔진이 달라서 나쁘다' 가 섞인다(#SUB-GEN2048 의 덮지 못한 것 1). 한 번 생성해서 체크포인트 0/256/512/1024 의 강제 즉답을 전부 저장하므로 CoT 예산 격자와 자기일관성 항이 추가 GPU 비용 0 으로 생긴다 → 루프 라운드 2~5 는 $0. 상설 규칙 ①(원문 전량 저장)·②(모델별 원문 로그 출력) 준수. 2026-10-18 수정: TTP_ALLOW_DOWNLOAD=1 — 파드에는 모델 캐시가 없어서 get_model 의 local_files_only=True 로는 4모델 전부 로드 실패한다(제출물은 오프라인 컨테이너라 기본값 유지). hf_transfer 로 55 GB 가중치 내려받기를 빠르게 한다. python3 -u 로 줄 단위 flush(파이프 버퍼링으로 36분을 날린 적이 있다). 2026-10-18 2차: 1차 실행이 OOM 으로 3분에 죽었다($0.38) — token_slots 가 KV 만 세고 프리필 활성값을 안 셌다(241 시퀀스 x 600 토큰 = 144k → MLP 중간값 10.47 GiB 요구). MAX_PREFILL_TOK 40000 토큰 상한 + 체크포인트별 칸 재계산 + OOM 배치 반감(_gen_safe) + expandable_segments 로 고쳤다. 칸은 추정이 아니라 실측 프롬프트 토큰 길이로 잰다. 2026-10-18 R3: r3_problems.json 추가 — Olmo T=1.0 자체 라벨 20문제(pidx 41~64). 그 묶음에는 gold 가 20/20 있어 의사정답 대체 없이 주최측 정의를 테스트타임에 잴 수 있다. 라벨·정답표는 파드에 보내지 않는다(누출 방지) — experiments/results/r3_labels.json 에만 둔다.",
+  "entry": "ttperturb.py",
+  "files": [
+    "solutions/ttp/ttp_lib.py",
+    "experiments/runpod/org33_problems.json",
+    "experiments/runpod/r3_problems.json"
+  ],
+  "flatten": true,
+  "disk_gb": 200,
+  "out": "/workspace/out",
+  "cmd": "set -e; export TTP_ALLOW_DOWNLOAD=1; export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True; python3 -V; python3 -m pip install -q 'transformers>=4.45' accelerate pandas pyarrow hf_transfer; export HF_HUB_ENABLE_HF_TRANSFER=1; python3 -c 'import torch,transformers;print(\"[단계] torch\",torch.__version__,\"tf\",transformers.__version__,\"cuda\",torch.cuda.is_available())'; python3 -u ttperturb.py --problems ${TTP_PROBS:-org33_problems.json} --cap ${TTP_CAP:-512} --samples ${TTP_SAMPLES:-3} ${TTP_ORDER:+--order \"$TTP_ORDER\"}"
+}

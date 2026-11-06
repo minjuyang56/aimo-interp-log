@@ -1,0 +1,17 @@
+Skywork 본실행 (M=100, cap 16384, k=4) — 슬라이스별·합산  [2026-10-08]
+  experiments: 41건  keys=['accepted', 'base_acc', 'base_acc_fin', 'gold', 'label', 'label_fin', 'level', 'max_drop', 'max_drop_fin', 'n_fin', 'n_hit', 'pidx', 'problem', 'subject']
+  experiments: 47건  keys=['accepted', 'base_acc', 'base_acc_fin', 'gold', 'label', 'label_fin', 'level', 'max_drop', 'max_drop_fin', 'n_fin', 'n_hit', 'pidx', 'problem', 'subject']
+
+[experiments] 라벨 41 · robust 29 / spurious 12 (29%)
+  label_fin: robust 34 / spurious 7 · 일치 36/41 = 88% · 뒤집힘 Counter({(False, True): 5})
+  base_acc 분포 {0.5: 3, 0.75: 5, 1.0: 33}
+
+[experiments] 라벨 47 · robust 33 / spurious 14 (30%)
+  label_fin: robust 42 / spurious 5 · 일치 36/47 = 77% · 뒤집힘 Counter({(False, True): 10, (True, False): 1})
+  base_acc 분포 {0.5: 4, 0.75: 1, 1.0: 42}
+
+[합산] 라벨 88 · robust 62 / spurious 26 (30%)
+  label_fin: robust 76 / spurious 12 · 일치 72/88 = 82% · 뒤집힘 Counter({(False, True): 15, (True, False): 1})
+  base_acc 분포 {0.5: 7, 0.75: 6, 1.0: 75}
+
+실측 시간: run0 31,277s(8.7h) · run50 28,413s(7.9h) · 합 16.6h  (선별 149~172 tok/s · 변형 168~176 tok/s)

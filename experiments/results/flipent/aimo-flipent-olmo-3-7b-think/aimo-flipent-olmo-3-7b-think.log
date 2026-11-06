@@ -1,0 +1,94 @@
+[{"stream_name":"stdout","time":6.338618299,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 92.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.380185036,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 17.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.420737201,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 35.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":24.355810302,"data":"WARNING: Skipping torchaudio as it is not installed.\n"}
+,{"stream_name":"stdout","time":24.416416538,"data":"[env] torchaudio 제거 확인\n"}
+,{"stream_name":"stdout","time":24.416459132,"data":"[env] model allenai/Olmo-3-7B-Think · maxnew 1024 · batch 11 · nprob 0\n"}
+,{"stream_name":"stderr","time":53.477776665,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":129.778774077,"data":"\rFetching 3 files:   0%|          | 0/3 [00:00\u003c?, ?it/s]\rFetching 3 files:  33%|███▎      | 1/3 [01:11\u003c02:23, 71.71s/it]\rFetching 3 files: 100%|██████████| 3/3 [01:13\u003c00:00, 19.20s/it]\rFetching 3 files: 100%|██████████| 3/3 [01:13\u003c00:00, 24.45s/it]\n"}
+,{"stream_name":"stderr","time":164.866568789,"data":"\rLoading weights:   0%|          | 0/355 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/355 [00:06\u003c39:48,  6.75s/it]\rLoading weights:   1%|          | 2/355 [00:07\u003c18:30,  3.15s/it]\rLoading weights:  21%|██        | 75/355 [00:07\u003c00:14, 19.30it/s]\rLoading weights:  30%|███       | 108/355 [00:08\u003c00:09, 24.75it/s]\rLoading weights:  37%|███▋      | 130/355 [00:10\u003c00:13, 17.16it/s]\rLoading weights:  41%|████      | 145/355 [00:12\u003c00:15, 13.63it/s]\rLoading weights:  44%|████▎     | 155/355 [00:14\u003c00:17, 11.63it/s]\rLoading weights:  46%|████▌     | 162/355 [00:15\u003c00:19,  9.77it/s]\rLoading weights:  47%|████▋     | 167/355 [00:15\u003c00:18, 10.12it/s]\rLoading weights:  48%|████▊     | 171/355 [00:16\u003c00:22,  8.10it/s]\rLoading weights:  50%|█████     | 178/355 [00:17\u003c00:17, 10.27it/s]\rLoading weights:  51%|█████▏    | 182/355 [00:17\u003c00:16, 10.74it/s]\rLoading weights:  54%|█████▎    | 190/355 [00:17\u003c00:12, 13.13it/s]\rLoading weights:  57%|█████▋    | 201/355 [00:17\u003c00:08, 18.95it/s]\rLoading weights:  59%|█████▉    | 210/355 [00:17\u003c00:05, 24.91it/s]\rLoading weights:  61%|██████    | 216/355 [00:18\u003c00:05, 25.47it/s]\rLoading weights:  63%|██████▎   | 223/355 [00:18\u003c00:04, 28.65it/s]\rLoading weights:  66%|██████▌   | 234/355 [00:18\u003c00:03, 33.08it/s]\rLoading weights:  69%|██████▉   | 245/355 [00:19\u003c00:05, 18.51it/s]\rLoading weights:  70%|███████   | 249/355 [00:19\u003c00:05, 18.47it/s]\rLoading weights:  72%|███████▏  | 256/355 [00:20\u003c00:05, 18.56it/s]\rLoading weights:  73%|███████▎  | 259/355 [00:21\u003c00:08, 11.54it/s]\rLoading weights:  75%|███████▌  | 267/355 [00:22\u003c00:09,  9.47it/s]\rLoading weights:  78%|███████▊  | 276/355 [00:22\u003c00:06, 11.30it/s]\rLoading weights:  78%|███████▊  | 278/355 [00:23\u003c00:09,  7.75it/s]\rLoading weights:  79%|███████▉  | 280/355 [00:24\u003c00:10,  7.12it/s]\rLoading weights:  81%|████████  | 287/355 [00:24\u003c00:06, 10.95it/s]\rLoading weights:  82%|████████▏ | 290/355 [00:25\u003c00:10,  6.39it/s]\rLoading weights:  82%|████████▏ | 292/355 [00:25\u003c00:09,  6.65it/s]\rLoading weights:  84%|████████▍ | 299/355 [00:25\u003c00:05, 10.99it/s]\rLoading weights:  85%|████████▌ | 303/355 [00:27\u003c00:07,  6.52it/s]\rLoading weights:  87%|████████▋ | 309/355 [00:27\u003c00:05,  8.43it/s]\rLoading weights:  88%|████████▊ | 312/355 [00:28\u003c00:07,  6.01it/s]\rLoading weights:  88%|████████▊ | 314/355 [00:28\u003c00:06,  5.92it/s]\rLoading weights:  90%|█████████ | 320/355 [00:29\u003c00:03,  9.10it/s]\rLoading weights:  91%|█████████ | 323/355 [00:30\u003c00:05,  5.52it/s]\rLoading weights:  92%|█████████▏| 325/355 [00:30\u003c00:04,  6.24it/s]\rLoading weights:  93%|█████████▎| 331/355 [00:30\u003c00:02, 10.18it/s]\rLoading weights:  94%|█████████▍| 334/355 [00:31\u003c00:03,  5.66it/s]\rLoading weights:  96%|█████████▋| 342/355 [00:32\u003c00:01,  8.13it/s]\rLoading weights:  97%|█████████▋| 344/355 [00:33\u003c00:01,  5.87it/s]\rLoading weights:  97%|█████████▋| 346/355 [00:33\u003c00:01,  5.61it/s]\rLoading weights: 100%|██████████| 355/355 [00:33\u003c00:00, 10.52it/s]\n"}
+,{"stream_name":"stdout","time":165.266466529,"data":"[entlens] allenai/Olmo-3-7B-Think 로드 112s · quant fp16\n"}
+,{"stream_name":"stdout","time":165.266517656,"data":"[entlens] final_norm = model.norm\n"}
+,{"stream_name":"stdout","time":165.266522429,"data":"[entlens] 문제 31 · 층 32 · maxnew 1024 · batch 11\n"}
+,{"stream_name":"stdout","time":309.836556972,"data":"[entlens] 생성 11행 · 145s · 1024스텝 · 141 ms/step · 완주 0/11\n"}
+,{"stream_name":"stdout","time":469.242194857,"data":"[entlens] 생성 11행 · 159s · 1024스텝 · 156 ms/step · 완주 0/11\n"}
+,{"stream_name":"stdout","time":616.084376913,"data":"[entlens] 생성 9행 · 147s · 1024스텝 · 143 ms/step · 완주 0/9\n"}
+,{"stream_name":"stdout","time":621.130354843,"data":"[entlens] 렌즈 5/31 · 5s\n"}
+,{"stream_name":"stdout","time":626.471082266,"data":"[entlens] 렌즈 10/31 · 10s\n"}
+,{"stream_name":"stdout","time":631.313937031,"data":"[entlens] 렌즈 15/31 · 15s\n"}
+,{"stream_name":"stdout","time":637.348921073,"data":"[entlens] 렌즈 20/31 · 21s\n"}
+,{"stream_name":"stdout","time":643.57265923,"data":"[entlens] 렌즈 25/31 · 27s\n"}
+,{"stream_name":"stdout","time":650.385474493,"data":"[entlens] 렌즈 30/31 · 34s\n"}
+,{"stream_name":"stdout","time":651.217060173,"data":"[entlens] 렌즈 31/31 · 35s\n"}
+,{"stream_name":"stdout","time":651.21841843,"data":"[entlens] 저장 /kaggle/working/entlens · meta {\"model\": \"allenai/Olmo-3-7B-Think\", \"n_layers\": 32, \"maxnew\": 1024, \"batch\": 11, \"n_prob\": 31, \"quant\": \"fp16\", \"n_marks\": 0, \"finished\": 0, \"lens_ok\": 30, \"lens_gate_max\": 0.0031673312}\n"}
+,{"stream_name":"stdout","time":651.21844389,"data":"[entlens] **경고** 마지막층 렌즈가 실제 로짓과 3.167e-03 어긋난다 — final_norm 가정을 다시 봐야 한다\n"}
+,{"stream_name":"stdout","time":651.218451841,"data":"\n"}
+,{"stream_name":"stdout","time":651.218457823,"data":"===== pidx 0 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":651.218465073,"data":"Okay, so I need to find the number of positive integers n between 1 and 100 such that the polynomial x^{2n} + 1 + (x + 1)^{2n} is divisible by x² + x + 1. Hmm, divisibility of polynomials. I remember that if a polynomial P(x) is divisible by another polynomial Q(x), then all the roots of Q(x) must be roots of P(x). So, maybe I should start by finding the roots of x² + x + 1 and then check when those roots satisfy the equation P(r) = 0, where P(x) is the given polynomial.\n"}
+,{"stream_name":"stdout","time":651.21848825,"data":"\n"}
+,{"stream_name":"stdout","time":651.218493118,"data":"First, let me recall that the roots of x² + x + 1 are the complex cube roots of unity except for 1. Let me denote one of them as ω. So ω satisfies ω² + ω + 1 = 0, and ω³ = 1. That's right, because the minimal polynomial for ω is x² + x + 1, and since ω³ - 1 = (ω - 1)(ω² + ω + 1), so ω³ = 1. So ω is a primitive 3rd root of unity.\n"}
+,{"stream_name":"stdout","time":651.218499218,"data":"\n"}
+,{"stream_name":"stdout","time":651.218503505,"data":"Therefore, if x² + x + 1 divides P(x) = x^{2n} + 1 + (x + 1)^{2n}, then substituting x = ω \n"}
+,{"stream_name":"stdout","time":651.21850768,"data":"\n"}
+,{"stream_name":"stdout","time":651.21851198,"data":"\n"}
+,{"stream_name":"stdout","time":651.218516018,"data":"===== pidx 1 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":651.218519888,"data":"Okay, so I need to solve this problem about a polynomial p(x) that satisfies two conditions: first, p(1) = 210, and second, for all real numbers x, the equation (x + 10)p(2x) = 8(x - 4)p(x + 6) holds. The goal is to find p(10). Alright, let's start breaking this down step by step.\n"}
+,{"stream_name":"stdout","time":651.218524353,"data":"\n"}
+,{"stream_name":"stdout","time":651.218528975,"data":"First, since p(x) is a polynomial, that gives us some structure to work with. Polynomials have finite degrees, and their behavior is determined by their coefficients and degree. The functional equation given relates the value of the polynomial at 2x to its value at x + 6, scaled by some factors involving x. Maybe I can figure out the degree of the polynomial first?\n"}
+,{"stream_name":"stdout","time":651.218533722,"data":"\n"}
+,{"stream_name":"stdout","time":651.218537327,"data":"Let me denote the degree of p(x) as n. Then, let's analyze the degrees of both sides of the equation (x + 10)p(2x) = 8(x - 4)p(x + 6).\n"}
+,{"stream_name":"stdout","time":651.218541253,"data":"\n"}
+,{"stream_name":"stdout","time":651.218544838,"data":"On the left-hand side (LHS), we have (x + 10) multiplied by p(2x). The degree of p(2x) is the same as the degree\n"}
+,{"stream_name":"stdout","time":651.21854882,"data":"\n"}
+,{"stream_name":"stdout","time":651.21855231,"data":"\n"}
+,{"stream_name":"stdout","time":651.21855576,"data":"===== pidx 2 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":651.218559794,"data":"Okay, so I have this problem here with three complex numbers a, b, and c. They satisfy these three equations:\n"}
+,{"stream_name":"stdout","time":651.218569861,"data":"\n"}
+,{"stream_name":"stdout","time":651.21857334,"data":"First, (a + 1)(b + 1)(c + 1) = 1,\n"}
+,{"stream_name":"stdout","time":651.218575788,"data":"\n"}
+,{"stream_name":"stdout","time":651.218579083,"data":"Second, (a + 2)(b + 2)(c + 2) = 2,\n"}
+,{"stream_name":"stdout","time":651.218597357,"data":"\n"}
+,{"stream_name":"stdout","time":651.2186017,"data":"Third, (a + 3)(b + 3)(c + 3) = 3.\n"}
+,{"stream_name":"stdout","time":651.218605986,"data":"\n"}
+,{"stream_name":"stdout","time":651.218609703,"data":"And I need to find the value of (a + 4)(b + 4)(c + 4). Hmm, interesting. Alright, let me think about how to approach this. Since the equations involve products of (a + n), (b + n), (c + n) for n = 1, 2, 3, and we need the next one for n = 4. Maybe there's a pattern or a recursive relation here?\n"}
+,{"stream_name":"stdout","time":651.218615245,"data":"\n"}
+,{"stream_name":"stdout","time":651.21861917,"data":"Let me denote P(n) = (a + n)(b + n)(c + n). Then the given equations are P(1) = 1, P(2) = 2, P(3) = 3, and we need to find P(4). So if I can find a way to express P(n) in terms of previous values, maybe I can find a formula for P(n) and then compute P(4).\n"}
+,{"stream_name":"stdout","time":651.218628975,"data":"\n"}
+,{"stream_name":"stdout","time":651.21863254,"data":"Since P(n) is a product of three linear terms in n, expanding it might give a cubic polynomial in n. Let me try expanding P(n):\n"}
+,{"stream_name":"stdout","time":651.218636499,"data":"\n"}
+,{"stream_name":"stdout","time":651.218639929,"data":"\n"}
+,{"stream_name":"stdout","time":651.218643517,"data":"\n"}
+,{"stream_name":"stdout","time":651.218646928,"data":"\n"}
+,{"stream_name":"stdout","time":651.21865038,"data":"===== pidx 3 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":651.218654334,"data":"Okay, so I need to find the number of pairs of complex numbers (z₁, z₂) that satisfy three conditions: their product z₁z₂ is pure imaginary, their quotient z₁/z₂ is real, and both have absolute value 1. Hmm, let me break this down step by step.\n"}
+,{"stream_name":"stdout","time":651.218658922,"data":"\n"}
+,{"stream_name":"stdout","time":651.218662514,"data":"First, since both z₁ and z₂ are complex numbers with |z₁| = |z₂| = 1, they lie on the unit circle in the complex plane. That means I can represent them in the form z = e^{iθ}, where θ is the angle (argument) of the complex number. So maybe I can write z₁ = e^{iα} and z₂ = e^{iβ}, where α and β are real numbers between 0 and 2π, right?\n"}
+,{"stream_name":"stdout","time":651.218667605,"data":"\n"}
+,{"stream_name":"stdout","time":651.218671164,"data":"Let me note that down:\n"}
+,{"stream_name":"stdout","time":651.21867796,"data":"\n"}
+,{"stream_name":"stdout","time":651.218685843,"data":"Let z₁ = e^{iα} and z₂ = e^{iβ}, with α, β ∈ [0, 2π).\n"}
+,{"stream_name":"stdout","time":651.218703056,"data":"\n"}
+,{"stream_name":"stdout","time":651.218707933,"data":"Now, the first condition is that z₁z₂ is pure imaginary. Let's compute z₁z₂:\n"}
+,{"stream_name":"stdout","time":651.218712543,"data":"\n"}
+,{"stream_name":"stdout","time":651.218716803,"data":"z₁z₂ = e^{iα} * e^{iβ} = e^{i(α + β)}.\n"}
+,{"stream_name":"stdout","time":651.218721325,"data":"\n"}
+,{"stream_name":"stdout","time":651.218724895,"data":"A complex number is pure imaginary if it has no real part, which means it's equal to i times a real number. In exponent\n"}
+,{"stream_name":"stdout","time":651.21872885,"data":"\n"}
+,{"stream_name":"stdout","time":651.218732378,"data":"\n"}
+,{"stream_name":"stdout","time":651.218735922,"data":"===== pidx 4 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":651.218741956,"data":"Okay, so I need to find the number of ordered pairs (a, b) of integers such that the absolute value of a + bi is less than or equal to 5. Hmm, let me think. First, I remember that for a complex number z = a + bi, the modulus |z| is calculated as the square root of (a² + b²). So the condition |a + bi| ≤ 5 translates to sqrt(a² + b²) ≤ 5. If I square both sides to eliminate the square root, that would give me a² + b² ≤ 25. So the problem is now to find all integer pairs (a, b) where the sum of their squares is less than or equal to 25. \n"}
+,{"stream_name":"stdout","time":651.218747655,"data":"\n"}
+,{"stream_name":"stdout","time":651.218751238,"data":"Alright, so I need to count all integer points (a, b) inside or on the circle of radius 5 centered at the origin in the coordinate plane. Since a and b are integers, this is a classic problem in number theory or lattice points. I think the way to approach this is to consider all possible integer values of a and b such that when you square them and add, the\n"}
+,{"stream_name":"stdout","time":651.218759902,"data":"\n"}
+,{"stream_name":"stdout","time":651.218763495,"data":"[즉답] pidx 0 · ans=' 33\\n\\nTo determine the number of' · int=33 · note=\n"}
+,{"stream_name":"stdout","time":651.218767555,"data":"[즉답] pidx 1 · ans=' 210\\n\\nThe problem involves a polynomial' · int=210 · note=\n"}
+,{"stream_name":"stdout","time":651.218771645,"data":"[즉답] pidx 2 · ans=' 4\\n\\nThe problem involves complex numbers' · int=4 · note=\n"}
+,{"stream_name":"stdout","time":651.218777615,"data":"[즉답] pidx 3 · ans=' 4\\n\\nThe problem requires finding the' · int=4 · note=\n"}
+,{"stream_name":"stdout","time":651.218785499,"data":"[즉답] pidx 4 · ans=' 101\\n\\nThe problem asks for the' · int=101 · note=\n"}
+,{"stream_name":"stderr","time":658.142169909,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":658.142200727,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":658.418583254,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":658.418610761,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":659.251396653,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":660.387768475,"data":"[NbConvertApp] Writing 438577 bytes to __results__.html\n"}
+]

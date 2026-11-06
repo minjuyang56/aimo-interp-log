@@ -1,0 +1,31 @@
+#TOK-AUDIT — vLLM DeepSeek 디토큰화 손상이 **라벨 집계까지 번졌나**. GPU 0. 텍스트 없이 판정한다.
+
+## (1) 코드 경로 — 동일하다
+`genlab_v2.Gen.samples()` **119행**: `return [[(o.text, o.finish_reason == "stop") for o in out.outputs] …]`
+`genlab_v2.acc_of()` **170행**: `n_hit = sum(1 for t, f in groups if f and same_answer(extract_answer(t), gold))`
+  → `acc_of` 가 받는 `t` 는 **vLLM 이 디토큰화한 `o.text` 그 자체**다. 호출부 세 곳(**231** 선별 ·
+    **250** 변형 · **328** 선별재사용 경로의 변형)이 모두 그 값을 쓴다.
+`jobs/genprobe.py` **62행** `Gen, chat = ns["Gen"], ns["chat"]` · **84행** `o.outputs[0].text`
+  → genprobe 는 **같은 클래스·같은 필드**를 썼고 거기서 41/41 손상이 관측됐다.
+  같은 파드·같은 이미지·같은 vllm 0.31.0·같은 모델이므로 **라벨 생성도 같은 손상 텍스트를 채점했다.**
+
+## (2) 텍스트가 없는데 어떻게 입증하나 — 자연실험
+손상은 **boxed 안에 선행 공백이 있을 때만** 터진다(`oxed{ 90}` → 추출 `Ġ90`). 그 습관은 문제마다
+고정적이므로, greedy 에서 손상된 문제는 k=8 샘플에서도 손상됐을 것이다. 따라서:
+  **greedy 가 Ġ 로 뒤집힌 문제군의 기록된 base_acc 가 그렇지 않은 문제군보다 낮아야 한다.**
+이건 라벨 파일에 저장된 수(base_acc)와 genprobe greedy 만으로 계산된다 — 버린 텍스트가 필요 없다.
+대조군: Skywork·Olmo 는 손상 0건이므로 같은 검정에서 차이가 없어야 한다.
+
+## (2) 자연실험 결과
+   DeepSeek  greedy 손상행 41/41 · Ġ로 뒤집힌 문제 **12**
+             기록된 base_acc: 뒤집힌 군 평균 **0.729** (n=12) vs 나머지 **0.716** (n=29) · 차 +0.014 · 맨-휘트니 단측 p = **0.5411**
+   Skywork   greedy 손상행 0/30 · Ġ로 뒤집힌 문제 **0**
+             뒤집힌 군이 없어 검정 불가 (대조군으로서 정상)
+   Olmo      greedy 손상행 0/31 · Ġ로 뒤집힌 문제 **0**
+             뒤집힌 군이 없어 검정 불가 (대조군으로서 정상)
+
+## 기록된 평균 base_acc vs greedy 복원 정답률 — 세 모델 비교
+   모델           기록 base_acc(k=8)     greedy 손상채점     greedy 복원채점
+   DeepSeek                0.720           0.683           0.976
+   Skywork                 0.942           0.767           0.767
+   Olmo                    0.859           0.806           0.806

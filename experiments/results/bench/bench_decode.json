@@ -1,0 +1,26 @@
+{
+  "A_baseline_pad": {
+    "sec": 2213.1,
+    "tokens": 53770,
+    "tok_s": 24.3,
+    "per_seq": 3.0
+  },
+  "B_static_cache": {
+    "sec": 3914.7,
+    "tokens": 50369,
+    "tok_s": 12.9,
+    "per_seq": 1.6
+  },
+  "C_generate_batch": {
+    "sec": 0.6,
+    "tokens": 0,
+    "tok_s": 0.0,
+    "per_seq": 0.0
+  },
+  "D_per_problem": {
+    "sec": 6077.3,
+    "tokens": 52885,
+    "tok_s": 8.7,
+    "per_seq": 1.1
+  }
+}

@@ -1,0 +1,1310 @@
+<title>AIMO getting-started 코드 구조도</title>
+<style>
+  :root {
+    --ground: #f5f6f8;
+    --surface: #ffffff;
+    --surface-2: #edeff3;
+    --ink: #161a20;
+    --ink-2: #545d6a;
+    --rule: #dbdfe6;
+    --rule-2: #c6ccd6;
+    --eval: #2a5db0;
+    --eval-soft: #e5edfa;
+    --sub: #8f5406;
+    --sub-soft: #f8efdc;
+    --danger: #a5291f;
+    --danger-soft: #fbe9e7;
+    --ok: #2c6742;
+    --ok-soft: #e4f0e8;
+
+    --display: "Palatino Linotype", Palatino, "Iowan Old Style", Georgia, serif;
+    --body: system-ui, "Segoe UI Variable Text", "Segoe UI", "Malgun Gothic",
+            -apple-system, "Helvetica Neue", sans-serif;
+    --mono: "Cascadia Mono", "Cascadia Code", Consolas, "JetBrains Mono",
+            ui-monospace, "D2Coding", monospace;
+
+    --measure: 68ch;
+    --wide: 1120px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0e1116;
+      --surface: #161a20;
+      --surface-2: #1c2129;
+      --ink: #dfe4ea;
+      --ink-2: #949eac;
+      --rule: #262c35;
+      --rule-2: #38404b;
+      --eval: #7fa7e8;
+      --eval-soft: #17233a;
+      --sub: #dda45f;
+      --sub-soft: #2b2317;
+      --danger: #ef8f84;
+      --danger-soft: #33201d;
+      --ok: #7cc39a;
+      --ok-soft: #17291f;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0e1116;
+    --surface: #161a20;
+    --surface-2: #1c2129;
+    --ink: #dfe4ea;
+    --ink-2: #949eac;
+    --rule: #262c35;
+    --rule-2: #38404b;
+    --eval: #7fa7e8;
+    --eval-soft: #17233a;
+    --sub: #dda45f;
+    --sub-soft: #2b2317;
+    --danger: #ef8f84;
+    --danger-soft: #33201d;
+    --ok: #7cc39a;
+    --ok-soft: #17291f;
+  }
+
+  :root[data-theme="light"] {
+    --ground: #f5f6f8;
+    --surface: #ffffff;
+    --surface-2: #edeff3;
+    --ink: #161a20;
+    --ink-2: #545d6a;
+    --rule: #dbdfe6;
+    --rule-2: #c6ccd6;
+    --eval: #2a5db0;
+    --eval-soft: #e5edfa;
+    --sub: #8f5406;
+    --sub-soft: #f8efdc;
+    --danger: #a5291f;
+    --danger-soft: #fbe9e7;
+    --ok: #2c6742;
+    --ok-soft: #e4f0e8;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: var(--wide);
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    padding: 56px 0 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .kicker {
+    font-family: var(--display);
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1.15;
+    font-weight: 660;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin-bottom: 16px;
+  }
+
+  h1 .latin { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; }
+
+  .standfirst {
+    max-width: var(--measure);
+    color: var(--ink-2);
+    font-size: 17px;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .fact { display: flex; flex-direction: column; gap: 2px; }
+
+  .fact dt {
+    font-size: 11.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+
+  .fact dd {
+    font-family: var(--display);
+    font-size: 21px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+  }
+
+  /* ---------- nav ---------- */
+
+  .toc {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--ground) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 8px;
+  }
+
+  .toc ol {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    overflow-x: auto;
+    padding: 11px 0;
+    font-size: 13.5px;
+    white-space: nowrap;
+  }
+
+  .toc a { color: var(--ink-2); text-decoration: none; }
+  .toc a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .toc a:focus-visible { outline: 2px solid var(--eval); outline-offset: 3px; border-radius: 2px; }
+
+  /* ---------- sections ---------- */
+
+  section { padding-top: 52px; }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 640;
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+
+  .lede { max-width: var(--measure); color: var(--ink-2); margin-bottom: 26px; }
+
+  p { max-width: var(--measure); }
+  section > p + p { margin-top: 14px; }
+
+  a.ref {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    color: var(--eval);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--eval) 35%, transparent);
+  }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.87em;
+    background: var(--surface-2);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* ---------- figures ---------- */
+
+  figure {
+    margin: 30px 0;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 22px 22px 16px;
+    overflow-x: auto;
+  }
+
+  figure svg { display: block; width: 100%; min-width: 620px; max-width: 100%; height: auto; }
+
+  figcaption {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--rule);
+    font-size: 13.5px;
+    color: var(--ink-2);
+    max-width: 76ch;
+  }
+
+  /* ---------- svg shared ---------- */
+
+  .n-box { fill: var(--surface-2); stroke: var(--rule-2); stroke-width: 1.2; }
+  .e-box { fill: var(--eval-soft); stroke: var(--eval); stroke-width: 1.3; }
+  .s-box { fill: var(--sub-soft); stroke: var(--sub); stroke-width: 1.3; }
+  .d-box { fill: var(--danger-soft); stroke: var(--danger); stroke-width: 1.5; }
+  .o-box { fill: var(--ok-soft); stroke: var(--ok); stroke-width: 1.3; }
+  .grp   { fill: none; stroke: var(--rule-2); stroke-width: 1.2; stroke-dasharray: 5 4; }
+
+  .t      { font-family: var(--body); font-size: 13px; fill: var(--ink); }
+  .t-mono { font-family: var(--mono); font-size: 12.5px; fill: var(--ink); }
+  .t-sm   { font-family: var(--body); font-size: 11.5px; fill: var(--ink-2); }
+  .t-lbl  { font-family: var(--body); font-size: 11px; fill: var(--ink-2);
+            letter-spacing: 0.07em; text-transform: uppercase; }
+  .t-eval { fill: var(--eval); }
+  .t-sub  { fill: var(--sub); }
+  .t-dgr  { fill: var(--danger); }
+  .t-ok   { fill: var(--ok); }
+  .b      { font-weight: 640; }
+
+  .edge  { stroke: var(--ink-2); stroke-width: 1.4; fill: none; }
+  .edge-d { stroke: var(--danger); stroke-width: 1.6; fill: none; }
+  .lead  { stroke: var(--rule-2); stroke-width: 1.1; fill: none; }
+
+  /* ---------- tree ---------- */
+
+  .tree {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin: 26px 0;
+    overflow-x: auto;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.95;
+    white-space: pre;
+    tab-size: 2;
+  }
+
+  .tree .dir { color: var(--ink); font-weight: 600; }
+  .tree .note { color: var(--ink-2); }
+  .tree .tag-e { color: var(--eval); }
+  .tree .tag-s { color: var(--sub); }
+
+  /* ---------- steps ---------- */
+
+  .steps { list-style: none; counter-reset: step; margin: 26px 0; }
+
+  .steps > li {
+    counter-increment: step;
+    position: relative;
+    padding: 0 0 22px 58px;
+    border-left: 1px solid var(--rule);
+    margin-left: 17px;
+  }
+
+  .steps > li:last-child { border-left-color: transparent; padding-bottom: 0; }
+
+  .steps > li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: -17px;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--rule-2);
+    font-family: var(--display);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-2);
+  }
+
+  .steps h3 { margin-top: 4px; }
+  .steps p { color: var(--ink-2); font-size: 14.5px; }
+
+  /* ---------- tables ---------- */
+
+  .tablewrap { overflow-x: auto; margin: 26px 0; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 640px;
+    font-size: 14px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    font-weight: 600;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--rule-2);
+    background: var(--surface-2);
+    white-space: nowrap;
+  }
+
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.mono, th.mono { font-family: var(--mono); font-size: 12.5px; white-space: nowrap; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  td.dim { color: var(--ink-2); }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+  .pill-e { background: var(--eval-soft); color: var(--eval); }
+  .pill-s { background: var(--sub-soft); color: var(--sub); }
+  .pill-d { background: var(--danger-soft); color: var(--danger); }
+  .pill-o { background: var(--ok-soft); color: var(--ok); }
+
+  /* ---------- code block ---------- */
+
+  pre.code {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--sub);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 22px 0;
+    overflow-x: auto;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  pre.code .c { color: var(--ink-2); }
+  pre.code .k { color: var(--eval); }
+
+  /* ---------- callout ---------- */
+
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--danger);
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin: 24px 0;
+  }
+
+  .callout.ok { border-left-color: var(--ok); }
+  .callout h3 { margin-bottom: 6px; }
+  .callout p { color: var(--ink-2); font-size: 14.5px; max-width: 74ch; }
+  .callout p + p { margin-top: 10px; }
+
+  /* ---------- two-up ---------- */
+
+  .duo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    margin: 26px 0;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 18px 20px;
+  }
+
+  .card .t-lbl { display: block; margin-bottom: 8px; font-size: 11px; }
+  .card p { font-size: 14.5px; color: var(--ink-2); max-width: none; }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="kicker">AIMO Interpretability Challenge · getting-started</div>
+    <h1>이 저장소는 어떻게 돌아가는가</h1>
+    <p class="standfirst">
+      파일 하나하나가 무슨 일을 하고, 누가 누구를 부르고, 실행하면 어떤 순서로 흘러가는지.
+      아래 내용은 전부 <code>C:\side\getting-started</code>에서 실제로 실행해 확인한 것입니다.
+    </p>
+    <dl class="facts">
+      <div class="fact"><dt>파이썬 파일</dt><dd>19개</dd></div>
+      <div class="fact"><dt>검증 케이스</dt><dd>28건</dd></div>
+      <div class="fact"><dt>예제 솔루션</dt><dd>3개</dd></div>
+      <div class="fact"><dt>저장소 테스트</dt><dd>20 passed</dd></div>
+      <div class="fact"><dt>실행 시간 제한</dt><dd>3600초</dd></div>
+    </dl>
+  </header>
+
+  <nav class="toc" aria-label="목차">
+    <ol>
+      <li><a href="#overview">전체 그림</a></li>
+      <li><a href="#map">파일 지도</a></li>
+      <li><a href="#order">실행 순서</a></li>
+      <li><a href="#deps">의존 관계</a></li>
+      <li><a href="#contract">계약</a></li>
+      <li><a href="#probe">trained-probe 내부</a></li>
+      <li><a href="#uncertainty">uncertainty-profiling 내부</a></li>
+      <li><a href="#compare">두 방법 비교</a></li>
+      <li><a href="#classes">클래스</a></li>
+      <li><a href="#problems">확인된 문제</a></li>
+    </ol>
+  </nav>
+
+  <!-- ================= 1 ================= -->
+  <section id="overview">
+    <h2>전체 그림</h2>
+    <p class="lede">
+      저장소는 두 종류의 코드로 나뉩니다. <span style="color:var(--eval);font-weight:600">채점하는 쪽</span>은
+      대회 주최측 코드이고 당신은 손대지 않습니다.
+      <span style="color:var(--sub);font-weight:600">채점당하는 쪽</span>이 당신이 만들어 제출할 코드입니다.
+      이 경계가 저장소 구조 전체를 결정합니다.
+    </p>
+
+    <figure>
+      <svg viewBox="0 0 1000 340" role="img" aria-label="run_local.py가 ingestion.py와 scoring.py를 각각 별도 프로세스로 띄우고, 그 사이를 predictions.jsonl 파일이 잇는 흐름도">
+        <defs>
+          <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+
+        <!-- inputs -->
+        <rect class="n-box" x="8" y="40" width="152" height="52" rx="4"/>
+        <text class="t-mono" x="84" y="61" text-anchor="middle">cases.jsonl</text>
+        <text class="t-sm" x="84" y="79" text-anchor="middle">문제 28건 · 정답 없음</text>
+
+        <rect class="n-box" x="8" y="215" width="152" height="52" rx="4"/>
+        <text class="t-mono" x="84" y="236" text-anchor="middle">labels.jsonl</text>
+        <text class="t-sm" x="84" y="254" text-anchor="middle">정답 28건</text>
+
+        <!-- ingestion subprocess -->
+        <rect class="e-box" x="200" y="16" width="248" height="168" rx="5"/>
+        <text class="t-lbl t-eval" x="216" y="38">별도 프로세스 ①</text>
+        <text class="t-mono b" x="216" y="60">ingestion.py</text>
+        <text class="t-sm" x="216" y="80">load_cases → load_solution</text>
+        <text class="t-sm" x="216" y="97">→ model_id 별로 묶기</text>
+
+        <rect class="s-box" x="216" y="110" width="216" height="58" rx="4"/>
+        <text class="t-lbl t-sub" x="228" y="128">당신이 제출한 코드</text>
+        <text class="t-mono b t-sub" x="228" y="150">are_robust(model_id, problems)</text>
+
+        <!-- predictions -->
+        <rect class="n-box" x="500" y="58" width="168" height="56" rx="4"/>
+        <text class="t-sm" x="584" y="78" text-anchor="middle">tmp/input/res/</text>
+        <text class="t-mono" x="584" y="98" text-anchor="middle">predictions.jsonl</text>
+
+        <!-- copied reference -->
+        <rect class="n-box" x="500" y="212" width="168" height="56" rx="4"/>
+        <text class="t-sm" x="584" y="232" text-anchor="middle">tmp/input/ref/</text>
+        <text class="t-mono" x="584" y="252" text-anchor="middle">labels.jsonl</text>
+
+        <!-- scoring subprocess -->
+        <rect class="e-box" x="722" y="92" width="210" height="106" rx="5"/>
+        <text class="t-lbl t-eval" x="738" y="114">별도 프로세스 ②</text>
+        <text class="t-mono b" x="738" y="136">scoring.py</text>
+        <text class="t-sm" x="738" y="156">예측과 정답 대조</text>
+        <text class="t-sm" x="738" y="173">accuracy / coverage</text>
+
+        <!-- scores -->
+        <rect class="o-box" x="745" y="250" width="164" height="56" rx="4"/>
+        <text class="t-sm" x="827" y="270" text-anchor="middle">tmp/output/</text>
+        <text class="t-mono" x="827" y="290" text-anchor="middle">scores.json</text>
+
+        <g color="var(--ink-2)">
+          <line class="edge" x1="160" y1="66" x2="194" y2="66" marker-end="url(#a1)"/>
+          <text class="t-sm" x="177" y="56" text-anchor="middle">읽기</text>
+
+          <path class="edge" d="M 160 241 L 494 241" marker-end="url(#a1)"/>
+          <text class="t-sm" x="320" y="232" text-anchor="middle">그대로 복사 (copytree)</text>
+
+          <path class="edge" d="M 448 140 L 472 140 L 472 86 L 494 86" marker-end="url(#a1)"/>
+          <text class="t-sm" x="452" y="112" text-anchor="start">쓰기</text>
+
+          <path class="edge" d="M 668 86 L 694 86 L 694 122 L 716 122" marker-end="url(#a1)"/>
+          <path class="edge" d="M 668 240 L 694 240 L 694 168 L 716 168" marker-end="url(#a1)"/>
+
+          <line class="edge" x1="827" y1="198" x2="827" y2="244" marker-end="url(#a1)"/>
+        </g>
+      </svg>
+      <figcaption>
+        <code>run_local.py</code>는 아무것도 직접 채점하지 않습니다. 임시 디렉터리를 만들고
+        두 개의 <strong>별도 파이썬 프로세스</strong>를 순서대로 띄운 뒤, 마지막에 나온
+        <code>scores.json</code>만 읽어서 출력합니다
+        (<a class="ref" href="#">scripts/run_local.py:46-66</a>).
+        두 프로세스가 서로 아는 유일한 통로는 <code>predictions.jsonl</code> 파일 하나입니다.
+      </figcaption>
+    </figure>
+
+    <p>
+      이 구조가 중요한 이유는 <strong>Codabench 서버에서도 완전히 똑같이 돌아가기 때문</strong>입니다.
+      로컬의 <code>run_local.py</code>가 하는 일을 서버에서는 Codabench 플랫폼이 대신 합니다.
+      그래서 로컬에서 통과하면 서버에서도 통과한다는 보장이 생깁니다 — 단, 환경이 같을 때만.
+    </p>
+  </section>
+
+  <!-- ================= 2 ================= -->
+  <section id="map">
+    <h2>파일 지도</h2>
+    <p class="lede">
+      19개 파이썬 파일이 네 덩어리로 나뉩니다. 색으로 소유권을 표시했습니다.
+    </p>
+
+    <div class="tree">
+<span class="dir">getting-started/</span>
+├── <span class="dir">components/</span>              <span class="note">← Codabench가 실행하는 채점기. <span class="tag-e">건드리지 않음</span></span>
+│   ├── <span class="dir">ingestion_program/</span>
+│   │   ├── ingestion.py     <span class="note">당신 코드를 불러 실행하고 예측을 파일로 씀</span>
+│   │   └── metadata.yaml
+│   └── <span class="dir">scoring_program/</span>
+│       ├── scoring.py       <span class="note">예측 파일과 정답을 대조해 점수를 냄</span>
+│       └── metadata.yaml
+│
+├── <span class="dir">scripts/</span>                 <span class="note">← 로컬 개발 도구. <span class="tag-e">제출물에 포함 안 됨</span></span>
+│   ├── import_hf_dataset.py <span class="note">허깅페이스에서 검증 데이터 28건 내려받기</span>
+│   ├── run_local.py         <span class="note">채점기 두 개를 순서대로 띄우는 러너</span>
+│   └── build.py             <span class="note">제출용 ZIP 만들기</span>
+│
+├── <span class="dir">solutions/</span>               <span class="note">← <span class="tag-s">여기가 당신 영역</span>. 복사해서 고치면 됨</span>
+│   ├── <span class="dir">always-true/</span>
+│   │   └── solution.py      <span class="note">무조건 True. 17줄짜리 최소 예제</span>
+│   ├── <span class="dir">trained-probe/</span>
+│   │   ├── solution.py      <span class="note">진입점. 8줄. 아래로 위임만 함</span>
+│   │   ├── probe_inference.py <span class="note">실제 구현 360줄</span>
+│   │   └── <span class="dir">probe_artifacts/</span>
+│   │       └── probe_artifact.pkl  <span class="note">학습된 프로브 54MB</span>
+│   └── <span class="dir">uncertainty-profiling/</span>
+│       ├── solution.py      <span class="note">진입점. 17줄</span>
+│       ├── <span class="dir">uncertainty_profile/</span>  <span class="note">패키지 6개 모듈</span>
+│       │   ├── __init__.py
+│       │   ├── config.py       <span class="note">특징 14개의 이름과 순서, 생성 설정</span>
+│       │   ├── artifact.py     <span class="note">joblib 아티팩트 로드와 검증</span>
+│       │   ├── extraction.py   <span class="note">모델 생성 + 토큰별 확신도 수집</span>
+│       │   ├── metrics.py      <span class="note">확신도 통계 계산</span>
+│       │   └── inference.py    <span class="note">위 넷을 엮는 실행 흐름</span>
+│       ├── <span class="dir">uncertainty_artifacts/</span>
+│       │   └── deepseek-ai_DeepSeek-R1-0528-Qwen3-8B.joblib
+│       └── <span class="dir">scripts/</span>          <span class="note">학습용. 제출 시엔 안 쓰임</span>
+│
+├── <span class="dir">tests/</span>                   <span class="note">20개 테스트, 전부 통과</span>
+├── <span class="dir">data/val-sample/</span>         <span class="note">임포트해서 생김. git에는 없음</span>
+├── <span class="dir">dist/</span>                    <span class="note">build.py 결과물 ZIP</span>
+├── Dockerfile.competition   <span class="note">서버 환경 그대로 재현하는 이미지</span>
+└── pyproject.toml           <span class="note">서버와 똑같은 버전으로 핀 고정</span>
+    </div>
+
+    <div class="callout ok">
+      <h3>구조가 말해주는 것</h3>
+      <p>
+        두 예제 솔루션 모두 <code>solution.py</code>가 <strong>10줄 안팎</strong>입니다. 진짜 코드는 옆 파일에 있죠.
+        일부러 그렇게 만든 겁니다 — 채점기가 검사하는 건 <code>solution.py</code>의 함수 하나뿐이라,
+        그 파일을 얇게 유지하면 계약을 어길 일이 없습니다.
+        당신도 이 패턴을 따르는 게 안전합니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 3 ================= -->
+  <section id="order">
+    <h2>실행 순서</h2>
+    <p class="lede">
+      <code>uv run scripts/run_local.py solutions/trained-probe</code> 한 줄을 치면 벌어지는 일을
+      순서대로 따라가 봅니다. 서버에서도 3번부터는 동일합니다.
+    </p>
+
+    <ol class="steps">
+      <li>
+        <h3>임시 작업장을 만든다</h3>
+        <p>
+          <code>tempfile.TemporaryDirectory()</code>로 폴더를 하나 파고, 정답 파일
+          <code>labels.jsonl</code>을 그 안 <code>input/ref/</code>로 통째로 복사합니다.
+          이 폴더는 실행이 끝나면 사라집니다.
+          <a class="ref" href="#">run_local.py:37-44</a>
+        </p>
+      </li>
+      <li>
+        <h3>첫 번째 프로세스: 예측 수집</h3>
+        <p>
+          <code>ingestion.py</code>를 새 파이썬 프로세스로 띄웁니다. 인자는 세 개 —
+          입력 폴더, 출력 폴더, 그리고 <strong>제출물 폴더</strong>.
+          <a class="ref" href="#">run_local.py:46-55</a>
+        </p>
+      </li>
+      <li>
+        <h3>입력을 읽고 형식을 깐깐하게 검사한다</h3>
+        <p>
+          <code>load_cases()</code>가 28줄을 한 줄씩 읽으며 id 중복, model_id 누락,
+          <code>problem</code> 키가 정확히 <code>original_problem</code>과
+          <code>permutation_type</code> 둘뿐인지까지 확인합니다. 하나라도 어긋나면 즉시 중단.
+          <a class="ref" href="#">ingestion.py:35-66</a>
+        </p>
+      </li>
+      <li>
+        <h3>당신의 solution.py를 메모리로 불러온다</h3>
+        <p>
+          <code>importlib.util.spec_from_file_location</code>으로 파일을 직접 로드합니다.
+          그리고 <code>are_robust</code>의 <strong>함수 서명을 런타임에 검사</strong>합니다 —
+          인자 이름, 순서, 타입 힌트, 반환 타입까지 전부. 하나라도 다르면 거부됩니다.
+          <a class="ref" href="#">ingestion.py:69-124</a>
+        </p>
+      </li>
+      <li>
+        <h3>같은 모델끼리 묶는다</h3>
+        <p>
+          28건을 <code>model_id</code>별로 그룹화합니다. 우리 데이터에선 7개 그룹이 나왔습니다.
+          <code>are_robust</code>는 그룹마다 <strong>한 번씩, 총 7번</strong> 호출됩니다.
+          모델을 한 번만 로드하고 여러 문제를 처리하라는 뜻입니다.
+          <a class="ref" href="#">ingestion.py:146-148</a>
+        </p>
+      </li>
+      <li>
+        <h3>호출하고, 결과를 검사한다</h3>
+        <p>
+          반환값이 <code>list</code>인지, 길이가 입력과 같은지, 원소가 전부 진짜
+          <code>bool</code>인지(넘파이 <code>bool_</code>이나 <code>1/0</code>은 탈락) 확인합니다.
+          <strong>예외가 나면 조용히 삼키고</strong> 그 그룹 전체를 <code>valid=False</code>로 처리합니다 —
+          에러 메시지는 어디에도 남지 않습니다.
+          <a class="ref" href="#">ingestion.py:156-179</a>
+        </p>
+      </li>
+      <li>
+        <h3>예측을 파일로 쓴다</h3>
+        <p>
+          <code>predictions.jsonl</code>에 케이스별로 <code>{id, is_robust, valid}</code> 한 줄씩.
+          여기서 첫 프로세스는 끝납니다.
+          <a class="ref" href="#">ingestion.py:181-190</a>
+        </p>
+      </li>
+      <li>
+        <h3>두 번째 프로세스: 채점</h3>
+        <p>
+          <code>scoring.py</code>가 새로 뜹니다. <code>ref/</code>에서 정답을,
+          <code>res/</code>에서 예측을 읽어 대조합니다. 당신 코드는 이 프로세스에
+          <strong>아예 로드되지 않습니다</strong>.
+          <a class="ref" href="#">scoring.py:112-117</a>
+        </p>
+      </li>
+      <li>
+        <h3>점수를 낸다</h3>
+        <p>
+          <code>accuracy</code>의 분모는 <strong>전체 28건</strong>이지 맞힌 것만이 아닙니다.
+          즉 예외로 날린 케이스는 오답과 똑같이 정확도를 깎습니다.
+          <a class="ref" href="#">scoring.py:76-109</a>
+        </p>
+      </li>
+      <li>
+        <h3>출력하고 작업장을 지운다</h3>
+        <p>
+          <code>run_local.py</code>가 <code>scores.json</code>을 읽어 화면에 찍고,
+          임시 폴더는 사라집니다.
+          <a class="ref" href="#">run_local.py:65-66</a>
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= 4 ================= -->
+  <section id="deps">
+    <h2>의존 관계</h2>
+    <p class="lede">
+      누가 누구를 import 하는가. 왼쪽 끝의 채점기는 오직 <code>solution.py</code> 하나만 압니다 —
+      그 뒤로 뭐가 있든 상관하지 않습니다.
+    </p>
+
+    <figure>
+      <svg viewBox="0 0 1010 385" role="img" aria-label="ingestion.py가 두 솔루션의 solution.py만 로드하고, 각 solution.py가 자기 구현 모듈과 아티팩트로 뻗어나가는 의존 그래프">
+        <defs>
+          <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+
+        <text class="t-lbl t-sub" x="200" y="22">solutions/trained-probe</text>
+
+        <!-- group A -->
+        <rect class="s-box" x="200" y="34" width="158" height="46" rx="4"/>
+        <text class="t-mono b" x="279" y="55" text-anchor="middle">solution.py</text>
+        <text class="t-sm" x="279" y="71" text-anchor="middle">8줄 · 위임만</text>
+
+        <rect class="n-box" x="404" y="34" width="176" height="46" rx="4"/>
+        <text class="t-mono" x="492" y="55" text-anchor="middle">probe_inference.py</text>
+        <text class="t-sm" x="492" y="71" text-anchor="middle">360줄</text>
+
+        <rect class="n-box" x="648" y="12" width="158" height="42" rx="4"/>
+        <text class="t-mono" x="727" y="30" text-anchor="middle">probe_artifact.pkl</text>
+        <text class="t-sm" x="727" y="46" text-anchor="middle">54 MB · pickle</text>
+
+        <rect class="n-box" x="648" y="70" width="158" height="42" rx="4"/>
+        <text class="t-mono" x="727" y="88" text-anchor="middle">torch · transformers</text>
+        <text class="t-sm" x="727" y="104" text-anchor="middle">numpy</text>
+
+        <!-- group B -->
+        <text class="t-lbl t-sub" x="200" y="172">solutions/uncertainty-profiling</text>
+
+        <rect class="s-box" x="200" y="184" width="158" height="46" rx="4"/>
+        <text class="t-mono b" x="279" y="205" text-anchor="middle">solution.py</text>
+        <text class="t-sm" x="279" y="221" text-anchor="middle">17줄 · 위임만</text>
+
+        <rect class="n-box" x="404" y="245" width="176" height="46" rx="4"/>
+        <text class="t-mono" x="492" y="266" text-anchor="middle">inference.py</text>
+        <text class="t-sm" x="492" y="282" text-anchor="middle">흐름 조립</text>
+
+        <rect class="n-box" x="648" y="185" width="150" height="42" rx="4"/>
+        <text class="t-mono" x="723" y="203" text-anchor="middle">artifact.py</text>
+        <text class="t-sm" x="723" y="219" text-anchor="middle">로드 · 검증</text>
+
+        <rect class="n-box" x="648" y="247" width="150" height="42" rx="4"/>
+        <text class="t-mono" x="723" y="265" text-anchor="middle">extraction.py</text>
+        <text class="t-sm" x="723" y="281" text-anchor="middle">생성 · 수집</text>
+
+        <rect class="n-box" x="648" y="309" width="150" height="42" rx="4"/>
+        <text class="t-mono" x="723" y="327" text-anchor="middle">config.py</text>
+        <text class="t-sm" x="723" y="343" text-anchor="middle">특징 14개 순서</text>
+
+        <rect class="n-box" x="850" y="185" width="150" height="42" rx="4"/>
+        <text class="t-mono" x="925" y="203" text-anchor="middle">*.joblib</text>
+        <text class="t-sm" x="925" y="219" text-anchor="middle">1 MB · 회귀모델</text>
+
+        <rect class="n-box" x="850" y="247" width="150" height="42" rx="4"/>
+        <text class="t-mono" x="925" y="265" text-anchor="middle">metrics.py</text>
+        <text class="t-sm" x="925" y="281" text-anchor="middle">통계 계산</text>
+
+        <!-- ingestion -->
+        <rect class="e-box" x="8" y="122" width="148" height="72" rx="5"/>
+        <text class="t-lbl t-eval" x="22" y="143">채점기</text>
+        <text class="t-mono b" x="22" y="164">ingestion.py</text>
+        <text class="t-sm" x="22" y="182">solution.py만 로드</text>
+
+        <g color="var(--ink-2)">
+          <path class="edge" d="M 156 158 L 178 158 L 178 57 L 194 57" marker-end="url(#a2)"/>
+          <path class="edge" d="M 156 158 L 178 158 L 178 207 L 194 207" marker-end="url(#a2)"/>
+
+          <line class="edge" x1="358" y1="57" x2="398" y2="57" marker-end="url(#a2)"/>
+          <path class="edge" d="M 580 57 L 616 57 L 616 33 L 642 33" marker-end="url(#a2)"/>
+          <path class="edge" d="M 580 57 L 616 57 L 616 91 L 642 91" marker-end="url(#a2)"/>
+
+          <path class="edge" d="M 358 207 L 380 207 L 380 268 L 398 268" marker-end="url(#a2)"/>
+          <path class="edge" d="M 580 268 L 614 268 L 614 206 L 642 206" marker-end="url(#a2)"/>
+          <line class="edge" x1="580" y1="268" x2="642" y2="268" marker-end="url(#a2)"/>
+          <path class="edge" d="M 580 268 L 614 268 L 614 330 L 642 330" marker-end="url(#a2)"/>
+
+          <line class="edge" x1="798" y1="206" x2="844" y2="206" marker-end="url(#a2)"/>
+          <line class="edge" x1="798" y1="268" x2="844" y2="268" marker-end="url(#a2)"/>
+        </g>
+      </svg>
+      <figcaption>
+        화살표는 “왼쪽이 오른쪽을 import 하거나 읽는다”는 뜻입니다.
+        채점기에서 뻗은 두 화살표는 <code>import</code>가 아니라
+        <code>importlib.util.spec_from_file_location</code>으로 <strong>파일 경로를 직접 지정해 로드</strong>하는
+        것이라, ZIP 루트에 <code>solution.py</code>가 없으면 여기서 끊깁니다.
+        <code>config.py</code>가 오른쪽 끝에 있는 이유는 특징 14개의 <strong>순서</strong>를
+        학습과 추론이 똑같이 써야 하기 때문입니다.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= 5 ================= -->
+  <section id="contract">
+    <h2>계약: 이 함수 하나</h2>
+    <p class="lede">
+      저장소 전체가 이 한 줄을 중심으로 조직돼 있습니다. 채점기가 런타임에 서명을 검사하므로
+      <strong>타입 힌트까지 글자 그대로</strong> 맞아야 합니다.
+    </p>
+
+    <pre class="code"><span class="c"># solution.py — ZIP 루트에 있어야 함</span>
+<span class="k">def</span> are_robust(model_id: <span class="k">str</span>, problems: <span class="k">list</span>[<span class="k">str</span>]) -&gt; <span class="k">list</span>[<span class="k">bool</span>]:
+    <span class="k">return</span> [<span class="k">True</span>, <span class="k">False</span>, ...]  <span class="c"># 입력과 같은 개수, 같은 순서</span></pre>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>검사 항목</th><th>통과 조건</th><th>어기면</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>파일 위치</td><td class="mono">solution.py</td><td>ZIP 루트가 아니면 로드 실패</td></tr>
+          <tr><td>인자 개수와 이름</td><td class="mono">model_id, problems</td><td>이름만 달라도 거부</td></tr>
+          <tr><td>기본값</td><td>없어야 함</td><td class="dim"><code>problems=[]</code> 같은 건 거부</td></tr>
+          <tr><td>타입 힌트</td><td class="mono">str, list[str] → list[bool]</td><td>누락하면 거부</td></tr>
+          <tr><td>반환 타입</td><td class="mono">list</td><td class="dim">tuple, ndarray 전부 무효</td></tr>
+          <tr><td>반환 길이</td><td>입력 문제 수와 동일</td><td>그룹 전체 무효</td></tr>
+          <tr><td>원소 타입</td><td class="mono">type(x) is bool</td><td class="dim"><code>np.True_</code>, <code>1</code> 전부 무효</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <h3>예외는 삼켜집니다</h3>
+      <p>
+        <code>are_robust</code> 안에서 무슨 에러가 나든 채점기는
+        <code>except Exception: pass</code>로 넘어갑니다
+        (<a class="ref" href="#">ingestion.py:169-171</a>).
+        서버는 그 그룹을 통째로 무효 처리할 뿐, <strong>이유를 알려주지 않습니다</strong>.
+      </p>
+      <p>
+        실제로 이 저장소에서 <code>trained-probe</code>를 돌렸을 때
+        <code>invalid_predictions: 28</code>만 나오고 원인은 전혀 안 보였습니다.
+        직접 <code>are_robust</code>를 불러봐야 “모델이 캐시에 없다”는 진짜 에러가 나왔습니다.
+        <strong>제출 전 로컬 디버깅이 필수인 이유</strong>가 이것입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 6 ================= -->
+  <section id="probe">
+    <h2>trained-probe 내부</h2>
+    <p class="lede">
+      아이디어는 이렇습니다. 모델에게 문제를 <strong>읽히기만</strong> 하고(답은 안 시킴),
+      그 순간 31번째 층의 신경 활성값을 꺼내서, 미리 학습해둔 선형 분류기에 넣습니다.
+      “문제를 읽는 순간의 뇌 상태”만으로 판별하겠다는 발상입니다.
+    </p>
+
+    <figure>
+      <svg viewBox="0 0 900 565" role="img" aria-label="predict_robustness가 아티팩트는 한 번만 로드하지만, 문제마다 반복되는 루프 안에서 8B 모델을 매번 다시 로드하는 호출 흐름">
+        <defs>
+          <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+
+        <rect class="s-box" x="110" y="12" width="410" height="42" rx="4"/>
+        <text class="t-mono b" x="315" y="38" text-anchor="middle">are_robust(model_id, problems)</text>
+
+        <rect class="n-box" x="110" y="74" width="410" height="42" rx="4"/>
+        <text class="t-mono" x="315" y="100" text-anchor="middle">predict_robustness()</text>
+
+        <rect class="o-box" x="110" y="136" width="410" height="42" rx="4"/>
+        <text class="t-mono" x="315" y="162" text-anchor="middle">_load_artifact() → probe_artifact.pkl</text>
+
+        <!-- loop -->
+        <rect class="grp" x="80" y="200" width="470" height="330" rx="6"/>
+        <text class="t-lbl" x="94" y="222">for problem in problems — 28회 반복</text>
+
+        <rect class="n-box" x="110" y="240" width="410" height="40" rx="4"/>
+        <text class="t-mono" x="315" y="265" text-anchor="middle">_predict_problem()</text>
+
+        <rect class="n-box" x="110" y="300" width="410" height="40" rx="4"/>
+        <text class="t-mono" x="315" y="325" text-anchor="middle">_encode_problem()</text>
+
+        <rect class="d-box" x="110" y="360" width="410" height="40" rx="4"/>
+        <text class="t-mono b t-dgr" x="315" y="385" text-anchor="middle">_load_model() — 8B 모델 전체 로드</text>
+
+        <rect class="n-box" x="110" y="420" width="410" height="40" rx="4"/>
+        <text class="t-mono" x="315" y="445" text-anchor="middle">forward → hidden_states[31][0, -1, :]</text>
+
+        <rect class="n-box" x="110" y="480" width="410" height="40" rx="4"/>
+        <text class="t-mono" x="315" y="505" text-anchor="middle">mean_ensemble_margin() ≥ 0 → bool</text>
+
+        <g color="var(--ink-2)">
+          <line class="edge" x1="315" y1="54" x2="315" y2="68" marker-end="url(#a3)"/>
+          <line class="edge" x1="315" y1="116" x2="315" y2="130" marker-end="url(#a3)"/>
+          <line class="edge" x1="315" y1="178" x2="315" y2="234" marker-end="url(#a3)"/>
+          <line class="edge" x1="315" y1="280" x2="315" y2="294" marker-end="url(#a3)"/>
+          <line class="edge" x1="315" y1="340" x2="315" y2="354" marker-end="url(#a3)"/>
+          <line class="edge" x1="315" y1="400" x2="315" y2="414" marker-end="url(#a3)"/>
+          <line class="edge" x1="315" y1="460" x2="315" y2="474" marker-end="url(#a3)"/>
+
+          <path class="edge" d="M 110 500 L 96 500 L 96 260 L 104 260" marker-end="url(#a3)"/>
+        </g>
+
+        <g color="var(--rule-2)">
+          <line class="lead" x1="520" y1="157" x2="572" y2="157"/>
+          <line class="lead" x1="520" y1="380" x2="572" y2="380"/>
+        </g>
+
+        <text class="t b t-ok" x="580" y="152">아티팩트 로드 — 1회</text>
+        <text class="t-sm" x="580" y="172">54MB 피클, 한 번만 읽으면 끝</text>
+
+        <text class="t b t-dgr" x="580" y="368">모델 로드 — 28회</text>
+        <text class="t-sm" x="580" y="388">문제 하나 볼 때마다 처음부터</text>
+        <text class="t-sm" x="580" y="406">다시 로드합니다. 8B 모델 로드가</text>
+        <text class="t-sm" x="580" y="424">약 1분이니 28분 이상 —</text>
+        <text class="t-sm t-dgr" x="580" y="442">1시간 제한을 넘깁니다.</text>
+      </svg>
+      <figcaption>
+        <code>predict_robustness</code>는 아티팩트를 루프 <em>밖에서</em> 한 번만 로드합니다
+        (<a class="ref" href="#">probe_inference.py:356</a>). 그런데 모델은 그렇지 않습니다 —
+        <code>_encode_problem</code>이 매 호출마다 <code>_load_model</code>을 부릅니다
+        (<a class="ref" href="#">probe_inference.py:248</a>).
+        이 그림에서 빨간 상자가 루프 안에 있다는 사실 하나가 이 예제의 치명적 결함을 설명합니다.
+        <strong>이 그림은 수정 전 상태입니다</strong> — 지금은 빨간 상자가 루프 밖
+        <code>predict_robustness()</code> 바로 아래로 올라가 있습니다.
+        <a href="#problems">확인된 문제 1번</a> 참고.
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th class="mono">probe_inference.py</th><th>하는 일</th><th class="num">줄</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">ProbeArtifact</td><td>얼린 데이터클래스. 모델 id·시스템 프롬프트·가중치 묶음</td><td class="num">41–52</td></tr>
+          <tr><td class="mono">_artifact_candidates()</td><td>모델별 파일 → 범용 파일 순으로 후보 경로 나열</td><td class="num">69–94</td></tr>
+          <tr><td class="mono">_load_artifact()</td><td>존재하는 첫 후보를 로드. 없으면 <code>None</code></td><td class="num">97–106</td></tr>
+          <tr><td class="mono">load_pickle_artifact()</td><td>스키마 v2 검증. 어긋나면 즉시 예외</td><td class="num">109–144</td></tr>
+          <tr><td class="mono">_load_model()</td><td class="dim"><code>local_files_only=True</code>로 오프라인 로드</td><td class="num">195–216</td></tr>
+          <tr><td class="mono">_build_prompt()</td><td>학습 때와 같은 채팅 템플릿으로 포맷</td><td class="num">219–239</td></tr>
+          <tr><td class="mono">_encode_problem()</td><td>순전파 1회 → 마지막 토큰의 31층 hidden state</td><td class="num">242–275</td></tr>
+          <tr><td class="mono">mean_ensemble_margin()</td><td>8개 그룹 프로브의 마진 평균</td><td class="num">297–335</td></tr>
+          <tr><td class="mono">predict_robustness()</td><td>위를 엮어 bool 리스트 반환</td><td class="num">349–359</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      실제 아티팩트를 열어보니 <code>best_layer_index = 31</code>,
+      프로브 그룹 8개, 대상 모델은 <code>deepseek-ai/DeepSeek-R1-0528-Qwen3-8B</code>였습니다.
+      판정식은 한 줄로 요약됩니다 — <code>weights · hidden + bias − threshold ≥ 0</code>,
+      이걸 모든 그룹·시드에 대해 계산하고 평균 냅니다.
+    </p>
+  </section>
+
+  <!-- ================= 7 ================= -->
+  <section id="uncertainty">
+    <h2>uncertainty-profiling 내부</h2>
+    <p class="lede">
+      완전히 다른 접근입니다. 모델에게 문제를 <strong>실제로 풀게 시키고</strong>,
+      푸는 동안 얼마나 확신에 차 있었는지를 토큰 단위로 기록합니다.
+      “헷갈리면서 푼 문제는 흔들린다”는 가설이죠.
+    </p>
+
+    <div class="duo">
+      <div class="card">
+        <span class="t-lbl">모듈 6개의 역할</span>
+        <p>
+          <code>config.py</code>가 중심입니다 — 특징 14개의 <strong>이름과 순서</strong>를 상수로 고정하고,
+          생성 설정(프롬프트 2048토큰, 응답 4096토큰, 배치 8, 그리디 디코딩)을 담습니다.
+          <code>extraction.py</code>가 생성을 돌리며 수집하고, <code>metrics.py</code>가 통계를 내고,
+          <code>artifact.py</code>가 학습된 회귀모델을 꺼내고, <code>inference.py</code>가 넷을 엮습니다.
+        </p>
+      </div>
+      <div class="card">
+        <span class="t-lbl">모델을 다루는 방식</span>
+        <p>
+          <code>inference.py</code>는 모델을 <strong>배치당 한 번만</strong> 로드하고,
+          <code>finally</code> 블록에서 <code>release_model()</code>로 반드시 해제합니다.
+          같은 저장소 안에서 <code>trained-probe</code>와 정반대죠.
+          <strong>이쪽이 올바른 패턴</strong>입니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>수집하는 신호</th><th>무엇을 재는가</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">mean_logprob · mean_nll · ppl</td><td>전반적으로 얼마나 자신 있게 썼는가</td></tr>
+          <tr><td class="mono">min_logprob · max · std</td><td>확신도의 최악·최선·기복</td></tr>
+          <tr><td class="mono">min_k_logprob</td><td>가장 자신 없던 하위 20% 구간</td></tr>
+          <tr><td class="mono">mean_entropy</td><td>매 순간 선택지가 얼마나 갈렸는가</td></tr>
+          <tr><td class="mono">mean_top1_prob · top2_margin</td><td>1등과 2등 후보의 격차</td></tr>
+          <tr><td class="mono">frac_selected_is_top1</td><td>가장 유력한 후보를 고른 비율</td></tr>
+          <tr><td class="mono">frac_high_conf · frac_low_conf</td><td>확률 0.9 초과 / 0.1 미만 토큰 비중</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout ok">
+      <h3>이 방법은 실제로 점수가 나왔습니다</h3>
+      <p>
+        로컬에서 돌린 결과 <strong>accuracy 0.643, coverage 0.964, invalid 1</strong>.
+        모델이 캐시에 없는데도 대부분 살아남은 이유는
+        <code>load_artifact()</code>가 맞는 아티팩트를 못 찾으면 예외 대신
+        <strong>전부 <code>False</code>를 반환</strong>하기 때문입니다.
+      </p>
+      <p>
+        입력 28건의 <code>model_id</code>는 7종인데 번들된 아티팩트는 DeepSeek 하나뿐입니다.
+        그래서 27건은 “모르겠으니 False”로 조용히 넘어가고, DeepSeek을 요구하는 1건만 무효가 됐습니다.
+        <strong>모르는 입력에 우아하게 실패하는 설계</strong>가 점수를 지켜준 사례입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 8 ================= -->
+  <section id="compare">
+    <h2>두 방법은 어디서 갈라지는가</h2>
+    <p class="lede">
+      입력도 같고 출력도 같습니다. 갈라지는 건 가운데 두 단계 — 모델을 어떻게 굴리고,
+      거기서 무슨 신호를 꺼내느냐입니다.
+    </p>
+
+    <figure>
+      <svg viewBox="0 0 1000 430" role="img" aria-label="두 방법이 같은 입력과 출력을 갖지만 모델 실행 방식과 추출 신호에서 갈라지는 비교도">
+        <rect x="30" y="86" width="940" height="152" rx="6" fill="var(--danger-soft)" opacity="0.5"/>
+        <text class="t-lbl t-dgr" x="44" y="106">여기서 갈린다</text>
+
+        <text class="t-lbl t-sub" x="70" y="30">trained-probe</text>
+        <text class="t-lbl t-sub" x="560" y="30">uncertainty-profiling</text>
+
+        <!-- shared input -->
+        <rect class="n-box" x="70" y="42" width="380" height="34" rx="4"/>
+        <text class="t" x="260" y="64" text-anchor="middle">문제 텍스트</text>
+        <rect class="n-box" x="560" y="42" width="380" height="34" rx="4"/>
+        <text class="t" x="750" y="64" text-anchor="middle">문제 텍스트</text>
+
+        <!-- diverge row 1 -->
+        <rect class="s-box" x="70" y="116" width="380" height="48" rx="4"/>
+        <text class="t b" x="260" y="138" text-anchor="middle">순전파 1회 — 생성 없음</text>
+        <text class="t-sm" x="260" y="156" text-anchor="middle">문제를 읽기만 시킨다</text>
+
+        <rect class="s-box" x="560" y="116" width="380" height="48" rx="4"/>
+        <text class="t b" x="750" y="138" text-anchor="middle">그리디 생성 최대 4096토큰</text>
+        <text class="t-sm" x="750" y="156" text-anchor="middle">끝까지 풀게 시킨다</text>
+
+        <!-- diverge row 2 -->
+        <rect class="s-box" x="70" y="178" width="380" height="48" rx="4"/>
+        <text class="t b" x="260" y="200" text-anchor="middle">31층 마지막 토큰 hidden state</text>
+        <text class="t-sm" x="260" y="218" text-anchor="middle">고차원 벡터 하나</text>
+
+        <rect class="s-box" x="560" y="178" width="380" height="48" rx="4"/>
+        <text class="t b" x="750" y="200" text-anchor="middle">토큰별 logprob · 엔트로피</text>
+        <text class="t-sm" x="750" y="218" text-anchor="middle">→ 요약 통계 14개</text>
+
+        <!-- classifier -->
+        <rect class="n-box" x="70" y="256" width="380" height="48" rx="4"/>
+        <text class="t" x="260" y="278" text-anchor="middle">선형 프로브 8그룹</text>
+        <text class="t-sm" x="260" y="296" text-anchor="middle">마진 평균 ≥ 0</text>
+
+        <rect class="n-box" x="560" y="256" width="380" height="48" rx="4"/>
+        <text class="t" x="750" y="278" text-anchor="middle">scikit-learn 회귀</text>
+        <text class="t-sm" x="750" y="296" text-anchor="middle">예측 하락폭 &lt; 임계값</text>
+
+        <!-- output -->
+        <rect class="o-box" x="70" y="318" width="380" height="34" rx="4"/>
+        <text class="t" x="260" y="340" text-anchor="middle">bool</text>
+        <rect class="o-box" x="560" y="318" width="380" height="34" rx="4"/>
+        <text class="t" x="750" y="340" text-anchor="middle">bool</text>
+
+        <!-- cost -->
+        <text class="t-sm" x="260" y="382" text-anchor="middle">모델 로드: 문제마다 다시 —</text>
+        <text class="t-sm t-dgr b" x="260" y="400" text-anchor="middle">28회</text>
+        <text class="t-sm" x="750" y="382" text-anchor="middle">모델 로드: 배치당 한 번, finally에서 해제 —</text>
+        <text class="t-sm t-ok b" x="750" y="400" text-anchor="middle">1회</text>
+
+        <g color="var(--ink-2)" stroke="currentColor" stroke-width="1.2">
+          <line x1="260" y1="76" x2="260" y2="112"/>
+          <line x1="260" y1="164" x2="260" y2="174"/>
+          <line x1="260" y1="226" x2="260" y2="252"/>
+          <line x1="260" y1="304" x2="260" y2="314"/>
+          <line x1="750" y1="76" x2="750" y2="112"/>
+          <line x1="750" y1="164" x2="750" y2="174"/>
+          <line x1="750" y1="226" x2="750" y2="252"/>
+          <line x1="750" y1="304" x2="750" y2="314"/>
+        </g>
+      </svg>
+      <figcaption>
+        같은 계약을 지키는 두 가지 완전히 다른 가설. 왼쪽은 “모델이 문제를 읽는 순간 이미 답이 정해져 있다”,
+        오른쪽은 “푸는 과정의 흔들림에 답이 있다”고 봅니다. 맨 아래 줄이 실무적 차이입니다 —
+        같은 모델을 쓰면서도 로드 횟수가 28배 차이 납니다.
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>솔루션</th><th class="num">accuracy</th><th class="num">coverage</th><th class="num">invalid</th><th>로컬 실행 결과</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">always-true</td>
+            <td class="num">0.321</td><td class="num">1.000</td><td class="num">0</td>
+            <td><span class="pill pill-o">정상</span> 전부 True로 찍음</td>
+          </tr>
+          <tr>
+            <td class="mono">uncertainty-profiling</td>
+            <td class="num">0.643</td><td class="num">0.964</td><td class="num">1</td>
+            <td><span class="pill pill-o">정상</span> 모델 없는 27건은 False로 회피</td>
+          </tr>
+          <tr>
+            <td class="mono">trained-probe</td>
+            <td class="num">0.000</td><td class="num">0.000</td><td class="num">28</td>
+            <td><span class="pill pill-d">전멸</span> 모델 캐시 없음 → 예외</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= 9 ================= -->
+  <section id="classes">
+    <h2>클래스</h2>
+    <p class="lede">
+      저장소에 클래스는 많지 않습니다. 대부분 함수로 짜여 있고, 클래스는
+      <strong>데이터를 얼려서 담는 용도</strong>이거나 라이브러리 훅입니다.
+      상속 관계는 딱 하나뿐입니다.
+    </p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>클래스</th><th>종류</th><th>역할</th><th class="mono">위치</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">ProbeArtifact</td>
+            <td><span class="pill pill-s">frozen dataclass</span></td>
+            <td>프로브 가중치와 메타데이터를 불변으로 묶음</td>
+            <td class="mono">probe_inference.py:42</td>
+          </tr>
+          <tr>
+            <td class="mono">UncertaintyArtifact</td>
+            <td><span class="pill pill-s">frozen dataclass</span></td>
+            <td>회귀모델·특징이름·임계값을 불변으로 묶음</td>
+            <td class="mono">artifact.py:32</td>
+          </tr>
+          <tr>
+            <td class="mono">GenerationConfidenceConfig</td>
+            <td><span class="pill pill-s">frozen dataclass</span></td>
+            <td>생성 설정 + <code>validate()</code>로 자기 검증</td>
+            <td class="mono">config.py:49</td>
+          </tr>
+          <tr>
+            <td class="mono">Predictor</td>
+            <td><span class="pill pill-e">Protocol</span></td>
+            <td><code>predict()</code>만 있으면 되는 구조적 타입</td>
+            <td class="mono">artifact.py:24</td>
+          </tr>
+          <tr>
+            <td class="mono">GenerationConfidenceCollector</td>
+            <td><span class="pill pill-d">LogitsProcessor 상속</span></td>
+            <td>저장소의 유일한 상속. transformers 생성 루프에 끼어들어 매 토큰의 확률분포를 가로챔</td>
+            <td class="mono">extraction.py:170</td>
+          </tr>
+          <tr>
+            <td class="mono">IngestionError</td>
+            <td><span class="pill pill-e">RuntimeError 상속</span></td>
+            <td>입력 형식 위반</td>
+            <td class="mono">ingestion.py:17</td>
+          </tr>
+          <tr>
+            <td class="mono">ScoringError</td>
+            <td><span class="pill pill-e">RuntimeError 상속</span></td>
+            <td>정답 파일 형식 위반</td>
+            <td class="mono">scoring.py:11</td>
+          </tr>
+          <tr>
+            <td class="mono">DatasetImportError</td>
+            <td><span class="pill pill-e">RuntimeError 상속</span></td>
+            <td>데이터셋 내려받기 실패</td>
+            <td class="mono">import_hf_dataset.py:25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      <code>GenerationConfidenceCollector</code>가 흥미로운 지점입니다.
+      transformers의 <code>LogitsProcessor</code>는 원래 생성 결과를 <em>바꾸는</em> 훅인데,
+      여기서는 아무것도 바꾸지 않고 <strong>엿듣기만</strong> 합니다.
+      생성이 끝난 뒤 점수를 다시 계산하면 메모리가 터지니까,
+      흘러가는 도중에 통계만 뽑아내는 겁니다.
+    </p>
+  </section>
+
+  <!-- ================= 10 ================= -->
+  <section id="problems">
+    <h2>확인된 문제</h2>
+    <p class="lede">
+      전부 실행해서 재현한 것들입니다. 추측이 아닙니다.
+    </p>
+
+    <div class="callout ok">
+      <h3>1. 모델을 문제마다 다시 로드합니다 <span class="pill pill-o">고침</span></h3>
+      <p>
+        <code>_encode_problem</code>이 매번 <code>_load_model</code>을 호출하고 있었습니다
+        (수정 전 <a class="ref" href="#">probe_inference.py:248</a>).
+        아티팩트는 루프 밖에서 한 번만 로드하면서 모델은 안 그랬습니다.
+        서버에는 모델이 캐시돼 있어 로컬처럼 즉사하지 않고 <strong>시간 초과로 죽었을</strong> 문제입니다.
+      </p>
+      <p>
+        고친 방식: <code>predict_robustness</code>가 배치 시작 시 모델을 한 번 로드해
+        <code>_predict_problem</code> → <code>_encode_problem</code>으로 넘겨주고,
+        <code>finally</code>에서 <code>_release_model()</code>로 해제합니다.
+        같은 저장소의 <code>uncertainty-profiling</code>이 이미 쓰던 패턴 그대로입니다.
+      </p>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th>28문제 배치</th><th class="num">모델 로드 횟수</th><th class="num">예측 개수</th><th>계약</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>수정 전</td><td class="num">28</td><td class="num">28</td><td><span class="pill pill-o">통과</span></td></tr>
+            <tr><td>수정 후</td><td class="num">1</td><td class="num">28</td><td><span class="pill pill-o">통과</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        모델 로드를 가짜로 바꿔 횟수만 센 결과입니다. 반환값 개수와 <code>bool</code> 타입은
+        양쪽 모두 계약을 지킵니다. 저장소 테스트 20개도 그대로 통과합니다.
+      </p>
+    </div>
+
+    <div class="callout">
+      <h3>2. 문서와 실제가 다릅니다</h3>
+      <p>
+        <code>solutions/trained-probe/README.md:25</code>는 “아티팩트는 커밋돼 있지 않으며,
+        없으면 전부 <code>False</code>를 반환한다”고 적혀 있습니다.
+        하지만 실제로는 54MB 아티팩트가 커밋돼 있어서,
+        그 안전장치가 작동하지 않고 모델 로드를 시도하다 예외로 죽습니다.
+      </p>
+    </div>
+
+    <div class="callout">
+      <h3>3. README의 build 명령이 실패합니다</h3>
+      <p>
+        <code>uv run scripts/build.py all</code>은 <code>task/task.embedded.yaml</code>을 찾다가
+        <code>FileNotFoundError</code>로 끝납니다. 대회 운영용 디렉터리라 공개 저장소에서 빠진 듯합니다.
+        <code>build.py components</code>를 쓰면 README가 약속한
+        <code>dist/solution-trained-probe.zip</code>이 정상적으로 나옵니다.
+      </p>
+    </div>
+
+    <div class="callout">
+      <h3>4. 데이터셋이 private이라는 설명은 옛말입니다</h3>
+      <p>
+        <code>import_hf_dataset.py:31</code>의 독스트링은 <code>HF_TOKEN</code>이 필요하다고 하지만,
+        <code>aimo-interp/val-sample</code>은 현재 공개라 토큰 없이 받아집니다.
+      </p>
+    </div>
+
+    <div class="callout ok">
+      <h3>참고: 프로브는 모든 model_id에 같은 아티팩트를 씁니다</h3>
+      <p>
+        입력의 <code>model_id</code>가 7종인데 <code>_artifact_candidates</code>는
+        범용 <code>probe_artifact.pkl</code>을 전부에게 매칭시키고,
+        인코딩은 언제나 DeepSeek 8B로 합니다.
+        캐시된 모델이 그것뿐이라 불가피한 설계이긴 하지만,
+        <strong>점수를 올리려면 여기가 핵심 지점</strong>입니다.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    2026년 8월 18일 · <code>C:\side\getting-started</code>에서 실제 실행해 작성.
+    커밋 <code>9fbe36f</code> · uv 0.10.12 · torch 2.12.1+cpu · GPU 없음.
+    줄 번호는 해당 커밋 기준입니다.
+  </footer>
+
+</div>

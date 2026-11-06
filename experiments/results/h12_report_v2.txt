@@ -1,0 +1,21 @@
+H12 교환 개입 (v2) · 사전등록: 이식 효과 큼 = spurious (점수 = −효과) · null 30회
+모델           지표         n    AUC   bacc       null95% ρ(n_surf)  ρ(logT)    잔차AUC        잔차null
+-- Qwen3_5-4B: 제외 4, L=32
+Qwen3_5-4B   eff_cos   29  0.382  0.414 [0.27,0.67]      +0.69    +0.02    0.471 [0.24,0.64] 
+Qwen3_5-4B   eff_kl    29  0.309  0.343 [0.32,0.69]▼     +0.11    -0.45    0.534 [0.34,0.67] 
+Qwen3_5-4B   eff_max   29  0.368  0.485 [0.32,0.65]      +0.61    +0.05    0.441 [0.31,0.70] 
+-- Skywork-OR1-Math-7B: 제외 4, L=28
+Skywork-OR1- eff_cos   29  0.431  0.343 [0.28,0.68]      +0.19    -0.20    0.510 [0.37,0.72] 
+Skywork-OR1- eff_kl    29  0.255  0.343 [0.27,0.65]▼     -0.10    -0.31    0.407 [0.23,0.72] 
+Skywork-OR1- eff_max   29  0.431  0.414 [0.20,0.66]      +0.05    -0.23    0.510 [0.31,0.72] 
+-- Olmo-3-7B-Think: 제외 4, L=32
+Olmo-3-7B-Th eff_cos   29  0.456  0.485 [0.33,0.65]      +0.63    +0.19    0.515 [0.31,0.62] 
+Olmo-3-7B-Th eff_kl    29  0.407  0.414 [0.30,0.62]      +0.30    +0.22    0.515 [0.34,0.71] 
+Olmo-3-7B-Th eff_max   29  0.436  0.485 [0.36,0.72]      +0.50    +0.08    0.583 [0.30,0.69] 
+-- DeepSeek-R1-0528-Qwen3-8B: 제외 4, L=36
+DeepSeek-R1- eff_cos   29  0.392  0.414 [0.28,0.67]      +0.53    +0.10    0.431 [0.41,0.71] 
+DeepSeek-R1- eff_kl    29  0.475  0.485 [0.27,0.72]      +0.14    -0.05    0.539 [0.29,0.71] 
+DeepSeek-R1- eff_max   29  0.402  0.414 [0.31,0.63]      +0.43    +0.04    0.426 [0.27,0.67] 
+풀링(잔차)       eff_cos   29                                                   0.490 [0.31,0.63]    ρ: Qwen3_-Skywor +0.28  Qwen3_-Olmo-3 +0.73  Qwen3_-DeepSe +0.62  Skywor-Olmo-3 +0.38  Skywor-DeepSe +0.18  Olmo-3-DeepSe +0.61
+풀링(잔차)       eff_kl    29                                                   0.471 [0.36,0.71]    ρ: Qwen3_-Skywor +0.30  Qwen3_-Olmo-3 +0.11  Qwen3_-DeepSe +0.56  Skywor-Olmo-3 -0.01  Skywor-DeepSe +0.09  Olmo-3-DeepSe +0.29
+풀링(잔차)       eff_max   29                                                   0.456 [0.32,0.66]    ρ: Qwen3_-Skywor +0.13  Qwen3_-Olmo-3 +0.57  Qwen3_-DeepSe +0.58  Skywor-Olmo-3 +0.24  Skywor-DeepSe +0.04  Olmo-3-DeepSe +0.48

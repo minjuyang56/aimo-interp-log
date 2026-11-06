@@ -1,0 +1,12 @@
+H13 표면 부분공간 (S = MATH137 차이벡터 PCA k=8, v2 적용) · 사전등록: energy 큼 = spurious · compass13 큼 = robust · null 30회
+모델           지표          n    AUC   bacc       null95% ρ(n_surf)  ρ(logT)    잔차AUC        잔차null  S설명분산
+Qwen3_5-4B   energy     33  0.412  0.456 [0.36,0.63]      -0.66    -0.62    0.496 [0.32,0.67]   0.60
+Qwen3_5-4B   compass13  33  0.404  0.392 [0.31,0.69]      +0.38    +0.52    0.519 [0.34,0.69]   0.60
+Skywork-OR1- energy     33  0.404  0.456 [0.25,0.60]      -0.37    -0.40    0.519 [0.33,0.65]   0.66
+Skywork-OR1- compass13  33  0.585  0.583 [0.27,0.68]      -0.25    -0.41    0.492 [0.36,0.70]   0.66
+Olmo-3-7B-Th energy     33  0.662  0.646 [0.36,0.62]▲     +0.13    +0.20    0.615 [0.35,0.70]   0.57
+Olmo-3-7B-Th compass13  33  0.592  0.646 [0.37,0.64]      +0.05    -0.05    0.604 [0.30,0.69]   0.57
+DeepSeek-R1- energy     33  0.458  0.456 [0.26,0.73]      -0.23    -0.13    0.492 [0.32,0.63]   0.73
+DeepSeek-R1- compass13  33  0.504  0.456 [0.35,0.67]      +0.03    +0.12    0.496 [0.35,0.68]   0.73
+풀링(잔차)       energy     33                                                   0.512 [0.37,0.64]    ρ: Qwen3_-Skywor +0.61  Qwen3_-Olmo-3 +0.19  Qwen3_-DeepSe +0.47  Skywor-Olmo-3 +0.24  Skywor-DeepSe +0.33  Olmo-3-DeepSe +0.21
+풀링(잔차)       compass13  33                                                   0.608 [0.35,0.72]    ρ: Qwen3_-Skywor -0.14  Qwen3_-Olmo-3 -0.11  Qwen3_-DeepSe -0.14  Skywor-Olmo-3 +0.04  Skywor-DeepSe -0.02  Olmo-3-DeepSe +0.02

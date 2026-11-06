@@ -1,0 +1,143 @@
+[{"stream_name":"stdout","time":6.033446627,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 72.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.083150818,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 22.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.137091685,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 37.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":22.841762262,"data":"WARNING: Skipping torchaudio as it is not installed.\n"}
+,{"stream_name":"stdout","time":22.899823019,"data":"[env] torchaudio 제거 확인\n"}
+,{"stream_name":"stdout","time":22.899857054,"data":"[env] model Qwen/Qwen3.5-4B · maxnew 1024 · batch 0 · nprob 0\n"}
+,{"stream_name":"stderr","time":48.453159051,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":100.598679885,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:47\u003c00:47, 47.94s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:47\u003c00:00, 23.97s/it]\n"}
+,{"stream_name":"stderr","time":106.835700046,"data":"\rLoading weights:   0%|          | 0/426 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/426 [00:01\u003c13:39,  1.93s/it]\rLoading weights:  30%|███       | 128/426 [00:02\u003c00:03, 86.41it/s]\rLoading weights:  44%|████▍     | 187/426 [00:02\u003c00:02, 93.01it/s]\rLoading weights:  53%|█████▎    | 224/426 [00:02\u003c00:02, 95.83it/s]\rLoading weights:  59%|█████▉    | 251/426 [00:03\u003c00:01, 102.38it/s]\rLoading weights:  64%|██████▍   | 273/426 [00:03\u003c00:01, 99.77it/s] \rLoading weights:  68%|██████▊   | 291/426 [00:03\u003c00:01, 99.70it/s]\rLoading weights:  72%|███████▏  | 306/426 [00:03\u003c00:01, 98.77it/s]\rLoading weights:  75%|███████▌  | 320/426 [00:03\u003c00:01, 102.11it/s]\rLoading weights:  78%|███████▊  | 333/426 [00:04\u003c00:00, 100.45it/s]\rLoading weights:  81%|████████  | 345/426 [00:04\u003c00:00, 100.89it/s]\rLoading weights:  84%|████████▍ | 358/426 [00:04\u003c00:00, 106.60it/s]\rLoading weights:  87%|████████▋ | 370/426 [00:04\u003c00:00, 105.34it/s]\rLoading weights:  90%|████████▉ | 382/426 [00:04\u003c00:00, 104.21it/s]\rLoading weights:  92%|█████████▏| 393/426 [00:04\u003c00:00, 101.46it/s]\rLoading weights:  96%|█████████▋| 411/426 [00:04\u003c00:00, 95.59it/s] \rLoading weights: 100%|██████████| 426/426 [00:04\u003c00:00, 87.60it/s]\n"}
+,{"stream_name":"stdout","time":107.103560046,"data":"[entlens] Qwen/Qwen3.5-4B 로드 59s · quant fp16\n"}
+,{"stream_name":"stdout","time":107.103592511,"data":"[entlens] final_norm = model.norm\n"}
+,{"stream_name":"stdout","time":107.103597814,"data":"[entlens] 문제 33 · 층 32 · maxnew 1024 · batch 33\n"}
+,{"stream_name":"stderr","time":108.04120906,"data":"[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.\n"}
+,{"stream_name":"stderr","time":109.394304173,"data":"[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.\n"}
+,{"stream_name":"stderr","time":124.327998494,"data":"[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.\n"}
+,{"stream_name":"stderr","time":124.5854343,"data":"[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.\n"}
+,{"stream_name":"stdout","time":391.87341805,"data":"[entlens] 생성 33행 · 285s · 1024스텝 · 278 ms/step · 완주 0/33\n"}
+,{"stream_name":"stdout","time":402.640745265,"data":"[entlens] 렌즈 5/33 · 11s\n"}
+,{"stream_name":"stdout","time":413.315671167,"data":"[entlens] 렌즈 10/33 · 21s\n"}
+,{"stream_name":"stdout","time":422.251714738,"data":"[entlens] 렌즈 15/33 · 30s\n"}
+,{"stream_name":"stdout","time":432.872646457,"data":"[entlens] 렌즈 20/33 · 41s\n"}
+,{"stream_name":"stdout","time":443.849603964,"data":"[entlens] 렌즈 25/33 · 52s\n"}
+,{"stream_name":"stdout","time":453.762372331,"data":"[entlens] 렌즈 30/33 · 62s\n"}
+,{"stream_name":"stdout","time":458.92105192,"data":"[entlens] 렌즈 33/33 · 67s\n"}
+,{"stream_name":"stdout","time":458.922506858,"data":"[entlens] 저장 /kaggle/working/entlens · meta {\"model\": \"Qwen/Qwen3.5-4B\", \"n_layers\": 32, \"maxnew\": 1024, \"batch\": 33, \"n_prob\": 33, \"quant\": \"fp16\", \"n_marks\": 0, \"finished\": 0, \"lens_ok\": 33, \"lens_gate_max\": 0.0037915707}\n"}
+,{"stream_name":"stdout","time":458.922529044,"data":"[entlens] **경고** 마지막층 렌즈가 실제 로짓과 3.792e-03 어긋난다 — final_norm 가정을 다시 봐야 한다\n"}
+,{"stream_name":"stdout","time":458.92253572,"data":"\n"}
+,{"stream_name":"stdout","time":458.922541768,"data":"===== pidx 0 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":458.922547661,"data":"The problem asks for the product of Alice and Bob's ages. Let's denote the variables.\n"}
+,{"stream_name":"stdout","time":458.922553676,"data":"Let $A$ be the number of sweets Alice has.\n"}
+,{"stream_name":"stdout","time":458.922560783,"data":"Let $B$ be the number of sweets Bob has.\n"}
+,{"stream_name":"stdout","time":458.922567354,"data":"Let $a$ be Alice's age.\n"}
+,{"stream_name":"stdout","time":458.922574116,"data":"Let $b$ be Bob's age.\n"}
+,{"stream_name":"stdout","time":458.922580743,"data":"The problem states that $A, B, a, b$ are integers.\n"}
+,{"stream_name":"stdout","time":458.922587081,"data":"Also, $a$ and $b$ are positive integers.\n"}
+,{"stream_name":"stdout","time":458.922594127,"data":"The number of sweets $A$ and $B$ are likely non-negative integers, but usually \"holding some integer number of sweets\" implies non-negative. Let's assume $A, B \\ge 0$.\n"}
+,{"stream_name":"stdout","time":458.922602422,"data":"\n"}
+,{"stream_name":"stdout","time":458.922609278,"data":"Alice's statement 1: \"If we each added the number of sweets we're holding to our (positive integer) age, my answer would be double yours.\"\n"}
+,{"stream_name":"stdout","time":458.922614016,"data":"Alice's answer: $A + a$.\n"}
+,{"stream_name":"stdout","time":458.922618348,"data":"Bob's answer: $B + b$.\n"}
+,{"stream_name":"stdout","time":458.922623963,"data":"The condition is: $A + a = 2(B + b)$.\n"}
+,{"stream_name":"stdout","time":458.922632103,"data":"\n"}
+,{"stream_name":"stdout","time":458.922640841,"data":"Alice's statement 2: \"If we took the product, then my answer would be four times yours.\"\n"}
+,{"stream_name":"stdout","time":458.922649479,"data":"Alice's answer: $A \\times a$.\n"}
+,{"stream_name":"stdout","time":458.922675444,"data":"Bob's answer: $B \\times b$.\n"}
+,{"stream_name":"stdout","time":458.922681999,"data":"The condition is: $A \\times a = 4(B \\times b)$.\n"}
+,{"stream_name":"stdout","time":458.922687158,"data":"\n"}
+,{"stream_name":"stdout","time":458.92269367,"data":"B\n"}
+,{"stream_name":"stdout","time":458.922698206,"data":"\n"}
+,{"stream_name":"stdout","time":458.92270452,"data":"\n"}
+,{"stream_name":"stdout","time":458.92271108,"data":"===== pidx 1 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":458.922715686,"data":"The problem asks us to find the number of prime factors of $N$, counted with multiplicity, where $N$ is the count of positive integers $n \u003c 10^{101}$ satisfying two conditions:\n"}
+,{"stream_name":"stdout","time":458.922720118,"data":"1. $n^2 + (n+1)^2 \\equiv 0 \\pmod 5$\n"}
+,{"stream_name":"stdout","time":458.922724764,"data":"2. $F_{n-1}^2 + F_n^2 \\not\\equiv 0 \\pmod 5$\n"}
+,{"stream_name":"stdout","time":458.92272931,"data":"\n"}
+,{"stream_name":"stdout","time":458.922734003,"data":"Let's analyze the conditions modulo 5.\n"}
+,{"stream_name":"stdout","time":458.922738681,"data":"\n"}
+,{"stream_name":"stdout","time":458.922743302,"data":"Condition 1: $n^2 + (n+1)^2 \\equiv 0 \\pmod 5$.\n"}
+,{"stream_name":"stdout","time":458.922747807,"data":"$n^2 + n^2 + 2n + 1 \\equiv 0 \\pmod 5$\n"}
+,{"stream_name":"stdout","time":458.922752359,"data":"$2n^2 + 2n + 1 \\equiv 0 \\pmod 5$\n"}
+,{"stream_name":"stdout","time":458.922756881,"data":"Multiply by 3 (inverse of 2 mod 5):\n"}
+,{"stream_name":"stdout","time":458.922761561,"data":"$6n^2 + 6n + 3 \\equiv 0 \\pmod 5$\n"}
+,{"stream_name":"stdout","time":458.922766062,"data":"$n^2 + n + 3 \\equiv 0 \\pmod 5$\n"}
+,{"stream_name":"stdout","time":458.922770712,"data":"Let's check values of $n \\pmod 5$:\n"}
+,{"stream_name":"stdout","time":458.922775219,"data":"- $n=0: 0 + 0 + 3 = 3 \\not\\equiv 0$\n"}
+,{"stream_name":"stdout","time":458.922779768,"data":"- $n=1: 1 + 1 + 3 = 5 \\equiv 0$\n"}
+,{"stream_name":"stdout","time":458.922785556,"data":"- $n=2: 4 + 2 + 3 = 9 \\equiv 4 \\not\\equiv 0$\n"}
+,{"stream_name":"stdout","time":458.92278994,"data":"- $n=3: 9 + 3 + 3 = 15 \\equiv 0$\n"}
+,{"stream_name":"stdout","time":458.922793262,"data":"- $n=4: 16 + 4 + 3 = 23 \\equiv 3 \\not\\equiv 0$\n"}
+,{"stream_name":"stdout","time":458.92279809,"data":"So, $n \\equiv 1 \\pmod 5$ or $n \\equiv 3 \\pmod 5$.\n"}
+,{"stream_name":"stdout","time":458.922801954,"data":"Let $S_1 = \\{n \\in \\mathbb{Z}^+ \\mid n \u003c 10^{101}, n \\equiv 1 \\text{ or } 3 \\pmod 5\\}$.\n"}
+,{"stream_name":"stdout","time":458.922806346,"data":"The number of such\n"}
+,{"stream_name":"stdout","time":458.922810063,"data":"\n"}
+,{"stream_name":"stdout","time":458.922813336,"data":"\n"}
+,{"stream_name":"stdout","time":458.922816953,"data":"===== pidx 2 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":458.922820743,"data":"Let $R$ be the number of red marbles and $B$ be the number of blue marbles in the urn.\n"}
+,{"stream_name":"stdout","time":458.922824434,"data":"The total number of marbles is $n = R + B$.\n"}
+,{"stream_name":"stdout","time":458.922827702,"data":"We are given that there are at least 7 marbles of each color, so $R \\ge 7$ and $B \\ge 7$.\n"}
+,{"stream_name":"stdout","time":458.922832113,"data":"We draw $k=7$ marbles without replacement.\n"}
+,{"stream_name":"stdout","time":458.922835973,"data":"Let $X$ be the random variable representing the number of red marbles drawn.\n"}
+,{"stream_name":"stdout","time":458.922839416,"data":"The probability that exactly $r$ marbles are red is given by the hypergeometric distribution:\n"}
+,{"stream_name":"stdout","time":458.922846579,"data":"$P(X=r) = \\frac{\\binom{R}{r} \\binom{B}{k-r}}{\\binom{n}{k}}$.\n"}
+,{"stream_name":"stdout","time":458.922850758,"data":"Here $k=7$.\n"}
+,{"stream_name":"stdout","time":458.92285404,"data":"The problem states that the probability that exactly 4 marbles are red equals the probability that exactly 5 marbles are red.\n"}
+,{"stream_name":"stdout","time":458.922857925,"data":"So, $P(X=4) = P(X=5)$.\n"}
+,{"stream_name":"stdout","time":458.922861412,"data":"Substituting the formula:\n"}
+,{"stream_name":"stdout","time":458.922865016,"data":"$\\frac{\\binom{R}{4} \\binom{B}{7-4}}{\\binom{n}{7}} = \\frac{\\binom{R}{5} \\binom{B}{7-5}}{\\binom{n}{7}}$.\n"}
+,{"stream_name":"stdout","time":458.922869102,"data":"Since $\\binom{n}{7} \\neq 0$, we can cancel it out.\n"}
+,{"stream_name":"stdout","time":458.922873033,"data":"$\\binom{R}{4} \\binom{B}{3} = \\binom{R}{5} \\binom{B}{2}$.\n"}
+,{"stream_name":"stdout","time":458.922877128,"data":"\n"}
+,{"stream_name":"stdout","time":458.922880694,"data":"Let's\n"}
+,{"stream_name":"stdout","time":458.922884521,"data":"\n"}
+,{"stream_name":"stdout","time":458.922887403,"data":"\n"}
+,{"stream_name":"stdout","time":458.922891204,"data":"===== pidx 3 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":458.922895451,"data":"The problem asks for the greatest possible length of the segment $CD$, where $D$ is the foot of the perpendicular from $C$ to the line $AB$. We are given the side length $AB = c = 20$ and the circumradius $R = 26$.\n"}
+,{"stream_name":"stdout","time":458.922899902,"data":"\n"}
+,{"stream_name":"stdout","time":458.922903573,"data":"Let the vertices of the triangle be $A$, $B$, and $C$.\n"}
+,{"stream_name":"stdout","time":458.922907051,"data":"The side lengths are $a = BC$, $b = AC$, and $c = AB = 20$.\n"}
+,{"stream_name":"stdout","time":458.922910628,"data":"The circumradius is $R = 26$.\n"}
+,{"stream_name":"stdout","time":458.922914171,"data":"$D$ is the projection of $C$ onto the line $AB$.\n"}
+,{"stream_name":"stdout","time":458.922918083,"data":"The length $CD$ is the altitude from $C$ to $AB$, denoted as $h_c$.\n"}
+,{"stream_name":"stdout","time":458.92292209,"data":"We want to maximize $h_c$.\n"}
+,{"stream_name":"stdout","time":458.922926068,"data":"\n"}
+,{"stream_name":"stdout","time":458.922929818,"data":"Let's use the formula relating the area of the triangle to the circumradius.\n"}
+,{"stream_name":"stdout","time":458.92293374,"data":"Area $K = \\frac{abc}{4R}$.\n"}
+,{"stream_name":"stdout","time":458.9229408,"data":"Also, $K = \\frac{1}{2} c h_c$.\n"}
+,{"stream_name":"stdout","time":458.922944922,"data":"So, $\\frac{1}{2} c h_c = \\frac{abc}{4R}$.\n"}
+,{"stream_name":"stdout","time":458.922948888,"data":"$h_c = \\frac{2abc}{4Rc} = \\frac{ab}{2R}$.\n"}
+,{"stream_name":"stdout","time":458.922955213,"data":"This relates $h_c$ to the product of the other two sides $a$ and $b$.\n"}
+,{"stream_name":"stdout","time":458.922958929,"data":"We know $c = 20$ and $R = 26$.\n"}
+,{"stream_name":"stdout","time":458.922963306,"data":"So $h_c = \\frac{ab}{52}$.\n"}
+,{"stream_name":"stdout","time":458.922966639,"data":"To maximize $h_c$, we need to maximize the produ\n"}
+,{"stream_name":"stdout","time":458.922970606,"data":"\n"}
+,{"stream_name":"stdout","time":458.922991599,"data":"\n"}
+,{"stream_name":"stdout","time":458.92299608,"data":"===== pidx 4 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":458.923000676,"data":"The problem asks for the sum of all real numbers $r$ such that a circle with radius $r$ centered at $(4, 39)$ is tangent to the parabola $2y = x^2 - 8x + 12$.\n"}
+,{"stream_name":"stdout","time":458.923009296,"data":"\n"}
+,{"stream_name":"stdout","time":458.923013687,"data":"Let the circle be denoted by $C$. The center of the circle is $O = (4, 39)$. The radius is $r$.\n"}
+,{"stream_name":"stdout","time":458.923019476,"data":"The equation of the circle is $(x - 4)^2 + (y - 39)^2 = r^2$.\n"}
+,{"stream_name":"stdout","time":458.923024073,"data":"\n"}
+,{"stream_name":"stdout","time":458.923028529,"data":"The parabola is denoted by $P$. The equation is $2y = x^2 - 8x + 12$.\n"}
+,{"stream_name":"stdout","time":458.923034602,"data":"We can rewrite this as $y = \\frac{1}{2}x^2 - 4x + 6$.\n"}
+,{"stream_name":"stdout","time":458.923038981,"data":"Let's complete the square for the parabola to understand its geometry better.\n"}
+,{"stream_name":"stdout","time":458.92304352,"data":"$y = \\frac{1}{2}(x^2 - 8x) + 6 = \\frac{1}{2}(x^2 - 8x + 16 - 16) + 6 = \\frac{1}{2}(x-4)^2 - 8 + 6 = \\frac{1}{2}(x-4)^2 - 2$.\n"}
+,{"stream_name":"stdout","time":458.923047951,"data":"So the vertex of the parabola is at $(4, -2)$.\n"}
+,{"stream_name":"stdout","time":458.923052424,"data":"The axis of symmetry is the line $x = 4$.\n"}
+,{"stream_name":"stdout","time":458.923056954,"data":"The focus of the parabola $y = \\frac{1}{2}(x-4)^2 - 2$ can be found.\n"}
+,{"stream_name":"stdout","time":458.923061477,"data":"Standard form: $x^2 = 4py$. Here $(x-4)^2 = 2(y+2)$.\n"}
+,{"stream_name":"stdout","time":458.923065953,"data":"So $4p = 2 \\implies p = 1/2$.\n"}
+,{"stream_name":"stdout","time":458.923070428,"data":"The focus is \n"}
+,{"stream_name":"stdout","time":458.923075016,"data":"\n"}
+,{"stream_name":"stdout","time":458.923079567,"data":"[즉답] pidx 0 · ans=' 100\\n' · int=100 · note=\n"}
+,{"stream_name":"stdout","time":458.923084061,"data":"[즉답] pidx 1 · ans=' 1\\n\\n### Step-by-Step' · int=1 · note=\n"}
+,{"stream_name":"stdout","time":458.923088538,"data":"[즉답] pidx 2 · ans=' 105\\n\\nANSWER:' · int=105 · note=\n"}
+,{"stream_name":"stdout","time":458.923093015,"data":"[즉답] pidx 3 · ans=' 26\\n\\nWait, let me' · int=26 · note=\n"}
+,{"stream_name":"stdout","time":458.923097523,"data":"[즉답] pidx 4 · ans=' 1\\n\\n### Step-by-Step' · int=1 · note=\n"}
+,{"stream_name":"stderr","time":465.549235474,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":465.549281849,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":465.805690158,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":465.805717846,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":466.580768088,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":467.629450414,"data":"[NbConvertApp] Writing 375724 bytes to __results__.html\n"}
+]

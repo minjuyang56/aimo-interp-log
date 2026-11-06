@@ -1,0 +1,45 @@
+#GEN-PROBE — 풀이 도중 벡터 프로브 · **창 앞 512 토큰** · null 1000회
+주라벨 `label`(max_drop) · gen_k==8 · #77 프로토콜 과 동일한 폴드·PCA24·C격자·층 내부CV
+
+## Skywork · Skywork-OR1-Math-7B_gen512.npz · n 30 (robust 26 / spurious 4) · 쓴 풀이토큰 중앙 2048
+   AUC **0.692** · null 95% [0.17, 0.79]
+   길이잔차 AUC 0.625 · null [0.15, 0.74]  (게이트 아님)
+   balanced acc 0.500 · 고른 (층, C) [(7, 0.3), (21, 0.3), (14, 0.1), (21, 0.01)]
+   민감도 label_fin: 같은 점수로 AUC 0.778 (robust 27 / spurious 3)
+   민감도 label_major: **적용 불가** (라벨 수·클래스 부족)
+   기준선1 base_acc(k=8): AUC 0.716  (단독 순위 AUC 0.764)
+   기준선2 greedy 정답여부: AUC 0.490  (단독 순위 AUC 0.654)
+   기준선3 greedy 토큰수: AUC 0.659  (단독 순위 AUC 0.183)
+
+## Olmo · Olmo-3-7B-Think_gen512.npz · n 31 (robust 21 / spurious 10) · 쓴 풀이토큰 중앙 2048
+   AUC **0.719** · null 95% [0.22, 0.70] ▲
+   길이잔차 AUC 0.686 · null [0.21, 0.67]  (게이트 아님)
+   balanced acc 0.586 · 고른 (층, C) [(16, 0.003), (8, 0.01), (8, 0.003), (8, 0.003), (32, 0.3)]
+   민감도 label_fin: 같은 점수로 AUC 0.735 (robust 21 / spurious 9)
+   민감도 label_major: 같은 점수로 AUC 0.619 (robust 28 / spurious 3)
+   기준선1 base_acc(k=8): AUC 0.493  (단독 순위 AUC 0.429)
+   기준선2 greedy 정답여부: AUC 0.517  (단독 순위 AUC 0.579)
+   기준선3 greedy 토큰수: AUC 0.319  (단독 순위 AUC 0.310)
+
+## DeepSeek · DeepSeek-R1-0528-Qwen3-8B_gen512.npz · n 23 (robust 12 / spurious 11) · 쓴 풀이토큰 중앙 2048
+   AUC **0.447** · null 95% [0.19, 0.72]
+   길이잔차 AUC 0.447 · null [0.17, 0.69]  (게이트 아님)
+   balanced acc 0.564 · 고른 (층, C) [(27, 0.03), (27, 0.003), (27, 0.1), (27, 0.003), (36, 0.01)]
+   민감도 label_fin: 같은 점수로 AUC 0.447 (robust 12 / spurious 11)
+   민감도 label_major: 같은 점수로 AUC 0.690 (robust 21 / spurious 2)
+   기준선1 base_acc(k=8): AUC 0.663  (단독 순위 AUC 0.239)
+   기준선2 greedy 정답여부: AUC 0.447  (단독 순위 AUC 0.545)
+   기준선3 greedy 토큰수: AUC 0.470  (단독 순위 AUC 0.379)
+
+## 주지표 — 주라벨 모델별 AUC 의 **모델평균**
+   모델평균 AUC **0.619** · null 상단 평균 0.73 → 기준1 **미달**
+   모델평균 길이잔차 0.586 · null 상단 평균 0.70 (게이트 아님)
+
+## 기준선 모델평균 (지휘 지정)
+   기준선1 base_acc(k=8): 모델평균 AUC 0.624
+   기준선2 greedy 정답여부: 모델평균 AUC 0.485
+   기준선3 greedy 토큰수: 모델평균 AUC 0.482
+   → 기준2 **미달** (기준선1 base_acc(k=8) 이상)
+
+## 판정
+   **신호 미입증** (기준1 X · 기준2 X)

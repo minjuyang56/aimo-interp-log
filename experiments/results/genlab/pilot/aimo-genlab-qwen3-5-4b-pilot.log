@@ -1,0 +1,64 @@
+[{"stream_name":"stdout","time":6.058747666,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 2.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.797319613,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 86.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.835847085,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 19.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.8713160989999995,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 26.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":7.33776084,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 43.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":7.472182839,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.8/10.8 MB 89.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":8.028018037,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 37.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":32.369086809,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":32.369145527,"data":"bigframes 2.39.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.36915335,"data":"google-adk 1.29.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.369158398,"data":"ydata-profiling 4.18.4 requires pandas!=1.4.0,\u003c3.0,\u003e1.5, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.369163145,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.369167702,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.369172247,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.36918265,"data":"bqplot 0.12.45 requires pandas\u003c3.0.0,\u003e=1.0.0, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.369186183,"data":"cudf-cu12 26.2.1 requires pandas\u003c2.4.0,\u003e=2.0, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.369189405,"data":"dask-cudf-cu12 26.2.1 requires pandas\u003c2.4.0,\u003e=2.0, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.369192534,"data":"db-dtypes 1.5.1 requires pandas\u003c3.0.0,\u003e=1.5.3, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.369195772,"data":"gradio 5.50.0 requires pandas\u003c3.0,\u003e=1.0, but you have pandas 3.0.6 which is incompatible.\n"}
+,{"stream_name":"stdout","time":32.530536291,"data":"[바뀌면 안 되는 절차형] The sum of \\frac{1}{2} and \\frac{1}{3} is added to 7. A second number equals 20. The total is divided by 4. What is the result?\n"}
+,{"stream_name":"stdout","time":32.530600276,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":32.530780494,"data":"  notation: The sum of 1/2 and 1/3 is added to 7. A second number equals 20. The total is divided by 4. What is the result?\n"}
+,{"stream_name":"stdout","time":32.530873704,"data":"  → 채택 : [('notation', 'The sum of 1/2 and 1/3 is added to 7. A second number equals…', False), ('format', 'The sum of \\\\frac{1}{2} and \\\\frac{1}{3} is added to 7. A seco…', True)]\n"}
+,{"stream_name":"stdout","time":32.530882042,"data":"\n"}
+,{"stream_name":"stdout","time":32.53088553,"data":"[안전한 조건형] Alice has 12 apples. Bob has three times as many apples as Alice. Carol has $5$ fewer apples than Bob. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":32.530995977,"data":"  reorder : Carol has $5$ fewer apples than Bob. Bob has three times as many apples as Alice. Alice has 12 apples. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":32.531002191,"data":"  notation: Alice has twelve apples. Bob has three times as many apples as Alice. Carol has $5$ fewer apples than Bob. How many apples does Carol have?\n"}
+,{"stream_name":"stdout","time":32.531151347,"data":"  → 채택 : [('reorder', 'Carol has $5$ fewer apples than Bob. Bob has three times as …', False), ('notation', 'Alice has twelve apples. Bob has three times as many apples …', False)]\n"}
+,{"stream_name":"stdout","time":32.531160004,"data":"\n"}
+,{"stream_name":"stdout","time":32.53116425,"data":"[짧은 문제] Let $f(x) = x^2 + 3x$. Find $f(4)$.\n"}
+,{"stream_name":"stdout","time":32.531168233,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":32.531227612,"data":"  notation: (적용 불가)\n"}
+,{"stream_name":"stdout","time":32.531246529,"data":"  → 채택 : [('format', 'Let $f(x) = x^2 + 3x$. Find $f(4)$.', True), ('format2', 'Let $f(x) = x^2 + 3x$. Find $f(4)$.', True)]\n"}
+,{"stream_name":"stdout","time":32.531251271,"data":"\n"}
+,{"stream_name":"stdout","time":32.531254707,"data":"[분수 보호] A recipe uses \\frac{3}{4} cup of sugar and 25 grams of salt. The baker triples the recipe. How much sugar is used?\n"}
+,{"stream_name":"stdout","time":32.531266797,"data":"  reorder : (적용 불가)\n"}
+,{"stream_name":"stdout","time":32.531347523,"data":"  notation: A recipe uses 3/4 cup of sugar and twenty-five grams of salt. The baker triples the recipe. How much sugar is used?\n"}
+,{"stream_name":"stdout","time":32.531402752,"data":"  → 채택 : [('notation', 'A recipe uses 3/4 cup of sugar and twenty-five grams of salt…', False), ('format', 'A recipe uses \\\\frac{3}{4} cup of sugar and 25 grams of salt.…', True)]\n"}
+,{"stream_name":"stdout","time":32.531409994,"data":"\n"}
+,{"stream_name":"stdout","time":32.531822497,"data":"답 추출: -12 1234 42\n"}
+,{"stream_name":"stdout","time":32.53184064,"data":"자체 검사 통과\n"}
+,{"stream_name":"stdout","time":40.489660114,"data":"문제 10개 (후보 1476 · v2 중복 제거 후)\n"}
+,{"stream_name":"stderr","time":61.136416229,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":63.857592436,"data":"[load] VRAM 31.3 GB → fp16/bf16\n"}
+,{"stream_name":"stderr","time":112.482160423,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:47\u003c00:47, 47.06s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:47\u003c00:00, 23.53s/it]\n"}
+,{"stream_name":"stderr","time":122.18191713,"data":"[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d\n"}
+,{"stream_name":"stderr","time":124.855200022,"data":"\rLoading weights:   0%|          | 0/426 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/426 [00:00\u003c02:09,  3.29it/s]\rLoading weights:   6%|▋         | 27/426 [00:00\u003c00:04, 82.28it/s]\rLoading weights:  11%|█         | 45/426 [00:00\u003c00:03, 112.04it/s]\rLoading weights:  18%|█▊        | 75/426 [00:00\u003c00:02, 163.99it/s]\rLoading weights:  23%|██▎       | 96/426 [00:00\u003c00:01, 171.37it/s]\rLoading weights:  28%|██▊       | 119/426 [00:00\u003c00:01, 184.30it/s]\rLoading weights:  33%|███▎      | 142/426 [00:00\u003c00:01, 196.80it/s]\rLoading weights:  39%|███▉      | 167/426 [00:01\u003c00:01, 203.23it/s]\rLoading weights:  46%|████▌     | 195/426 [00:01\u003c00:01, 223.29it/s]\rLoading weights:  51%|█████▏    | 219/426 [00:01\u003c00:00, 215.35it/s]\rLoading weights:  57%|█████▋    | 242/426 [00:01\u003c00:00, 211.08it/s]\rLoading weights:  62%|██████▏   | 264/426 [00:01\u003c00:00, 202.72it/s]\rLoading weights:  68%|██████▊   | 291/426 [00:01\u003c00:00, 219.23it/s]\rLoading weights:  74%|███████▎  | 314/426 [00:01\u003c00:00, 205.82it/s]\rLoading weights:  80%|████████  | 341/426 [00:01\u003c00:00, 222.21it/s]\rLoading weights:  85%|████████▌ | 364/426 [00:01\u003c00:00, 205.65it/s]\rLoading weights:  91%|█████████▏| 389/426 [00:02\u003c00:00, 212.19it/s]\rLoading weights:  97%|█████████▋| 413/426 [00:02\u003c00:00, 212.47it/s]\rLoading weights: 100%|██████████| 426/426 [00:02\u003c00:00, 188.00it/s]\n"}
+,{"stream_name":"stdout","time":125.543457301,"data":"[1단계] 원문제 10개 · 배치 8 · max_new 4096\n"}
+,{"stream_name":"stdout","time":1655.887290861,"data":"  8/10 · 맞힘 3/8 · 1530s · 20.2 tok/s · eos 2/8\n"}
+,{"stream_name":"stdout","time":2768.790156253,"data":"  10/10 · 맞힘 4/10 · 2643s · 14.4 tok/s · eos 3/10\n"}
+,{"stream_name":"stdout","time":2768.790194838,"data":"[2단계] 변형 대상 4문제 × 2\n"}
+,{"stream_name":"stdout","time":4286.394212357,"data":"  8/8 · 4161s\n"}
+,{"stream_name":"stdout","time":4286.673765148,"data":"[done] Qwen3_5-4B: 문제 10 · 맞힘 4 · 라벨 4 (robust 4 / spurious 0) · 4161s\n"}
+,{"stream_name":"stdout","time":4286.673794189,"data":"    1 216 [('notation', 216), ('format', 216)] → True\n"}
+,{"stream_name":"stdout","time":4286.673800213,"data":"    3 156 [('notation', 156), ('format', 156)] → True\n"}
+,{"stream_name":"stdout","time":4286.673805361,"data":"    7 4 [('format', 4), ('format2', 4)] → True\n"}
+,{"stream_name":"stdout","time":4286.673810839,"data":"    8 2 [('format', 2), ('format2', 2)] → True\n"}
+,{"stream_name":"stderr","time":4291.984623172,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4291.984684041,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4292.239463862,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4292.239498526,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4292.874839493,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4294.219896154,"data":"[NbConvertApp] Writing 382123 bytes to __results__.html\n"}
+]

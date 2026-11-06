@@ -1,0 +1,63 @@
+문제 36 · 라벨 33 (robust 20 / spurious 13) · N=512
+[0] 길이 단독 AUC 0.331   상수 bacc 0.500
+== Qwen/Qwen3.5-4B
+   특징 단독 AUC (|AUC−0.5|가 클수록 갈림, 방향은 부호):
+     mean_lp              AUC 0.519  ρ(len) -0.13  
+     min_lp               AUC 0.538  ρ(len) -0.22  #
+     std_lp               AUC 0.488  ρ(len) +0.19  
+     ppl                  AUC 0.481  ρ(len) +0.13  
+     mean_ent             AUC 0.458  ρ(len) +0.12  #
+     mean_top1            AUC 0.527  ρ(len) -0.11  #
+     mean_margin          AUC 0.535  ρ(len) -0.02  #
+     frac_low_lp          AUC 0.525  ρ(len) +0.25  #
+     frac_conf            AUC 0.533  ρ(len) +0.05  #
+     lp_late_minus_early  AUC 0.488  ρ(len) +0.10  
+     ent_slope            AUC 0.473  ρ(len) -0.01  #
+   12특징 LOPO  bacc 0.254  AUC 0.135  ρ(len) +0.17  길이 잔차 AUC 0.150
+== Skywork/Skywork-OR1-Math-7B
+   특징 단독 AUC (|AUC−0.5|가 클수록 갈림, 방향은 부호):
+     mean_lp              AUC 0.596  ρ(len) -0.24  ###
+     min_lp               AUC 0.558  ρ(len) +0.01  ##
+     std_lp               AUC 0.369  ρ(len) +0.22  #####
+     ppl                  AUC 0.404  ρ(len) +0.24  ###
+     mean_ent             AUC 0.427  ρ(len) +0.23  ##
+     mean_top1            AUC 0.577  ρ(len) -0.25  ###
+     mean_margin          AUC 0.581  ρ(len) -0.23  ###
+     frac_conf            AUC 0.554  ρ(len) -0.23  ##
+     lp_late_minus_early  AUC 0.562  ρ(len) -0.01  ##
+     ent_slope            AUC 0.427  ρ(len) +0.05  ##
+   12특징 LOPO  bacc 0.415  AUC 0.212  ρ(len) +0.08  길이 잔차 AUC 0.208
+== allenai/Olmo-3-7B-Think
+   특징 단독 AUC (|AUC−0.5|가 클수록 갈림, 방향은 부호):
+     mean_lp              AUC 0.565  ρ(len) -0.52  ##
+     min_lp               AUC 0.400  ρ(len) -0.26  ####
+     std_lp               AUC 0.465  ρ(len) +0.55  #
+     ppl                  AUC 0.435  ρ(len) +0.52  ##
+     mean_ent             AUC 0.435  ρ(len) +0.52  ##
+     mean_top1            AUC 0.562  ρ(len) -0.52  ##
+     mean_margin          AUC 0.569  ρ(len) -0.47  ##
+     frac_conf            AUC 0.596  ρ(len) -0.48  ###
+     lp_late_minus_early  AUC 0.581  ρ(len) -0.10  ###
+     ent_slope            AUC 0.473  ρ(len) +0.17  #
+   12특징 LOPO  bacc 0.581  AUC 0.615  ρ(len) -0.31  길이 잔차 AUC 0.623
+== deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+   특징 단독 AUC (|AUC−0.5|가 클수록 갈림, 방향은 부호):
+     mean_lp              AUC 0.442  ρ(len) -0.43  ##
+     min_lp               AUC 0.462  ρ(len) -0.20  #
+     std_lp               AUC 0.512  ρ(len) +0.49  
+     ppl                  AUC 0.558  ρ(len) +0.43  ##
+     mean_ent             AUC 0.542  ρ(len) +0.43  #
+     mean_top1            AUC 0.442  ρ(len) -0.43  ##
+     mean_margin          AUC 0.438  ρ(len) -0.39  ##
+     frac_conf            AUC 0.462  ρ(len) -0.40  #
+     lp_late_minus_early  AUC 0.515  ρ(len) -0.13  
+     ent_slope            AUC 0.519  ρ(len) +0.11  
+   12특징 LOPO  bacc 0.329  AUC 0.165  ρ(len) +0.28  길이 잔차 AUC 0.196
+[2] 모델 간 margin 상관
+   Qwen3_5-4B                   vs Skywork-OR1-Math-7B          ρ = +0.46
+   Qwen3_5-4B                   vs Olmo-3-7B-Think              ρ = +0.09
+   Qwen3_5-4B                   vs DeepSeek-R1-0528-Qwen3-8B    ρ = +0.17
+   Skywork-OR1-Math-7B          vs Olmo-3-7B-Think              ρ = -0.01
+   Skywork-OR1-Math-7B          vs DeepSeek-R1-0528-Qwen3-8B    ρ = +0.21
+   Olmo-3-7B-Think              vs DeepSeek-R1-0528-Qwen3-8B    ρ = -0.13
+   4모델 평균 → AUC 0.258  bacc 0.417

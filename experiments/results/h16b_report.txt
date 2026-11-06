@@ -1,0 +1,2 @@
+H16b prefill 풀링 probe · 모델 4 · 문제 62 (robust 44 / spurious 18) · 층 3개 · nested LOO · null 1000회
+  LOO AUC **0.556** [null 0.34,0.66]  · 내부 CV 선택 분포 {(0, 0.003): 61, (2, 0.003): 1}

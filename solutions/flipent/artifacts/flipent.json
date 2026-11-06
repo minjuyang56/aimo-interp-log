@@ -1,0 +1,45 @@
+{
+  "rule": "score = ent_front = mean token entropy (full-vocab, natural log) over the first ceil(T/4) generated tokens of a greedy continuation capped at 1024 tokens. HIGHER entropy => robust (True). Per-model threshold = median ent_front on the organisers' official train-main-v2 33 problems, measured with the same generation setting (P2 artifacts); the official labels are NOT used.",
+  "sign": "ent_front >= thr  ->  True (robust)",
+  "cap": 1024,
+  "front_frac": 0.25,
+  "dtype_measured": "fp16",
+  "prereg": "CLAUDE.md ## #FLIP-ENT (pre-registered 2026-10-20, commit 4fcd838)",
+  "experimental": true,
+  "note": "EXPERIMENTAL submission (directive #FLIPENT-ZIP): the standing build gate requires >0.645 on the official 33, and this score was never evaluated there (the #FLIP-ENT pre-registration forbade re-judging on data already seen). On its own four self-label arms all four fell short of their shuffle nulls (AUC 0.721/0.562/0.337/0.526).",
+  "per_model": {
+    "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B": {
+      "thr": 0.19059280078125002,
+      "n": 33,
+      "train_true_rate": 0.5151515151515151,
+      "front_min": 0.1151071171875,
+      "front_max": 0.38664772265625,
+      "alias": "DeepSeek-R1-0528-Qwen3-8B"
+    },
+    "allenai/Olmo-3-7B-Think": {
+      "thr": 0.24138853515625,
+      "n": 33,
+      "train_true_rate": 0.5151515151515151,
+      "front_min": 0.1379789765625,
+      "front_max": 0.3727400625,
+      "alias": "Olmo-3-7B-Think"
+    },
+    "Qwen/Qwen3.5-4B": {
+      "thr": 0.250795796875,
+      "n": 33,
+      "train_true_rate": 0.5151515151515151,
+      "front_min": 0.14634004296875,
+      "front_max": 0.43626074609375,
+      "alias": "Qwen3_5-4B"
+    },
+    "Skywork/Skywork-OR1-Math-7B": {
+      "thr": 0.13639653125,
+      "n": 33,
+      "train_true_rate": 0.5151515151515151,
+      "front_min": 0.08260587109375,
+      "front_max": 0.22204280078125,
+      "alias": "Skywork-OR1-Math-7B"
+    }
+  },
+  "h15c_thr": -4.084030533093263
+}

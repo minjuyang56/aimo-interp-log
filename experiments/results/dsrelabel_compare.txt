@@ -1,0 +1,43 @@
+#DS-RELABEL — 옛(손상) vs 새(깨끗) DeepSeek k=8 라벨 (GPU 0)
+손상은 정답을 오답으로 세어 base_acc 를 약 0.28 깎았다 → 채택(>=0.5)·라벨이 같이 틀어졌다.
+그래서 **base_acc 평균이 올랐는가**가 손상 제거의 직접 증거다.
+
+## off40
+   파일: 옛 luvw8yu3mkxsza · 새 mbpc29h3v7um64
+   항목                             옛(손상)         새(깨끗)
+   채택 문제                             24            35
+   라벨 수                              23            32
+   robust / spurious            12 / 11        29 / 3
+   spurious 비율                      48%            9%
+   base_acc 평균                    0.698         0.971
+   경계 1샘플 판정                          0             0
+   spurious 원인 오답                    89             8
+   spurious 원인 미완주                   10             9
+   label_fin 일치                   23/23         31/32
+   과반 양성(spurious)                 2/23          0/32
+   결정 유형                 {'typos': 4, 'rename': 2, 'distract': 5}{'distract': 2, 'rename': 1}
+   라벨이 양쪽에 다 있는 pidx 21개 · **일치 13/21** = 62%
+   새로 라벨된 pidx [40, 44, 45, 46, 47, 48, 54, 58, 59, 62, 66]
+   사라진 pidx [51, 63]
+
+## off80
+   파일: 옛 1f7jul0dgk7o9s · 새 9svqsw8dzrtjsv
+   항목                             옛(손상)         새(깨끗)
+   채택 문제                             26            35
+   라벨 수                              18            32
+   robust / spurious             12 / 6        29 / 3
+   spurious 비율                      33%            9%
+   base_acc 평균                    0.712         0.943
+   경계 1샘플 판정                          0             0
+   spurious 원인 오답                    31             3
+   spurious 원인 미완주                    4             9
+   label_fin 일치                   17/18         29/31
+   과반 양성(spurious)                 1/18          0/32
+   결정 유형                 {'rename': 1, 'distract': 3, 'typos': 2}{'rename': 1, 'typos': 1, 'distract': 1}
+   라벨이 양쪽에 다 있는 pidx 18개 · **일치 12/18** = 67%
+   새로 라벨된 pidx [84, 87, 88, 90, 92, 101, 103, 106, 109, 110, 112, 116, 117, 119]
+   사라진 pidx []
+
+## 읽는 법
+   base_acc 가 올랐고 라벨이 바뀌었다면 두 원인(손상 제거 · k=8 재샘플 변동)이 섞여 있다.
+   같은 설정 재실행 없이는 그 둘을 가를 수 없다(사전등록 한계에 미리 적었다).

@@ -1,0 +1,119 @@
+#FLIPENT-ZIP 로컬 e2e 계측 줄 (로그에서 기계적으로 추출 · 손으로 옮겨 적지 않았다)
+   추출 규칙: /로드|생성 계획|ent_front|판정 |경로 |생성 경로|OOM|로드 실패|\[OK\]|\[FAIL\]|판정:/ 에 걸리는 줄만
+
+## flipent_smoke_e2e.log (19100 bytes · 걸린 줄 42)
+   ## 1. ent_front == entlens_eval.ent_feats[0] (제출물이 측정과 같은 식인가)
+      [OK] 난수 배열 9종(T=8..1024) 최대절대차                    2.220e-16
+      [OK] 실제 P2 행 132개 최대절대차                           5.551e-17
+      [OK] T<8 은 None
+      [OK] 비유한(nan/inf) 흔적은 None
+      [OK] SOLVE_PROMPT 문자열 동일
+      [OK] Qwen3.5-4B                         프롬프트·id 동일 토큰 [89, 83] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] Skywork-OR1-Math-7B                프롬프트·id 동일 토큰 [81, 75] · add_special_tokens=True 면 +[1, 1] 토큰
+      [OK] Olmo-3-7B-Think                    프롬프트·id 동일 토큰 [147, 143] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] DeepSeek-R1-0528-Qwen3-8B          프롬프트·id 동일 토큰 [79, 73] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] 모델 4종 임계 존재                                  Qwen/Qwen3.5-4B Skywork/Skywork-OR1-Math-7B allenai/Olmo-3-7B-Think deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+      [OK] 기록값 재현 DeepSeek-R1-0528-Qwen3-8B             0.190593 vs 기록 0.1906
+      [OK] 기록값 재현 Olmo-3-7B-Think                       0.241389 vs 기록 0.2414
+      [OK] 기록값 재현 Skywork-OR1-Math-7B                   0.136397 vs 기록 0.1364
+      [OK] 저장값 == 다시 계산한 중앙값 (4모델)                      불일치 0
+      [OK] cap·부호 메타 기록                                 cap 1024 · experimental True
+      [OK] 판정 8/8 일치                                    단어수 8 8 1 81 27 59 60 1
+      [OK] 폴백 임계 == h15C 출하값
+      [OK] openai/gpt-oss-120b      → h15C 폴백           0.00s · [True, True]
+      [OK] qwen3-8b:low             → h15C 폴백           0.00s · [True, True]
+      [OK] totally-unknown-model    → h15C 폴백           0.00s · [True, True]
+      [OK] (빈 문자열)                  → h15C 폴백           0.00s · [True, True]
+      [OK] 빈 입력은 []
+      [OK] 예산 0 → 생성 전에 폴백                              [True, True]
+      [OK] 예산 충분 → 계획 성립(칸 44 · 추정 73s)
+      [OK] CAP 사다리가 없다(점수 정의가 cap 에 묶여 있다)              CAP=1024
+           cap %d · 문제 2개 · 4bit nf4 (임계는 fp16 측정에서 나왔으므로 **판정 자체는
+   [flipent    76.5s]   Qwen/Qwen3.5-4B 로드 25.9s · dtype 4bit
+   [flipent    76.5s]   생성 계획: 문제 2 · cap 1024 · 배치칸 10 · 추정 20s / 예산 3224s
+   [flipent   442.5s]   ent_front n=2 · 평균 0.1536 · 범위 [0.1525, 0.1547] · 임계 0.2508
+   [flipent   442.5s]   판정 2/2 · 폴백 0 · True 0/2
+      [OK] Qwen/Qwen3.5-4B                    [False, False] 392s
+   [flipent   445.5s]   Skywork/Skywork-OR1-Math-7B 로드 실패: ValueError Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you
+      [OK] Skywork/Skywork-OR1-Math-7B        [True, True] 3s
+   [flipent   477.0s]   allenai/Olmo-3-7B-Think 로드 31.5s · dtype 4bit
+   [flipent   477.0s]   생성 계획: 문제 2 · cap 1024 · 배치칸 1 · 추정 38s / 예산 2823s
+   [flipent  1016.6s]   ent_front n=2 · 평균 0.2012 · 범위 [0.1964, 0.2059] · 임계 0.2414
+   [flipent  1016.6s]   판정 2/2 · 폴백 0 · True 0/2
+      [OK] allenai/Olmo-3-7B-Think            [False, False] 571s
+   [flipent  1020.0s]   deepseek-ai/DeepSeek-R1-0528-Qwen3-8B 로드 실패: ValueError Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you
+      [OK] deepseek-ai/DeepSeek-R1-0528-Qwen3-8B [True, True] 3s
+   ## 판정: 전부 통과
+
+## flipent_smoke_e2e_Skywork-OR1-Math-7B.log (10599 bytes · 걸린 줄 34)
+   ## 1. ent_front == entlens_eval.ent_feats[0] (제출물이 측정과 같은 식인가)
+      [OK] 난수 배열 9종(T=8..1024) 최대절대차                    2.220e-16
+      [OK] 실제 P2 행 132개 최대절대차                           5.551e-17
+      [OK] T<8 은 None
+      [OK] 비유한(nan/inf) 흔적은 None
+      [OK] SOLVE_PROMPT 문자열 동일
+      [OK] Qwen3.5-4B                         프롬프트·id 동일 토큰 [89, 83] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] Skywork-OR1-Math-7B                프롬프트·id 동일 토큰 [81, 75] · add_special_tokens=True 면 +[1, 1] 토큰
+      [OK] Olmo-3-7B-Think                    프롬프트·id 동일 토큰 [147, 143] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] DeepSeek-R1-0528-Qwen3-8B          프롬프트·id 동일 토큰 [79, 73] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] 모델 4종 임계 존재                                  Qwen/Qwen3.5-4B Skywork/Skywork-OR1-Math-7B allenai/Olmo-3-7B-Think deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+      [OK] 기록값 재현 DeepSeek-R1-0528-Qwen3-8B             0.190593 vs 기록 0.1906
+      [OK] 기록값 재현 Olmo-3-7B-Think                       0.241389 vs 기록 0.2414
+      [OK] 기록값 재현 Skywork-OR1-Math-7B                   0.136397 vs 기록 0.1364
+      [OK] 저장값 == 다시 계산한 중앙값 (4모델)                      불일치 0
+      [OK] cap·부호 메타 기록                                 cap 1024 · experimental True
+      [OK] 판정 8/8 일치                                    단어수 8 8 1 81 27 59 60 1
+      [OK] 폴백 임계 == h15C 출하값
+      [OK] openai/gpt-oss-120b      → h15C 폴백           0.00s · [True, True]
+      [OK] qwen3-8b:low             → h15C 폴백           0.00s · [True, True]
+      [OK] totally-unknown-model    → h15C 폴백           0.00s · [True, True]
+      [OK] (빈 문자열)                  → h15C 폴백           0.00s · [True, True]
+      [OK] 빈 입력은 []
+      [OK] 예산 0 → 생성 전에 폴백                              [True, True]
+      [OK] 예산 충분 → 계획 성립(칸 44 · 추정 73s)
+      [OK] CAP 사다리가 없다(점수 정의가 cap 에 묶여 있다)              CAP=1024
+           cap 1024 · 문제 2개 · 4bit nf4 (임계는 fp16 측정에서 나왔으므로 **판정 자체는
+   [flipent    88.1s]   Skywork/Skywork-OR1-Math-7B 로드 36.5s · dtype 4bit
+   [flipent    88.1s]   생성 계획: 문제 2 · cap 1024 · 배치칸 8 · 추정 20s / 예산 3212s
+   [flipent   304.5s]   ent_front n=2 · 평균 0.1546 · 범위 [0.1498, 0.1593] · 임계 0.1364
+   [flipent   304.5s]   판정 2/2 · 폴백 0 · True 2/2
+      [OK] Skywork/Skywork-OR1-Math-7B        [True, True] 253s · 경로 생성
+           생성 경로를 실제로 돈 모델 1/1
+   ## 판정: 전부 통과
+
+## flipent_smoke_e2e_DeepSeek-R1-0528-Qwen3-8B.log (13903 bytes · 걸린 줄 34)
+   ## 1. ent_front == entlens_eval.ent_feats[0] (제출물이 측정과 같은 식인가)
+      [OK] 난수 배열 9종(T=8..1024) 최대절대차                    2.220e-16
+      [OK] 실제 P2 행 132개 최대절대차                           5.551e-17
+      [OK] T<8 은 None
+      [OK] 비유한(nan/inf) 흔적은 None
+      [OK] SOLVE_PROMPT 문자열 동일
+      [OK] Qwen3.5-4B                         프롬프트·id 동일 토큰 [89, 83] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] Skywork-OR1-Math-7B                프롬프트·id 동일 토큰 [81, 75] · add_special_tokens=True 면 +[1, 1] 토큰
+      [OK] Olmo-3-7B-Think                    프롬프트·id 동일 토큰 [147, 143] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] DeepSeek-R1-0528-Qwen3-8B          프롬프트·id 동일 토큰 [79, 73] · add_special_tokens=True 면 +[0, 0] 토큰
+      [OK] 모델 4종 임계 존재                                  Qwen/Qwen3.5-4B Skywork/Skywork-OR1-Math-7B allenai/Olmo-3-7B-Think deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+      [OK] 기록값 재현 DeepSeek-R1-0528-Qwen3-8B             0.190593 vs 기록 0.1906
+      [OK] 기록값 재현 Olmo-3-7B-Think                       0.241389 vs 기록 0.2414
+      [OK] 기록값 재현 Skywork-OR1-Math-7B                   0.136397 vs 기록 0.1364
+      [OK] 저장값 == 다시 계산한 중앙값 (4모델)                      불일치 0
+      [OK] cap·부호 메타 기록                                 cap 1024 · experimental True
+      [OK] 판정 8/8 일치                                    단어수 8 8 1 81 27 59 60 1
+      [OK] 폴백 임계 == h15C 출하값
+      [OK] openai/gpt-oss-120b      → h15C 폴백           0.00s · [True, True]
+      [OK] qwen3-8b:low             → h15C 폴백           0.00s · [True, True]
+      [OK] totally-unknown-model    → h15C 폴백           0.00s · [True, True]
+      [OK] (빈 문자열)                  → h15C 폴백           0.00s · [True, True]
+      [OK] 빈 입력은 []
+      [OK] 예산 0 → 생성 전에 폴백                              [True, True]
+      [OK] 예산 충분 → 계획 성립(칸 44 · 추정 73s)
+      [OK] CAP 사다리가 없다(점수 정의가 cap 에 묶여 있다)              CAP=1024
+           cap 1024 · 문제 2개 · 4bit nf4 (임계는 fp16 측정에서 나왔으므로 **판정 자체는
+   [flipent   215.2s]   deepseek-ai/DeepSeek-R1-0528-Qwen3-8B 로드 43.5s · dtype 4bit
+   [flipent   215.2s]   생성 계획: 문제 2 · cap 1024 · 배치칸 2 · 추정 20s / 예산 3085s
+   [flipent   539.5s]   ent_front n=2 · 평균 0.1689 · 범위 [0.1669, 0.1708] · 임계 0.1906
+   [flipent   539.5s]   판정 2/2 · 폴백 0 · True 0/2
+      [OK] deepseek-ai/DeepSeek-R1-0528-Qwen3-8B [False, False] 368s · 경로 생성
+           생성 경로를 실제로 돈 모델 1/1
+   ## 판정: 전부 통과
+

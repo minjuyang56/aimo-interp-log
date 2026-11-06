@@ -1,0 +1,125 @@
+[{"stream_name":"stdout","time":5.555407173,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 35.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.593112081,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 20.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.638067142,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 31.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":21.680673185,"data":"WARNING: Skipping torchaudio as it is not installed.\n"}
+,{"stream_name":"stdout","time":21.73721471,"data":"[env] torchaudio 제거 확인\n"}
+,{"stream_name":"stdout","time":21.737287136,"data":"[env] model Skywork/Skywork-OR1-Math-7B · maxnew 1024 · batch 0 · nprob 0\n"}
+,{"stream_name":"stderr","time":42.413137549,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":120.298521659,"data":"\rFetching 4 files:   0%|          | 0/4 [00:00\u003c?, ?it/s]\rFetching 4 files:  25%|██▌       | 1/4 [00:33\u003c01:39, 33.18s/it]\rFetching 4 files:  50%|█████     | 2/4 [01:14\u003c01:16, 38.03s/it]\rFetching 4 files: 100%|██████████| 4/4 [01:14\u003c00:00, 18.65s/it]\n"}
+,{"stream_name":"stderr","time":153.426926186,"data":"\rLoading weights:   0%|          | 0/339 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/339 [00:10\u003c1:00:51, 10.80s/it]\rLoading weights:  42%|████▏     | 142/339 [00:11\u003c00:10, 18.06it/s]\rLoading weights:  57%|█████▋    | 192/339 [00:14\u003c00:08, 16.73it/s]\rLoading weights:  63%|██████▎   | 214/339 [00:14\u003c00:06, 18.99it/s]\rLoading weights:  67%|██████▋   | 228/339 [00:16\u003c00:06, 17.57it/s]\rLoading weights:  70%|██████▉   | 237/339 [00:17\u003c00:06, 15.74it/s]\rLoading weights:  72%|███████▏  | 244/339 [00:19\u003c00:08, 11.56it/s]\rLoading weights:  73%|███████▎  | 249/339 [00:19\u003c00:07, 12.29it/s]\rLoading weights:  76%|███████▌  | 256/339 [00:20\u003c00:07, 10.91it/s]\rLoading weights:  76%|███████▋  | 259/339 [00:21\u003c00:09,  8.51it/s]\rLoading weights:  79%|███████▉  | 268/339 [00:22\u003c00:08,  8.50it/s]\rLoading weights:  80%|███████▉  | 270/339 [00:23\u003c00:09,  7.21it/s]\rLoading weights:  83%|████████▎ | 280/339 [00:24\u003c00:08,  7.28it/s]\rLoading weights:  86%|████████▌ | 292/339 [00:26\u003c00:06,  7.02it/s]\rLoading weights:  86%|████████▋ | 293/339 [00:26\u003c00:06,  6.62it/s]\rLoading weights:  90%|████████▉ | 304/339 [00:27\u003c00:04,  7.90it/s]\rLoading weights:  90%|████████▉ | 305/339 [00:28\u003c00:05,  6.24it/s]\rLoading weights:  90%|█████████ | 306/339 [00:28\u003c00:05,  5.76it/s]\rLoading weights:  93%|█████████▎| 316/339 [00:29\u003c00:03,  7.29it/s]\rLoading weights:  94%|█████████▍| 318/339 [00:30\u003c00:03,  6.18it/s]\rLoading weights:  97%|█████████▋| 328/339 [00:31\u003c00:01,  6.66it/s]\rLoading weights: 100%|██████████| 339/339 [00:31\u003c00:00, 10.63it/s]\n"}
+,{"stream_name":"stdout","time":153.752075314,"data":"[entlens] Skywork/Skywork-OR1-Math-7B 로드 111s · quant fp16\n"}
+,{"stream_name":"stdout","time":153.752119879,"data":"[entlens] final_norm = model.norm\n"}
+,{"stream_name":"stdout","time":153.752126591,"data":"[entlens] 문제 33 · 층 28 · maxnew 1024 · batch 33\n"}
+,{"stream_name":"stdout","time":458.989122978,"data":"[entlens] 생성 33행 · 305s · 1024스텝 · 298 ms/step · 완주 0/33\n"}
+,{"stream_name":"stdout","time":462.35130957,"data":"[entlens] 렌즈 5/33 · 3s\n"}
+,{"stream_name":"stdout","time":466.34955422,"data":"[entlens] 렌즈 10/33 · 7s\n"}
+,{"stream_name":"stdout","time":470.128216797,"data":"[entlens] 렌즈 15/33 · 11s\n"}
+,{"stream_name":"stdout","time":474.197213374,"data":"[entlens] 렌즈 20/33 · 15s\n"}
+,{"stream_name":"stdout","time":479.53404575,"data":"[entlens] 렌즈 25/33 · 21s\n"}
+,{"stream_name":"stdout","time":483.848549931,"data":"[entlens] 렌즈 30/33 · 25s\n"}
+,{"stream_name":"stdout","time":486.676985306,"data":"[entlens] 렌즈 33/33 · 28s\n"}
+,{"stream_name":"stdout","time":486.678284343,"data":"[entlens] 저장 /kaggle/working/entlens · meta {\"model\": \"Skywork/Skywork-OR1-Math-7B\", \"n_layers\": 28, \"maxnew\": 1024, \"batch\": 33, \"n_prob\": 33, \"quant\": \"fp16\", \"n_marks\": 0, \"finished\": 0, \"lens_ok\": 33, \"lens_gate_max\": 0.0004324317}\n"}
+,{"stream_name":"stdout","time":486.678301436,"data":"[entlens] 렌즈 게이트 통과 · 마지막층 vs 실제 로짓 최대차 4.324e-04\n"}
+,{"stream_name":"stdout","time":486.678306851,"data":"\n"}
+,{"stream_name":"stdout","time":486.678316823,"data":"===== pidx 0 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":486.678320369,"data":"Okay, so I have this problem where Alice and Bob each have some number of sweets. They also have certain ages, which are positive integers. The problem gives me some conditions about their sweets and ages, and then Bob gives a condition about exchanging sweets. I need to find the product of their ages.\n"}
+,{"stream_name":"stdout","time":486.678323818,"data":"\n"}
+,{"stream_name":"stdout","time":486.678326603,"data":"Let me try to break down the problem step by step.\n"}
+,{"stream_name":"stdout","time":486.678329536,"data":"\n"}
+,{"stream_name":"stdout","time":486.6783459,"data":"First, let's define some variables to represent the quantities involved.\n"}
+,{"stream_name":"stdout","time":486.678351059,"data":"\n"}
+,{"stream_name":"stdout","time":486.678356084,"data":"Let me denote:\n"}
+,{"stream_name":"stdout","time":486.678360639,"data":"- Let A be Alice's current number of sweets.\n"}
+,{"stream_name":"stdout","time":486.678365621,"data":"- Let B be Bob's current number of sweets.\n"}
+,{"stream_name":"stdout","time":486.678370498,"data":"- Let a be Alice's age.\n"}
+,{"stream_name":"stdout","time":486.67837531,"data":"- Let b be Bob's age.\n"}
+,{"stream_name":"stdout","time":486.678379902,"data":"\n"}
+,{"stream_name":"stdout","time":486.678384131,"data":"Now, let's parse the statements one by one.\n"}
+,{"stream_name":"stdout","time":486.678389221,"data":"\n"}
+,{"stream_name":"stdout","time":486.678394278,"data":"Alice says to Bob: \"If we each added the number of sweets we're holding to our (positive integer) age, my answer would be double yours. If we took the product, then my answer would be four times yours.\"\n"}
+,{"stream_name":"stdout","time":486.67840006,"data":"\n"}
+,{"stream_name":"stdout","time":486.67840466,"data":"So, this gives us two conditions.\n"}
+,{"stream_name":"stdout","time":486.678408769,"data":"\n"}
+,{"stream_name":"stdout","time":486.678412787,"data":"First condition: If each added thei\n"}
+,{"stream_name":"stdout","time":486.678416813,"data":"\n"}
+,{"stream_name":"stdout","time":486.678420715,"data":"\n"}
+,{"stream_name":"stdout","time":486.678424725,"data":"===== pidx 1 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":486.678434728,"data":"Okay, so I have this problem about Fibonacci numbers and some conditions on n. Let me try to break it down step by step.\n"}
+,{"stream_name":"stdout","time":486.678463012,"data":"\n"}
+,{"stream_name":"stdout","time":486.678467682,"data":"First, the problem says that we need to find the number of positive integers n less than 10^101 such that two conditions are met:\n"}
+,{"stream_name":"stdout","time":486.678471506,"data":"\n"}
+,{"stream_name":"stdout","time":486.678474709,"data":"1. n² + (n+1)² is a multiple of 5.\n"}
+,{"stream_name":"stdout","time":486.67847809,"data":"2. F_{n-1}² + F_n² is not a multiple of 5.\n"}
+,{"stream_name":"stdout","time":486.678481454,"data":"\n"}
+,{"stream_name":"stdout","time":486.678484609,"data":"Then, we need to find how many prime factors N has, counted with multiplicity, where N is the number of such n.\n"}
+,{"stream_name":"stdout","time":486.678488399,"data":"\n"}
+,{"stream_name":"stdout","time":486.67849153,"data":"Alright, let's tackle each condition one by one.\n"}
+,{"stream_name":"stdout","time":486.678494929,"data":"\n"}
+,{"stream_name":"stdout","time":486.678498088,"data":"Starting with the first condition: n² + (n+1)² ≡ 0 mod 5.\n"}
+,{"stream_name":"stdout","time":486.678501555,"data":"\n"}
+,{"stream_name":"stdout","time":486.678504692,"data":"Let me compute n² + (n+1)².\n"}
+,{"stream_name":"stdout","time":486.678507996,"data":"\n"}
+,{"stream_name":"stdout","time":486.678511201,"data":"n² + (n+1)² = n² + n² + 2n + 1 = 2n² + 2n + 1.\n"}
+,{"stream_name":"stdout","time":486.67851962,"data":"\n"}
+,{"stream_name":"stdout","time":486.678522513,"data":"So, 2n² + 2n + 1 ≡ 0 mod 5.\n"}
+,{"stream_name":"stdout","time":486.678525096,"data":"\n"}
+,{"stream_name":"stdout","time":486.678528071,"data":"Let me simplify this equation modulo 5.\n"}
+,{"stream_name":"stdout","time":486.678530339,"data":"\n"}
+,{"stream_name":"stdout","time":486.678532958,"data":"2n² + 2n + 1 ≡ 0 mod 5.\n"}
+,{"stream_name":"stdout","time":486.678547498,"data":"\n"}
+,{"stream_name":"stdout","time":486.678551448,"data":"I can factor out a 2 from the first two terms:\n"}
+,{"stream_name":"stdout","time":486.678555235,"data":"\n"}
+,{"stream_name":"stdout","time":486.678558928,"data":"2(n² + n) + 1 ≡ 0 mod 5.\n"}
+,{"stream_name":"stdout","time":486.678562712,"data":"\n"}
+,{"stream_name":"stdout","time":486.678565864,"data":"Alternatively, maybe it's easier to just test n modulo 5, since modulo 5 has only 5 residues: 0,1,2,\n"}
+,{"stream_name":"stdout","time":486.67856927,"data":"\n"}
+,{"stream_name":"stdout","time":486.678572329,"data":"\n"}
+,{"stream_name":"stdout","time":486.678575402,"data":"===== pidx 2 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":486.678578922,"data":"Okay, so I have this problem about an urn with n marbles, each either red or blue. There are at least 7 marbles of each color. When 7 marbles are drawn without replacement, the probability of exactly 4 red equals the probability of exactly 5 red. I need to find the sum of the 5 smallest n for which this is possible.\n"}
+,{"stream_name":"stdout","time":486.678582971,"data":"\n"}
+,{"stream_name":"stdout","time":486.678586198,"data":"Hmm, let me think. So, the probability of drawing exactly 4 red marbles is equal to the probability of drawing exactly 5 red marbles. That should relate to the hypergeometric distribution, right? Because we're drawing without replacement.\n"}
+,{"stream_name":"stdout","time":486.678590071,"data":"\n"}
+,{"stream_name":"stdout","time":486.678593189,"data":"Let me denote the number of red marbles as r and blue marbles as b. So, n = r + b. And we know that r ≥ 7 and b ≥ 7, so n must be at least 14.\n"}
+,{"stream_name":"stdout","time":486.678600606,"data":"\n"}
+,{"stream_name":"stdout","time":486.678603778,"data":"The probability of drawing exactly k red marbles in 7 draws is given by the hypergeometric formula:\n"}
+,{"stream_name":"stdout","time":486.678607197,"data":"\n"}
+,{"stream_name":"stdout","time":486.678610349,"data":"P(k) = C(r, k) * C(b, 7 - k) / C(n, 7)\n"}
+,{"stream_name":"stdout","time":486.678613561,"data":"\n"}
+,{"stream_name":"stdout","time":486.678616922,"data":"Where C(a, b) is the combination of a things taken b at \n"}
+,{"stream_name":"stdout","time":486.678626611,"data":"\n"}
+,{"stream_name":"stdout","time":486.678629258,"data":"\n"}
+,{"stream_name":"stdout","time":486.678642817,"data":"===== pidx 3 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":486.678647276,"data":"Okay, so I have this geometry problem here. Let me try to understand it step by step. The problem says:\n"}
+,{"stream_name":"stdout","time":486.678651261,"data":"\n"}
+,{"stream_name":"stdout","time":486.678655284,"data":"Triangle ABC has side length AB = 20 and circumradius R = 26. Let D be the foot of the perpendicular from C to the line AB. What is the greatest possible length of segment CD?\n"}
+,{"stream_name":"stdout","time":486.678659498,"data":"\n"}
+,{"stream_name":"stdout","time":486.678662644,"data":"Hmm, so we have triangle ABC with AB = 20, and the circumradius is 26. We need to find the maximum possible length of CD, where D is the foot of the perpendicular from C to AB. So CD is the altitude from C to AB.\n"}
+,{"stream_name":"stdout","time":486.678666433,"data":"\n"}
+,{"stream_name":"stdout","time":486.678669566,"data":"Wait, so CD is the height of the triangle from vertex C to base AB. And we need the maximum possible value of CD. So essentially, among all possible triangles ABC with AB = 20 and circumradius 26, what's the maximum possible height from C to AB.\n"}
+,{"stream_name":"stdout","time":486.678673408,"data":"\n"}
+,{"stream_name":"stdout","time":486.678677079,"data":"First, let me recall some concepts. The circumradius R of a triangle is given by the formula:\n"}
+,{"stream_name":"stdout","time":486.678680507,"data":"\n"}
+,{"stream_name":"stdout","time":486.67868361,"data":"R = (a * b * c) / (4 * Δ)\n"}
+,{"stream_name":"stdout","time":486.678686826,"data":"\n"}
+,{"stream_name":"stdout","time":486.678689943,"data":"where a, b, c are the side lengths,\n"}
+,{"stream_name":"stdout","time":486.678693272,"data":"\n"}
+,{"stream_name":"stdout","time":486.678696335,"data":"\n"}
+,{"stream_name":"stdout","time":486.678699471,"data":"===== pidx 4 · n_tok 1024 · 완주 False · 마커 0 =====\n"}
+,{"stream_name":"stdout","time":486.678702882,"data":"Okay, so I have this problem where I need to find the sum of all real numbers r such that the circle with radius r centered at (4, 39) is tangent to the parabola given by 2y = x² - 8x + 12. Hmm, let me try to figure this out step by step.\n"}
+,{"stream_name":"stdout","time":486.678706812,"data":"\n"}
+,{"stream_name":"stdout","time":486.678709966,"data":"First, I should probably write down the equations of the circle and the parabola. The circle is centered at (4, 39) with radius r, so its equation is (x - 4)² + (y - 39)² = r². The parabola is given by 2y = x² - 8x + 12. Maybe I can rewrite that to make it easier to work with. Dividing both sides by 2, I get y = (x² - 8x + 12)/2. So, y = (1/2)x² - 4x + 6. That's a parabola that opens upwards.\n"}
+,{"stream_name":"stdout","time":486.678716176,"data":"\n"}
+,{"stream_name":"stdout","time":486.678722549,"data":"Now, the circle and the parabola are tangent to each other, which means they intersect at exactly one point. So, substituting the expression for y from the parabola into the circle's equation should give me a system with exactly one solution. That should result i\n"}
+,{"stream_name":"stdout","time":486.678740367,"data":"\n"}
+,{"stream_name":"stdout","time":486.678744264,"data":"[즉답] pidx 0 · ans=' 120' · int=120 · note=\n"}
+,{"stream_name":"stdout","time":486.678748309,"data":"[즉답] pidx 1 · ans=' 3' · int=3 · note=\n"}
+,{"stream_name":"stdout","time":486.678752154,"data":"[즉답] pidx 2 · ans=' 35' · int=35 · note=\n"}
+,{"stream_name":"stdout","time":486.678756339,"data":"[즉답] pidx 3 · ans=' 24' · int=24 · note=\n"}
+,{"stream_name":"stdout","time":486.678759887,"data":"[즉답] pidx 4 · ans=' 40\\n\\nTo solve the problem' · int=40 · note=\n"}
+,{"stream_name":"stderr","time":492.025433109,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":492.025463405,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":492.25009529,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":492.250121214,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":492.978259141,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":493.88555767,"data":"[NbConvertApp] Writing 375736 bytes to __results__.html\n"}
+]

@@ -1,0 +1,65 @@
+#TEMP-SENS — 디코딩 민감도 (T 0.6 → 1.0 · top_k 없음 → 40) · Olmo · 같은 20문제
+사전등록: CLAUDE.md `## #TEMP-SENS` (커밋 a6e5a62, 생성 전 기록) · 1회 실행
+
+새 라벨 파일 Olmo-3-7B-Think_off40_v2_labels.json · 행 20 · 선정 20개 중 새 결과가 있는 것 20
+설정 확인: gen_k [8] · gen_cap [32768] (옛 라벨과 같아야 한다: k=8 · 32768)
+
+## 문제별 (옛 → 새)
+ pidx   옛label    새label   옛base   새base   Δbase  새max_drop      새 미완주(원본)       결정유형
+   41 spurious  spurious   1.000   0.875  -0.125      0.375              0      typos
+   42   robust    robust   0.875   0.625  -0.250     -0.125              0     rename
+   43   robust  spurious   0.875   1.000   0.125      0.500              0     rename
+   44 spurious    robust   0.750   0.750   0.000      0.000              0   distract
+   45 spurious    robust   1.000   0.875  -0.125      0.000              0     rename
+   47 spurious  spurious   1.000   1.000   0.000      0.375              0      typos
+   49 spurious    robust   0.875   0.500  -0.375      0.000              0     rename
+   51   robust  spurious   0.750   0.875   0.125      0.250              0     rename
+   52   robust    robust   1.000   0.875  -0.125     -0.125              0     rename
+   53   robust    robust   0.875   0.875   0.000      0.000              0      typos
+   54   robust    robust   0.500   0.875   0.375      0.000              0     rename
+   56   robust    robust   1.000   1.000   0.000      0.000              0     rename
+   57   robust    robust   1.000   0.875  -0.125     -0.125              0      typos
+   58 spurious    robust   1.000   0.875  -0.125     -0.125              0      typos
+   59   robust    robust   1.000   0.875  -0.125      0.000              0      typos
+   60   robust    robust   1.000   1.000   0.000      0.000              0      typos
+   61 spurious  spurious   0.875   0.750  -0.125      0.500              0   distract
+   62   robust    robust   0.875   1.000   0.125      0.000              0      typos
+   63   robust  spurious   0.875   1.000   0.125      0.250              0      typos
+   64   robust      중간대역   1.000   1.000   0.000      0.125              0   distract
+
+## (ㄱ) 20문제 전체 — 주판정 (n=20)
+① spurious  옛 7/20 = 35%  →  새 6/20 = 30%   (새 중간대역 제외 1건)
+② base_acc  옛 평균 0.9062  →  새 평균 0.8750   쌍별 Δ 평균 -0.0312 · 중앙 +0.0000 · 내림 9 / 같음 6 / 오름 5
+전환표 (행=옛, 열=새)
+              robust  spurious      중간대역      라벨없음
+    robust         9         3         1         0
+  spurious         4         3         0         0
+McNemar  robust→spurious b=3 · spurious→robust c=4 · 불일치 7
+  정확 이항검정 p = 1.0000
+판정  기준1 spurious 30% >= 70%(2배) → 미달   기준2 b>c → 미달
+  → **기각: 디코딩 설정으로 설명되지 않는다**
+민감도 label_fin: 옛 spurious 6/19 → 새 6/19
+민감도 label_major: 옛 spurious 2/20 → 새 1/20
+
+## (ㄴ) 새 base_acc >= 0.5 통과분 = 전체 20개 → (ㄱ)과 같다
+
+## 추출 교정 base_acc (민감도 · 판정에 쓰지 않는다)
+   규칙 ② 육안 점검이 잡은 결함: `extract_answer` 가 `\[ \boxed{..} \]` 서식을 못 뽑아
+   **완주·정답 샘플이 오답으로 집계된다**(Olmo T=1.0 선별 160샘플 중 8 = 5.0%).
+   원문을 저장했으므로(규칙 ①) 교정값을 계산할 수 있다 — 마지막 `\boxed{}` 가 gold 와
+   같으면 정답으로 센 base_acc. **옛 T=0.6 쪽은 원문이 없어 교정이 불가능하므로**
+   이 열은 '교정하면 어느 방향으로 움직이나' 만 보여주고 짝 비교에 쓰지 않는다.
+   합집합 교정으로 **구제된 샘플 8개** (추출 None 이었지만 마지막 boxed 가 정답)
+   n 20 · 관측 base_acc 평균 **0.8750** → 교정 **0.9250** (차 +0.0500) · 올라간 문제 4 / 같음 16 / 내려간 문제 0
+   참고: 옛 T=0.6 관측 평균 0.9062 (교정 불가)
+
+## 부가 (판정에 쓰지 않는다)
+원본 미완주율(새): 0.0% (완주 160 / 160 샘플)
+변형 샘플(새) 432개 · 미완주 0 (0.0%) · 완주오답 55 (12.7%)
+spurious 결정 변형 유형(새): {'typos': 3, 'rename': 2, 'distract': 1} — 옛 쪽은 라벨 JSON 이 없어 비교 불가(docstring 참조)
+새 원본 샘플 160개 · 평균 22,983자 · 중앙 19,577자 · 파일 기록 BPE 마커 0
+
+한계(사전등록에 미리 적음): vLLM 은 seed 고정에도 배치·스케줄링에 따라 같은 출력을
+보장하지 않는다 → 라벨 변화에서 '디코딩 설정' 과 '재샘플 변동' 을 가를 수 없다.
+그래서 기준1 을 2배로 높게 잡았다. n=20 이고 옛 spurious 7건이라 전환 한두 건이
+비율을 5~10%p 움직인다. 이 결과는 #77·#GEN-PROBE 의 판정을 바꾸지 않는다.

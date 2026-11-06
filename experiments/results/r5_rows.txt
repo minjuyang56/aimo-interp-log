@@ -1,0 +1,28 @@
+#R5-TRANSFER (a) 재료 — screen 전 문제(채택·탈락 모두)로 정답률 방향을 학습할 행
+   제외한 pod: 67elv2je7wzefw(DeepSeek Ġ 손상 (base_acc 0.497)) · 1f7jul0dgk7o9s(DeepSeek Ġ 손상 (0.512)) · luvw8yu3mkxsza(DeepSeek Ġ 손상 (0.497)) · x04ghnc52b6dll(DeepSeek Ġ 손상 k=4 (0.544)) · i6hxd8z437eas4(Olmo T=1.0 (디코딩 다름))
+
+   모델                          slice                                행  k     평균     sd
+   Skywork-OR1-Math-7B         pj7vh1qllei51i Skywork-OR1-Math-7B_  40  8  0.900  0.215
+   Skywork-OR1-Math-7B         **고유 문제 합계**                        40     0.900  0.215
+      base_acc 분포 {0.0: 1, 0.25: 1, 0.5: 1, 0.625: 2, 0.75: 1, 0.875: 6, 1.0: 28}
+      0 인 문제 1 · 0.5 미만 2 · 서로 다른 값 7 · 공식 33 과 겹침 **0**(규칙상 제외)
+
+   Olmo-3-7B-Think             sprwmaodvz095s Olmo-3-7B-Think_off4  40  8  0.881  0.158
+   Olmo-3-7B-Think             ofclt769pgvn6u Olmo-3-7B-Think_v3_s  40  8  0.881  0.158
+   Olmo-3-7B-Think             nbgd17ti5ydns8 Olmo-3-7B-Think_v2_s  40  4  0.875  0.230
+   Olmo-3-7B-Think             daxtmpmss5lf1a Olmo-3-7B-Think_v2_s   5  4  0.800  0.292
+   Olmo-3-7B-Think             **고유 문제 합계**                        61     0.865  0.205
+      base_acc 분포 {0.0: 1, 0.25: 1, 0.5: 5, 0.625: 1, 0.75: 9, 0.875: 11, 1.0: 33}
+      0 인 문제 1 · 0.5 미만 2 · 서로 다른 값 7 · 공식 33 과 겹침 **0**(규칙상 제외)
+
+   DeepSeek-R1-0528-Qwen3-8B   mbpc29h3v7um64 DeepSeek-R1-0528-Qwe  40  8  0.853  0.321
+   DeepSeek-R1-0528-Qwen3-8B   9svqsw8dzrtjsv DeepSeek-R1-0528-Qwe  40  8  0.831  0.318
+   DeepSeek-R1-0528-Qwen3-8B   **고유 문제 합계**                        55     0.873  0.284
+      base_acc 분포 {0.0: 4, 0.125: 1, 0.625: 3, 0.875: 8, 1.0: 39}
+      0 인 문제 4 · 0.5 미만 5 · 서로 다른 값 5 · 공식 33 과 겹침 **0**(규칙상 제외)
+
+   저장 experiments/results/r5_rows.json
+
+   비교: **채택분만** 쓸 때(특징이 이미 있는 행) 표준편차는 Skywork 0.120 · Olmo 0.167 ·
+   DeepSeek 0.073 이고 DeepSeek 의 greedy 정답은 32/32 로 **변이가 0** 이었다.
+   screen 전 문제를 쓰면 행도 늘고 변이도 커진다 — 그게 (a) 를 실행 가능하게 만든다.

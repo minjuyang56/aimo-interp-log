@@ -1,0 +1,38 @@
+공개 릴리스 스냅샷 빌드 — 원본 추적 780개
+  대상: C:\side\aimo-interp-release
+
+[제외]
+  실행 산출물 디렉터리                  48개 ·   3235.26 MB
+  .npz (재생성 가능)                73개 ·    314.94 MB
+  데이터 1MB 초과                    6개 ·     16.92 MB
+  대상 확장자 아님 (.zip)              2개 ·      0.02 MB
+  임시 스크립트                       2개 ·      0.01 MB
+  대상 확장자 아님 (없음)                2개 ·      0.00 MB
+  대상 확장자 아님 (.jsonl)            1개 ·      0.00 MB
+  대상 확장자 아님 (.failed)           6개 ·      0.00 MB
+  대상 확장자 아님 (.pushed)           8개 ·      0.00 MB
+  대상 확장자 아님 (.analyzed)         2개 ·      0.00 MB
+  대상 확장자 아님 (.downloaded)       2개 ·      0.00 MB
+  대상 확장자 아님 (.decided)          1개 ·      0.00 MB
+  대상 확장자 아님 (.trigger)          1개 ·      0.00 MB
+
+[포함] 626개 · 10.98 MB
+    .json       104개     5.77 MB
+    .py         273개     1.81 MB
+    .log         41개     1.61 MB
+    .md          11개     0.66 MB
+    .txt        140개     0.34 MB
+    .parquet     28개     0.25 MB
+    .html         3개     0.23 MB
+    .png          1개     0.14 MB
+    .pdf          1개     0.09 MB
+    .tex          1개     0.04 MB
+    .sh          21개     0.03 MB
+    .patch        1개     0.00 MB
+    .csv          1개     0.00 MB
+
+  익명 치환 227건 적용 (공개 트리에서만 · 개발 저장소 원본 불변)
+  제출 zip 48개 복사 (1MB 미만만 — sub2048 은 가중치 6.8MB 라 제외)
+    익명화 위해 제외: flipent-small.zip <- flipent_lib.py ([author])
+  릴리스 트리 파일 674개 · 13.17 MB
+  50MB 초과 파일: 0개 (없음 — GitHub 통과)

@@ -1,0 +1,12 @@
+{
+  "_why": "지휘 #RP 우선순위 ① — H22(라벨 정의 재현)를 공식 33문제에 실제로 돌려 AUC·정확도를 본다. '정의 재현이 86% 근처 나오나' 에 직접 답하는 실험이다. 섭동·점수는 제출물 h22_lib 그대로, 생성만 vLLM(비용).",
+  "entry": "h22_official33.py",
+  "files": [
+    "solutions/h22/h22_lib.py"
+  ],
+  "flatten": true,
+  "disk_gb": 200,
+  "out": "/workspace/out",
+  "cmd": "set -e; python3 -V; python3 -m pip install -q vllm pandas pyarrow; python3 -c 'import vllm,torch;print(\"[단계] vllm\",vllm.__version__,\"torch\",torch.__version__)'; python3 h22_official33.py --model \"$H22_MODEL\" --n-problems ${H22_N:-5} --cap ${H22_CAP:-24576} --N ${H22_NS:-4} --K ${H22_K:-6} --S ${H22_S:-2} --chunk ${H22_CHUNK:-8}",
+  "_note": "pip 를 파이프로 넘기면 파이프라인 종료코드가 tail 의 것이 되어 **설치 실패가 가려진다** (실제로 한 번 겪었다). set -e + 파이프 없음으로 둔다. 이미지에 `python` 이 없고 `python3`(3.13)만 있다 — 그래서 python3 로 부른다."
+}

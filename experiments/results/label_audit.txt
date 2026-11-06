@@ -1,0 +1,98 @@
+#LABEL-AUDIT — 정답표·방향 버그 점검 5개 (비용 $0)
+
+## (1) `is_robust` 와 자체 라벨의 **실제 파이썬 타입** — `bool('False') == True` 함정
+   parquet `is_robust` dtype=object · 파이썬 타입 {'bool': 71, 'NoneType': 11}
+   값 분포 {'True': 52, 'None': 11, 'False': 19}
+   문자열 값 0개 → 없다(안전)
+   problems() y vs 독립 재계산: 길이 33/33 · 불일치 0 → 일치
+   라벨 분포 robust 20 / spurious 13
+   parquet NaN/None 11행 — `problems()` 는 `dropna()` 로 빼고 라벨 0개 문제는 건너뛴다
+   → 82행 중 라벨 있는 행 71 · 문제단위 라벨 33개
+
+   자체 라벨 JSON (`label` · `label_fin` · `label_major`) 타입:
+   DeepSeek-R1-0528-Qwen3-8B_off80_v2_labels.json         {'label': {'bool': 18, 'NoneType': 8}, 'label_fin': {'bool': 19, 'NoneType': 7}, 'label_major': {'bool': 26}}
+   DeepSeek-R1-0528-Qwen3-8B_off80_v2_labels.json         {'label': {'bool': 32, 'NoneType': 3}, 'label_fin': {'bool': 32, 'NoneType': 3}, 'label_major': {'bool': 35}}
+   Olmo-3-7B-Think_v2_labels.json                         {'label': {'bool': 4}, 'label_fin': {'bool': 4}, 'label_major': {'bool': 4}}
+   Olmo-3-7B-Think_off40_v2_labels.json                   {'label': {'bool': 19, 'NoneType': 1}, 'label_fin': {'bool': 19, 'NoneType': 1}, 'label_major': {'bool': 20}}
+   DeepSeek-R1-0528-Qwen3-8B_v3_labels.json               {'label': {'bool': 23, 'NoneType': 1}, 'label_fin': {'bool': 23, 'NoneType': 1}, 'label_major': {'bool': 24}}
+   DeepSeek-R1-0528-Qwen3-8B_off40_v2_labels.json         {'label': {'bool': 32, 'NoneType': 3}, 'label_fin': {'bool': 34, 'NoneType': 1}, 'label_major': {'bool': 35}}
+   Olmo-3-7B-Think_v3_labels.json                         {'label': {'NoneType': 9, 'bool': 31}, 'label_fin': {'NoneType': 10, 'bool': 30}, 'label_major': {'bool': 40}}
+   Skywork-OR1-Math-7B_off40_v2_labels.json               {'label': {'bool': 30, 'NoneType': 8}, 'label_fin': {'bool': 34, 'NoneType': 4}, 'label_major': {'bool': 38}}
+   DeepSeek-R1-0528-Qwen3-8B_off80_v2_labels.json         {'label': {'bool': 26}, 'label_fin': {'bool': 25, 'NoneType': 1}, 'label_major': {'bool': 26}}
+   skywork_labels_merged.json                             {'label': {'bool': 88}, 'label_fin': {'bool': 88}, 'label_major': {'bool': 88}}
+   검사한 라벨 파일 10개 · 문자열 라벨 없다(안전)
+
+## (2) 방향 규약 — '점수 큼 = robust' 가 모든 곳에서 같은가
+   위치                                    찾은 줄  대표 줄
+   채점기(상류) robust 정의                        0  (없음)
+   평가기 AUC (robust 양성)                      4  ttp_eval.py:42 pos, neg = s[y == 1], s[y == 0]
+   평가기 null (라벨만 섞음)                        3  ttp_eval.py:96 ys = rng.permutation(y)
+   프로브 학습 (y=robust)                        3  build_sub2048_artifacts.py:23 축소·분류기 = StandardScaler → PCA 24 → 로지스틱 L2 `class_weight
+   제출 sub2048 (점수>=thr → True)              6  sub2048_lib.py:10 4. 모델별 가중치(StandardScaler → PCA 24 → 로지스틱) 적용 → **모델별 절대 임계 `thr`** 
+   제출 ttp (score<=thr → True)               5  ttp_lib.py:279 def h15c_decide(problems, thr=-4.084031):
+   제출 h15C/lencal (점수>=thr)                 2  lencal_lib.py:43 return [bool(s >= thr) for s in scores(problems)]
+
+   **규약 표 (코드에서 직접 읽은 것)**
+   | 곳 | 양성(=1) | 점수 방향 | True 판정 |
+   |---|---|---|---|
+   | 채점기 `are_robust` | robust | — | 반환 True = robust |
+   | `ttp_eval.auc` | y==1 = robust | 점수 = **−spur** | — |
+   | `ttp_eval.loo_acc` | — | spur 낮을수록 robust | `spur <= thr` |
+   | `ttp_lib.decide` | — | score_spurious | `score <= thr` → True |
+   | `sub2048_lib` | — | 프로브 점수 큼 = robust | `score >= thr` → True |
+   | `lencal_lib` / `h15_lib` | — | −log(단어수) 큼 = robust | `score >= thr` → True |
+   → **두 규약이 공존한다**: 프로브·길이는 '큼=robust', 섭동 점수는 '큼=spurious'.
+     각 평가기가 자기 규약으로 AUC 를 내므로 **부호 혼동은 없다**(아래 (5) 끝단 검사로 확인).
+
+## (3) 문제-라벨 매칭을 **번호가 아니라 원문 텍스트(공백 정규화)**로 재대조
+   org33_problems.json: 텍스트 일치 33/33 · **pidx 가 라벨 인덱스와 같은 행 18/33** → 텍스트 매칭 필수
+   R1 산출물 pidx 집합: 최소 0 최대 35 개수 33 → 0..32 아님(36문제 기준) → 매핑 필요
+
+   자체 라벨 묶음 — 문제 텍스트가 **공식 33 과 겹치는가**(누출 점검, 0 이어야 정상):
+   1f7jul0dgk7o9s  DeepSeek-R1-0528-Qwen3-8B_off80_v2_label   행   26 · 겹침 0
+   9svqsw8dzrtjsv  DeepSeek-R1-0528-Qwen3-8B_off80_v2_label   행   35 · 겹침 0
+   daxtmpmss5lf1a  Olmo-3-7B-Think_v2_labels.json             행    4 · 겹침 0
+   i6hxd8z437eas4  Olmo-3-7B-Think_off40_v2_labels.json       행   20 · 겹침 0
+   luvw8yu3mkxsza  DeepSeek-R1-0528-Qwen3-8B_v3_labels.json   행   24 · 겹침 0
+   mbpc29h3v7um64  DeepSeek-R1-0528-Qwen3-8B_off40_v2_label   행   35 · 겹침 0
+   ofclt769pgvn6u  Olmo-3-7B-Think_v3_labels.json             행   40 · 겹침 0
+   pj7vh1qllei51i  Skywork-OR1-Math-7B_off40_v2_labels.json   행   38 · 겹침 0
+   x04ghnc52b6dll  DeepSeek-R1-0528-Qwen3-8B_off80_v2_label   행   26 · 겹침 0
+   합계 행 248 · 공식 33 과 겹침 **0** → 누출 없음(설계대로)
+
+## (4) 부호 — `is_robust` vs `max_drop`, 그리고 R1 흔들림 점수 vs `max_drop`
+   공식 71행: ρ(is_robust, max_drop) = **-0.773** (p=2.82e-15) → 음수 = robust 일수록 max_drop 작다 (정상)
+      robust 평균 max_drop 0.018 · spurious 평균 0.416
+
+   R1 흔들림 점수(ck512) vs **그 (모델,문제) 의 주최측 max_drop** — 양수여야 정상
+   모델                              쌍        ρ         p        판정
+   DeepSeek-R1-0528-Qwen3-8B       9   -0.130     0.738        반대
+   Olmo-3-7B-Think                 9   -0.249     0.519        반대
+   Qwen3.5-4B                     14   +0.035     0.906     정상 방향
+   Skywork-OR1-Math-7B             2        —         —      n 부족
+   (이 쌍은 모델별 3~12행뿐이라 유의성은 못 주장한다 — **부호만** 본다)
+
+## (5) 끝단 합성 검사 — 라벨을 **알려진 방향**으로 심고 전 경로를 돌린다
+   주의: '반대로 심기' 대조는 **고정 부호 점수에만** 쓸 수 있다. 프로브는 학습하는
+   분류기라 반대로 심어도 가중치 부호를 뒤집어 맞힌다(그게 정상이다).
+   (a) 규약: probe auc_of(큼=robust)=1.000/0.000 · ttp auc(spur 작을수록 robust)=1.000  OK
+   (b) 섭동·고정부호 경로: 정방향 AUC 1.000·정확도 1.000 · 반대로 심으면 0.000  OK
+   (c) 제출 `ttp_lib.score_one`+임계: 심은 라벨 재현 1.000  OK
+   (d) 프로브 실제 경로(d=10 · 3σ 심음): AUC 0.981  OK
+   (e) 검정력 측정 — 같은 경로, 차원만 바꿔 심은 신호의 천장을 본다 (판정 아님)
+          차원     1.0σ     3.0σ     8.0σ    20.0σ
+          10    0.669    0.996    1.000    1.000
+          40    0.715    0.873    0.927    0.946
+         400    0.515    0.585    0.685    0.696
+      → **차원이 실제 규모(수백~수천)면 20σ 신호도 AUC 0.7 을 못 넘는다.**
+        이건 버그가 아니라 n=33 에서 PCA24+LR 경로의 **검정력 상한**이다 —
+        #77·#ORG-TRAIN 이 0.5~0.6 에 머문 것을 설명하고, 리포트 검정력 절의 근거가 된다.
+
+## 결론
+   (1) 라벨 타입              통과
+   (2) 방향 규약              통과
+   (3) 텍스트 매칭             통과
+   (4) 부호                 통과
+   (5) 끝단 합성              통과
+
+   → **버그 아님.** 라벨·방향·매칭·부호·끝단 경로가 전부 일관된다. '흔들림 큼 = robust' 를 R3 가설로 사전등록한다.

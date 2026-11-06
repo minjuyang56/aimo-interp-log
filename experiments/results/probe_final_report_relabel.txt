@@ -1,0 +1,50 @@
+#77 최종 프로브 평가 — 다모델 · 1회 실행
+
+주라벨 `label`(max_drop) · **주분석 gen_k == 8** (Amendment 2) · null 1000회 (라벨 섞고 같은 nested CV 재실행; 표준화·PCA 는 y 무관이라 투영을 재사용한다)
+민감도: gen_k != 주분석 · `label_fin` · `label_major`(과반; 양성 0 이면 '적용 불가')
+
+## Skywork · Skywork-OR1-Math-7B_own_k8.npz · gen_k==8 30/30 · robust 26 / spurious 4
+   AUC **0.885** · null 95% [0.13, 0.84] ▲
+   길이잔차 AUC 0.740 · null [0.11, 0.82] 
+   balanced acc 0.788 · 고른 (층, C) [(28, 0.003), (21, 0.03), (14, 0.003), (7, 0.003)]
+   민감도 label_fin: 같은 점수로 AUC 0.877 (robust 27 / spurious 3)
+   민감도 label_major: **적용 불가**(양성 0 또는 값 없음 · robust 30 / spurious 0)
+
+## Olmo · Olmo-3-7B-Think_own_k8.npz · gen_k==8 31/31 · robust 21 / spurious 10
+   AUC **0.638** · null 95% [0.19, 0.74] 
+   길이잔차 AUC 0.605 · null [0.17, 0.70] 
+   balanced acc 0.660 · 고른 (층, C) [(16, 0.01), (8, 0.03), (24, 0.003), (16, 0.3), (8, 0.03)]
+   민감도 label_fin: 같은 점수로 AUC 0.630 (robust 21 / spurious 9 · 라벨 없음 1 제외)
+   민감도 label_major: 같은 점수로 AUC 0.679 (robust 28 / spurious 3)
+
+## DeepSeek · DeepSeek-R1-0528-Qwen3-8B_own_k8.npz · gen_k==8 32/32 · robust 29 / spurious 3
+   AUC **0.552** · null 95% [0.08, 0.87] 
+   길이잔차 AUC 0.230 · null [0.06, 0.86] 
+   balanced acc 0.592 · 고른 (층, C) [(18, 0.003), (18, 0.003), (18, 0.003)]
+   민감도 label_fin: 같은 점수로 AUC 0.500 (robust 30 / spurious 2)
+   민감도 label_major: **적용 불가**(양성 0 또는 값 없음 · robust 32 / spurious 0)
+
+## 주지표 — 주라벨 모델별 AUC 의 **모델평균**
+
+   모델평균 AUC **0.691** · null 상단 평균 0.82 — null 안
+   모델평균 길이잔차 0.525 · null 상단 평균 0.79 — null 안
+   → 통과 기준 1·2: **미달**
+
+## 보조 — 풀링 (모델별 폴드 밖 점수를 모아 (모델, 문제) 행 전체)
+   AUC 0.680 · balanced acc 0.629 · n 93
+
+## 보조 — 모델 간 분리력 (#77 정의)
+   라벨이 갈리는 쌍 **16개 < 20 → 판정 불가**(사전등록 규칙). 숫자를 주장하지 않는다.
+
+## 보조 — 외부 테스트 (공식 train-main-v2 문제단위 라벨 33 · 학습 금지)
+   Skywork: 고른 층 7 · C 0.03 → AUC **0.708** [null 0.28, 0.72] · 길이잔차 0.604 · n 33 (robust 20 / spurious 13)
+   Olmo: 고른 층 8 · C 0.01 → AUC **0.492** [null 0.29, 0.69] · 길이잔차 0.492 · n 33 (robust 20 / spurious 13)
+   DeepSeek: 고른 층 18 · C 0.003 → AUC **0.619** [null 0.29, 0.70] · 길이잔차 0.438 · n 33 (robust 20 / spurious 13)
+
+## 판정
+
+주지표·길이잔차 중 하나 이상이 null 안이다 → **신호 미입증**
+
+검정력 메모(Amendment 2 에 미리 적음): k=8 라벨은 모델당 약 30문제로 공식 33 과 같은 규모다.
+그 규모에서는 AUC 0.75 미만을 우연과 구분할 수 없다(`analysis/power_33.py`) — 따라서 이 표는
+'신호 있음' 을 주장하기보다 **구간을 보고하는** 쪽으로 읽는다.
