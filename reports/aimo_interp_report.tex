@@ -622,12 +622,30 @@ Skywork use the rule with a 12288\,$\to$\,8192 per-case budget ladder, every oth
 \texttt{model\_id} including \texttt{gpt-oss-120b} at all effort levels takes the length rule
 without loading a model). At Main scale, four to five problems per model, the first rung costs
 508--582\,s per generating call against a $\approx 1650$\,s share, i.e.\ $31$--$35\%$ of the budget.
-\TODO{its submission\_id, once uploaded, here and in the OpenReview form}
+\textbf{It was never submitted.} Its only evidence is therefore the offline measurement on the 33
+public labels, and we claim no leaderboard score for it.
+
+\paragraph{Nominated submission.} We nominate the mid-generation probe that
+Table~\ref{tab:resolution} is about (\texttt{dist/sub2048.zip}), the one white-box method we did
+submit. Its observed scores were $0.62$ on Main (13/21) and $0.57$ on Small (8/14). Those runs
+predate the three IDs in the table and were overwritten on the per-track leaderboard, which shows
+only the latest submission per track, so the ID cannot be recovered from the public API.
+\TODO{the nominated submission\_id, read from the Codabench ``My Submissions'' page}
+
+Two measurements belong beside that nomination, and both are in the body rather than hidden here.
+First, its fixed threshold is miscalibrated off its training distribution: the predicted True rate
+is $0.48$--$0.50$ on the labels it was fitted to and $0.15$--$0.21$ on the official 33, where its
+accuracy falls below the constant predictor. Second, the same frozen weights transfer at pooled AUC
+$0.610$, below the $0.671$ of problem length alone. Removing either per-model partition --- one
+instrument for every model, or one shared threshold --- does not recover anything (rows P5a and P5b
+of Table~\ref{tab:honest}); so whatever the Main score of $0.62$ was, it was not the per-model
+routing. We nominate it because it is the submission this report analyses end to end, not because
+the number is defensible.
 
 \subsubsection*{Reproducibility}
 Every number cites the commit that produced it; logs live in \texttt{experiments/results/} and the
 pre-registration for each hypothesis, including the ones that failed, is in the versioned notebook
 file in the repository. Code, all measurement logs and every pre-registration are served
-anonymously at \texttt{https://anonymous.4open.science/r/aimo-interp-log} \TODO{confirm the 4open.science slug after creating the anonymized view}
+anonymously at \texttt{https://anonymous.4open.science/r/aimo-interp-log-6A8E}.
 
 \end{document}

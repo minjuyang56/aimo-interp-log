@@ -46,6 +46,7 @@ ANON = [
     ("[Author]", "[Author]"),
     ("[author]", "[author]"),
     ("[user]", "[user]"),
+    ("[author-email]", "[author-email]"),
 ]
 ANON_EXT = {".py", ".sh", ".md", ".txt", ".tex", ".json", ".yml", ".yaml",
             ".cfg", ".toml", ".html", ".log", ".csv", ".bib", ".patch"}
@@ -130,8 +131,17 @@ def main():
         out("    %-10s %4d개 %8.2f MB" % (e, n, s / 1048576))
     out()
 
+    #  .git 은 남긴다 — 스냅샷이 공개 저장소의 작업트리이기도 하므로 통째로 지우면
+    #  히스토리가 날아가고, 읽기전용 object 파일 때문에 rmtree 자체가 WinError 5 로 막힌다.
     if dest.exists():
-        shutil.rmtree(dest)
+        for item in dest.iterdir():
+            if item.name == ".git":
+                continue
+            if item.is_dir():
+                shutil.rmtree(item)
+            else:
+                item.unlink()
+    dest.mkdir(parents=True, exist_ok=True)
     nanon = 0
     for s, f in keep:
         t = dest / f
