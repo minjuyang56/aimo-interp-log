@@ -338,6 +338,10 @@ False, which is silence, not signal. \textbf{(iii) The rule may be re-reading th
 --- the organisers' labels are accuracies inside a fixed budget, so ``does it finish inside a
 budget'' is partly the same measurement, which breaks transfer whenever that budget differs.
 
+The hybrid was submitted on the small track (\texttt{1026614}) and scored $\mathbf{0.57}$, equal to
+the length rule and to the board median: the offline margin of $0.682$ over $0.636$ did not survive
+14 items, which is what one item of resolution predicts either way.
+
 \section{Conclusion}
 \label{sec:conclusion}
 Three numbers carry this report. A probe scoring $0.872$ on labels we generated scored $0.610$ when
@@ -600,17 +604,21 @@ save its raw text.
 
 \section{Submissions}
 \label{app:subs}
-Methods were packaged as Codabench submissions; the following are the submission IDs visible on the
-public leaderboard for our account, and they are the IDs this report describes.
+Methods were packaged as Codabench submissions. The per-track leaderboard shows only the latest
+submission per track, so the first two IDs below were read from the account's submission history
+rather than from the public board.
 
 \begin{center}\small
 \begin{tabular}{llrl}
 \toprule
 submission\_id & track & accuracy & method \\
 \midrule
+\texttt{979457} & Small ($N{=}14$) & $\mathbf{0.57}$ & mid-generation probe, \textbf{nominated} (\S\ref{sec:resolution}) \\
+\texttt{979466} & Main ($N{=}21$)  & $\mathbf{0.62}$ & mid-generation probe, \textbf{nominated} \\
 \texttt{1000005} & Main ($N{=}21$)  & $0.48$ & prior-calibrated length rule (\S\ref{sec:power}) \\
 \texttt{1000047} & Small ($N{=}14$) & $0.50$ & prior-calibrated length rule \\
 \texttt{1005084} & Small ($N{=}14$) & $0.50$ & front-of-reasoning entropy, experimental \\
+\texttt{1026614} & Small ($N{=}14$) & $0.57$ & natural-termination hybrid, exploratory (\S\ref{sec:acting}) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -622,15 +630,19 @@ Skywork use the rule with a 12288\,$\to$\,8192 per-case budget ladder, every oth
 \texttt{model\_id} including \texttt{gpt-oss-120b} at all effort levels takes the length rule
 without loading a model). At Main scale, four to five problems per model, the first rung costs
 508--582\,s per generating call against a $\approx 1650$\,s share, i.e.\ $31$--$35\%$ of the budget.
-\textbf{It was never submitted.} Its only evidence is therefore the offline measurement on the 33
-public labels, and we claim no leaderboard score for it.
+It was submitted on the small track before the deadline as \texttt{1026614} and scored $\mathbf{0.57}$ (8/14)
+--- equal to the length rule's $0.57$ and to the board median, i.e.\ one item apart and not
+distinguishable from it. We record it as an exploratory submission, not a nomination: the
+routing that produced the offline $0.682$ was chosen after seeing per-model accuracies. We hold
+no worker log for that run, so we cannot state which rung of the budget ladder executed; our
+timing model admits cap 12288 at leaderboard scale (six generating problems, $57\%$ of budget),
+which is the rung the offline number comes from.
 
 \paragraph{Nominated submission.} We nominate the mid-generation probe that
 Table~\ref{tab:resolution} is about (\texttt{dist/sub2048.zip}), the one white-box method we did
-submit. Its observed scores were $0.62$ on Main (13/21) and $0.57$ on Small (8/14). Those runs
-predate the three IDs in the table and were overwritten on the per-track leaderboard, which shows
-only the latest submission per track, so the ID cannot be recovered from the public API.
-\TODO{the nominated submission\_id, read from the Codabench ``My Submissions'' page}
+submit: \texttt{979466} on Main, scoring $0.62$ (13/21), and \texttt{979457} on Small, scoring
+$0.57$ (8/14). Both runs were later overwritten on the per-track leaderboard, which displays only
+the latest submission per track; the IDs come from the account's submission history.
 
 Two measurements belong beside that nomination, and both are in the body rather than hidden here.
 First, its fixed threshold is miscalibrated off its training distribution: the predicted True rate
