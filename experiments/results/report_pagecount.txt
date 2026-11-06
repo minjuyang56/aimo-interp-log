@@ -3,6 +3,6 @@
   요약 단어수 194 (기준 200 이하) -> OK
   남은 TODO 자리표시 0개 (주석 줄 제외)
   엔진 C:/Users/[user]/AppData/Local/Temp/claude/f426170cbba2d8c9/da5535f2-8ff7-44c5-97e7-a1fadbd43bc0/scratchpad/tectbin\tectonic.exe
-  **쪽수 계산 구역: 5쪽 · 오류 0 · 미정의 참조 8**
+  **쪽수 계산 구역: 5쪽 · 오류 0 · 미정의 참조 5**
     (절단판의 미정의 참조는 부록 라벨이 잘려서 생긴다 — 전체 PDF 쪽이 0 이어야 한다)
   전체 PDF:        10쪽 · 오류 0 · 미정의 참조 0

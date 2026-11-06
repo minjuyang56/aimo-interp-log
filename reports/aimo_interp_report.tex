@@ -151,7 +151,7 @@ difference. Our reverse-engineered thresholds reproduce the organisers' \texttt{
 \textbf{82/82} on all public rows, so the rule is right; and perturbation strength is capped by
 answer preservation --- per-type collapse probability $10.9\%$ against the $40$--$50\%$ their
 $27\%$ spurious rate requires, with \emph{more} perturbation types making a majority \emph{less}
-likely. Details, controls and commits in Appendix~\ref{app:detail}.
+likely. Details, controls and commits in the \emph{Supporting detail} section.
 
 \section{Three checkpoints that caught us}
 \label{sec:checkpoints}
@@ -213,7 +213,7 @@ supported, and the apparent evidence for it was an artefact of reading a fit as 
 Before accepting any of these reversals we audited the labels themselves: five checks --- label
 dtype, both sign conventions, text alignment, $\rho(\texttt{is\_robust}, \texttt{max\_drop})$ and an
 end-to-end planted label --- all passed, so the reversals are not bookkeeping
-(Appendix~\ref{app:detail}). \cmt{e0feda3}{\texttt{label\_audit.txt}}
+(\emph{Supporting detail} section). \cmt{e0feda3}{\texttt{label\_audit.txt}}
 
 \section{At \texorpdfstring{$n{=}33$}{n=33}, nothing beats a constant predictor}
 \label{sec:power}
@@ -311,7 +311,7 @@ majority answer. What a submission can buy is the stability of an error; what th
 the fragility of a correct solution. Implementing the definition faithfully ($N{=}4$, $K{=}6$
 answer-preserving perturbations, majority rule, cap 24576) reaches AUC $0.673$ inside its null, and a
 reduced $K{=}2$ rename-only version of itself reaches $0.675$ --- perturbation diversity moved the
-AUC by $0.002$, so faithfulness was not the missing piece (Appendix~\ref{app:detail}).
+AUC by $0.002$, so faithfulness was not the missing piece (\emph{Supporting detail} section).
 \cmt{0fe94a2}{\texttt{h22\_official33\_skywork\_report.txt}}
 
 \paragraph{One rule does clear its null --- and cannot be bought.} The exception is the simplest
@@ -407,7 +407,14 @@ author's responsibility and as an explicit standing rule for the agent: every nu
 is printed by a committed script into a committed log, several of the corrections and retractions
 recorded here originated in the author challenging an AI-stated conclusion, and the three
 checkpoints in \S\ref{sec:checkpoints} were instituted after specific AI-authored misreadings were
-caught. No AI system is an author; responsibility for the content is the author's.
+caught. To state the boundary explicitly, the following involved no AI system: the decision of what to
+pre-register, when to abandon a line of work and what to claim or retract; every Codabench
+submission and every leaderboard reading; and the production of any reported number --- each
+value is printed into a committed log by a committed script, and a checker confirms that every
+three- and four-decimal figure in this report occurs in one of those logs (123 of 123, with
+integers and two-decimal leaderboard scores outside its scope). One place where a language model
+produced experimental \emph{data} rather than assistance --- the model-rewritten perturbations
+in the label-generation study --- is reported as a measured step with its own acceptance test. No AI system is an author; responsibility for the content is the author's.
 
 \begin{thebibliography}{9}
 \bibitem{aimo2026}
@@ -658,6 +665,9 @@ the number is defensible.
 Every number cites the commit that produced it; logs live in \texttt{experiments/results/} and the
 pre-registration for each hypothesis, including the ones that failed, is in the versioned notebook
 file in the repository. Code, all measurement logs and every pre-registration are served
-anonymously at \texttt{https://anonymous.4open.science/r/aimo-interp-log-6A8E}.
+anonymously at
+\begin{center}
+\texttt{https://\allowbreak anonymous.4open.science/\allowbreak r/\allowbreak aimo-interp-log-6A8E}
+\end{center}
 
 \end{document}
